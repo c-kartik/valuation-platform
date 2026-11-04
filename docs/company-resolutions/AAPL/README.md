@@ -1,5 +1,9 @@
 # Apple — manually approved cash-flow treatments
 
+## Current remaining-issue review — November4
+
+The [four-stage implementation](remaining-issues-2026-11-04/report.html) executes the latest approved plan in order. Historical tax-inclusive NWC and existing forward-tax policy are now recorded under that approval; the date-matched common-share population is bound. Exact Other/lease financing, FY2024 D&A reconciliation and cash/claims/awards remain unresolved. FCFF and provisional FCFE are numerically unchanged. Current API/UI shows these decisions and preserves original review scope separately. **Apple remains OPEN; full financial review has not passed.**
+
 ## Current historical FCFF adoption — November 4
 
 The [operating-method implementation](operating-fcff-2026-11-04/README.md) supersedes the earlier current-display statements below: FY2021–25 standardized FCFF is93.41/108.44/99.84/115.68/95.12B. All five use one source-bound EBIT/defined-current-NWC/cash-PP&E method. Current tax accruals/mixed Other remain inside NWC by disclosed convention;355M FY2024 D&A population mismatch is retained as a qualification. Both missing bars are populated and source/runtime review passes for that scope. This is not exact unlevered cash or full financial clearance. Legacy CFO gaps and all FCFE/open broader matters remain traceable; company status OPEN.

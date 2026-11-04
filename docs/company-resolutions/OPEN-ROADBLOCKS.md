@@ -1,5 +1,11 @@
 # Apple, Meta and Alphabet — open FCFF/FCFE roadblocks
 
+## Apple current issue crosswalk — November4 ordered review
+
+The [latest four-stage execution](AAPL/remaining-issues-2026-11-04/README.md) records **A7's reported-tax allocation and uniform tax-inclusive historical NWC policy as adopted under the latest user approval**. It is no longer pending another policy approval. A1 remains a missing-interest limitation of legacy CFO history; the selected standardized FCFF already has all five values. D&A aggregate policy is adopted, while A5's exact expense-population reconciliation stays open.
+
+Current Apple API issues areA2/A3/A5/S1/S2/S3: financing Other/principal, D&A exact alignment, economic historical/forecast basis, explicit forward FCFE financing assumptions and equity/claim/award coverage. Original review IDs remain in `legacy_review_scope_items` and unchanged old records; stricter A4/A6 population questions remain qualifications within S1 rather than two more missing values in the selected FCFF consumer. The ordinary common-share source/date is selected, but award-adjusted denominator and complete equity bridge remain null. No old source or approval is overwritten and no broad company pass is granted.
+
 ## November 4 update — current Apple FCFF consumer
 
 [Operating-method adoption and independent audit](AAPL/operating-fcff-2026-11-04/README.md): A1's **current chart/API missing-FCFF effect is resolved** through a uniform five-year standardized EBIT method. FY2024/25 now115.68/95.12B. Missing gross interest remains a factual limitation only of the preserved legacy CFO method; it is not an input to the new consumer.

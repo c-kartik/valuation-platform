@@ -1,0 +1,10 @@
+test_fy2024_same_context_and_original_comparative_equality (__main__.DaPopulationReview.test_fy2024_same_context_and_original_comparative_equality) ... ok
+test_no_unsourced_or_unmatched_extra_addback (__main__.DaPopulationReview.test_no_unsourced_or_unmatched_extra_addback) ... ok
+test_policy_closed_is_not_exact_reconciliation_closed (__main__.DaPopulationReview.test_policy_closed_is_not_exact_reconciliation_closed) ... ok
+test_rounding_cannot_explain_2024_but_can_2025 (__main__.DaPopulationReview.test_rounding_cannot_explain_2024_but_can_2025) ... ok
+test_source_tamper_fails_closed (__main__.DaPopulationReview.test_source_tamper_fails_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.699s
+
+OK

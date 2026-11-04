@@ -1,0 +1,11 @@
+financing
+{"annual_financing_statements_reconciled": 5, "exact_full_fcfe_newly_cleared": 0, "primary_instance_source_pairs": 5, "provisional_fcfe_reproduced": 5, "reported_cfo_and_cash_ppe_rebound": 10, "runtime_values_changed": 0}
+
+da
+{"five_year_fcff_changes": 0, "later_comparative_primary_instance_points": 9, "original_and_later_da_compares_equal": 2, "original_cash_ppe_points_rebound": 5, "original_combined_da_points_rebound": 5, "synthetic_plugs_applied": 0}
+
+tax
+PASS: five tax schedules and three first-forecast bridges; no runtime or policy changes.
+
+equity
+PASS: dated Apple share/cash/debt source populations; missing claim/award values preserved.

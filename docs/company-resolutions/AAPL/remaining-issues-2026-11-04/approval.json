@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-04",
+  "ticker": "AAPL",
+  "user_request": "ok follow this plan step by step and implement this solution to resolve the issue. report back to me once it's successful.",
+  "referenced_plan": "Four-stage Apple remaining-issues plan immediately preceding this approval: financing/FCFE, D&A, historical versus forecast tax/working capital, and equity/share valuation; followed by independent review.",
+  "historical_scope": "FY2021–FY2025, selected Apple Inc. consolidated USGAAP annuals",
+  "valuation_anchor": "2025-09-27, conditional fiscal-end model using explicitly later-filed information; not current-date fair value",
+  "approved_treatments": [
+    "Replay known financing cash once and preserve unidentified Other/lease cash as missing; prepare a specific issuer evidence request without sending it.",
+    "Investigate D&A by date, asset and cash-flow population; retain the reported combined historical aggregate with its disclosed qualification rather than add a plug.",
+    "Preserve historical reported tax and all-year tax-inclusive aggregate NWC; separately review existing recurring forecast policy, explain differences and prohibit automatic history calibration.",
+    "Bind dated cash/debt/share/award evidence, select coherent point-in-time shares, review cash eligibility and claim/award overlap; never assume missing claims are zero.",
+    "Independently verify classifications, arithmetic, source lineage, before/after effects and actual API/UI output."
+  ],
+  "not_authorized_or_inferred": [
+    "Sending an investor-relations message",
+    "Creating undisclosed gross financing or lease cash amounts",
+    "A materiality waiver without a supported exposure bound",
+    "An automatic fully diluted denominator or zero-value award/other-claim assumption",
+    "Automatic source-era update, new financial anchor or current-market valuation",
+    "Company financial completion despite unresolved required evidence"
+  ],
+  "parent_company_status": "OPEN"
+}

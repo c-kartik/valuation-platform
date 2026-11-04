@@ -2,10 +2,12 @@ import {useEffect,useState} from 'react';
 import {failureMessage,request} from '../api';
 import {fixedUnit} from '../presentation';
 import {ExportData} from './ExportData';
+import {AppleResolution,checkAppleResolution} from './AppleResolution';
+import type {AppleResolutionData} from './AppleResolution';
 
 type Metric={amount_usd:string|null;status:string;scope:string;basis:string;cleared:boolean;source_urls:string[];operands?:Record<string,string>;qualifications?:string[];parent_common_amount_usd?:string|null;parent_common_status?:string;open_items:string[]};
 type Readiness={schema_version:'cashflow-consumer-readiness-v1';counts:{available_stated_convention:number;provisional_financing:number;missing_required_input:number;parent_common_fcfe_available:number};gates:{id:string;label:string;status:string;detail:string}[];financial_review_status:'OPEN';history_gap_disables_manual_forecast:false;amounts_changed:boolean;prior_clearance_flags_changed:false};
-export type CashFlowReview={schema_version:'pilot-company-cashflows-v1';ticker:string;status:'OPEN';review_passed:boolean;notice:string;unresolved_scope_items:string[];readiness?:Readiness;periods:{fiscal_year:number;annual_start:string;annual_end:string;accession:string;revenue_usd:string;reported_cash_fcf_usd:string;identified_net_borrowing_usd:string;fcff:Metric;fcfe:Metric}[]};
+export type CashFlowReview={schema_version:'pilot-company-cashflows-v1';ticker:string;status:'OPEN';review_passed:boolean;notice:string;unresolved_scope_items:string[];current_resolution?:AppleResolutionData;readiness?:Readiness;periods:{fiscal_year:number;annual_start:string;annual_end:string;accession:string;revenue_usd:string;reported_cash_fcf_usd:string;identified_net_borrowing_usd:string;fcff:Metric;fcfe:Metric}[]};
 const decimal=(value:unknown)=>typeof value==='string'&&/^-?\d+(?:\.\d+)?$/.test(value)&&Number.isFinite(Number(value));
 export function checkCashFlows(value:CashFlowReview,ticker:string){
  if(value?.schema_version!=='pilot-company-cashflows-v1'||value.ticker!==ticker||value.status!=='OPEN'||value.review_passed!==false||!Array.isArray(value.unresolved_scope_items)||!value.unresolved_scope_items.every(s=>typeof s==='string')||!Array.isArray(value.periods)||value.periods.length!==5)throw Error('Incompatible cash-flow review');
@@ -19,6 +21,7 @@ export function checkCashFlows(value:CashFlowReview,ticker:string){
   const available=value.periods.filter(p=>p.fcff.amount_usd!==null).length+(ticker==='GOOGL'?5:0);
   if(r.schema_version!=='cashflow-consumer-readiness-v1'||r.financial_review_status!=='OPEN'||r.history_gap_disables_manual_forecast!==false||r.amounts_changed!==value.periods.every(p=>p.fcff.basis==='STANDARDIZED_EBIT_CURRENT_NWC_CASH_PPE')||r.prior_clearance_flags_changed!==false||r.counts.available_stated_convention!==available||r.counts.provisional_financing!==(ticker==='GOOGL'?0:5)||r.counts.missing_required_input!==10-available-r.counts.provisional_financing||r.counts.parent_common_fcfe_available!==0||!Array.isArray(r.gates)||r.gates.map(g=>g.id).join(',')!=='history,parent_cash,comparison,forecast,parent_value,per_share'||r.gates.some(g=>typeof g.label!=='string'||typeof g.detail!=='string')||r.gates.map(g=>g.status).join(',')!=='SCOPED_AVAILABILITY,UNAVAILABLE,NOT_CLEARED,REVIEW_SEPARATELY,REVIEW_SEPARATELY,REVIEW_SEPARATELY')throw Error('Incompatible consumer readiness');
  }
+ if(value.current_resolution){if(ticker!=='AAPL')throw Error('Apple resolution attached to another issuer');checkAppleResolution(value.current_resolution);}
  return value;
 }
 const money=(value:string|null)=>value===null?'Unavailable':fixedUnit(value,'1000000000',2)+'B';
@@ -41,6 +44,7 @@ export function HistoricalCashFlows({ticker,active,load=request}:{ticker:string;
    {data.readiness&&<section aria-label="Separate availability and valuation checks"><h3>Availability and valuation checks</h3><p>{data.readiness.counts.available_stated_convention} historical calculations available under stated conventions · {data.readiness.counts.provisional_financing} provisional · {data.readiness.counts.missing_required_input} missing required inputs. Manual forecasts use their own inputs and validation.</p><dl>{data.readiness.gates.map(g=><div key={g.id}><dt>{g.label}</dt><dd>{g.detail}</dd></div>)}</dl></section>}
    <p>{data.notice}</p>{ticker==='AAPL'&&data.periods[0].fcff.basis==='STANDARDIZED_EBIT_CURRENT_NWC_CASH_PPE'&&<p>All five Apple FCFF observations use the same standardized method. The previous CFO-based series and its FY2024–25 gaps are retained in the export. Current tax accruals and mixed Other current balances are included by convention; these are not separately reported FCFF figures.</p>}<p>Broader review remains open: {data.unresolved_scope_items.join(', ')}. Annual amount checks do not clear valuation, ownership or per-share inputs.</p>
    <details><summary>Calculation inputs, filing sources and open items</summary>{data.periods.map(p=><section key={p.fiscal_year}><h3>FY{p.fiscal_year}</h3><p>CFO less net cash PP&amp;E: {money(p.reported_cash_fcf_usd)}. Identified net borrowing: {money(p.identified_net_borrowing_usd)}.</p>{p.fcff.operands&&<p>FCFF inputs (USD): {Object.entries(p.fcff.operands).map(([k,v])=>`${k}: ${v}`).join('; ')}.</p>}{p.fcff.qualifications?.map(q=><p key={q}>{q}</p>)}<p>FCFF basis: {p.fcff.basis}. FCFE scope: {p.fcfe.scope}. Open items: {[...p.fcff.open_items,...p.fcfe.open_items].join(', ')}.</p>{[...new Set([...p.fcff.source_urls,...p.fcfe.source_urls])].map(url=><p key={url}><a href={url} target="_blank" rel="noreferrer">SEC filing · {url.split('/').at(-1)}</a></p>)}</section>)}</details>
+   {data.current_resolution&&<AppleResolution data={data.current_resolution}/>}
    <ExportData value={data} name={ticker+'-five-year-fcff-fcfe-review'}/>
   </>}
  </section>;

@@ -1,0 +1,9 @@
+test_matching_anchor_population_and_issued_control (__main__.EquitySourceReviewTests.test_matching_anchor_population_and_issued_control) ... ok
+test_missing_claims_and_awards_are_not_zero_or_price (__main__.EquitySourceReviewTests.test_missing_claims_and_awards_are_not_zero_or_price) ... ok
+test_nonoverlapping_parent_sums_and_market_debt_alternative (__main__.EquitySourceReviewTests.test_nonoverlapping_parent_sums_and_market_debt_alternative) ... ok
+test_wrong_date_and_eps_concept_cannot_supply_denominator (__main__.EquitySourceReviewTests.test_wrong_date_and_eps_concept_cannot_supply_denominator) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.961s
+
+OK

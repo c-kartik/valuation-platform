@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "viewports": [
+    {
+      "name": "desktop",
+      "pageWidth": 1440,
+      "viewportWidth": 1440,
+      "finalValidation": true,
+      "companyStatus": "Apple review remains open"
+    },
+    {
+      "name": "mobile",
+      "pageWidth": 390,
+      "viewportWidth": 390,
+      "finalValidation": true,
+      "companyStatus": "Apple review remains open"
+    }
+  ]
+}

@@ -1,5 +1,11 @@
 # Financial Methodology
 
+## Apple ordered policy and source review — November4
+
+The [approved remaining-issue run](company-resolutions/AAPL/remaining-issues-2026-11-04/README.md) records the all-year tax-inclusive standardized historical NWC policy and retains separate explicit forward18%→20%/terminal20% tax assumptions. Three source-to-first-forecast component bridges explain arithmetic, not full economic equivalence. Base uses5% incremental-sales WC; Bear/Bull retain Base WC/revenue ratios under the existing scenario convention. No cross-basis CAGR/calibration is enabled.
+
+The date-matched common-share population is selected as source support, separate from awards. Debt carrying/principal/fair value alternatives are not summed. Gross cash is not automatically eligible excess cash. Unidentified financing, D&A exact reconciliation and non-overlap claims/awards stay open; no new FCFE, equity or share-value amount is certified by policy approval or source preparation.
+
 ## Apple standardized historical FCFF — November 4, 2026
 
 The [versioned adoption](company-resolutions/AAPL/operating-fcff-2026-11-04/README.md) uses EBIT×(1−reported provision/pretax)+reported combined D&A−cash PP&E−Δdefined current NWC for every FY2021–25 period. NWC removes cash/current securities, interest-bearing current debt and both current lease liabilities from aggregate current assets/liabilities; current income-tax accruals and mixed Other stay included consistently. This materially refines the original separate-tax preference because early-year tax splits are undisclosed. FY2024+17.782B/FY2025−13.585B current-tax movements affect results. No missing tax split is zero-filled.

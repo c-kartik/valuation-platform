@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-04",
+  "implementation_verdict": "PASS_QUALIFIED_IMPLEMENTATION",
+  "financial_verdict": "NOT_READY_FULL_APPLE_FINANCIAL_CLEARANCE",
+  "stage_execution_order": [
+    "financing",
+    "da",
+    "tax",
+    "equity"
+  ],
+  "independent_source_audit": {
+    "distinct_primary_instance_fact_bindings": 146,
+    "retained_source_body_hashes": 12,
+    "financing_statements": 5,
+    "provisional_fcfe_calculations": 5,
+    "tax_schedules": 5,
+    "historical_first_forecast_bridges": 3,
+    "verdict": "PASS_WITH_DISCLOSED_SOURCE_LIMITS"
+  },
+  "test_results": {
+    "financing_stage": 4,
+    "da_stage": 5,
+    "tax_stage": 5,
+    "equity_stage": 4,
+    "focused_original_and_new_python_api": 23,
+    "independent_focused_subset": 17,
+    "full_api": 71,
+    "full_frontend": 291,
+    "frontend_files": 26,
+    "counts_overlap_do_not_sum": true,
+    "production_frontend_build": "PASS"
+  },
+  "sealed_runtime": "PASS final fresh interpreter, startup, health, pinned source/decision data and live API",
+  "browser": "PASS reviewed desktop/mobile, source values, adopted policy, legacy review preserved,5 provisional FCFE, unchanged historical FCFF, no JavaScript errors",
+  "value_changes": {
+    "historical_fcff_usd": "0",
+    "provisional_fcfe_usd": "0",
+    "forecast_policy_changed": false,
+    "three_scenario_ev_differences": "0",
+    "verified_fair_value_per_share_usd": null
+  },
+  "repairs_during_validation": [
+    "A decision-text spacing update regenerated resource/code/bundle pins; an API test process caching the prior pin failed readiness after the update. A new process against stable final files passed all71tests. Initial and final receipts are retained.",
+    "A test filename collision was caught in final diff; original8Apple resolution tests restored byte-for-byte and4new progress tests moved to a separate file. The combined23test suite passed."
+  ],
+  "external_issuer_request_sent": false,
+  "public_deployment": false,
+  "remaining_financial_items": [
+    "Consolidated Other financing and actual finance-lease principal/containment",
+    "D&A exact expense-population reconciliation",
+    "Economic history/forecast alignment and explicit forward FCFE financing",
+    "Cash eligibility, complete claims and non-overlap existing-award treatment"
+  ],
+  "company_status": "OPEN",
+  "report_visual_review": {
+    "desktop": "PASS",
+    "mobile": "PASS responsive stacked tables",
+    "screenshots_inspected": true,
+    "page_horizontal_overflow": false
+  }
+}

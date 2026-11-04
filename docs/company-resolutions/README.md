@@ -1,5 +1,9 @@
 # Company cash-flow resolutions
 
+## Apple ordered remaining-issue run — November4
+
+[New Apple report](AAPL/remaining-issues-2026-11-04/report.html) distinguishes four executed treatments from unresolved financial evidence. Tax/NWC policy adoption and a coherent dated share-source population are recorded; financing/expense/claim/award completeness remains OPEN. Source, test, fresh-runtime and UI checks do not turn provisional FCFE into verified cash. Existing three-company amounts and forward policies are unchanged.
+
 ## Current Apple historical consumer — November 4
 
 The [five-year operating-method adoption](AAPL/operating-fcff-2026-11-04/report.html) resolves the current Apple FY2024/25 FCFF display gaps under an explicitly qualified standardized methodology, consistently replacing all five years. Current three-company selected-method counts:15FCFF+5consolidated FCFE available under stated conventions;10provisional FCFE;0selected-method FCFF gaps. The old18/10/2 counts and17strict failed cells below describe earlier scopes/bases and remain preserved. Tax/Other conventions,355M D&A qualification and legacy CFO nulls are explicit. Overall company reviews remain OPEN.

@@ -94,7 +94,8 @@
     "src/valuation_platform/valuation/fcfe.py",
     "src/valuation_platform/review/discount_inputs.py",
     "src/valuation_platform/review/apple_operating_history.py",
-    "src/valuation_platform/review/operating_fcff.py"
+    "src/valuation_platform/review/operating_fcff.py",
+    "src/valuation_platform/review/apple_resolution.py"
   ],
   "resources": {
     "data/investor-context/2026-10-29/aapl.json": "b11526adfa6d112130211caa9b590ebd7b713a92edb690c70914eb19aef8ffbe",
@@ -141,6 +142,7 @@
     "data/preload/aapl-v1/sources/treasury-2026-10.html": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
     "docs/company-resolutions/META/adopted-history.json": "f12fa6a2a988405f2c7129a73c1a9a850f370139409222c66561c0c986d536a6",
     "docs/company-resolutions/implementation-2026-11-03/platform-cashflows.json": "9b2a9d775745e9d4bd08efe60d49619c24f632b16a28fce5fcba014fe1f55d86",
-    "docs/company-resolutions/AAPL/operating-fcff-2026-11-04/adopted-history.json": "ccdc7beda9546d0e160e22eb2e42acb68101c544aa2400edc82a68ab3d479cb8"
+    "docs/company-resolutions/AAPL/operating-fcff-2026-11-04/adopted-history.json": "ccdc7beda9546d0e160e22eb2e42acb68101c544aa2400edc82a68ab3d479cb8",
+    "docs/company-resolutions/AAPL/remaining-issues-2026-11-04/platform-resolution.json": "cc4d491bbc9dc569780f7b08a0fec26e5cade0ce4c2dc0ee4fb65e9e68e24539"
   }
 }

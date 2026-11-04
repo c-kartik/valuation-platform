@@ -1,0 +1,17 @@
+UNSENT DRAFT — no message has been sent to Apple.
+
+Subject: Apple Inc. FY2021–FY2025 consolidated financing cash-flow disclosures
+
+We are reconciling historical free cash flow to equity from Apple Inc.'s consolidated US GAAP filings for the fiscal years ended September 25, 2021; September 24, 2022; September 30, 2023; September 28, 2024; and September 27, 2025.
+
+Could you identify public disclosures or provide clarification on these specific points?
+
+1. What transactions comprise the original annual cash-flow statement's financing “Other” amounts of $(129)M, $(160)M, $(581)M, $(361)M and $(111)M respectively? Please distinguish any borrowing proceeds, repayments, financing fees, lease principal, equity-related cash and other components, including gross offsetting amounts if these are net captions.
+
+2. What actual cash payments of finance-lease principal are included in each of those consolidated fiscal years? In which cash-flow statement caption are they recorded? Are any included in term-debt repayments or the Other amounts above? We are asking for historical cash principal, excluding lease interest, noncash ROU additions and operating-lease cash.
+
+3. If annual principal is not separately available, is there a public complete finance-lease liability roll-forward identifying cash principal, new noncash liabilities, interest, modifications, terminations, foreign exchange and other changes for those years?
+
+We have preserved the known FY2021 presentation bridge: original Other $(129)M plus $1,105M of common-stock issuance proceeds equals $976M in the later comparative. Our request concerns the original $(129)M's composition, not that resolved presentation change. We are not treating year-end liabilities or prospective maturities as realized cash principal.
+
+Please specify the consolidated reporting perimeter, fiscal year, units and source references for any amounts. We would appreciate links to the relevant public disclosures where possible.

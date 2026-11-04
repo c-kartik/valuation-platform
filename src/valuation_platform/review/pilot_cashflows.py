@@ -73,5 +73,9 @@ def read_cashflows(root, ticker):
                     'Current tax accruals included uniformly; tax-excluded historical cash flow is not established.']}
         company['active_fcff_method_adoption'] = 'AAPL_OPERATING_2026_11_04'
         company['notice'] = NOTICE
+        from .apple_resolution import read_resolution
+        company['current_resolution'] = read_resolution(root)
+        company['legacy_review_scope_items'] = company['unresolved_scope_items']
+        company['unresolved_scope_items'] = company['current_resolution']['current_open_issue_ids']
     company['readiness'] = readiness(company)
     return company

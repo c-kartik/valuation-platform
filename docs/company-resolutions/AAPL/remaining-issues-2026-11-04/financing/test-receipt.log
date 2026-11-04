@@ -1,0 +1,9 @@
+test_duplicate_and_missing_rows_fail_closed (test_replay.FinancingReplayTests.test_duplicate_and_missing_rows_fail_closed) ... ok
+test_request_not_sent_and_reclassification_exact (test_replay.FinancingReplayTests.test_request_not_sent_and_reclassification_exact) ... ok
+test_source_bound_exact_results (test_replay.FinancingReplayTests.test_source_bound_exact_results) ... ok
+test_unknowns_never_zero_or_verified (test_replay.FinancingReplayTests.test_unknowns_never_zero_or_verified) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 4.676s
+
+OK

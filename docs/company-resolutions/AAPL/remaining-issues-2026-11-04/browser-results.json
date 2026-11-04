@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "historical_fcff_unchanged": [
+    "93405319832.977739522191800891884219876015273746188",
+    "108443877097.97402248474009890598893394792742416228",
+    "99843836665.611591756348034043750439614545966096926",
+    "115679805288.09167105316435194558043487063206057416",
+    "95123891892.502768799584115001243134507153674027530"
+  ],
+  "fcfe_provisional_rows": 5,
+  "dated_source_values_visible": true,
+  "adopted_tax_policy_visible": true,
+  "company_complete": false,
+  "fair_value_per_share_usd": null,
+  "legacy_scope_preserved": true,
+  "javascript_errors": []
+}

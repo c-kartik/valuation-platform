@@ -9,6 +9,7 @@ import fixture from '../test-fixtures/fcfe-result.json';
 import projection from '../../../docs/company-resolutions/implementation-2026-11-03/platform-cashflows.json';
 import readiness from '../test-fixtures/cashflow-readiness.json';
 import appleOperating from '../test-fixtures/apple-operating-cashflows.json';
+import resolution from '../../../docs/company-resolutions/AAPL/remaining-issues-2026-11-04/platform-resolution.json';
 afterEach(()=>vi.unstubAllGlobals());
 it('shows all five standardized Apple FCFF values with explicit method and preserves FCFE qualification',async()=>{
  const load=vi.fn(async()=>structuredClone(appleOperating)) as unknown as typeof request;
@@ -87,4 +88,21 @@ it('accepts authoritative FCFE and rejects fake per-share certification at the t
  await expect(request('/api/v1/fcfe/run',fixture.submitted_inputs)).resolves.toHaveProperty('equity_value_usd');
  const bad={...fixture,value_per_share:'123'};vi.stubGlobal('fetch',vi.fn(async()=>new Response(JSON.stringify(bad),{status:200})));
  await expect(request('/api/v1/fcfe/run',{})).rejects.toHaveProperty('code','service_unavailable');
+});
+
+it('exposes source-bound Apple decisions without clearing FCFE or per-share output',async()=>{
+ const d={...structuredClone(appleOperating),current_resolution:structuredClone(resolution)} as CashFlowReview;
+ const load=vi.fn(async()=>d) as unknown as typeof request;
+ render(<HistoricalCashFlows ticker="AAPL" active load={load}/>);
+ await screen.findByText('Apple review decisions and remaining evidence');
+ fireEvent.click(screen.getByText('Apple review decisions and remaining evidence'));
+ expect(screen.getByText(/Gross cash and marketable securities: 132.42B/)).toBeTruthy();
+ expect(screen.getByText(/Term-debt disclosed fair value: 80.40B/)).toBeTruthy();
+ expect(screen.getAllByText('Provisional · financing classification open')).toHaveLength(5);
+ expect(screen.getByText(/Company review remains open. The decisions below/)).toBeTruthy();
+ expect(checkCashFlows(d,'AAPL')).toBe(d);
+ const bad=structuredClone(d);(bad.current_resolution as unknown as {company_complete:boolean}).company_complete=true;
+ expect(()=>checkCashFlows(bad,'AAPL')).toThrow('Incompatible Apple resolution');
+ const wrong=structuredClone(d);wrong.current_resolution!.anchor_support.fair_value_per_share_usd='175' as unknown as null;
+ expect(()=>checkCashFlows(wrong,'AAPL')).toThrow('Incompatible Apple resolution');
 });

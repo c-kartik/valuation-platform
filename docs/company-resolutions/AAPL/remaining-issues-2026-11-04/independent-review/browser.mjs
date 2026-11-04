@@ -1,0 +1,36 @@
+import {chromium} from '/Users/kc/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+import fs from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+const here=path.dirname(fileURLToPath(import.meta.url));
+const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
+const page=await browser.newPage({viewport:{width:1440,height:1200}});
+const errors=[];page.on('pageerror',e=>errors.push(String(e)));
+await page.goto('http://127.0.0.1:5193/workspace/');
+await page.locator('#canvas-company').selectOption('aapl-fy2025');
+await page.getByRole('link',{name:'Cash flows',exact:true}).click();
+await page.getByText('Apple review decisions and remaining evidence',{exact:true}).click();
+await page.getByText(/Gross cash and marketable securities: 132.42B/).waitFor();
+await page.waitForFunction(()=>document.querySelector('.cv-ev')?.textContent?.startsWith('$'),{},{timeout:60000});
+const ev=await page.locator('.cv-ev').innerText();
+if(ev!=='$2.58tn')throw Error('Existing displayed Base EV changed: '+ev);
+const panel=page.getByLabel('Apple resolution decisions',{exact:true});
+const text=await panel.innerText();
+for(const required of ['Company review remains open','Additional issuer evidence needed','reconciliation open','132.42B','98.66B','80.40B','1.23B','14.77326B','not automatically eligible excess cash','fair value per share is not published']){
+ if(!text.includes(required))throw Error('Missing live decision qualification: '+required);
+}
+const provisional=page.getByText('Provisional · financing classification open',{exact:true});
+if(await provisional.count()!==5)throw Error('All five FCFEs must remain provisional');
+const table=page.getByRole('table',{name:/Five-year cash flows/});
+const body=await page.locator('#cash-flow-history').innerText();
+for(const required of ['115.68B','95.12B'])if(!body.includes(required))throw Error('Prior FCFF changed or absent '+required);
+await panel.scrollIntoViewIfNeeded();
+await page.screenshot({path:path.join(here,'live-platform-desktop.png'),fullPage:true});
+await page.setViewportSize({width:390,height:844});
+await panel.scrollIntoViewIfNeeded();
+await page.screenshot({path:path.join(here,'live-platform-mobile.png'),fullPage:true});
+const result={date:'2026-11-04',live_url:'http://127.0.0.1:5193/workspace/',company:'AAPL',decision_panel_qualified:true,provisional_fcfe_rows:await provisional.count(),existing_fy2024_fy2025_fcff_preserved:true,displayed_base_ev:ev,page_errors:errors};
+if(errors.length)throw Error(errors.join('\n'));
+await fs.writeFile(path.join(here,'browser-results.json'),JSON.stringify(result,null,2)+'\n');
+await browser.close();
+console.log(JSON.stringify(result));

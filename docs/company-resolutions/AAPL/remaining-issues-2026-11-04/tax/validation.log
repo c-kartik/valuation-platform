@@ -1,0 +1,11 @@
+PASS: five tax schedules and three first-forecast bridges; no runtime or policy changes.
+test_accounting_provision_and_cash_taxes_stay_distinct (__main__.TaxWorkpaperTests.test_accounting_provision_and_cash_taxes_stay_distinct) ... ok
+test_all_scenario_bridges_and_preserved_policy (__main__.TaxWorkpaperTests.test_all_scenario_bridges_and_preserved_policy) ... ok
+test_bridge_rejects_a_cash_plug (__main__.TaxWorkpaperTests.test_bridge_rejects_a_cash_plug) ... ok
+test_source_bound_workpaper_replays_without_mutation (__main__.TaxWorkpaperTests.test_source_bound_workpaper_replays_without_mutation) ... ok
+test_unknown_tax_never_becomes_zero_and_diagnostic_not_adopted (__main__.TaxWorkpaperTests.test_unknown_tax_never_becomes_zero_and_diagnostic_not_adopted) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.294s
+
+OK

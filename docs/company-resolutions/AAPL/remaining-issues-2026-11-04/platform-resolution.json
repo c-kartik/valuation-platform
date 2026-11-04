@@ -1,0 +1,87 @@
+{
+  "anchor_support": {
+    "as_of": "2025-09-27",
+    "cash_and_securities_usd": "132420000000",
+    "dated_common_shares": "14773260000",
+    "fair_value_per_share_usd": null,
+    "finance_lease_liability_usd": "1230000000",
+    "named_debt_carrying_usd": "98657000000",
+    "term_debt_fair_value_usd": "80400000000"
+  },
+  "approval_record": "docs/company-resolutions/AAPL/remaining-issues-2026-11-04/approval.json",
+  "company_complete": false,
+  "company_status": "OPEN",
+  "current_open_issue_ids": [
+    "A2",
+    "A3",
+    "A5",
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "date": "2026-11-04",
+  "policy_outcomes": {
+    "A1": "CURRENT_SELECTED_FCFF_GAP_RESOLVED_LEGACY_INTEREST_STILL_MISSING",
+    "A7": "ADOPTED_REPORTED_ETR_ALLOCATION_NOT_OBSERVED_OPERATING_CASH_TAX",
+    "dated_common_share_population": "DATE_MATCHED_SOURCE_SELECTED_BEFORE_AWARD_ADJUSTMENT",
+    "historical_current_tax_nwc": "ADOPTED_UNIFORM_STANDARDIZED_POPULATION"
+  },
+  "readiness": {
+    "automatic_history_calibration": false,
+    "complete_equity_bridge": false,
+    "exact_expense_alignment": false,
+    "exact_fcfe": false,
+    "fair_value_per_share": false
+  },
+  "remaining_evidence": [
+    "Apple consolidated Other-financing components and actual finance-lease principal cash with containing captions.",
+    "Supported D&A expense-population reconciliation for the FY2024 note difference.",
+    "Cash eligibility, claims/forecast overlap and existing-award valuation or denominator treatment before verified value per share.",
+    "History-to-forecast economic investment/tax/expense alignment; explicit forward financing assumptions for FCFE."
+  ],
+  "report": "docs/company-resolutions/AAPL/remaining-issues-2026-11-04/report.html",
+  "schema_version": "apple-resolution-progress-v1",
+  "share_population": {
+    "as_of": "2025-09-27",
+    "award_adjusted_shares": null,
+    "concept": "CommonStockSharesOutstanding",
+    "shares": "14773260000"
+  },
+  "source_urls": [
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm"
+  ],
+  "stage_workpaper_sha256": {
+    "da": "a026ec528b525ec5024886089c5e6ee58dc94e1605d30b6158966864e724eb31",
+    "equity": "5a01b1aac5e710e760659b53efb72ea0842495cf38874afc93822feb41374d42",
+    "financing": "bcfc82690c2411203fd963aa362ecb1fcf190e393ec7b2b12ec5647561448dd0",
+    "tax": "7dd1e8106e1a950a7e324c56f86b87a23331b17672b158aa8791e4452b1f171d"
+  },
+  "stages": [
+    {
+      "detail": "Five financing statements reconcile. Other financing and actual finance-lease principal/containment remain unidentified. FCFE stays provisional; an issuer evidence request is prepared and unsent.",
+      "id": "financing",
+      "label": "Historical FCFE financing",
+      "outcome": "EVIDENCE_BLOCKED"
+    },
+    {
+      "detail": "Reported combined D&A is retained with no plug. The FY2024 $355m note-versus-cash-statement difference is not explained by rounding; exact expense-population alignment remains open.",
+      "id": "da",
+      "label": "Depreciation and amortization",
+      "outcome": "AGGREGATE_ADOPTED_RECONCILIATION_OPEN"
+    },
+    {
+      "detail": "The all-year tax-inclusive historical NWC convention is recorded under the approved plan. Forward tax remains an explicit 18% to 20% assumption, terminal 20%, with separate incremental operating WC. Exact operating cash taxes and automatic historical calibration are not certified.",
+      "id": "tax",
+      "label": "Tax and working capital",
+      "outcome": "POLICY_ADOPTED"
+    },
+    {
+      "detail": "The 2025-09-27 common-share population is selected as dated support, with separate cash, debt fair/carrying values and lease observations. Eligible cash, complete claims and non-overlapping award treatment remain unresolved; fair value per share is not published.",
+      "id": "equity",
+      "label": "Equity and dated shares",
+      "outcome": "PARTIAL_SOURCE_BOUND"
+    }
+  ],
+  "ticker": "AAPL"
+}

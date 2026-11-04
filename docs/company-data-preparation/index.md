@@ -1,5 +1,9 @@
 # Company data preparation register
 
+## Apple remaining-issue treatments — November4
+
+[Ordered Apple execution](../company-resolutions/AAPL/remaining-issues-2026-11-04/README.md) records approved tax/NWC policy, source-bound dated share/debt support and explicit financing/D&A/per-share evidence gaps. New API/UI details preserve provisional amounts and separate policy adoption from source clearance. Existing source packages, preparation/sufficiency statuses and all other issuers are unchanged; company status remains OPEN.
+
 ## Apple five-year standardized historical adoption — November 4
 
 [Apple decision and replay](../company-resolutions/AAPL/operating-fcff-2026-11-04/README.md) now supplies all five selected historical FCFF values via an explicitly qualified EBIT/current-NWC/cash-PP&E method, including FY2024/25. Tax-inclusive aggregate working capital is a disclosed refinement; source inputs and conventions remain distinct. Legacy CFO gaps, FCFE and broader financial review are preserved. No source package, preparation/sufficiency status, forecast policy or wider-universe scope changes.

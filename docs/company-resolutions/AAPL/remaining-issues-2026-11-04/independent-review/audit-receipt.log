@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-04",
+  "audit_verdict": "READY_WITH_CAVEATS_FOR_SOURCE_REVIEW; NOT_READY_FOR_COMPLETE_APPLE_FCFE_OR_PER_SHARE_CERTIFICATION",
+  "independent_primary_instance_fact_bindings": 146,
+  "unique_hashed_source_bodies": 12,
+  "financing_statements_reconciled": 5,
+  "provisional_fcfe_reproduced": [
+    {
+      "year": 2021,
+      "fcfe_usd": "105618000000",
+      "exact_fcfe": false
+    },
+    {
+      "year": 2022,
+      "fcfe_usd": "111320000000",
+      "exact_fcfe": false
+    },
+    {
+      "year": 2023,
+      "fcfe_usd": "89683000000",
+      "exact_fcfe": false
+    },
+    {
+      "year": 2024,
+      "fcfe_usd": "102809000000",
+      "exact_fcfe": false
+    },
+    {
+      "year": 2025,
+      "fcfe_usd": "90284000000",
+      "exact_fcfe": false
+    }
+  ],
+  "annual_tax_component_schedules_reconciled": 5,
+  "forecast_component_bridges_recomputed": 3,
+  "new_financial_values_adopted": 0,
+  "three_existing_apple_scenario_enterprise_values_unchanged": true,
+  "fresh_sealed_runtime_checked": true,
+  "live_api_checked": true,
+  "company_complete": false,
+  "unresolved_evidence": [
+    "Other financing and actual finance-lease principal/containment",
+    "FY2024 D&A exact expense reconciliation",
+    "Cash eligibility, complete claims, non-overlapping existing awards",
+    "Economic history-to-forecast alignment and explicit forward FCFE financing"
+  ],
+  "scope_limitation": "Verifies retained-source bindings and implementation controls. No issuer response obtained, no exact cash-tax inference, no PM valuation/price recommendation, and no whole-company clearance."
+}
