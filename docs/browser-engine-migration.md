@@ -1,8 +1,8 @@
 # Parallel browser valuation engine
 
-November 5, 2026, Asia/Dubai. Status: local implementation and validation complete
-within the recorded checks; external publication and actual phone-hosted review
-remain OPEN. The user's controlling instruction is to preserve Python unchanged
+Updated November 6, 2026, Asia/Dubai. Status: local implementation, validation and
+authorized production publication complete within the recorded checks. Actual
+user phone acceptance remains pending. The controlling instruction preserves Python unchanged
 while building a JavaScript alternative, retaining the option to switch later.
 
 The user subsequently confirmed the intended ongoing architecture: keep data
@@ -18,6 +18,16 @@ or fallback to Python. Python execution is an explicit opt-in; its source and
 manual preparation workflow remain unchanged.
 
 ## Preserved boundaries
+
+Publication update: on November 6 the user explicitly authorized deploying to the
+existing website. https://kartikchaturvedi.com/valuation/ is now published via
+portfolio commit `ef09ea0`, Netlify deploy `6aece3dfa3a978959a4ec529`, site ID
+`4439ee14-d894-45b4-84a9-be3ef68eb870`. This supersedes earlier publication/access
+blockers below. Existing `main` auto-publishing was verified before the push.
+The release serves only `public/`, with browser calculations and no backend.
+All three live Base FCFF/FCFE pairs match local checks. Search works live;
+29 non-HTML files match release hashes; HTML uses existing Pretty URLs processing.
+Rollback deployment: `6ab52e24d57aeb8a2cc3ee7d`. No GCP or Python changes.
 
 - No existing Python file was edited. `scripts/browser-migration/python-source-baseline.json`
   pins all 396 tracked Python files; `verify-assets.mjs` checks each byte digest.

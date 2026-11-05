@@ -1,5 +1,28 @@
 # Project Status
 
+## Production browser deployment — November 6, 2026
+
+The user explicitly authorized deployment to the existing portfolio. The
+JavaScript platform is published at https://kartikchaturvedi.com/valuation/ through
+the existing Netlify/GitHub integration, portfolio commit `ef09ea0`, deploy
+`6aece3dfa3a978959a4ec529`. Netlify confirms Published. The portfolio navigation
+and calculator were released together. Only the allowlisted `public/` directory
+is served; no Python/backend functions, credentials or release receipts ship.
+
+Live browser checks reproduce AAPL FCFF/FCFE 175.46/161.00, META 374.70/370.36
+and GOOGL 125.91/124.04 USD/share under the existing qualified Base contracts.
+Search suggestions, incremental filtering and company switching work. No browser
+console errors were observed. All 29 non-HTML public assets match release hashes;
+eight HTML pages serve successfully with existing Netlify Pretty URLs processing.
+Missing assets, API routes and private metadata paths return 404. The production
+homepage has no review-only noindex header. Python hashes remain unchanged.
+
+Previous production deploy `6ab52e24d57aeb8a2cc3ee7d` is available for rollback.
+Netlify automatically publishes portfolio `main`; future pushes must include a
+validated, matching application/data package. Existing Python/GCP resources were
+not changed or retired. External availability is verified; actual user iPhone
+testing remains user acceptance, not a claim established by viewport emulation.
+
 ## Company search — November 5, 2026
 
 The main workspace company selector is now a searchable combobox. Focusing or
