@@ -5,6 +5,13 @@ within the recorded checks; external publication and actual phone-hosted review
 remain OPEN. The user's controlling instruction is to preserve Python unchanged
 while building a JavaScript alternative, retaining the option to switch later.
 
+The user subsequently confirmed the intended ongoing architecture: keep data
+retrieval/preparation in the unchanged Python pipeline and trigger it manually
+on the laptop; export reviewed static data for the browser JavaScript engine.
+A Node.js rewrite of SEC acquisition is not required. Neither website valuation
+calculations nor this refresh workflow requires a GCP backend. Existing GCP
+resources are not retired by this decision alone.
+
 ## Preserved boundaries
 
 - No existing Python file was edited. `scripts/browser-migration/python-source-baseline.json`
@@ -31,7 +38,7 @@ while building a JavaScript alternative, retaining the option to switch later.
 | 8. Portfolio assembly | Static portfolio plus `/valuation/`, legacy calculator, data and worker assets; route/hash/MIME checks; no API/functions. |
 | 9. Hosted review | Prepared locally; external Netlify draft is pending existing-account access and verified site/protection settings. |
 | 10. Release workflow | Documented build, integrity, test, assembly, review, release and rollback; live publication pending step 9. |
-| 11. Python data migration | Superseded by user's preservation instruction: keep acquisition/preparation untouched; Node tools export a manually refreshed read-only snapshot from the existing API. No parallel SEC acquisition implementation claimed. |
+| 11. Python data migration | Not required under the confirmed architecture: retain Python acquisition/preparation and run it manually on the laptop; export reviewed static datasets to the JavaScript site. |
 | 12. GCP retirement | Superseded by preservation/switchback requirement: retain existing cloud resources; no deletion or cost-elimination claim. |
 
 ## Choosing execution

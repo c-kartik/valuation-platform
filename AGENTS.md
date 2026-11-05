@@ -6,6 +6,9 @@ The user authorizes a parallel JavaScript/TypeScript valuation engine and static
 portfolio integration, with the existing Python pipeline left untouched and
 available for switching back. Do not replace Python acquisition/normalization,
 change its source or financial policies, or retire GCP under this migration.
+The user explicitly approves keeping SEC/data refresh in Python permanently,
+run manually on the laptop. Export reviewed data to the static JavaScript site;
+no Node.js rewrite of that pipeline or hosted refresh service is required.
 The ordinary frontend build retains Python/API execution; `build:browser` fixes
 execution to the browser without an automatic backend fallback. See
 `docs/browser-engine-migration.md` for parity evidence, static dataset refresh,

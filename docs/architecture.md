@@ -2,6 +2,11 @@
 
 ## Parallel browser execution — November 5, 2026
 
+Confirmed refresh workflow: the existing Python acquisition/preparation pipeline
+runs manually on the laptop; reviewed datasets are exported and published with
+the static website. It remains Python permanently unless separately requested.
+No GCP-hosted data refresh or Node.js replacement pipeline is required.
+
 `frontend/src/browser-engine/` implements the existing operating, terminal,
 equity, FCFE, analyst, scenario, sensitivity and exact-certified reverse functions
 in TypeScript using isolated decimal.js constructors (50-digit HALF_EVEN; solver
