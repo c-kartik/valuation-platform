@@ -34,3 +34,4 @@ firebase-debug.log
 # Recreated cloud research copies and local task state
 .cloud/
 frontend/dist-browser/
+frontend/dist-python/

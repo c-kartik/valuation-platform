@@ -2,7 +2,8 @@
 
 The [parallel browser engine](docs/browser-engine-migration.md) runs the existing
 valuation workspace on-device from prepared static company data. The original
-Python pipeline and API remain intact and are the default development path.
+Python pipeline and API remain intact. JavaScript is the default development
+and build path; `dev:python` and `build:python` explicitly select the retained API.
 `npm run build:browser` in `frontend/` prepares an optional backend-free build for
 the portfolio's `/valuation/` route. Publishing to the existing Netlify account
 remains pending account access; this does not switch the live website.

@@ -6,11 +6,13 @@
   "engines": { "node": ">=22.12.0" },
   "scripts": {
     "dev": "vite",
+    "dev:python": "VALUATION_ENGINE=python vite --port 5197",
     "build": "tsc --noEmit && vite build",
+    "build:python": "tsc --noEmit && VALUATION_ENGINE=python vite build --outDir=dist-python",
     "build:browser": "tsc --noEmit && VALUATION_ENGINE=browser vite build --base=/valuation/ --outDir=dist-browser",
     "dev:browser": "VALUATION_ENGINE=browser vite --port 5196",
-    "test:browser": "vitest run src/browser-engine",
-    "test": "vitest run",
+    "test:browser": "VALUATION_ENGINE=browser vitest run src/browser-engine",
+    "test": "VALUATION_ENGINE=python vitest run",
     "dev:prototype": "vite --config vite.prototype.config.ts",
     "build:prototype": "tsc --noEmit && vite build --config vite.prototype.config.ts"
   },

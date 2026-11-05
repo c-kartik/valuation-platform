@@ -1,5 +1,20 @@
 # Project Status
 
+## Default JavaScript execution verified — November 5, 2026
+
+Normal `npm run dev` and `npm run build` now use the on-device JavaScript engine
+and verified static datasets. The main local workspace at5195 uses JavaScript
+without an API proxy. Explicit `dev:python`/`build:python` preserve the alternative;
+all396 existing Python files and approved data remain unchanged.
+
+142 browser-engine checks pass, including128 full-output Python reference cases,
+and the full451-test frontend suite passes. Default JavaScript and opt-in Python
+builds pass. Live main-workspace checks reproduce all three accepted Base share
+pairs and their DCF outputs. These are implementation checks under the existing
+qualified financial contracts; no new financial convention or current-date target
+is approved. SEC refresh remains a manual laptop/Python workflow. Netlify
+publication is still pending account access; no live site or GCP change.
+
 ## Parallel JavaScript engine — November 5, 2026
 
 The browser-only valuation engine and static `/valuation/` portfolio artifact are

@@ -9,8 +9,10 @@ change its source or financial policies, or retire GCP under this migration.
 The user explicitly approves keeping SEC/data refresh in Python permanently,
 run manually on the laptop. Export reviewed data to the static JavaScript site;
 no Node.js rewrite of that pipeline or hosted refresh service is required.
-The ordinary frontend build retains Python/API execution; `build:browser` fixes
-execution to the browser without an automatic backend fallback. See
+JavaScript/browser execution is now the default for ordinary frontend development
+and builds, using the verified static datasets with no automatic backend fallback.
+Python/API execution is an explicit opt-in through `dev:python` or `build:python`;
+`build:browser` prepares the fixed browser-only portfolio artifact. See
 `docs/browser-engine-migration.md` for parity evidence, static dataset refresh,
 release prerequisites and remaining hosting access work. Wider issuer expansion
 and new financial conventions remain outside this engineering migration.

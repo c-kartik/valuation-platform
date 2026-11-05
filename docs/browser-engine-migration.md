@@ -12,6 +12,11 @@ A Node.js rewrite of SEC acquisition is not required. Neither website valuation
 calculations nor this refresh workflow requires a GCP backend. Existing GCP
 resources are not retired by this decision alone.
 
+The user subsequently requested JavaScript as the default. Normal development
+and builds now execute on-device from the verified dataset, without an API proxy
+or fallback to Python. Python execution is an explicit opt-in; its source and
+manual preparation workflow remain unchanged.
+
 ## Preserved boundaries
 
 - No existing Python file was edited. `scripts/browser-migration/python-source-baseline.json`
@@ -34,7 +39,7 @@ resources are not retired by this decision alone.
 | 4. TypeScript engine | Operating forecasts, terminals, equity, FCFE, analyst conventions, scenarios, sensitivities and reverse DCF implemented independently of Python. |
 | 5. Equivalence | 128 default/perturbed/rejected reference cases; full intermediate and final output comparisons, exact proof fractions. |
 | 6. Worker execution | Disposable workers; abort/deadline termination, structured errors; six transport tests. |
-| 7. UI transport | Same UI/shape checks; explicit browser build; no automatic cloud fallback; ordinary Python build remains default. |
+| 7. UI transport | Same UI/shape checks; JavaScript default; explicit Python opt-in; no automatic cloud fallback. |
 | 8. Portfolio assembly | Static portfolio plus `/valuation/`, legacy calculator, data and worker assets; route/hash/MIME checks; no API/functions. |
 | 9. Hosted review | Prepared locally; external Netlify draft is pending existing-account access and verified site/protection settings. |
 | 10. Release workflow | Documented build, integrity, test, assembly, review, release and rollback; live publication pending step 9. |
@@ -43,16 +48,28 @@ resources are not retired by this decision alone.
 
 ## Choosing execution
 
-In `frontend/`, using the repository-required Node runtime:
+In `frontend/`, using the repository-required Node runtime, ordinary development
+now defaults to JavaScript:
+
+```sh
+npm run dev
+```
+
+The already-running main workspace at `http://127.0.0.1:5195/workspace/` picks up
+the default. A separately launched ordinary server uses the configured port5173.
+To run a second browser-only frontend on5196:
 
 ```sh
 npm run dev:browser
 ```
 
-Open `http://127.0.0.1:5196/workspace/`. This starts a distinct frontend, not a
-Python API. The existing server at `http://127.0.0.1:5195/workspace/` continues to
-use Python by default. In an ordinary development build, `?engine=browser`
-explicitly selects browser execution. There is no silent retry through Python.
+Open `http://127.0.0.1:5196/workspace/`. Neither server needs Python to calculate.
+There is no silent retry through Python. To explicitly use the retained local
+Python API on8135 with a separate frontend on5197:
+
+```sh
+VALUATION_LOCAL_API=http://127.0.0.1:8135 npm run dev:python
+```
 
 ```sh
 npm run build:browser
@@ -60,8 +77,9 @@ npm run build:browser
 
 Builds `frontend/dist-browser` with `/valuation/` asset paths and the browser
 transport fixed on. Passing `?engine=python` cannot enable a backend in that
-static artifact. The unchanged ordinary `npm run build` retains the original
-API transport as its default. Choosing a deployed Python service requires a
+static artifact. Ordinary `npm run build` also uses JavaScript, with root-relative
+asset paths in `dist/`. `npm run build:python` explicitly builds the API-backed
+alternative into `dist-python/`. Choosing a deployed Python service requires a
 separate explicit deployment/configuration; no cloud credentials enter the UI.
 
 ## Financial implementation
@@ -114,6 +132,7 @@ npm run test:browser -- --maxWorkers=1
 npm test -- --maxWorkers=2
 npm run build
 npm run build:browser
+npm run build:python
 ```
 
 The recorded full frontend run passed 451 tests (309 pre-existing plus 128 parity,

@@ -14,9 +14,10 @@ in TypeScript using isolated decimal.js constructors (50-digit HALF_EVEN; solver
 revision/execution controls remain in place. Browser jobs run in disposable Web
 Workers; cancellation and the 35-second deadline terminate the worker.
 
-The ordinary build/API remain the default. The explicit browser-only build
-cannot silently fall back to Python/GCP; `?engine=browser` is also available for
-local comparison in the ordinary development build. Prepared data assets replace
+JavaScript is the default in ordinary development and production builds. The
+default development server has no API proxy. Python is an explicit build/server
+opt-in (`VALUATION_ENGINE=python`, `dev:python`, `build:python`); the browser-only
+build cannot silently fall back to Python/GCP. Prepared data assets replace
 GET routes, with a manifest digest embedded at build time and each loaded file's
 SHA256 checked before use. Data are snapshots, not fresh SEC/market retrieval.
 Live market-price reconciliation is explicitly unavailable in browser mode.
