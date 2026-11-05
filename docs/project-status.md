@@ -1,5 +1,21 @@
 # Project Status
 
+## Company search — November 5, 2026
+
+The main workspace company selector is now a searchable combobox. Focusing or
+clicking it shows three prepared tickers (META, GOOGL, AAPL); each typed letter
+immediately filters ticker symbols and company names locally. Keyboard selection,
+Escape, outside dismissal and unavailable-dataset messaging are supported.
+Selecting a result uses the existing company/session switching logic, preserving
+per-company assumptions. This does not expand the supported dataset universe or
+alter the Python pipeline, data preparation or valuation calculations.
+
+Validation: all 458 frontend tests pass (including seven search interaction
+checks and existing company-session retention coverage). Default and portfolio
+browser builds pass. Live desktop and 390px phone-size checks cover suggestions,
+incremental filtering, keyboard selection, pointer selection and no matches.
+The asset verifier confirms all 396 Python files and frozen datasets unchanged.
+
 ## Default JavaScript execution verified — November 5, 2026
 
 Normal `npm run dev` and `npm run build` now use the on-device JavaScript engine

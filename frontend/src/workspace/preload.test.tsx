@@ -211,7 +211,9 @@ it('bounds old-catalog discovery and offers an explicit reload when the server l
   return response(body);
  })as unknown as typeof request;
  render(<Workspace load={load}/>);await screen.findByRole('region',{name:'Interactive revenue and FCFF chart'});
- fireEvent.change(screen.getByLabelText('Company'),{target:{value:'meta-fy2025'}});
+ fireEvent.focus(screen.getByLabelText('Company'));
+ fireEvent.change(screen.getByLabelText('Company'),{target:{value:'META'}});
+ fireEvent.click(screen.getByRole('option'));
  await waitFor(()=>expect(catalogs).toBe(2));expect(screen.queryByRole('region',{name:'Interactive revenue and FCFF chart'})).toBeNull();
  available=true;fireEvent.click(screen.getByRole('button',{name:'Reload starting assumptions'}));
  await screen.findByRole('region',{name:'Interactive revenue and FCFF chart'});expect(catalogs).toBe(3);
