@@ -8,6 +8,7 @@ import {fileURLToPath} from 'node:url';
 
 const repo=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const args=process.argv.slice(2);
+const production=args.includes('--production');
 const option=(name,fallback)=>{const i=args.indexOf(name);return i<0?fallback:args[i+1];};
 const portfolio=path.resolve(option('--portfolio','/Users/kc/Projects/Website/V3/kartikchaturvedi.com'));
 const build=path.resolve(option('--build',path.join(repo,'frontend/dist-browser')));
@@ -41,11 +42,11 @@ async function walk(root,rel=''){
 await walk(build);
 const redirects='/valuation /valuation/ 301\n/featured /featured.html 200\n/project-pipeline /project-pipeline.html 200\n/work /work.html 200\n/contact /contact.html 200\n/valuation/workspace /valuation/index.html 200\n/valuation/workspace/ /valuation/index.html 200\n';
 // Exact missing resources must never become successful HTML; no global SPA fallback.
-const headers='/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  X-Robots-Tag: noindex, nofollow\n  Cache-Control: no-store\n  Content-Security-Policy: default-src \'self\'; connect-src \'self\'; worker-src \'self\'; img-src \'self\' data:; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com; font-src \'self\' https://fonts.gstatic.com; script-src \'self\'; frame-ancestors \'none\'; base-uri \'none\'; object-src \'none\'\n/valuation/assets/*\n  Cache-Control: public, max-age=31536000, immutable\n';
+const headers='/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n'+(production?'  Cache-Control: public, max-age=0, must-revalidate\n':'  X-Robots-Tag: noindex, nofollow\n  Cache-Control: no-store\n')+'  Content-Security-Policy: default-src \'self\'; connect-src \'self\'; worker-src \'self\'; img-src \'self\' data:; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com; font-src \'self\' https://fonts.gstatic.com; script-src \'self\'; frame-ancestors \'none\'; base-uri \'none\'; object-src \'none\'\n/valuation/assets/*\n  Cache-Control: public, max-age=31536000, immutable\n';
 for(const [name,data]of Object.entries({'_redirects':redirects,'_headers':headers,'404.html':'<!doctype html><html lang="en"><meta charset="utf-8"><title>Not found</title><h1>Not found</h1></html>\n'})){
  await writeFile(path.join(publicDir,name),data,{flag:'wx'});records.push({path:name,sha256:hash(data),bytes:Buffer.byteLength(data),source:'generated'});
 }
 const commit=cwd=>execFileSync('git',['rev-parse','HEAD'],{cwd,encoding:'utf8'}).trim();
 const status=cwd=>execFileSync('git',['status','--porcelain'],{cwd,encoding:'utf8'}).trim();
-await writeFile(path.join(output,'release-manifest.json'),JSON.stringify({schema:'browser-portfolio-release/v1',createdAt:new Date().toISOString(),sources:{valuation:{directory:repo,commit:commit(repo),workingTreeStatus:status(repo)},portfolio:{directory:portfolio,commit:commit(portfolio),workingTreeStatus:status(portfolio)}},files:records.sort((a,b)=>a.path.localeCompare(b.path)),publication:{directory:'public',backend:'none',production:false,notes:'Draft review artifact. Does not establish Netlify account access or private protection.'}},null,2)+'\n',{flag:'wx'});
+await writeFile(path.join(output,'release-manifest.json'),JSON.stringify({schema:'browser-portfolio-release/v1',createdAt:new Date().toISOString(),sources:{valuation:{directory:repo,commit:commit(repo),workingTreeStatus:status(repo)},portfolio:{directory:portfolio,commit:commit(portfolio),workingTreeStatus:status(portfolio)}},files:records.sort((a,b)=>a.path.localeCompare(b.path)),publication:{directory:'public',backend:'none',production,notes:production?'Production artifact; publication requires user authorization.':'Draft review artifact. Does not establish Netlify account access or private protection.'}},null,2)+'\n',{flag:'wx'});
 console.log(JSON.stringify({output,publicDir,files:records.length}));

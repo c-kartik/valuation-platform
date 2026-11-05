@@ -26,6 +26,11 @@ calculator remains at `/valuation/calculator.html`. The server binds only to
 loopback and has no API, proxy, functions or data refresh. Its read-only
 `/__static_health` metadata reports static mode. The default port is 5200.
 
+After explicit production authorization, `--production` replaces review-only
+noindex/no-store headers with revalidation caching and preserves indexing of the
+existing portfolio. Hashed application assets remain immutable. It only packages
+files; it does not publish them.
+
 Assembly options are `--portfolio`, `--build`, and `--output`, each an absolute
 directory. Output must be outside either source checkout and must not already
 exist: each release is an exclusive directory. Only its `public/` folder may be
