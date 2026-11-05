@@ -7,6 +7,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
+    "build:browser": "tsc --noEmit && VALUATION_ENGINE=browser vite build --base=/valuation/ --outDir=dist-browser",
+    "dev:browser": "VALUATION_ENGINE=browser vite --port 5196",
+    "test:browser": "vitest run src/browser-engine",
     "test": "vitest run",
     "dev:prototype": "vite --config vite.prototype.config.ts",
     "build:prototype": "tsc --noEmit && vite build --config vite.prototype.config.ts"

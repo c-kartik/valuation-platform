@@ -1,0 +1,73 @@
+{
+  "automatic_adoption": false,
+  "base_wacc": "0.08940800",
+  "cost_of_equity": "0.09120",
+  "cost_of_equity_percent": "9.12000",
+  "economic_hash": "1c652c65ae2cd9cbf5f726f163963434c17514c6f2b1a0afcf229d059a1768fe",
+  "information_review": "2026-10-30",
+  "limitations": [
+    "These are saved starting assumptions, not live market estimates or filing-reported capital costs.",
+    "Beta, credit spread, target weights and tax shield are configured assumptions, not measured issuer beta or market capital weights.",
+    "Bear/Bull WACC diagnostic offsets do not automatically change CAPM cost of equity.",
+    "This supplies no missing historical interest, financing, minority ownership or per-share input."
+  ],
+  "model_origin": "2025-12-31",
+  "observed_macro_inputs": [
+    {
+      "available_at": "2026-10-30",
+      "end": "2026-10-28",
+      "id": "treasury_10y-original",
+      "key": "treasury_10y",
+      "published_at": null,
+      "source": "treasury-2026-10",
+      "source_sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+      "unit": "fraction",
+      "value": "0.0505"
+    },
+    {
+      "available_at": "2026-10-08",
+      "end": "2026-10-01",
+      "id": "implied_erp-original",
+      "key": "implied_erp",
+      "published_at": "2026-10-08",
+      "source": "damodaran-2026-10-08",
+      "source_sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+      "unit": "fraction",
+      "value": "0.037"
+    }
+  ],
+  "operands": {
+    "beta": "1.10",
+    "debt_weight": "0.04",
+    "equity_weight": "0.96",
+    "erp": "0.037",
+    "risk_free": "0.0505",
+    "spread": "0.0075",
+    "tax_shield": "0.20"
+  },
+  "pre_tax_cost_of_debt": "0.0580",
+  "scenario_wacc_offset_applied_to_cost_of_equity": false,
+  "schema_version": "saved-discount-inputs-v1",
+  "sources": [
+    {
+      "id": "damodaran-2026-10-08",
+      "observation_date": "2026-10-01",
+      "published_at": "2026-10-08",
+      "retrieved_at": "2026-10-30T13:40:26.745937+00:00",
+      "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+      "title": "Aswath Damodaran October 8 2026 market update",
+      "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+    },
+    {
+      "id": "treasury-2026-10",
+      "observation_date": "2026-10-28",
+      "published_at": null,
+      "retrieved_at": "2026-10-30T13:40:25.931113+00:00",
+      "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+      "title": "US Treasury October 2026 daily par yield curve",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+    }
+  ],
+  "status": "CONFIGURED_CONVENTION",
+  "ticker": "GOOGL"
+}

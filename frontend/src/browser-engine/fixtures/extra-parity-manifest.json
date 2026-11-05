@@ -1,0 +1,12 @@
+{
+  "schema_version": "extra-parity-manifest-v1",
+  "seed": "0x05ec2026",
+  "fixture_count": 68,
+  "sha256": "1fffee0fb6c5cc542ff05bb09d2e95c8919dc9a977f189160a62942e5c6ca5a2",
+  "successful": 42,
+  "rejected": 26,
+  "error_codes": {
+    "invalid_case": 26
+  },
+  "unexpected": []
+}

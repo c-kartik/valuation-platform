@@ -1,0 +1,2207 @@
+{
+  "economic": {
+    "anchor": {
+      "accession": "0000320193-25-000079",
+      "annual_end": "2025-09-27",
+      "annual_start": "2024-09-29",
+      "cik": 320193,
+      "form": "10-K",
+      "kind": "aapl-fy2025"
+    },
+    "anchor_revenue": "416161000000",
+    "case_template": {
+      "analyst": {
+        "author": null,
+        "rationale": null,
+        "timestamp_utc": null
+      },
+      "anchor": {
+        "accession": "0000320193-25-000079",
+        "annual_end": "2025-09-27",
+        "annual_start": "2024-09-29",
+        "cik": 320193,
+        "form": "10-K",
+        "kind": "aapl-fy2025"
+      },
+      "case_name": "AAPL FY2025 — UNSET review template",
+      "conventions": {
+        "discounting": "fiscal-end-annual-gordon-v1",
+        "forecast": "manual-fcff-v1"
+      },
+      "forecast_years": [
+        {
+          "capex_percent_revenue": null,
+          "change_in_operating_nwc_percent_revenue": null,
+          "d_and_a_percent_revenue": null,
+          "fiscal_year_label": "FY2026",
+          "forecast_tax_rate": null,
+          "operating_margin": null,
+          "period_index": 1,
+          "revenue_growth": null
+        },
+        {
+          "capex_percent_revenue": null,
+          "change_in_operating_nwc_percent_revenue": null,
+          "d_and_a_percent_revenue": null,
+          "fiscal_year_label": "FY2027",
+          "forecast_tax_rate": null,
+          "operating_margin": null,
+          "period_index": 2,
+          "revenue_growth": null
+        },
+        {
+          "capex_percent_revenue": null,
+          "change_in_operating_nwc_percent_revenue": null,
+          "d_and_a_percent_revenue": null,
+          "fiscal_year_label": "FY2028",
+          "forecast_tax_rate": null,
+          "operating_margin": null,
+          "period_index": 3,
+          "revenue_growth": null
+        },
+        {
+          "capex_percent_revenue": null,
+          "change_in_operating_nwc_percent_revenue": null,
+          "d_and_a_percent_revenue": null,
+          "fiscal_year_label": "FY2029",
+          "forecast_tax_rate": null,
+          "operating_margin": null,
+          "period_index": 4,
+          "revenue_growth": null
+        },
+        {
+          "capex_percent_revenue": null,
+          "change_in_operating_nwc_percent_revenue": null,
+          "d_and_a_percent_revenue": null,
+          "fiscal_year_label": "FY2030",
+          "forecast_tax_rate": null,
+          "operating_margin": null,
+          "period_index": 5,
+          "revenue_growth": null
+        }
+      ],
+      "input_basis": "MANUAL_INPUT",
+      "limitations": [
+        "All 37 numerical assumptions and analyst identity/date/rationale are unset; no defaults or historical calibration.",
+        "Revenue-only retained historical binding; no forecast, WACC, terminal, asset/claim, class-equivalence or award inputs approved.",
+        "Manual margins include SBC and operating-lease service costs. Expense D&A, financed investment and WC scope require issuer-specific semantic review; historical proxies remain incomplete.",
+        "Historical cash movements are not automatic forecast WC inputs. Gross financial assets are not automatically eligible assets; historical omissions do not approve valuation omissions.",
+        "Fiscal-end analytical date using later-filed information; no contemporaneous backtest or established information cutoff.",
+        "Anchor fiscal year is September 29, 2024–September 27, 2025; FY2026–FY2030 are ordinal fiscal labels, not assumed December year-ends. No automatic 52/53-week adjustment."
+      ],
+      "schema_version": "analyst-case-v1",
+      "scope": "AAPL consolidated FY2026–FY2030 manual forecast; ordinal annual periods after the selected fiscal end, using later-filed information. Financial scope/rationale and information cutoff must be supplied and reviewed.",
+      "terminal": {
+        "d_and_a_percent_revenue": null,
+        "investment_percent_revenue": null,
+        "operating_margin": null,
+        "operating_tax_rate": null,
+        "working_capital_cash_requirement_percent_revenue": null
+      },
+      "terminal_growth": null,
+      "wacc": null
+    },
+    "configuration": {
+      "bear_growth_offset": "-0.02",
+      "bear_margin_offset": "-0.02",
+      "bear_wacc_offset": "0.01",
+      "beta": "1.05",
+      "bull_growth_offset": "0.02",
+      "bull_margin_offset": "0.02",
+      "bull_wacc_offset": "-0.01",
+      "cash_ppe_growth": [
+        "0.10",
+        "0.08",
+        "0.06",
+        "0.05"
+      ],
+      "cash_ppe_start_usd": null,
+      "commissioning_allowance": "0.10",
+      "credit_spread": "0.006",
+      "debt_tax_shield": "0.20",
+      "debt_weight": "0.15",
+      "equity_weight": "0.85",
+      "exit_ev_ebit_multiple": null,
+      "expense_da_start_usd": null,
+      "growth_endpoint": "0.05",
+      "incremental_wc": "0.05",
+      "margin_endpoint": "0.315",
+      "new_financed_fraction_cash_ppe": "0.01",
+      "sensitivity_growth_offset": "0.005",
+      "sensitivity_multiple_offset": "2",
+      "sensitivity_wacc_offset": "0.01",
+      "tax_endpoint": "0.20",
+      "tax_start": "0.18",
+      "terminal_da": "0.025",
+      "terminal_growth": "0.025",
+      "terminal_investment": "0.035",
+      "terminal_margin": "0.315",
+      "terminal_tax": "0.20"
+    },
+    "configuration_provenance": {
+      "investment": "Annualize reported nine-month cash PP&E6.799bn by4/3; do not copy an infrastructure spending plan from another issuer. Later cash PP&E grows10%,8%,6%,5%. A separately configured1% new-financed-assets estimate and10% commissioning allowance are forecast assumptions, not inferred from the undisclosed operating/finance lease split.",
+      "operating": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+      "owner": "AI-assisted initial forecast policy under user authorization; editable estimates, not financial approval",
+      "scenario": "Diagnostic offsets only, not researched probabilities, fair-value bounds or guaranteed ordering. Unchanged ratios inherit Base.",
+      "selected_at": "2026-11-02",
+      "terminal": "Independent nominal-USD growth, operating margin, tax, D&A, investment and incremental cash assumptions. No year-five copy or target-EV solving.",
+      "wacc": "Shared dated Treasury/ERP observations; company-specific configured beta, spread, target financing weights and tax shield. No observed issuer beta regression or current market weights are claimed.",
+      "wc": "0.05 of incremental revenue converted to full-revenue cash needs; analyst convention, not calibration from mixed historical CFO. Taxes, capital creditors, acquisitions, financing and collateral excluded."
+    },
+    "dates": {
+      "anchor_period": "2024-09-29/2025-09-27",
+      "information_review": "2026-11-02",
+      "model_origin": "2025-09-27",
+      "timing": "Fiscal-end analytical origin using later-filed information; not a contemporaneous backtest or current-date fair value"
+    },
+    "diagnostics": [
+      "Five-year forecast revenue CAGR = 0.1052950120760978474566037622025933650873837685227; not any individual annual rate",
+      "Terminal net reinvestment/revenue = 0.011219512195121951219512195121951219512195121951220",
+      "Implied incremental return diagnostic g*NOPAT/net reinvestment = 0.56152173913043478260869565217391304347826086956519; NOT observed ROIC",
+      "FY2026 remains estimated using the retained July filing; this policy does not assert that an unavailable September-year-end result has been reported.",
+      "Prior fiscal Q4 revenue is annual less nine-month revenue; no calendar-Q4 substitution. Quarter momentum and4/3 annualizations do not normalize seasonality or acquisitions.",
+      "Latest-quarter reported operating margin includes tariff-refund effects; the31.5% endpoint is an independent assumption, not a claim of normalized reported earnings.",
+      "Expense D&A starts from4/3 of cash-flow D&A; expense alignment, acquisitions and future intangible amortization remain uncertain.",
+      "The1% financed-additions overlay is an explicit forecast estimate; missing historical lease splits and historical interest gaps are not solved.",
+      "Terminal D&A2.5% and investment3.5% are independent mature assumptions; no implied historical ROIC, equity bridge or years6–10 defaults."
+    ],
+    "fields": {
+      "exit_ev_ebit_multiple": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [],
+        "limitation": "No supported mature EV/EBIT exit selection; enter an explicit assumption to use exit",
+        "operands": {
+          "reason": "No supported mature EV/EBIT exit selection; enter an explicit assumption to use exit"
+        },
+        "periods": [],
+        "rule": "unavailable-v1",
+        "sources": [],
+        "status": "MISSING_EVIDENCE",
+        "unit": "multiple",
+        "value": null
+      },
+      "forecast_years[0].capex_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Annualize reported nine-month cash PP&E6.799bn by4/3; do not copy an infrastructure spending plan from another issuer. Later cash PP&E grows10%,8%,6%,5%. A separately configured1% new-financed-assets estimate and10% commissioning allowance are forecast assumptions, not inferred from the undisclosed operating/finance lease split.",
+        "operands": {
+          "annualization_denominator": "3",
+          "annualization_numerator": "4",
+          "cash_growth": null,
+          "cash_ppe_usd": "9065333333.3333333333333333333333333333333333333333",
+          "initial_cash_rule": "annualize reported YTD cash PP&E",
+          "new_financed_assets_usd": "90653333.333333333333333333333333333333333333333333",
+          "principal": "EXCLUDED; cash PP&E definition already excludes financing principal",
+          "reported_ytd_cash_ppe_usd": "6799000000",
+          "revenue_usd": "483582853098.81322046875664639074397039431707005830"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          }
+        ],
+        "rule": "cash-ppe-plus-new-financed-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.018933646236616607468524995991535977295858717795219"
+      },
+      "forecast_years[0].change_in_operating_nwc_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Company-specific incremental-sales cash coefficient; not book NWC, historical CFO calibration or a second CFO deduction.",
+        "operands": {
+          "formula": "coefficient*g/(1+g)",
+          "growth": "0.1620090616343511777142900136984099192243316169903",
+          "incremental_fraction": "0.05"
+        },
+        "periods": [],
+        "rule": "incremental-to-full-revenue-wc-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.0069710756560920215004563633948410956942823937978490"
+      },
+      "forecast_years[0].d_and_a_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Annualized cash-flow D&A is a forecast starting estimate; expense alignment and commissioning are not fully reconciled vintage economics.",
+        "operands": {
+          "annualization_denominator": "3",
+          "annualization_numerator": "4",
+          "commissioning_allowance": "0.10",
+          "expense_da_usd": "13297333333.333333333333333333333333333333333333333",
+          "initial_da_rule": "annualize reported YTD cash-flow D&A as a forecast expense estimate",
+          "previous_expense_da_usd": "13297333333.333333333333333333333333333333333333333",
+          "previous_investment_usd": null,
+          "reported_ytd_da_usd": "9973000000",
+          "revenue_usd": "483582853098.81322046875664639074397039431707005830"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          }
+        ],
+        "rule": "expense-commissioning-allowance-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.027497528599543238927623279635413522019341660985631"
+      },
+      "forecast_years[0].forecast_tax_rate": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Explicit operating tax convention, not historical effective or actual unlevered cash taxes. No immediate tax benefit on operating losses.",
+        "operands": {
+          "endpoint": "0.20",
+          "index": 0,
+          "start": "0.18"
+        },
+        "periods": [],
+        "rule": "operating-tax-fade-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.18"
+      },
+      "forecast_years[0].operating_margin": {
+        "basis": "REPORTED_OBSERVATIONS_AND_FORECAST_RULE",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "DERIVED_FROM_REPORTED_OBSERVATIONS",
+          "CONFIGURED_TRANSFORMATION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+        "operands": {
+          "denominator": "4",
+          "endpoint": "0.315",
+          "index": 0,
+          "start": "0.32622901377299688348245702221775409671257665627827"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          }
+        ],
+        "rule": "reported-margin-fade-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "AVAILABLE_ESTIMATE",
+        "unit": "fraction",
+        "value": "0.32622901377299688348245702221775409671257665627827"
+      },
+      "forecast_years[0].revenue_growth": {
+        "basis": "REPORTED_OBSERVATIONS_AND_FORECAST_RULE",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "DERIVED_FROM_REPORTED_OBSERVATIONS",
+          "CONFIGURED_TRANSFORMATION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+        "operands": {
+          "current_fiscal_q3_revenue_usd": "109417000000",
+          "denominator": "4",
+          "derived_prior_fiscal_q4_revenue_usd": "102466000000",
+          "endpoint": "0.05",
+          "fy2026_revenue_estimate": "483582853098.81322046875664639074397039431707005828",
+          "index": 0,
+          "prior_annual_revenue_usd": "416161000000",
+          "prior_fiscal_q3_revenue_usd": "94036000000",
+          "prior_ytd_revenue_usd": "313695000000",
+          "reported_ytd_revenue_usd": "364357000000",
+          "start": "0.1620090616343511777142900136984099192243316169903"
+        },
+        "periods": [
+          {
+            "available_at": "2025-10-31",
+            "end": "2025-09-27",
+            "published_at": "2025-10-31",
+            "start": "2024-09-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2025-06-28",
+            "published_at": "2026-07-31",
+            "start": "2024-09-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2025-06-28",
+            "published_at": "2026-07-31",
+            "start": "2025-03-30"
+          }
+        ],
+        "rule": "quarter-extension-growth-fade-v1",
+        "sources": [
+          "fy2025-10k",
+          "q3-2026-10q"
+        ],
+        "status": "AVAILABLE_ESTIMATE",
+        "unit": "fraction",
+        "value": "0.1620090616343511777142900136984099192243316169903"
+      },
+      "forecast_years[1].capex_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Annualize reported nine-month cash PP&E6.799bn by4/3; do not copy an infrastructure spending plan from another issuer. Later cash PP&E grows10%,8%,6%,5%. A separately configured1% new-financed-assets estimate and10% commissioning allowance are forecast assumptions, not inferred from the undisclosed operating/finance lease split.",
+        "operands": {
+          "annualization_denominator": "3",
+          "annualization_numerator": "4",
+          "cash_growth": "0.10",
+          "cash_ppe_usd": "9971866666.6666666666666666666666666666666666666666",
+          "initial_cash_rule": "annualize reported YTD cash PP&E",
+          "new_financed_assets_usd": "99718666.666666666666666666666666666666666666666666",
+          "principal": "EXCLUDED; cash PP&E definition already excludes financing principal",
+          "reported_ytd_cash_ppe_usd": "6799000000",
+          "revenue_usd": "548386241952.29915256076453741392116027705880531962"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          }
+        ],
+        "rule": "cash-ppe-plus-new-financed-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.018365860707004025190348195297639652396619506892376"
+      },
+      "forecast_years[1].change_in_operating_nwc_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Company-specific incremental-sales cash coefficient; not book NWC, historical CFO calibration or a second CFO deduction.",
+        "operands": {
+          "formula": "coefficient*g/(1+g)",
+          "growth": "0.13400679622576338328571751027380743941824871274272",
+          "incremental_fraction": "0.05"
+        },
+        "periods": [],
+        "rule": "incremental-to-full-revenue-wc-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.0059085534880288619879698255686000066017823638393351"
+      },
+      "forecast_years[1].d_and_a_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Annualized cash-flow D&A is a forecast starting estimate; expense alignment and commissioning are not fully reconciled vintage economics.",
+        "operands": {
+          "annualization_denominator": "3",
+          "annualization_numerator": "4",
+          "commissioning_allowance": "0.10",
+          "expense_da_usd": "14212932000.000000000000000000000000000000000000000",
+          "initial_da_rule": "annualize reported YTD cash-flow D&A as a forecast expense estimate",
+          "previous_expense_da_usd": "13297333333.333333333333333333333333333333333333333",
+          "previous_investment_usd": "9155986666.6666666666666666666666666666666666666666",
+          "reported_ytd_da_usd": "9973000000",
+          "revenue_usd": "548386241952.29915256076453741392116027705880531962"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          }
+        ],
+        "rule": "expense-commissioning-allowance-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.025917739929799876632136889282316773302765385363517"
+      },
+      "forecast_years[1].forecast_tax_rate": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Explicit operating tax convention, not historical effective or actual unlevered cash taxes. No immediate tax benefit on operating losses.",
+        "operands": {
+          "endpoint": "0.20",
+          "index": 1,
+          "start": "0.18"
+        },
+        "periods": [],
+        "rule": "operating-tax-fade-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.185"
+      },
+      "forecast_years[1].operating_margin": {
+        "basis": "REPORTED_OBSERVATIONS_AND_FORECAST_RULE",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "DERIVED_FROM_REPORTED_OBSERVATIONS",
+          "CONFIGURED_TRANSFORMATION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+        "operands": {
+          "denominator": "4",
+          "endpoint": "0.315",
+          "index": 1,
+          "start": "0.32622901377299688348245702221775409671257665627827"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          }
+        ],
+        "rule": "reported-margin-fade-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "AVAILABLE_ESTIMATE",
+        "unit": "fraction",
+        "value": "0.32342176032974766261184276666331557253443249220870"
+      },
+      "forecast_years[1].revenue_growth": {
+        "basis": "REPORTED_OBSERVATIONS_AND_FORECAST_RULE",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "DERIVED_FROM_REPORTED_OBSERVATIONS",
+          "CONFIGURED_TRANSFORMATION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+        "operands": {
+          "current_fiscal_q3_revenue_usd": "109417000000",
+          "denominator": "4",
+          "derived_prior_fiscal_q4_revenue_usd": "102466000000",
+          "endpoint": "0.05",
+          "fy2026_revenue_estimate": "483582853098.81322046875664639074397039431707005828",
+          "index": 1,
+          "prior_annual_revenue_usd": "416161000000",
+          "prior_fiscal_q3_revenue_usd": "94036000000",
+          "prior_ytd_revenue_usd": "313695000000",
+          "reported_ytd_revenue_usd": "364357000000",
+          "start": "0.1620090616343511777142900136984099192243316169903"
+        },
+        "periods": [
+          {
+            "available_at": "2025-10-31",
+            "end": "2025-09-27",
+            "published_at": "2025-10-31",
+            "start": "2024-09-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2025-06-28",
+            "published_at": "2026-07-31",
+            "start": "2024-09-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2025-06-28",
+            "published_at": "2026-07-31",
+            "start": "2025-03-30"
+          }
+        ],
+        "rule": "quarter-extension-growth-fade-v1",
+        "sources": [
+          "fy2025-10k",
+          "q3-2026-10q"
+        ],
+        "status": "AVAILABLE_ESTIMATE",
+        "unit": "fraction",
+        "value": "0.13400679622576338328571751027380743941824871274272"
+      },
+      "forecast_years[2].capex_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Annualize reported nine-month cash PP&E6.799bn by4/3; do not copy an infrastructure spending plan from another issuer. Later cash PP&E grows10%,8%,6%,5%. A separately configured1% new-financed-assets estimate and10% commissioning allowance are forecast assumptions, not inferred from the undisclosed operating/finance lease split.",
+        "operands": {
+          "annualization_denominator": "3",
+          "annualization_numerator": "4",
+          "cash_growth": "0.08",
+          "cash_ppe_usd": "10769616000.000000000000000000000000000000000000000",
+          "initial_cash_rule": "annualize reported YTD cash PP&E",
+          "new_financed_assets_usd": "107696160.00000000000000000000000000000000000000000",
+          "principal": "EXCLUDED; cash PP&E definition already excludes financing principal",
+          "reported_ytd_cash_ppe_usd": "6799000000",
+          "revenue_usd": "606517668237.04675683589353570310898020451314105965"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          }
+        ],
+        "rule": "cash-ppe-plus-new-financed-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.017934040061218454012988745964565604961155627855814"
+      },
+      "forecast_years[2].change_in_operating_nwc_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Company-specific incremental-sales cash coefficient; not book NWC, historical CFO calibration or a second CFO deduction.",
+        "operands": {
+          "formula": "coefficient*g/(1+g)",
+          "growth": "0.10600453081717558885714500684920495961216580849515",
+          "incremental_fraction": "0.05"
+        },
+        "periods": [],
+        "rule": "incremental-to-full-revenue-wc-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.0047922285968780681370856277005838556297231578296031"
+      },
+      "forecast_years[2].d_and_a_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Annualized cash-flow D&A is a forecast starting estimate; expense alignment and commissioning are not fully reconciled vintage economics.",
+        "operands": {
+          "annualization_denominator": "3",
+          "annualization_numerator": "4",
+          "commissioning_allowance": "0.10",
+          "expense_da_usd": "15220090533.333333333333333333333333333333333333333",
+          "initial_da_rule": "annualize reported YTD cash-flow D&A as a forecast expense estimate",
+          "previous_expense_da_usd": "14212932000.000000000000000000000000000000000000000",
+          "previous_investment_usd": "10071585333.333333333333333333333333333333333333333",
+          "reported_ytd_da_usd": "9973000000",
+          "revenue_usd": "606517668237.04675683589353570310898020451314105965"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          }
+        ],
+        "rule": "expense-commissioning-allowance-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.025094224505566800403540625808593431613123605153725"
+      },
+      "forecast_years[2].forecast_tax_rate": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Explicit operating tax convention, not historical effective or actual unlevered cash taxes. No immediate tax benefit on operating losses.",
+        "operands": {
+          "endpoint": "0.20",
+          "index": 2,
+          "start": "0.18"
+        },
+        "periods": [],
+        "rule": "operating-tax-fade-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.19"
+      },
+      "forecast_years[2].operating_margin": {
+        "basis": "REPORTED_OBSERVATIONS_AND_FORECAST_RULE",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "DERIVED_FROM_REPORTED_OBSERVATIONS",
+          "CONFIGURED_TRANSFORMATION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+        "operands": {
+          "denominator": "4",
+          "endpoint": "0.315",
+          "index": 2,
+          "start": "0.32622901377299688348245702221775409671257665627827"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          }
+        ],
+        "rule": "reported-margin-fade-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "AVAILABLE_ESTIMATE",
+        "unit": "fraction",
+        "value": "0.32061450688649844174122851110887704835628832813914"
+      },
+      "forecast_years[2].revenue_growth": {
+        "basis": "REPORTED_OBSERVATIONS_AND_FORECAST_RULE",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "DERIVED_FROM_REPORTED_OBSERVATIONS",
+          "CONFIGURED_TRANSFORMATION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+        "operands": {
+          "current_fiscal_q3_revenue_usd": "109417000000",
+          "denominator": "4",
+          "derived_prior_fiscal_q4_revenue_usd": "102466000000",
+          "endpoint": "0.05",
+          "fy2026_revenue_estimate": "483582853098.81322046875664639074397039431707005828",
+          "index": 2,
+          "prior_annual_revenue_usd": "416161000000",
+          "prior_fiscal_q3_revenue_usd": "94036000000",
+          "prior_ytd_revenue_usd": "313695000000",
+          "reported_ytd_revenue_usd": "364357000000",
+          "start": "0.1620090616343511777142900136984099192243316169903"
+        },
+        "periods": [
+          {
+            "available_at": "2025-10-31",
+            "end": "2025-09-27",
+            "published_at": "2025-10-31",
+            "start": "2024-09-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2025-06-28",
+            "published_at": "2026-07-31",
+            "start": "2024-09-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2025-06-28",
+            "published_at": "2026-07-31",
+            "start": "2025-03-30"
+          }
+        ],
+        "rule": "quarter-extension-growth-fade-v1",
+        "sources": [
+          "fy2025-10k",
+          "q3-2026-10q"
+        ],
+        "status": "AVAILABLE_ESTIMATE",
+        "unit": "fraction",
+        "value": "0.10600453081717558885714500684920495961216580849515"
+      },
+      "forecast_years[3].capex_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Annualize reported nine-month cash PP&E6.799bn by4/3; do not copy an infrastructure spending plan from another issuer. Later cash PP&E grows10%,8%,6%,5%. A separately configured1% new-financed-assets estimate and10% commissioning allowance are forecast assumptions, not inferred from the undisclosed operating/finance lease split.",
+        "operands": {
+          "annualization_denominator": "3",
+          "annualization_numerator": "4",
+          "cash_growth": "0.06",
+          "cash_ppe_usd": "11415792960.000000000000000000000000000000000000000",
+          "initial_cash_rule": "annualize reported YTD cash PP&E",
+          "new_financed_assets_usd": "114157929.60000000000000000000000000000000000000000",
+          "principal": "EXCLUDED; cash PP&E definition already excludes financing principal",
+          "reported_ytd_cash_ppe_usd": "6799000000",
+          "revenue_usd": "653827420369.87067712693306368484563985894325536715"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          }
+        ],
+        "rule": "cash-ppe-plus-new-financed-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.017634547787973618281158869370733768776772839331360"
+      },
+      "forecast_years[3].change_in_operating_nwc_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Company-specific incremental-sales cash coefficient; not book NWC, historical CFO calibration or a second CFO deduction.",
+        "operands": {
+          "formula": "coefficient*g/(1+g)",
+          "growth": "0.078002265408587794428572503424602479806082904247575",
+          "incremental_fraction": "0.05"
+        },
+        "periods": [],
+        "rule": "incremental-to-full-revenue-wc-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.0036179082322718093513093972875138985203953452928107"
+      },
+      "forecast_years[3].d_and_a_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Annualized cash-flow D&A is a forecast starting estimate; expense alignment and commissioning are not fully reconciled vintage economics.",
+        "operands": {
+          "annualization_denominator": "3",
+          "annualization_numerator": "4",
+          "commissioning_allowance": "0.10",
+          "expense_da_usd": "16307821749.333333333333333333333333333333333333333",
+          "initial_da_rule": "annualize reported YTD cash-flow D&A as a forecast expense estimate",
+          "previous_expense_da_usd": "15220090533.333333333333333333333333333333333333333",
+          "previous_investment_usd": "10877312160.000000000000000000000000000000000000000",
+          "reported_ytd_da_usd": "9973000000",
+          "revenue_usd": "653827420369.87067712693306368484563985894325536715"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          }
+        ],
+        "rule": "expense-commissioning-allowance-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.024942089060914554429994075604776435601286566490010"
+      },
+      "forecast_years[3].forecast_tax_rate": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Explicit operating tax convention, not historical effective or actual unlevered cash taxes. No immediate tax benefit on operating losses.",
+        "operands": {
+          "endpoint": "0.20",
+          "index": 3,
+          "start": "0.18"
+        },
+        "periods": [],
+        "rule": "operating-tax-fade-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.195"
+      },
+      "forecast_years[3].operating_margin": {
+        "basis": "REPORTED_OBSERVATIONS_AND_FORECAST_RULE",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "DERIVED_FROM_REPORTED_OBSERVATIONS",
+          "CONFIGURED_TRANSFORMATION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+        "operands": {
+          "denominator": "4",
+          "endpoint": "0.315",
+          "index": 3,
+          "start": "0.32622901377299688348245702221775409671257665627827"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          }
+        ],
+        "rule": "reported-margin-fade-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "AVAILABLE_ESTIMATE",
+        "unit": "fraction",
+        "value": "0.31780725344324922087061425555443852417814416406957"
+      },
+      "forecast_years[3].revenue_growth": {
+        "basis": "REPORTED_OBSERVATIONS_AND_FORECAST_RULE",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "DERIVED_FROM_REPORTED_OBSERVATIONS",
+          "CONFIGURED_TRANSFORMATION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+        "operands": {
+          "current_fiscal_q3_revenue_usd": "109417000000",
+          "denominator": "4",
+          "derived_prior_fiscal_q4_revenue_usd": "102466000000",
+          "endpoint": "0.05",
+          "fy2026_revenue_estimate": "483582853098.81322046875664639074397039431707005828",
+          "index": 3,
+          "prior_annual_revenue_usd": "416161000000",
+          "prior_fiscal_q3_revenue_usd": "94036000000",
+          "prior_ytd_revenue_usd": "313695000000",
+          "reported_ytd_revenue_usd": "364357000000",
+          "start": "0.1620090616343511777142900136984099192243316169903"
+        },
+        "periods": [
+          {
+            "available_at": "2025-10-31",
+            "end": "2025-09-27",
+            "published_at": "2025-10-31",
+            "start": "2024-09-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2025-06-28",
+            "published_at": "2026-07-31",
+            "start": "2024-09-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2025-06-28",
+            "published_at": "2026-07-31",
+            "start": "2025-03-30"
+          }
+        ],
+        "rule": "quarter-extension-growth-fade-v1",
+        "sources": [
+          "fy2025-10k",
+          "q3-2026-10q"
+        ],
+        "status": "AVAILABLE_ESTIMATE",
+        "unit": "fraction",
+        "value": "0.078002265408587794428572503424602479806082904247575"
+      },
+      "forecast_years[4].capex_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Annualize reported nine-month cash PP&E6.799bn by4/3; do not copy an infrastructure spending plan from another issuer. Later cash PP&E grows10%,8%,6%,5%. A separately configured1% new-financed-assets estimate and10% commissioning allowance are forecast assumptions, not inferred from the undisclosed operating/finance lease split.",
+        "operands": {
+          "annualization_denominator": "3",
+          "annualization_numerator": "4",
+          "cash_growth": "0.05",
+          "cash_ppe_usd": "11986582608.000000000000000000000000000000000000000",
+          "initial_cash_rule": "annualize reported YTD cash PP&E",
+          "new_financed_assets_usd": "119865826.08000000000000000000000000000000000000000",
+          "principal": "EXCLUDED; cash PP&E definition already excludes financing principal",
+          "reported_ytd_cash_ppe_usd": "6799000000",
+          "revenue_usd": "686518791388.36421098327971686908792185189041813551"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          }
+        ],
+        "rule": "cash-ppe-plus-new-financed-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.017634547787973618281158869370733768776772839331360"
+      },
+      "forecast_years[4].change_in_operating_nwc_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Company-specific incremental-sales cash coefficient; not book NWC, historical CFO calibration or a second CFO deduction.",
+        "operands": {
+          "formula": "coefficient*g/(1+g)",
+          "growth": "0.0500000000000000000000000000000000000000000000000",
+          "incremental_fraction": "0.05"
+        },
+        "periods": [],
+        "rule": "incremental-to-full-revenue-wc-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.0023809523809523809523809523809523809523809523809524"
+      },
+      "forecast_years[4].d_and_a_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Annualized cash-flow D&A is a forecast starting estimate; expense alignment and commissioning are not fully reconciled vintage economics.",
+        "operands": {
+          "annualization_denominator": "3",
+          "annualization_numerator": "4",
+          "commissioning_allowance": "0.10",
+          "expense_da_usd": "17460816838.293333333333333333333333333333333333333",
+          "initial_da_rule": "annualize reported YTD cash-flow D&A as a forecast expense estimate",
+          "previous_expense_da_usd": "16307821749.333333333333333333333333333333333333333",
+          "previous_investment_usd": "11529950889.600000000000000000000000000000000000000",
+          "reported_ytd_da_usd": "9973000000",
+          "revenue_usd": "686518791388.36421098327971686908792185189041813551"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          }
+        ],
+        "rule": "expense-commissioning-allowance-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.025433851275916110722009488135095059503775095641091"
+      },
+      "forecast_years[4].forecast_tax_rate": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Explicit operating tax convention, not historical effective or actual unlevered cash taxes. No immediate tax benefit on operating losses.",
+        "operands": {
+          "endpoint": "0.20",
+          "index": 4,
+          "start": "0.18"
+        },
+        "periods": [],
+        "rule": "operating-tax-fade-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.20"
+      },
+      "forecast_years[4].operating_margin": {
+        "basis": "REPORTED_OBSERVATIONS_AND_FORECAST_RULE",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "DERIVED_FROM_REPORTED_OBSERVATIONS",
+          "CONFIGURED_TRANSFORMATION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+        "operands": {
+          "denominator": "4",
+          "endpoint": "0.315",
+          "index": 4,
+          "start": "0.32622901377299688348245702221775409671257665627827"
+        },
+        "periods": [
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          }
+        ],
+        "rule": "reported-margin-fade-v1",
+        "sources": [
+          "q3-2026-10q"
+        ],
+        "status": "AVAILABLE_ESTIMATE",
+        "unit": "fraction",
+        "value": "0.31500000000000000000000000000000000000000000000000"
+      },
+      "forecast_years[4].revenue_growth": {
+        "basis": "REPORTED_OBSERVATIONS_AND_FORECAST_RULE",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "DERIVED_FROM_REPORTED_OBSERVATIONS",
+          "CONFIGURED_TRANSFORMATION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+        "operands": {
+          "current_fiscal_q3_revenue_usd": "109417000000",
+          "denominator": "4",
+          "derived_prior_fiscal_q4_revenue_usd": "102466000000",
+          "endpoint": "0.05",
+          "fy2026_revenue_estimate": "483582853098.81322046875664639074397039431707005828",
+          "index": 4,
+          "prior_annual_revenue_usd": "416161000000",
+          "prior_fiscal_q3_revenue_usd": "94036000000",
+          "prior_ytd_revenue_usd": "313695000000",
+          "reported_ytd_revenue_usd": "364357000000",
+          "start": "0.1620090616343511777142900136984099192243316169903"
+        },
+        "periods": [
+          {
+            "available_at": "2025-10-31",
+            "end": "2025-09-27",
+            "published_at": "2025-10-31",
+            "start": "2024-09-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2025-09-28"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2025-06-28",
+            "published_at": "2026-07-31",
+            "start": "2024-09-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2026-06-27",
+            "published_at": "2026-07-31",
+            "start": "2026-03-29"
+          },
+          {
+            "available_at": "2026-07-31",
+            "end": "2025-06-28",
+            "published_at": "2026-07-31",
+            "start": "2025-03-30"
+          }
+        ],
+        "rule": "quarter-extension-growth-fade-v1",
+        "sources": [
+          "fy2025-10k",
+          "q3-2026-10q"
+        ],
+        "status": "AVAILABLE_ESTIMATE",
+        "unit": "fraction",
+        "value": "0.0500000000000000000000000000000000000000000000000"
+      },
+      "terminal.d_and_a_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Annualized cash-flow D&A is a forecast starting estimate; expense alignment and commissioning are not fully reconciled vintage economics.",
+        "operands": {
+          "configuration_key": "terminal_da",
+          "value": "0.025"
+        },
+        "periods": [],
+        "rule": "independent-terminal-configuration-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.025"
+      },
+      "terminal.investment_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [],
+        "limitation": "Explicit long-run estimate; not independently approved or complete financial calibration.",
+        "operands": {
+          "configuration_key": "terminal_investment",
+          "value": "0.035"
+        },
+        "periods": [],
+        "rule": "independent-terminal-configuration-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.035"
+      },
+      "terminal.operating_margin": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [
+          "q3-2026-10q"
+        ],
+        "limitation": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+        "operands": {
+          "configuration_key": "terminal_margin",
+          "value": "0.315"
+        },
+        "periods": [],
+        "rule": "independent-terminal-configuration-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.315"
+      },
+      "terminal.operating_tax_rate": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [],
+        "limitation": "Explicit long-run estimate; not independently approved or complete financial calibration.",
+        "operands": {
+          "configuration_key": "terminal_tax",
+          "value": "0.20"
+        },
+        "periods": [],
+        "rule": "independent-terminal-configuration-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.20"
+      },
+      "terminal.working_capital_cash_requirement_percent_revenue": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [],
+        "limitation": "Explicit long-run estimate; not independently approved or complete financial calibration.",
+        "operands": {
+          "growth": "0.025",
+          "incremental_fraction": "0.05"
+        },
+        "periods": [],
+        "rule": "terminal-incremental-to-full-wc-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.0012195121951219512195121951219512195121951219512195"
+      },
+      "terminal_growth": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [],
+        "limitation": "Explicit long-run estimate; not independently approved or complete financial calibration.",
+        "operands": {
+          "configuration_key": "terminal_growth",
+          "value": "0.025"
+        },
+        "periods": [],
+        "rule": "independent-terminal-configuration-v1",
+        "sources": [],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.025"
+      },
+      "wacc": {
+        "basis": "EXPLICIT_VERSIONED_CONFIGURATION",
+        "classification": [
+          "FORECAST_ESTIMATE",
+          "MODELING_CONVENTION"
+        ],
+        "configuration_reference": "aapl-preload-v1.0.0/configuration",
+        "configuration_selected_at": "2026-11-02",
+        "context_role": "Definition/scope background only; not automatic historical calibration",
+        "context_sources": [],
+        "limitation": "Dated 10y Treasury par proxy plus monthly Treasury-based ERP; configured beta/spread/target weights/shield, not measured issuer market weights. No intermediate rounding.",
+        "operands": {
+          "beta": "1.05",
+          "debt_weight": "0.15",
+          "equity_weight": "0.85",
+          "erp": "0.037",
+          "risk_free": "0.0505",
+          "spread": "0.006",
+          "tax_shield": "0.20"
+        },
+        "periods": [
+          {
+            "available_at": "2026-10-30",
+            "end": "2026-10-28",
+            "published_at": null,
+            "start": null
+          },
+          {
+            "available_at": "2026-10-08",
+            "end": "2026-10-01",
+            "published_at": "2026-10-08",
+            "start": null
+          }
+        ],
+        "rule": "target-weight-wacc-v1",
+        "sources": [
+          "damodaran-2026-10-08",
+          "treasury-2026-10"
+        ],
+        "status": "CONFIGURED_CONVENTION",
+        "unit": "fraction",
+        "value": "0.08272750"
+      }
+    },
+    "issuer": {
+      "cik": 320193,
+      "class_equivalence": "NOT_SELECTED",
+      "issuer": "Apple Inc.",
+      "listing_class": "Common",
+      "ticker": "AAPL"
+    },
+    "observations": [
+      {
+        "available_at": "2025-10-31",
+        "cik": 320193,
+        "classification": "REPORTED_FACT",
+        "definition": "consolidated-reported",
+        "dimensions": [],
+        "end": "2025-09-27",
+        "extraction": {
+          "cik": 320193,
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-09-27",
+          "kind": "inline-xbrl-v1",
+          "start": "2024-09-29"
+        },
+        "id": "fy2025_revenue-original",
+        "key": "fy2025_revenue",
+        "locator": "inline#f-78",
+        "mapping_version": "aapl-reviewed-inline-guidance-v1",
+        "precision": "-6",
+        "published_at": "2025-10-31",
+        "scope": "consolidated",
+        "source": "fy2025-10k",
+        "source_sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+        "start": "2024-09-29",
+        "supersedes": null,
+        "unit": "USD",
+        "value": "416161000000"
+      },
+      {
+        "available_at": "2026-07-31",
+        "cik": 320193,
+        "classification": "REPORTED_FACT",
+        "definition": "consolidated-reported",
+        "dimensions": [],
+        "end": "2026-06-27",
+        "extraction": {
+          "cik": 320193,
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-06-27",
+          "kind": "inline-xbrl-v1",
+          "start": "2025-09-28"
+        },
+        "id": "ytd2026_revenue-original",
+        "key": "ytd2026_revenue",
+        "locator": "inline#f-58",
+        "mapping_version": "aapl-reviewed-inline-guidance-v1",
+        "precision": "-6",
+        "published_at": "2026-07-31",
+        "scope": "consolidated",
+        "source": "q3-2026-10q",
+        "source_sha256": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
+        "start": "2025-09-28",
+        "supersedes": null,
+        "unit": "USD",
+        "value": "364357000000"
+      },
+      {
+        "available_at": "2026-07-31",
+        "cik": 320193,
+        "classification": "REPORTED_FACT",
+        "definition": "consolidated-reported",
+        "dimensions": [],
+        "end": "2026-06-27",
+        "extraction": {
+          "cik": 320193,
+          "concept": "us-gaap:DepreciationDepletionAndAmortization",
+          "end": "2026-06-27",
+          "kind": "inline-xbrl-v1",
+          "start": "2025-09-28"
+        },
+        "id": "ytd2026_da-original",
+        "key": "ytd2026_da",
+        "locator": "inline#f-302",
+        "mapping_version": "aapl-reviewed-inline-guidance-v1",
+        "precision": "-6",
+        "published_at": "2026-07-31",
+        "scope": "consolidated",
+        "source": "q3-2026-10q",
+        "source_sha256": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
+        "start": "2025-09-28",
+        "supersedes": null,
+        "unit": "USD",
+        "value": "9973000000"
+      },
+      {
+        "available_at": "2026-07-31",
+        "cik": 320193,
+        "classification": "REPORTED_FACT",
+        "definition": "consolidated-reported",
+        "dimensions": [],
+        "end": "2026-06-27",
+        "extraction": {
+          "cik": 320193,
+          "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "end": "2026-06-27",
+          "kind": "inline-xbrl-v1",
+          "start": "2025-09-28"
+        },
+        "id": "ytd2026_cash_ppe-original",
+        "key": "ytd2026_cash_ppe",
+        "locator": "inline#f-328",
+        "mapping_version": "aapl-reviewed-inline-guidance-v1",
+        "precision": "-6",
+        "published_at": "2026-07-31",
+        "scope": "consolidated",
+        "source": "q3-2026-10q",
+        "source_sha256": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
+        "start": "2025-09-28",
+        "supersedes": null,
+        "unit": "USD",
+        "value": "6799000000"
+      },
+      {
+        "available_at": "2026-07-31",
+        "cik": 320193,
+        "classification": "REPORTED_FACT",
+        "definition": "consolidated-reported",
+        "dimensions": [],
+        "end": "2025-06-28",
+        "extraction": {
+          "cik": 320193,
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-06-28",
+          "kind": "inline-xbrl-v1",
+          "start": "2024-09-29"
+        },
+        "id": "ytd2025_revenue-original",
+        "key": "ytd2025_revenue",
+        "locator": "inline#f-59",
+        "mapping_version": "aapl-reviewed-inline-guidance-v1",
+        "precision": "-6",
+        "published_at": "2026-07-31",
+        "scope": "consolidated",
+        "source": "q3-2026-10q",
+        "source_sha256": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
+        "start": "2024-09-29",
+        "supersedes": null,
+        "unit": "USD",
+        "value": "313695000000"
+      },
+      {
+        "available_at": "2026-07-31",
+        "cik": 320193,
+        "classification": "REPORTED_FACT",
+        "definition": "consolidated-reported",
+        "dimensions": [],
+        "end": "2026-06-27",
+        "extraction": {
+          "cik": 320193,
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-06-27",
+          "kind": "inline-xbrl-v1",
+          "start": "2026-03-29"
+        },
+        "id": "q32026_revenue-original",
+        "key": "q32026_revenue",
+        "locator": "inline#f-56",
+        "mapping_version": "aapl-reviewed-inline-guidance-v1",
+        "precision": "-6",
+        "published_at": "2026-07-31",
+        "scope": "consolidated",
+        "source": "q3-2026-10q",
+        "source_sha256": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
+        "start": "2026-03-29",
+        "supersedes": null,
+        "unit": "USD",
+        "value": "109417000000"
+      },
+      {
+        "available_at": "2026-07-31",
+        "cik": 320193,
+        "classification": "REPORTED_FACT",
+        "definition": "consolidated-reported",
+        "dimensions": [],
+        "end": "2025-06-28",
+        "extraction": {
+          "cik": 320193,
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-06-28",
+          "kind": "inline-xbrl-v1",
+          "start": "2025-03-30"
+        },
+        "id": "q32025_revenue-original",
+        "key": "q32025_revenue",
+        "locator": "inline#f-57",
+        "mapping_version": "aapl-reviewed-inline-guidance-v1",
+        "precision": "-6",
+        "published_at": "2026-07-31",
+        "scope": "consolidated",
+        "source": "q3-2026-10q",
+        "source_sha256": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
+        "start": "2025-03-30",
+        "supersedes": null,
+        "unit": "USD",
+        "value": "94036000000"
+      },
+      {
+        "available_at": "2026-07-31",
+        "cik": 320193,
+        "classification": "REPORTED_FACT",
+        "definition": "consolidated-reported",
+        "dimensions": [],
+        "end": "2026-06-27",
+        "extraction": {
+          "cik": 320193,
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2026-06-27",
+          "kind": "inline-xbrl-v1",
+          "start": "2026-03-29"
+        },
+        "id": "q32026_ebit-original",
+        "key": "q32026_ebit",
+        "locator": "inline#f-88",
+        "mapping_version": "aapl-reviewed-inline-guidance-v1",
+        "precision": "-6",
+        "published_at": "2026-07-31",
+        "scope": "consolidated",
+        "source": "q3-2026-10q",
+        "source_sha256": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
+        "start": "2026-03-29",
+        "supersedes": null,
+        "unit": "USD",
+        "value": "35695000000"
+      },
+      {
+        "available_at": "2026-10-30",
+        "cik": null,
+        "classification": "EXTERNAL_OBSERVATION",
+        "definition": "treasury-par-yield",
+        "dimensions": [],
+        "end": "2026-10-28",
+        "id": "treasury_10y-original",
+        "key": "treasury_10y",
+        "locator": "Daily Treasury par yield curve,10/28/2026 row,10-year5.05%; publication time not separately retained",
+        "mapping_version": "alphabet-reviewed-release-extraction-v1",
+        "precision": "0.01 percent",
+        "published_at": null,
+        "scope": "macro",
+        "source": "treasury-2026-10",
+        "source_sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+        "start": null,
+        "supersedes": null,
+        "unit": "fraction",
+        "value": "0.0505"
+      },
+      {
+        "available_at": "2026-10-08",
+        "cik": null,
+        "classification": "EXTERNAL_OBSERVATION",
+        "definition": "implied-erp-over-treasury",
+        "dimensions": [],
+        "end": "2026-10-01",
+        "id": "implied_erp-original",
+        "key": "implied_erp",
+        "locator": "October8authorpost; startOctober2026 implied ERP3.70%overTreasury; adjusted-RF3.92%notselected",
+        "mapping_version": "alphabet-reviewed-release-extraction-v1",
+        "precision": "0.01 percent",
+        "published_at": "2026-10-08",
+        "scope": "macro",
+        "source": "damodaran-2026-10-08",
+        "source_sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+        "start": null,
+        "supersedes": null,
+        "unit": "fraction",
+        "value": "0.037"
+      }
+    ],
+    "optional_bridge": {
+      "assets": null,
+      "claims": null,
+      "reason": "Eligibility/claims/settlement/class/award selections unapproved; omissions potentially unbounded",
+      "shares": null,
+      "status": "UNSUPPORTED_PREPARATION"
+    },
+    "policy": {
+      "context_sources": {
+        "capex_percent_revenue": [
+          "q3-2026-10q"
+        ],
+        "change_in_operating_nwc_percent_revenue": [
+          "q3-2026-10q"
+        ],
+        "d_and_a_percent_revenue": [
+          "q3-2026-10q"
+        ],
+        "forecast_tax_rate": [
+          "q3-2026-10q"
+        ],
+        "operating_margin": [
+          "q3-2026-10q"
+        ],
+        "revenue_growth": [
+          "q3-2026-10q"
+        ]
+      },
+      "da_model": {
+        "annualization_denominator": "3",
+        "annualization_numerator": "4",
+        "key": "ytd2026_da",
+        "method": "annualize-ytd"
+      },
+      "diagnostics": [
+        "FY2026 remains estimated using the retained July filing; this policy does not assert that an unavailable September-year-end result has been reported.",
+        "Prior fiscal Q4 revenue is annual less nine-month revenue; no calendar-Q4 substitution. Quarter momentum and4/3 annualizations do not normalize seasonality or acquisitions.",
+        "Latest-quarter reported operating margin includes tariff-refund effects; the31.5% endpoint is an independent assumption, not a claim of normalized reported earnings.",
+        "Expense D&A starts from4/3 of cash-flow D&A; expense alignment, acquisitions and future intangible amortization remain uncertain.",
+        "The1% financed-additions overlay is an explicit forecast estimate; missing historical lease splits and historical interest gaps are not solved.",
+        "Terminal D&A2.5% and investment3.5% are independent mature assumptions; no implied historical ROIC, equity bridge or years6–10 defaults."
+      ],
+      "investment_model": {
+        "annualization_denominator": "3",
+        "annualization_numerator": "4",
+        "key": "ytd2026_cash_ppe",
+        "method": "annualize-ytd"
+      },
+      "issuer": {
+        "anchor_kind": "aapl-fy2025",
+        "cik": 320193
+      },
+      "limitations": {
+        "capex_percent_revenue": "Annualize reported nine-month cash PP&E6.799bn by4/3; do not copy an infrastructure spending plan from another issuer. Later cash PP&E grows10%,8%,6%,5%. A separately configured1% new-financed-assets estimate and10% commissioning allowance are forecast assumptions, not inferred from the undisclosed operating/finance lease split.",
+        "change_in_operating_nwc_percent_revenue": "Company-specific incremental-sales cash coefficient; not book NWC, historical CFO calibration or a second CFO deduction.",
+        "d_and_a_percent_revenue": "Annualized cash-flow D&A is a forecast starting estimate; expense alignment and commissioning are not fully reconciled vintage economics.",
+        "forecast_tax_rate": "Explicit operating tax convention, not historical effective or actual unlevered cash taxes. No immediate tax benefit on operating losses.",
+        "operating_margin": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate.",
+        "revenue_growth": "Uses Apple fiscal periods: nine months2025-09-28 to2026-06-27, not calendar nine months. Prior fiscal Q4 is retained annual416.161bn minus reported prior YTD313.695bn. Extend that102.466bn quarter by current/prior June-quarter growth. Fade growth to5% and reported latest-quarter operating margin to31.5%. Tax18% to20% is a forecasting convention, not a reported sustainable tax rate."
+      },
+      "mapping": "aapl-reviewed-inline-guidance-v1",
+      "margin_model": {
+        "method": "reported-quarter"
+      },
+      "revenue_model": {
+        "method": "quarter-extension",
+        "prior_ytd_key": "ytd2025_revenue"
+      },
+      "review_date": "2026-11-02",
+      "rules": "registered-decimal-fade-commissioning-v1",
+      "selection": {
+        "fy2025_revenue": {
+          "cik": 320193,
+          "definition": "consolidated-reported",
+          "dimensions": [],
+          "end": "2025-09-27",
+          "scope": "consolidated",
+          "start": "2024-09-29",
+          "unit": "USD"
+        },
+        "implied_erp": {
+          "cik": null,
+          "definition": "implied-erp-over-treasury",
+          "dimensions": [],
+          "end": "2026-10-01",
+          "scope": "macro",
+          "start": null,
+          "unit": "fraction"
+        },
+        "q32025_revenue": {
+          "cik": 320193,
+          "definition": "consolidated-reported",
+          "dimensions": [],
+          "end": "2025-06-28",
+          "scope": "consolidated",
+          "start": "2025-03-30",
+          "unit": "USD"
+        },
+        "q32026_ebit": {
+          "cik": 320193,
+          "definition": "consolidated-reported",
+          "dimensions": [],
+          "end": "2026-06-27",
+          "scope": "consolidated",
+          "start": "2026-03-29",
+          "unit": "USD"
+        },
+        "q32026_revenue": {
+          "cik": 320193,
+          "definition": "consolidated-reported",
+          "dimensions": [],
+          "end": "2026-06-27",
+          "scope": "consolidated",
+          "start": "2026-03-29",
+          "unit": "USD"
+        },
+        "treasury_10y": {
+          "cik": null,
+          "definition": "treasury-par-yield",
+          "dimensions": [],
+          "end": "2026-10-28",
+          "scope": "macro",
+          "start": null,
+          "unit": "fraction"
+        },
+        "ytd2025_revenue": {
+          "cik": 320193,
+          "definition": "consolidated-reported",
+          "dimensions": [],
+          "end": "2025-06-28",
+          "scope": "consolidated",
+          "start": "2024-09-29",
+          "unit": "USD"
+        },
+        "ytd2026_cash_ppe": {
+          "cik": 320193,
+          "definition": "consolidated-reported",
+          "dimensions": [],
+          "end": "2026-06-27",
+          "scope": "consolidated",
+          "start": "2025-09-28",
+          "unit": "USD"
+        },
+        "ytd2026_da": {
+          "cik": 320193,
+          "definition": "consolidated-reported",
+          "dimensions": [],
+          "end": "2026-06-27",
+          "scope": "consolidated",
+          "start": "2025-09-28",
+          "unit": "USD"
+        },
+        "ytd2026_revenue": {
+          "cik": 320193,
+          "definition": "consolidated-reported",
+          "dimensions": [],
+          "end": "2026-06-27",
+          "scope": "consolidated",
+          "start": "2025-09-28",
+          "unit": "USD"
+        }
+      },
+      "source_max_age_days": 45,
+      "version": "aapl-preload-v1.0.0"
+    },
+    "scenario_policy": "diagnostic-offset-v1; unchanged RATIOS inherit Base, including WC; 5% incremental WC rule describes Base only, not stressed revenue. No probabilities or guaranteed ordering",
+    "scenarios": {
+      "Base": {
+        "exit_ev_ebit_multiple": null,
+        "forecast_years[0].capex_percent_revenue": "0.018933646236616607468524995991535977295858717795219",
+        "forecast_years[0].change_in_operating_nwc_percent_revenue": "0.0069710756560920215004563633948410956942823937978490",
+        "forecast_years[0].d_and_a_percent_revenue": "0.027497528599543238927623279635413522019341660985631",
+        "forecast_years[0].forecast_tax_rate": "0.18",
+        "forecast_years[0].operating_margin": "0.32622901377299688348245702221775409671257665627827",
+        "forecast_years[0].revenue_growth": "0.1620090616343511777142900136984099192243316169903",
+        "forecast_years[1].capex_percent_revenue": "0.018365860707004025190348195297639652396619506892376",
+        "forecast_years[1].change_in_operating_nwc_percent_revenue": "0.0059085534880288619879698255686000066017823638393351",
+        "forecast_years[1].d_and_a_percent_revenue": "0.025917739929799876632136889282316773302765385363517",
+        "forecast_years[1].forecast_tax_rate": "0.185",
+        "forecast_years[1].operating_margin": "0.32342176032974766261184276666331557253443249220870",
+        "forecast_years[1].revenue_growth": "0.13400679622576338328571751027380743941824871274272",
+        "forecast_years[2].capex_percent_revenue": "0.017934040061218454012988745964565604961155627855814",
+        "forecast_years[2].change_in_operating_nwc_percent_revenue": "0.0047922285968780681370856277005838556297231578296031",
+        "forecast_years[2].d_and_a_percent_revenue": "0.025094224505566800403540625808593431613123605153725",
+        "forecast_years[2].forecast_tax_rate": "0.19",
+        "forecast_years[2].operating_margin": "0.32061450688649844174122851110887704835628832813914",
+        "forecast_years[2].revenue_growth": "0.10600453081717558885714500684920495961216580849515",
+        "forecast_years[3].capex_percent_revenue": "0.017634547787973618281158869370733768776772839331360",
+        "forecast_years[3].change_in_operating_nwc_percent_revenue": "0.0036179082322718093513093972875138985203953452928107",
+        "forecast_years[3].d_and_a_percent_revenue": "0.024942089060914554429994075604776435601286566490010",
+        "forecast_years[3].forecast_tax_rate": "0.195",
+        "forecast_years[3].operating_margin": "0.31780725344324922087061425555443852417814416406957",
+        "forecast_years[3].revenue_growth": "0.078002265408587794428572503424602479806082904247575",
+        "forecast_years[4].capex_percent_revenue": "0.017634547787973618281158869370733768776772839331360",
+        "forecast_years[4].change_in_operating_nwc_percent_revenue": "0.0023809523809523809523809523809523809523809523809524",
+        "forecast_years[4].d_and_a_percent_revenue": "0.025433851275916110722009488135095059503775095641091",
+        "forecast_years[4].forecast_tax_rate": "0.20",
+        "forecast_years[4].operating_margin": "0.31500000000000000000000000000000000000000000000000",
+        "forecast_years[4].revenue_growth": "0.0500000000000000000000000000000000000000000000000",
+        "terminal.d_and_a_percent_revenue": "0.025",
+        "terminal.investment_percent_revenue": "0.035",
+        "terminal.operating_margin": "0.315",
+        "terminal.operating_tax_rate": "0.20",
+        "terminal.working_capital_cash_requirement_percent_revenue": "0.0012195121951219512195121951219512195121951219512195",
+        "terminal_growth": "0.025",
+        "wacc": "0.08272750"
+      },
+      "Bear": {
+        "exit_ev_ebit_multiple": null,
+        "forecast_years[0].capex_percent_revenue": "0.018933646236616607468524995991535977295858717795219",
+        "forecast_years[0].change_in_operating_nwc_percent_revenue": "0.0069710756560920215004563633948410956942823937978490",
+        "forecast_years[0].d_and_a_percent_revenue": "0.027497528599543238927623279635413522019341660985631",
+        "forecast_years[0].forecast_tax_rate": "0.18",
+        "forecast_years[0].operating_margin": "0.30622901377299688348245702221775409671257665627827",
+        "forecast_years[0].revenue_growth": "0.1420090616343511777142900136984099192243316169903",
+        "forecast_years[1].capex_percent_revenue": "0.018365860707004025190348195297639652396619506892376",
+        "forecast_years[1].change_in_operating_nwc_percent_revenue": "0.0059085534880288619879698255686000066017823638393351",
+        "forecast_years[1].d_and_a_percent_revenue": "0.025917739929799876632136889282316773302765385363517",
+        "forecast_years[1].forecast_tax_rate": "0.185",
+        "forecast_years[1].operating_margin": "0.30342176032974766261184276666331557253443249220870",
+        "forecast_years[1].revenue_growth": "0.11400679622576338328571751027380743941824871274272",
+        "forecast_years[2].capex_percent_revenue": "0.017934040061218454012988745964565604961155627855814",
+        "forecast_years[2].change_in_operating_nwc_percent_revenue": "0.0047922285968780681370856277005838556297231578296031",
+        "forecast_years[2].d_and_a_percent_revenue": "0.025094224505566800403540625808593431613123605153725",
+        "forecast_years[2].forecast_tax_rate": "0.19",
+        "forecast_years[2].operating_margin": "0.30061450688649844174122851110887704835628832813914",
+        "forecast_years[2].revenue_growth": "0.08600453081717558885714500684920495961216580849515",
+        "forecast_years[3].capex_percent_revenue": "0.017634547787973618281158869370733768776772839331360",
+        "forecast_years[3].change_in_operating_nwc_percent_revenue": "0.0036179082322718093513093972875138985203953452928107",
+        "forecast_years[3].d_and_a_percent_revenue": "0.024942089060914554429994075604776435601286566490010",
+        "forecast_years[3].forecast_tax_rate": "0.195",
+        "forecast_years[3].operating_margin": "0.29780725344324922087061425555443852417814416406957",
+        "forecast_years[3].revenue_growth": "0.058002265408587794428572503424602479806082904247575",
+        "forecast_years[4].capex_percent_revenue": "0.017634547787973618281158869370733768776772839331360",
+        "forecast_years[4].change_in_operating_nwc_percent_revenue": "0.0023809523809523809523809523809523809523809523809524",
+        "forecast_years[4].d_and_a_percent_revenue": "0.025433851275916110722009488135095059503775095641091",
+        "forecast_years[4].forecast_tax_rate": "0.20",
+        "forecast_years[4].operating_margin": "0.29500000000000000000000000000000000000000000000000",
+        "forecast_years[4].revenue_growth": "0.0300000000000000000000000000000000000000000000000",
+        "terminal.d_and_a_percent_revenue": "0.025",
+        "terminal.investment_percent_revenue": "0.035",
+        "terminal.operating_margin": "0.315",
+        "terminal.operating_tax_rate": "0.20",
+        "terminal.working_capital_cash_requirement_percent_revenue": "0.0012195121951219512195121951219512195121951219512195",
+        "terminal_growth": "0.025",
+        "wacc": "0.09272750"
+      },
+      "Bull": {
+        "exit_ev_ebit_multiple": null,
+        "forecast_years[0].capex_percent_revenue": "0.018933646236616607468524995991535977295858717795219",
+        "forecast_years[0].change_in_operating_nwc_percent_revenue": "0.0069710756560920215004563633948410956942823937978490",
+        "forecast_years[0].d_and_a_percent_revenue": "0.027497528599543238927623279635413522019341660985631",
+        "forecast_years[0].forecast_tax_rate": "0.18",
+        "forecast_years[0].operating_margin": "0.34622901377299688348245702221775409671257665627827",
+        "forecast_years[0].revenue_growth": "0.1820090616343511777142900136984099192243316169903",
+        "forecast_years[1].capex_percent_revenue": "0.018365860707004025190348195297639652396619506892376",
+        "forecast_years[1].change_in_operating_nwc_percent_revenue": "0.0059085534880288619879698255686000066017823638393351",
+        "forecast_years[1].d_and_a_percent_revenue": "0.025917739929799876632136889282316773302765385363517",
+        "forecast_years[1].forecast_tax_rate": "0.185",
+        "forecast_years[1].operating_margin": "0.34342176032974766261184276666331557253443249220870",
+        "forecast_years[1].revenue_growth": "0.15400679622576338328571751027380743941824871274272",
+        "forecast_years[2].capex_percent_revenue": "0.017934040061218454012988745964565604961155627855814",
+        "forecast_years[2].change_in_operating_nwc_percent_revenue": "0.0047922285968780681370856277005838556297231578296031",
+        "forecast_years[2].d_and_a_percent_revenue": "0.025094224505566800403540625808593431613123605153725",
+        "forecast_years[2].forecast_tax_rate": "0.19",
+        "forecast_years[2].operating_margin": "0.34061450688649844174122851110887704835628832813914",
+        "forecast_years[2].revenue_growth": "0.12600453081717558885714500684920495961216580849515",
+        "forecast_years[3].capex_percent_revenue": "0.017634547787973618281158869370733768776772839331360",
+        "forecast_years[3].change_in_operating_nwc_percent_revenue": "0.0036179082322718093513093972875138985203953452928107",
+        "forecast_years[3].d_and_a_percent_revenue": "0.024942089060914554429994075604776435601286566490010",
+        "forecast_years[3].forecast_tax_rate": "0.195",
+        "forecast_years[3].operating_margin": "0.33780725344324922087061425555443852417814416406957",
+        "forecast_years[3].revenue_growth": "0.098002265408587794428572503424602479806082904247575",
+        "forecast_years[4].capex_percent_revenue": "0.017634547787973618281158869370733768776772839331360",
+        "forecast_years[4].change_in_operating_nwc_percent_revenue": "0.0023809523809523809523809523809523809523809523809524",
+        "forecast_years[4].d_and_a_percent_revenue": "0.025433851275916110722009488135095059503775095641091",
+        "forecast_years[4].forecast_tax_rate": "0.20",
+        "forecast_years[4].operating_margin": "0.33500000000000000000000000000000000000000000000000",
+        "forecast_years[4].revenue_growth": "0.0700000000000000000000000000000000000000000000000",
+        "terminal.d_and_a_percent_revenue": "0.025",
+        "terminal.investment_percent_revenue": "0.035",
+        "terminal.operating_margin": "0.315",
+        "terminal.operating_tax_rate": "0.20",
+        "terminal.working_capital_cash_requirement_percent_revenue": "0.0012195121951219512195121951219512195121951219512195",
+        "terminal_growth": "0.025",
+        "wacc": "0.07272750"
+      }
+    },
+    "sources": [
+      {
+        "accession": "0000320193-26-000020",
+        "bytes": 1018319,
+        "content_type": "text/html",
+        "extraction_version": "raw-body-v1",
+        "file": "q3-2026-10q.html",
+        "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+        "http_status": 200,
+        "id": "q3-2026-10q",
+        "observation_date": "2026-06-27",
+        "published_at": "2026-07-31",
+        "retrieved_at": "2026-11-02T15:10:20.802949+00:00",
+        "rights": "Public primary evidence retained for local reproducibility; not a redistribution license.",
+        "sha256": "a12d2352fdb814fdd2423d6f4ced093b25fb2b30adc17e7a8326b9e0cd3c51b5",
+        "title": "Apple Q3 FY2026 Form 10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm"
+      },
+      {
+        "accession": "0000320193-25-000079",
+        "bytes": 1520319,
+        "content_type": "text/html",
+        "extraction_version": "retained-primary-reuse-v1",
+        "file": "fy2025-10k.html",
+        "final_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+        "http_status": 200,
+        "id": "fy2025-10k",
+        "observation_date": "2025-09-27",
+        "published_at": "2025-10-31",
+        "retrieved_at": "2026-10-11T17:12:47.260610+00:00",
+        "rights": "Existing retained SEC primary evidence reused without altering historical packages.",
+        "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+        "title": "AAPL FY2025 retained approved annual filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+      },
+      {
+        "accession": null,
+        "bytes": 246533,
+        "content_type": "text/html; charset=UTF-8",
+        "extraction_version": "raw-body-v1",
+        "file": "treasury-2026-10.html",
+        "final_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "http_status": 200,
+        "id": "treasury-2026-10",
+        "observation_date": "2026-10-28",
+        "published_at": null,
+        "retrieved_at": "2026-10-30T13:40:25.931113+00:00",
+        "rights": "US Treasury public source; page-specific third-party exceptions may apply; retained locally for attribution and reproducibility.",
+        "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+        "title": "US Treasury October 2026 daily par yield curve",
+        "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+      },
+      {
+        "accession": null,
+        "bytes": 169880,
+        "content_type": "text/html; charset=UTF-8",
+        "extraction_version": "raw-body-v1",
+        "file": "damodaran-2026-10-08.html",
+        "final_url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+        "http_status": 200,
+        "id": "damodaran-2026-10-08",
+        "observation_date": "2026-10-01",
+        "published_at": "2026-10-08",
+        "retrieved_at": "2026-10-30T13:40:26.745937+00:00",
+        "rights": "Publicly accessible primary source; public access does not establish a redistribution license. Retained locally for attribution and reproducibility; author/issuer rights remain.",
+        "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+        "title": "Aswath Damodaran October 8 2026 market update",
+        "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+      }
+    ]
+  },
+  "economic_hash": "3d49d43cb82d7ca8228234e45dbd884f531c20c99a170427de7c6f5e09627d7b",
+  "generated_at": "2026-11-05T16:03:54.177151+00:00",
+  "schema_version": "preload-profile-v1"
+}

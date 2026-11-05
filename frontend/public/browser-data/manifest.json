@@ -1,0 +1,45 @@
+{
+  "schema_version": "browser-data-manifest-v1",
+  "dataset_version": "2026-11-05-migration-baseline",
+  "generated_at": "2026-11-05T18:26:14.028Z",
+  "files": {
+    "catalog.json": "ac5be3745820f5d8e4ec5f864978dc4f0c254ee638e4f15882d22e950ad0216a",
+    "preloads/aapl.json": "4707445e5888f435abe82a2f3e730edd13cc4aadfaa54721dea99bf422dfc859",
+    "cashflows/AAPL.json": "fd90e7e2e03ca92510b29e3774e06028c564808777884b1002aa552e9c614208",
+    "discount-inputs/AAPL.json": "b2b2f263193eb335f76b2ef822357b86a33de43e2202d2ba473c5697e17c17e5",
+    "preloads/meta.json": "5f7d905b6225b477db3fca734b8fe00045a63be3fd89b3a81110c160d069b4b2",
+    "cashflows/META.json": "ef4a41c2245550fa941215dd00ec48ea6d2dfc91fa32a1b40167deb9732524c3",
+    "discount-inputs/META.json": "a15933e5032983608deab019488cf86728693505786c772579898768fe8c626d",
+    "analyst/META.json": "53734dca1740f1cee4c8a8f9161d3e00ab39eeb63dce294a0c76e3a712f66a18",
+    "preloads/googl.json": "603204c8534a556d34445138110cadcbd2efa7a790a7b4d648e09bd562185b77",
+    "cashflows/GOOGL.json": "01f79e226431964939e50c71e7e58e66d562f83c0b44e8beeea054e68d99cfab",
+    "discount-inputs/GOOGL.json": "01729890394f69edc9b2f331bc7e909b05dbe5c625c9d5b6705dfe7678ae0cb6",
+    "analyst/GOOGL.json": "14860ce34e73cbcfa8d3b463a50cbd4f15fa67cbef8426325edf9c2332ab9b45",
+    "anchors.json": "ad1a28f93b7045a7c3f74fec5807a3a88330aa146cee6725eda7f1ac57321220",
+    "policies.json": "9b8a8b632dccef58f243785e4387bfcffd33e03f0888281740cb36515b9de038",
+    "metadata.json": "13c1dcd3b9e3050685ff7c9437ac6e0ead0b21565e58b314c6b43e94ca7b7f00"
+  },
+  "routes": {
+    "/api/v1/catalog": "catalog.json",
+    "/api/v1/preloads/aapl": "preloads/aapl.json",
+    "/api/v1/cashflows/AAPL": "cashflows/AAPL.json",
+    "/api/v1/discount-inputs/AAPL": "discount-inputs/AAPL.json",
+    "/api/v1/preloads/meta": "preloads/meta.json",
+    "/api/v1/cashflows/META": "cashflows/META.json",
+    "/api/v1/discount-inputs/META": "discount-inputs/META.json",
+    "/api/v1/analyst/META": "analyst/META.json",
+    "/api/v1/preloads/googl": "preloads/googl.json",
+    "/api/v1/cashflows/GOOGL": "cashflows/GOOGL.json",
+    "/api/v1/discount-inputs/GOOGL": "discount-inputs/GOOGL.json",
+    "/api/v1/analyst/GOOGL": "analyst/GOOGL.json"
+  },
+  "source": "Read-only local Python reference API; manually refreshed frozen dataset",
+  "qualifications": [
+    "Static dated financial data; no automatic SEC or market refresh.",
+    "Preserves existing reported/derived/assumed distinctions and unresolved source qualifications.",
+    "No credentials, network secrets, personal files or machine paths are intentionally included."
+  ],
+  "fixture_count": 60,
+  "fixture_sha256": "ce9871bbc737bf23a5a9cd3214dda2565a3c47efa9b0fde44747a25a8faa8b5b",
+  "python_baseline_sha256": "16bb59f6a29b969e0abbbbd43c839ac29a0b3ca7edae2fbc878184cf2bfe0ff5"
+}

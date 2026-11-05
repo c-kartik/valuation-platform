@@ -1,0 +1,19 @@
+{
+  "assumption_status": "CONFIGURED_ANALYST_CONVENTIONS_NOT_REPORTED_FACTS",
+  "defaults": {
+    "additional_assets_usd": "27524000000",
+    "additional_claims_usd": "0",
+    "cost_of_equity": "0.09490",
+    "historical_minority_cash_share": "0",
+    "historical_other_financing_fraction": "0",
+    "nci_claim_usd": "0",
+    "operating_cash_reserve_ratio": "0.02",
+    "pre_tax_cost_of_debt": "0.0595",
+    "rsu_vesting_fraction": "1"
+  },
+  "model_origin": "2025-12-31",
+  "name": "Meta",
+  "policy_version": "meta-analyst-2026-11-04-v1",
+  "schema_version": "company-analyst-profile-v1",
+  "ticker": "META"
+}

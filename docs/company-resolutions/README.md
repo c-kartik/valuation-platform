@@ -1,5 +1,13 @@
 # Company cash-flow resolutions
 
+## Parallel browser consumer — November 5, 2026
+
+The [browser-engine migration](../browser-engine-migration.md) reproduces the
+existing three-company analyst contracts from versioned static exports. It makes
+no changes to issuer policy/source records or approved financial preparation,
+and grants no additional financial acceptance. Python source preservation and
+default/perturbed full-precision comparisons are separate from financial review.
+
 ## Meta and Alphabet five-output analyst acceptance — November4,2026
 
 [Meta](META/analyst-ready-2026-11-04/report.html) and [Alphabet](GOOGL/analyst-ready-2026-11-04/report.html) now meet the same qualified analyst-use contract as Apple, under the user's explicit extension. Both have five historical annuals and both forward valuation/share routes, editable assumptions, scenarios/sensitivities, sealed API and live DCF consumers. Exact source unknowns are preserved. Alphabet's historical parent proxy is not verified parent cash; its separate NCI valuation uses a labeled book-value proxy. No other issuer or wider-universe acceptance is implied. Dated OPEN statements below retain their earlier scope.

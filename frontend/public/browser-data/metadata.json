@@ -1,0 +1,579 @@
+{
+  "analyst": {
+    "AAPL": {
+      "schema_version": "apple-analyst-result-v1",
+      "ticker": "AAPL",
+      "policy_version": "aapl-analyst-2026-11-04-v1",
+      "model_origin": "2025-09-27",
+      "readiness": [
+        {
+          "detail": "Five reproducible standardized EBIT/NWC calculations; reported D&A and tax conventions retained.",
+          "id": "historical_fcff",
+          "label": "Historical FCFF · five years",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Selected operating forecast, WACC and terminal inputs calculate; history is context, not automatic calibration.",
+          "id": "fcff_valuation",
+          "label": "FCFF forecast and enterprise value",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Identified-funding CFO-based estimates under the explicit Other-financing exclusion policy; economic SBC variant shown separately.",
+          "id": "historical_fcfe",
+          "label": "Historical FCFE · five years",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Explicit net-debt rollover, matched financed investment, interest, terminal financing and cost of equity calculate.",
+          "id": "fcfe_valuation",
+          "label": "FCFE forecast and equity value",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Date-matched cash/debt/shares plus disclosed reserve, RSU and additional-claim assumptions; debt deducted only in FCFF bridge.",
+          "id": "per_share",
+          "label": "Fair value per share · both methods",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        }
+      ],
+      "qualifications": [
+        "Analyst-ready means usable under these disclosed assumptions; it does not certify exact historical cash flows or a market trading recommendation.",
+        "Analytical origin 2025-09-27 uses later-filed information. This is not a current-date valuation or contemporaneous backtest; no current-price upside claim is made.",
+        "Historical FCFE = reported CFO - cash PP&E + identified term-debt/CP net borrowing. The chosen fraction of net Other is an assumption; unknown gross financing and lease principal remain unidentified. No extra guessed principal deduction is made.",
+        "The economic FCFE companion subtracts reported SBC from CFO-based FCFE. Historical FCFF, CFO-based FCFE and forward operating cash flows still have different tax, noncash and investment populations; no automatic cross-basis CAGR or calibration.",
+        "Reported combined D&A is retained. The FY2024 355M note difference is a source qualification; it has zero forecast valuation impact when forward inputs are held fixed and history calibration is disabled.",
+        "Historical current taxes remain within the defined NWC convention. Forward tax and working capital are independent normalized analyst assumptions, not issuer-certified operating cash taxes.",
+        "Explicit forecast financing debt stays at carrying value by net rollover. Interest equals the assumed debt cost times opening carrying debt. Matching new financed assets and principal are included once; no gross maturity schedule or repurchase-driven share shrinkage is predicted.",
+        "FCFF uses the submitted WACC (saved Base targets 15% debt); FCFE uses the submitted cost of equity and flat explicit debt. These are different financing assumptions, so the two valuations need not match. Their difference is quantified, not forced away.",
+        "The operating cash reserve is an analyst liquidity haircut, not an observed Apple requirement. Future operating margins and working-capital drivers are assumed inclusive of ongoing operational liquidity costs.",
+        "Term debt uses disclosed fair value; CP and finance leases use carrying proxies. Operating leases remain service expenses and are not deducted as debt again. Compare the carrying-debt sensitivity.",
+        "Existing unvested RSUs enter expected shares; future compensation remains in operating margins as a future-grant expense proxy. No separate settlement of the same RSUs, grant-date value deduction, exercise proceeds or future-cost cash deduction is added. Vesting assumptions are editable.",
+        "Zero additional non-operating claims is a base-case assumption, not evidence of no exposure. Ordinary tax/legal settlements are assumed captured by forecast expenses and taxes; do not deduct the already-settled Ireland escrow again. The 23.242B claim stress is illustrative, not a proven maximum.",
+        "Small net Other is not a bound on potentially offsetting gross financing. Changing its allocation only stress-tests the disclosed net caption; it does not establish exact historical FCFE."
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm",
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+        "https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/free-cash-flow-valuation",
+        "https://www.cfainstitute.org/standards/professionals/code-ethics-standards/standards-of-practice-v-a",
+        "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/valopt.pdf",
+        "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/noncashwc.htm"
+      ],
+      "discount_basis": {
+        "beta": "1.05",
+        "classification": "DATED_MACRO_OBSERVATIONS_AND_CONFIGURED_ANALYST_ASSUMPTIONS",
+        "debt_tax_shield": "0.20",
+        "equity_risk_premium": "0.037",
+        "macro_observations": {
+          "implied_erp": {
+            "available_at": "2026-10-08",
+            "cik": null,
+            "classification": "EXTERNAL_OBSERVATION",
+            "definition": "implied-erp-over-treasury",
+            "dimensions": [],
+            "end": "2026-10-01",
+            "id": "implied_erp-original",
+            "key": "implied_erp",
+            "locator": "October8authorpost; startOctober2026 implied ERP3.70%overTreasury; adjusted-RF3.92%notselected",
+            "mapping_version": "alphabet-reviewed-release-extraction-v1",
+            "precision": "0.01 percent",
+            "published_at": "2026-10-08",
+            "scope": "macro",
+            "source": "damodaran-2026-10-08",
+            "source_sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+            "start": null,
+            "supersedes": null,
+            "unit": "fraction",
+            "value": "0.037"
+          },
+          "treasury_10y": {
+            "available_at": "2026-10-30",
+            "cik": null,
+            "classification": "EXTERNAL_OBSERVATION",
+            "definition": "treasury-par-yield",
+            "dimensions": [],
+            "end": "2026-10-28",
+            "id": "treasury_10y-original",
+            "key": "treasury_10y",
+            "locator": "Daily Treasury par yield curve,10/28/2026 row,10-year5.05%; publication time not separately retained",
+            "mapping_version": "alphabet-reviewed-release-extraction-v1",
+            "precision": "0.01 percent",
+            "published_at": null,
+            "scope": "macro",
+            "source": "treasury-2026-10",
+            "source_sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+            "start": null,
+            "supersedes": null,
+            "unit": "fraction",
+            "value": "0.0505"
+          }
+        },
+        "macro_sources": [
+          {
+            "accession": null,
+            "bytes": 246533,
+            "content_type": "text/html; charset=UTF-8",
+            "extraction_version": "raw-body-v1",
+            "file": "treasury-2026-10.html",
+            "final_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+            "http_status": 200,
+            "id": "treasury-2026-10",
+            "observation_date": "2026-10-28",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:40:25.931113+00:00",
+            "rights": "US Treasury public source; page-specific third-party exceptions may apply; retained locally for attribution and reproducibility.",
+            "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+            "title": "US Treasury October 2026 daily par yield curve",
+            "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+          },
+          {
+            "accession": null,
+            "bytes": 169880,
+            "content_type": "text/html; charset=UTF-8",
+            "extraction_version": "raw-body-v1",
+            "file": "damodaran-2026-10-08.html",
+            "final_url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+            "http_status": 200,
+            "id": "damodaran-2026-10-08",
+            "observation_date": "2026-10-01",
+            "published_at": "2026-10-08",
+            "retrieved_at": "2026-10-30T13:40:26.745937+00:00",
+            "rights": "Publicly accessible primary source; public access does not establish a redistribution license. Retained locally for attribution and reproducibility; author/issuer rights remain.",
+            "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+            "title": "Aswath Damodaran October 8 2026 market update",
+            "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+          }
+        ],
+        "risk_free": "0.0505",
+        "saved_base_wacc": "0.08272750",
+        "target_debt_weight": "0.15",
+        "target_equity_weight": "0.85"
+      },
+      "exact_full_historical_fcfe_claim": false,
+      "automatic_history_calibration": false
+    },
+    "META": {
+      "schema_version": "company-analyst-result-v1",
+      "ticker": "META",
+      "name": "Meta",
+      "policy_version": "meta-analyst-2026-11-04-v1",
+      "model_origin": "2025-12-31",
+      "readiness": [
+        {
+          "detail": "Five adopted reported-cash-convention calculations with explicit interest/tax/investment qualifications.",
+          "id": "historical_fcff",
+          "label": "Historical FCFF · five years",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Current selected operating forecast, WACC and independent terminal calculate.",
+          "id": "fcff_valuation",
+          "label": "FCFF forecast and enterprise value",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Standardized identified-financing estimates; consolidated scope and any historical minority allocation are explicit.",
+          "id": "historical_fcfe",
+          "label": "Historical FCFE · five years",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Explicit financing, cost of equity and terminal debt growth; minority value deducted once when applicable.",
+          "id": "fcfe_valuation",
+          "label": "FCFE forecast and equity value",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Dated cash/debt/shares plus editable investment, reserve, awards and claim assumptions.",
+          "id": "per_share",
+          "label": "Fair value per share · both methods",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        }
+      ],
+      "qualifications": [
+        "Analyst-ready means usable under these explicit conventions, not exact historical cash reconstruction, issuer-certified assumptions or an investment recommendation.",
+        "Analytical origin 2025-12-31 uses later-filed information; no current-date fair value, historical backtest or current-price upside is asserted.",
+        "Historical FCFF preserves the adopted reported-CFO/expensed-interest/reported-tax/cash-investment convention. It retains SBC addbacks, unlike forward EBIT cash flows. No automatic cross-basis CAGR or forecast calibration.",
+        "Historical FCFE includes identified financing once. Net Other allocation is a selected assumption and not a bound on unidentified offsetting gross financing. The economic companion subtracts reported SBC once; it does not normalize all accounting differences.",
+        "Flat explicit carrying debt is maintained by net rollover; interest is debt cost times opening debt. Matched financed-asset investment and aggregate principal enter once; gross maturity/refinancing schedules are not predicted. Terminal debt grows at the terminal growth rate.",
+        "FCFF uses the submitted target-weight WACC; FCFE uses CAPM/configured cost of equity and flat explicit debt. These financing assumptions differ, so valuation differences are shown rather than forced to zero.",
+        "Liquid cash and securities exclude restricted balances and separately shown nonmarketable holdings. The selected operating reserve is an analyst haircut; ongoing liquidity costs are assumed included in forward margins/WC.",
+        "Separate non-operating financial investments use an editable carrying-value proxy, not an observed market value. Operating EBIT forecasts exclude their investment returns; the same holdings are not added twice. Exclusion and haircut sensitivities show this valuation judgment.",
+        "Term debt uses disclosed fair value and finance leases carrying proxies. Operating leases remain service expenses; no second operating-lease debt deduction. FCFE does not subtract debt again.",
+        "Dated common shares across all economic classes plus expected existing RSU vesting form the denominator. Equal per-share economic participation is an explicit analyst assumption; voting/control rights are not claimed identical. Future SBC in margins proxies future grants; no separate settlement/award-value deduction for the same existing RSUs.",
+        "Zero additional non-operating claims is an explicit base assumption, not proof of no tax/legal exposure. Ordinary settlements are assumed within forecast tax/expenses; stresses are illustrative, not bounds.",
+        "FCFE financing identities are checked at 50-digit arithmetic precision. A last-place associativity residual, when present, is exported with its calculated rounding envelope and is not a cash adjustment; financial component mismatches still fail validation.",
+        "Meta cash investment nets only identified PP&E receipts. The 2022/2023 245M/221M corrections remain; no second disposal deduction is made.",
+        "Reported interest expense and cash investment retain their stated scope. Disclosed incurred capitalized interest is not automatically added to FCFF or deducted from capex; it is not proof of cash paid. Exact economic interest/investment alignment remains a qualification.",
+        "FY2025 exceptional tax/valuation-allowance charges are not added to reported CFO. Forward 16% to 20%, terminal 20%, remain the separate saved analyst tax policy.",
+        "The 27.524B nonmarketable investment total already contains 7.448B equity-method holdings; these are added once. Disclosed venture commitments/maximum guarantee exposure are not expected cash losses and are not automatically deducted in full; the additional-claim input permits a separately assessed loss assumption."
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/fb-20211231_htm.xml",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/meta-20221231_htm.xml",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231_htm.xml",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/meta-20241231_htm.xml",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231_htm.xml",
+        "https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/free-cash-flow-valuation",
+        "https://www.cfainstitute.org/standards/professionals/code-ethics-standards/standards-of-practice-v-a",
+        "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/mgtoption.htm",
+        "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/noncashwc.htm"
+      ],
+      "discount_basis": {
+        "beta": "1.20",
+        "classification": "DATED_MACRO_OBSERVATIONS_AND_CONFIGURED_ANALYST_ASSUMPTIONS",
+        "debt_tax_shield": "0.20",
+        "equity_risk_premium": "0.037",
+        "macro_observations": {
+          "implied_erp": {
+            "available_at": "2026-10-08",
+            "cik": null,
+            "classification": "EXTERNAL_OBSERVATION",
+            "definition": "implied-erp-over-treasury",
+            "dimensions": [],
+            "end": "2026-10-01",
+            "id": "implied_erp-original",
+            "key": "implied_erp",
+            "locator": "October8authorpost; startOctober2026 implied ERP3.70%overTreasury; adjusted-RF3.92%notselected",
+            "mapping_version": "alphabet-reviewed-release-extraction-v1",
+            "precision": "0.01 percent",
+            "published_at": "2026-10-08",
+            "scope": "macro",
+            "source": "damodaran-2026-10-08",
+            "source_sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+            "start": null,
+            "supersedes": null,
+            "unit": "fraction",
+            "value": "0.037"
+          },
+          "treasury_10y": {
+            "available_at": "2026-10-30",
+            "cik": null,
+            "classification": "EXTERNAL_OBSERVATION",
+            "definition": "treasury-par-yield",
+            "dimensions": [],
+            "end": "2026-10-28",
+            "id": "treasury_10y-original",
+            "key": "treasury_10y",
+            "locator": "Daily Treasury par yield curve,10/28/2026 row,10-year5.05%; publication time not separately retained",
+            "mapping_version": "alphabet-reviewed-release-extraction-v1",
+            "precision": "0.01 percent",
+            "published_at": null,
+            "scope": "macro",
+            "source": "treasury-2026-10",
+            "source_sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+            "start": null,
+            "supersedes": null,
+            "unit": "fraction",
+            "value": "0.0505"
+          }
+        },
+        "macro_sources": [
+          {
+            "accession": null,
+            "bytes": 246533,
+            "content_type": "text/html; charset=UTF-8",
+            "extraction_version": "raw-body-v1",
+            "file": "treasury-2026-10.html",
+            "final_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+            "http_status": 200,
+            "id": "treasury-2026-10",
+            "observation_date": "2026-10-28",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:40:25.931113+00:00",
+            "rights": "US Treasury public source; page-specific third-party exceptions may apply; retained locally for attribution and reproducibility.",
+            "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+            "title": "US Treasury October 2026 daily par yield curve",
+            "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+          },
+          {
+            "accession": null,
+            "bytes": 169880,
+            "content_type": "text/html; charset=UTF-8",
+            "extraction_version": "raw-body-v1",
+            "file": "damodaran-2026-10-08.html",
+            "final_url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+            "http_status": 200,
+            "id": "damodaran-2026-10-08",
+            "observation_date": "2026-10-01",
+            "published_at": "2026-10-08",
+            "retrieved_at": "2026-10-30T13:40:26.745937+00:00",
+            "rights": "Publicly accessible primary source; public access does not establish a redistribution license. Retained locally for attribution and reproducibility; author/issuer rights remain.",
+            "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+            "title": "Aswath Damodaran October 8 2026 market update",
+            "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+          }
+        ],
+        "risk_free": "0.0505",
+        "saved_base_wacc": "0.09253500",
+        "target_debt_weight": "0.05",
+        "target_equity_weight": "0.95"
+      },
+      "exact_full_historical_fcfe_claim": false,
+      "automatic_history_calibration": false
+    },
+    "GOOGL": {
+      "schema_version": "company-analyst-result-v1",
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "policy_version": "googl-analyst-2026-11-04-v1",
+      "model_origin": "2025-12-31",
+      "readiness": [
+        {
+          "detail": "Five adopted reported-cash-convention calculations with explicit interest/tax/investment qualifications.",
+          "id": "historical_fcff",
+          "label": "Historical FCFF · five years",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Current selected operating forecast, WACC and independent terminal calculate.",
+          "id": "fcff_valuation",
+          "label": "FCFF forecast and enterprise value",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Standardized identified-financing estimates; consolidated scope and any historical minority allocation are explicit.",
+          "id": "historical_fcfe",
+          "label": "Historical FCFE · five years",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Explicit financing, cost of equity and terminal debt growth; minority value deducted once when applicable.",
+          "id": "fcfe_valuation",
+          "label": "FCFE forecast and equity value",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        },
+        {
+          "detail": "Dated cash/debt/shares plus editable investment, reserve, awards and claim assumptions.",
+          "id": "per_share",
+          "label": "Fair value per share · both methods",
+          "status": "ANALYST_READY_WITH_QUALIFICATIONS"
+        }
+      ],
+      "qualifications": [
+        "Analyst-ready means usable under these explicit conventions, not exact historical cash reconstruction, issuer-certified assumptions or an investment recommendation.",
+        "Analytical origin 2025-12-31 uses later-filed information; no current-date fair value, historical backtest or current-price upside is asserted.",
+        "Historical FCFF preserves the adopted reported-CFO/expensed-interest/reported-tax/cash-investment convention. It retains SBC addbacks, unlike forward EBIT cash flows. No automatic cross-basis CAGR or forecast calibration.",
+        "Historical FCFE includes identified financing once. Net Other allocation is a selected assumption and not a bound on unidentified offsetting gross financing. The economic companion subtracts reported SBC once; it does not normalize all accounting differences.",
+        "Flat explicit carrying debt is maintained by net rollover; interest is debt cost times opening debt. Matched financed-asset investment and aggregate principal enter once; gross maturity/refinancing schedules are not predicted. Terminal debt grows at the terminal growth rate.",
+        "FCFF uses the submitted target-weight WACC; FCFE uses CAPM/configured cost of equity and flat explicit debt. These financing assumptions differ, so valuation differences are shown rather than forced to zero.",
+        "Liquid cash and securities exclude restricted balances and separately shown nonmarketable holdings. The selected operating reserve is an analyst haircut; ongoing liquidity costs are assumed included in forward margins/WC.",
+        "Separate non-operating financial investments use an editable carrying-value proxy, not an observed market value. Operating EBIT forecasts exclude their investment returns; the same holdings are not added twice. Exclusion and haircut sensitivities show this valuation judgment.",
+        "Term debt uses disclosed fair value and finance leases carrying proxies. Operating leases remain service expenses; no second operating-lease debt deduction. FCFE does not subtract debt again.",
+        "Dated common shares across all economic classes plus expected existing RSU vesting form the denominator. Equal per-share economic participation is an explicit analyst assumption; voting/control rights are not claimed identical. Future SBC in margins proxies future grants; no separate settlement/award-value deduction for the same existing RSUs.",
+        "Zero additional non-operating claims is an explicit base assumption, not proof of no tax/legal exposure. Ordinary settlements are assumed within forecast tax/expenses; stresses are illustrative, not bounds.",
+        "FCFE financing identities are checked at 50-digit arithmetic precision. A last-place associativity residual, when present, is exported with its calculated rounding envelope and is not a cash adjustment; financial component mismatches still fail validation.",
+        "Alphabet historical FCFE is consolidated before minority attribution. With zero selected minority cash share, the displayed parent proxy is explicitly unallocated consolidated cash, not verified parent cash. Alternative historical allocations are scenarios, not issuer disclosures.",
+        "Forward valuation discounts consolidated operating FCFE and deducts one selected minority-interest claim in the equity bridge. The historical cash-allocation assumption does not change forward cash flows, preventing a second minority deduction.",
+        "The default minority claim uses disclosed book NCI as a valuation proxy; redeemable NCI is already included. It is not observed fair value. 5×/10× proxy stresses are not bounds; later Waymo financing valuations are not backdated.",
+        "Finance-lease cash, including prepayments, remains within debt repayments once. Historical cash capex and new noncash assets are separate populations; no rounded prepayment subtraction invents exact principal.",
+        "Class A/B/C economic-per-share equivalence is assumed for valuation only. Different voting/control rights and possible market price premiums are not modeled."
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/free-cash-flow-valuation",
+        "https://www.cfainstitute.org/standards/professionals/code-ethics-standards/standards-of-practice-v-a",
+        "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/valopt.pdf",
+        "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/noncashwc.htm"
+      ],
+      "discount_basis": {
+        "beta": "1.10",
+        "classification": "DATED_MACRO_OBSERVATIONS_AND_CONFIGURED_ANALYST_ASSUMPTIONS",
+        "debt_tax_shield": "0.20",
+        "equity_risk_premium": "0.037",
+        "macro_observations": {
+          "implied_erp": {
+            "available_at": "2026-10-08",
+            "cik": null,
+            "classification": "EXTERNAL_OBSERVATION",
+            "definition": "implied-erp-over-treasury",
+            "dimensions": [],
+            "end": "2026-10-01",
+            "id": "implied_erp-original",
+            "key": "implied_erp",
+            "locator": "October8authorpost; startOctober2026 implied ERP3.70%overTreasury; adjusted-RF3.92%notselected",
+            "mapping_version": "alphabet-reviewed-release-extraction-v1",
+            "precision": "0.01 percent",
+            "published_at": "2026-10-08",
+            "scope": "macro",
+            "source": "damodaran-2026-10-08",
+            "source_sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+            "start": null,
+            "supersedes": null,
+            "unit": "fraction",
+            "value": "0.037"
+          },
+          "treasury_10y": {
+            "available_at": "2026-10-30",
+            "cik": null,
+            "classification": "EXTERNAL_OBSERVATION",
+            "definition": "treasury-par-yield",
+            "dimensions": [],
+            "end": "2026-10-28",
+            "id": "treasury_10y-original",
+            "key": "treasury_10y",
+            "locator": "Daily Treasury par yield curve,10/28/2026 row,10-year5.05%; publication time not separately retained",
+            "mapping_version": "alphabet-reviewed-release-extraction-v1",
+            "precision": "0.01 percent",
+            "published_at": null,
+            "scope": "macro",
+            "source": "treasury-2026-10",
+            "source_sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+            "start": null,
+            "supersedes": null,
+            "unit": "fraction",
+            "value": "0.0505"
+          }
+        },
+        "macro_sources": [
+          {
+            "accession": null,
+            "bytes": 246533,
+            "content_type": "text/html; charset=UTF-8",
+            "extraction_version": "raw-body-v1",
+            "file": "treasury-2026-10.html",
+            "final_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+            "http_status": 200,
+            "id": "treasury-2026-10",
+            "observation_date": "2026-10-28",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:40:25.931113+00:00",
+            "rights": "US Treasury public source; page-specific third-party exceptions may apply; retained locally for attribution and reproducibility.",
+            "sha256": "c026bac766f7d9c4c0091a5b5426f5413dfd72cb9795a53438014c72d98a84a6",
+            "title": "US Treasury October 2026 daily par yield curve",
+            "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve"
+          },
+          {
+            "accession": null,
+            "bytes": 169880,
+            "content_type": "text/html; charset=UTF-8",
+            "extraction_version": "raw-body-v1",
+            "file": "damodaran-2026-10-08.html",
+            "final_url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+            "http_status": 200,
+            "id": "damodaran-2026-10-08",
+            "observation_date": "2026-10-01",
+            "published_at": "2026-10-08",
+            "retrieved_at": "2026-10-30T13:40:26.745937+00:00",
+            "rights": "Publicly accessible primary source; public access does not establish a redistribution license. Retained locally for attribution and reproducibility; author/issuer rights remain.",
+            "sha256": "14a9850bf8ae0df9ee3423be2e4a7174b8cdc2261d4396686de4e941619f04a4",
+            "title": "Aswath Damodaran October 8 2026 market update",
+            "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html"
+          }
+        ],
+        "risk_free": "0.0505",
+        "saved_base_wacc": "0.08940800",
+        "target_debt_weight": "0.04",
+        "target_equity_weight": "0.96"
+      },
+      "exact_full_historical_fcfe_claim": false,
+      "automatic_history_calibration": false
+    }
+  },
+  "caseLimitations": {
+    "investor": [
+      "SYNTHETIC example only; anchor revenue 100 and every rate are synthetic, not SEC or META data.",
+      "No economic completeness or sustainable terminal economics certified; no equity/share bridge.",
+      "Anonymous investor preparation; no verified identity or supplied investment rationale. Optional personal notes are not evidence or approval. Preparation timestamp is not a valuation date, information cutoff or evidence review. Forecast inputs are user-entered and not independently reviewed.",
+      "No economic consistency, evidence completeness or actual META execution approval is inferred.",
+      "Enterprise value only; no bridge/share inputs or automatic historical forecasts."
+    ],
+    "analyst": [
+      "SYNTHETIC example only; anchor revenue 100 and every rate are synthetic, not SEC or META data.",
+      "No economic completeness or sustainable terminal economics certified; no equity/share bridge.",
+      "Analyst identity, rationale and scope are submitted declarations, not authenticated approval.",
+      "No economic consistency, evidence completeness or actual META execution approval is inferred.",
+      "Enterprise value only; no bridge/share inputs or automatic historical forecasts."
+    ]
+  },
+  "fcfeLimitations": [
+    "Forward financing is supplied explicitly; no historical gap or NCI attribution is auto-filled.",
+    "WACC in the linked operating case is used only for its separate FCFF reference; FCFE discounting uses cost of equity.",
+    "Terminal financing declares stable capital structure; economic sustainability and ownership require separate review.",
+    "Consolidated FCFE is before minority allocation. No common-share value is certified by this calculator."
+  ],
+  "sensitivity": {
+    "growth": {
+      "held_fixed": "All explicit annual operating inputs and period identities; terminal operating ratios; bridge components, shares, source bindings, dates, conventions, rationale and limitations.",
+      "cell_reproduction": "Start from selected_case; replace only wacc and terminal_growth with the cell's strings; read_case then run_case. Rows are WACC, columns terminal growth.",
+      "numeric_policy": "Derived contributions/deltas: isolated Decimal precision 50, HALF_EVEN; changes are fractional; amounts base USD, shares actual, value/share USD/share.",
+      "limitations": [
+        "Only WACC and terminal growth change. Annual operating cash flows stay fixed; discount factors/PVs and terminal revenue/FCFF/value respond through the existing engine.",
+        "Cutoff and input reviews are supplied declarations, not authenticated availability or approvals.",
+        "Sensitivity is not probability analysis, a fair-value range or economic validation. Unbounded claims/awards omissions remain unbounded."
+      ],
+      "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR"
+    },
+    "exit": {
+      "held_fixed": "All explicit annual operating paths and final-year EBIT; bridge/shares and declarations. Only WACC and multiple vary.",
+      "cell_reproduction": "Replace only wacc and terminal_valuation.exit_ev_ebit_multiple in selected_case; run_case. Rows WACC; columns multiple.",
+      "numeric_policy": "Derived contributions/deltas: isolated Decimal precision 50, HALF_EVEN; changes are fractional; amounts base USD, shares actual, value/share USD/share.",
+      "limitations": [
+        "Only WACC and EV/EBIT multiple change. Operating cash flows and final-year EBIT are fixed; annual PVs and terminal PV/value respond.",
+        "Cutoff and input reviews are supplied declarations, not authenticated availability or approvals.",
+        "Sensitivity is not probability analysis, a fair-value range or economic validation. Unbounded claims/awards omissions remain unbounded."
+      ],
+      "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR"
+    }
+  },
+  "scenarios": {
+    "limitations": [
+      "Scenario labels imply no valuation ordering or approved economics.",
+      "Cutoffs and input reviews are declarations, not authenticated availability or approvals.",
+      "No probabilities, expected value or investment recommendation calculated."
+    ],
+    "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR"
+  },
+  "reverse": {
+    "held_fixed": "Five annual margin/tax/D&A/investment/WC ratios, WACC, terminal growth and all terminal operating ratios, bridge/shares, dates, conventions and source metadata. Only annual revenue growth is replaced, in all five periods; revenue-dependent amounts recalculate.",
+    "numerical_policy": {
+      "certificate_decimal_extent": 4096,
+      "ev_absolute_tolerance": "1e-8",
+      "exact_component_precision": 512,
+      "forward_precision": 50,
+      "growth_tolerance": "1e-12",
+      "max_iterations": 128,
+      "per_share_absolute_tolerance": "1e-10",
+      "relative_tolerance": "1e-12",
+      "residual_test": "absolute <= unit_absolute_tolerance + relative_tolerance * max(abs(target), abs(achieved))",
+      "rounding": "ROUND_HALF_EVEN",
+      "solver_precision": 80,
+      "version": "bounded-bisection-v1"
+    },
+    "limitations": [
+      "Conditional implied constant growth, not unique market expectations, an economic-plausibility endorsement or a price target.",
+      "Uniqueness concerns the exact fixed-ratio mathematical model; the existing precision-50 forward engine verifies the numerical answer within the stated residual policy.",
+      "Source/review/cutoff declarations authenticate no approvals; claims, awards and potentially unbounded omissions remain qualified."
+    ],
+    "semantic_input_review": "NOT_ASSESSED_BY_CALCULATOR"
+  },
+  "review": {
+    "schema_version": "investor-market-review-v1",
+    "status": "UNAVAILABLE",
+    "reasons": [
+      "No market reference for synthetic examples.",
+      "Complete the dated cash, claims and share bridge to reconcile market equity to model EV."
+    ],
+    "search_bounds": {
+      "lower": "-0.5",
+      "upper": "0.5"
+    },
+    "limitations": [
+      "CAGR summarizes starting-to-final revenue; it does not preserve cash-flow timing or fully explain a value difference.",
+      "EV is operating enterprise value, not market capitalization or shareholder upside."
+    ]
+  }
+}

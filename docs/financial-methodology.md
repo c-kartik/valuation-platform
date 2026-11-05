@@ -1,5 +1,14 @@
 # Financial Methodology
 
+## Browser-engine equivalence boundary — November 5, 2026
+
+The parallel TypeScript engine is an implementation migration, not a new
+financial-methodology approval. It preserves the existing AAPL/META/GOOGL named
+contracts, financing/ownership qualifications, source references, missing values
+and fiscal-end origins. Its prepared static histories must not be described as
+fresh SEC retrieval or exact parent-common cash. Existing Python and policies
+remain untouched. See [equivalence and limitations](browser-engine-migration.md).
+
 ## Meta/Alphabet analyst contracts — November4,2026
 
 The user authorized the same five-output reasonable-assumption standard for [Meta](company-resolutions/META/analyst-ready-2026-11-04/README.md) and [Alphabet](company-resolutions/GOOGL/analyst-ready-2026-11-04/README.md). Historical FCFF preserves the adopted CFO/expensed-interest/reported-tax/cash-investment convention; FCFE uses identified borrowing with explicit net-Other assumptions, plus a separate SBC-expensed diagnostic. History is not automatically calibrated into operating forecasts.

@@ -1,5 +1,26 @@
 # Architecture
 
+## Parallel browser execution — November 5, 2026
+
+`frontend/src/browser-engine/` implements the existing operating, terminal,
+equity, FCFE, analyst, scenario, sensitivity and exact-certified reverse functions
+in TypeScript using isolated decimal.js constructors (50-digit HALF_EVEN; solver
+80-digit; BigInt rational certification). The UI's existing response checks and
+revision/execution controls remain in place. Browser jobs run in disposable Web
+Workers; cancellation and the 35-second deadline terminate the worker.
+
+The ordinary build/API remain the default. The explicit browser-only build
+cannot silently fall back to Python/GCP; `?engine=browser` is also available for
+local comparison in the ordinary development build. Prepared data assets replace
+GET routes, with a manifest digest embedded at build time and each loaded file's
+SHA256 checked before use. Data are snapshots, not fresh SEC/market retrieval.
+Live market-price reconciliation is explicitly unavailable in browser mode.
+
+The static assembler combines existing portfolio assets with the application at
+`/valuation/`, without API rewrites, functions, secrets or Python runtime. It
+does not modify the portfolio checkout or publish. Source paths/release receipts
+stay outside the public artifact. See [migration record](browser-engine-migration.md).
+
 ## Versioned cash-flow review and manual FCFE route — November3
 
 `scripts/prepare_pilot_cashflows.py` replays immutable issuer results and adopted Meta history into a separately hashed private-bundle resource. `review/pilot_cashflows.py` serves an ownership/status-validated projection at `/api/v1/cashflows/{ticker}`; it does not infer inputs or rebuild per request. The Cash flows view consumes this endpoint lazily and retains all five years. `valuation/fcfe.py` derives explicit manual financing/equity cash from the same authoritative operating case, independently discounts with cost of equity, and exposes bounded `/api/v1/fcfe/validate` and `/run` through the existing isolated worker. UI edits invalidate/abort prior FCFE replies. No second debt subtraction or certified per-share result is produced. Original CFO history and FCFF/WACC remain separate; no cross-basis FCFF CAGR is added.

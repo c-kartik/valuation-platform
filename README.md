@@ -1,5 +1,12 @@
 # Automated Equity Valuation Platform
 
+The [parallel browser engine](docs/browser-engine-migration.md) runs the existing
+valuation workspace on-device from prepared static company data. The original
+Python pipeline and API remain intact and are the default development path.
+`npm run build:browser` in `frontend/` prepares an optional backend-free build for
+the portfolio's `/valuation/` route. Publishing to the existing Netlify account
+remains pending account access; this does not switch the live website.
+
 [Codex Cloud/mobile setup](docs/codex-cloud.md) provides portable installation,
 verification, supervised app startup and the original42-company research snapshot.
 Read the [cloud handoff](docs/cloud-work-handoff.md) before continuing financial review.

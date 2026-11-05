@@ -1,5 +1,27 @@
 # Project Status
 
+## Parallel JavaScript engine — November 5, 2026
+
+The browser-only valuation engine and static `/valuation/` portfolio artifact are
+implemented locally alongside the unchanged Python pipeline. 128 independent
+reference cases cover default/perturbed companies, 5/10-year forecasts, both
+terminal methods, equity, FCFE, scenarios, sensitivity, exact-certified reverse
+outcomes and rejected inputs. The full frontend run passed 451 tests. Existing
+396 tracked Python source hashes and the frozen dataset/fixture hashes verify
+unchanged. No new financial policy, fact, issuer or economic approval is claimed.
+
+Actual static-browser checks reproduce AAPL175.46/161.00, META374.70/370.36 and
+GOOGL125.91/124.04 USD/share; editing/recalculation and sensitivity work without a
+backend on the static preview origin. Desktop and phone-size browser checks are
+developer validation, not actual iPhone keyboard/remote-host acceptance.
+
+Migration remains OPEN for Netlify publication and actual phone-hosted review:
+the existing account is signed out, site ID/plan/access protection unverified,
+and a recorded active portfolio GitHub webhook must be understood before pushing.
+Python default execution, SEC preparation, live domain and GCP are retained by the
+user's preservation instruction; no replacement, cloud shutdown or production
+publication has occurred. [Migration/release instructions](browser-engine-migration.md).
+
 ## Meta and Alphabet five-output analyst acceptance — November4,2026
 
 [Meta report](company-resolutions/META/analyst-ready-2026-11-04/report.html) and [Alphabet report](company-resolutions/GOOGL/analyst-ready-2026-11-04/report.html): all ten named outputs are analyst-ready with qualifications. Both histories, explicit default FCFE financing, both share valuations, editable assumptions, sensitivities and exports run in the isolated API and live DCF panels at5/10-year horizons and Bear/Base/Bull. Base META374.70/370.36 and GOOGL125.91/124.04 USD/share (FCFF/FCFE) are FY2025-origin estimates using later information, not current-price targets.

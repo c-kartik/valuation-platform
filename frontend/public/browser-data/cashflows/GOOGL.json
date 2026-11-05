@@ -1,0 +1,337 @@
+{
+  "decision_record": "docs/company-resolutions/GOOGL/README.md",
+  "notice": "Historical cash measures are derived from rounded filing inputs. Provisional FCFE excludes unclassified funding and is not cleared parent-common cash. Consolidated FCFE is before minority-interest attribution. Missing is not zero. Historical CFO and EBIT-forecast bases differ; no cross-basis FCFF CAGR.",
+  "periods": [
+    {
+      "accession": "0001652044-22-000019",
+      "annual_end": "2021-12-31",
+      "annual_start": "2021-01-01",
+      "fcfe": {
+        "amount_usd": "65776000000",
+        "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+        "cleared": false,
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "open_items": [
+          "G1",
+          "G2"
+        ],
+        "parent_common_amount_usd": null,
+        "parent_common_status": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+        "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+        ],
+        "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+      },
+      "fcff": {
+        "amount_usd": "67301940022.483302841272290431370820199704631119536",
+        "basis": "REPORTED_CFO_CASH_PPE",
+        "cleared": true,
+        "open_items": [],
+        "operands": {
+          "cash_ppe": "24640000000",
+          "cfo": "91652000000",
+          "interest_expense": "346000000",
+          "pretax_income": "90734000000",
+          "tax_provision": "14701000000"
+        },
+        "scope": "CONSOLIDATED",
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1652044/000165204422000019/goog-20211231.htm"
+        ],
+        "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+        "valuation_basis_aligned": false
+      },
+      "fiscal_year": 2021,
+      "identified_net_borrowing_usd": "-1236000000",
+      "reported_cash_fcf_usd": "67012000000",
+      "revenue_usd": "257637000000"
+    },
+    {
+      "accession": "0001652044-23-000016",
+      "annual_end": "2022-12-31",
+      "annual_start": "2022-01-01",
+      "fcfe": {
+        "amount_usd": "58814000000",
+        "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+        "cleared": false,
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "open_items": [
+          "G1",
+          "G2"
+        ],
+        "parent_common_amount_usd": null,
+        "parent_common_status": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+        "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+        ],
+        "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+      },
+      "fcff": {
+        "amount_usd": "60310162685.060565275908479138627187079407806191117",
+        "basis": "REPORTED_CFO_CASH_PPE",
+        "cleared": true,
+        "open_items": [],
+        "operands": {
+          "cash_ppe": "31485000000",
+          "cfo": "91495000000",
+          "interest_expense": "357000000",
+          "pretax_income": "71328000000",
+          "tax_provision": "11356000000"
+        },
+        "scope": "CONSOLIDATED",
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000016/goog-20221231.htm"
+        ],
+        "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+        "valuation_basis_aligned": false
+      },
+      "fiscal_year": 2022,
+      "identified_net_borrowing_usd": "-1196000000",
+      "reported_cash_fcf_usd": "60010000000",
+      "revenue_usd": "282836000000"
+    },
+    {
+      "accession": "0001652044-24-000022",
+      "annual_end": "2023-12-31",
+      "annual_start": "2023-01-01",
+      "fcfe": {
+        "amount_usd": "68735000000",
+        "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+        "cleared": false,
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "open_items": [
+          "G1",
+          "G2"
+        ],
+        "parent_common_amount_usd": null,
+        "parent_common_status": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+        "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+        ],
+        "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+      },
+      "fcff": {
+        "amount_usd": "69760161636.548175974427476463245330564532123149434",
+        "basis": "REPORTED_CFO_CASH_PPE",
+        "cleared": true,
+        "open_items": [],
+        "operands": {
+          "cash_ppe": "32251000000",
+          "cfo": "101746000000",
+          "interest_expense": "308000000",
+          "pretax_income": "85717000000",
+          "tax_provision": "11922000000"
+        },
+        "scope": "CONSOLIDATED",
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm"
+        ],
+        "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+        "valuation_basis_aligned": false
+      },
+      "fiscal_year": 2023,
+      "identified_net_borrowing_usd": "-760000000",
+      "reported_cash_fcf_usd": "69495000000",
+      "revenue_usd": "307394000000"
+    },
+    {
+      "accession": "0001652044-25-000014",
+      "annual_end": "2024-12-31",
+      "annual_start": "2024-01-01",
+      "fcfe": {
+        "amount_usd": "73652000000",
+        "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+        "cleared": false,
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "open_items": [
+          "G1",
+          "G2"
+        ],
+        "parent_common_amount_usd": null,
+        "parent_common_status": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+        "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+        ],
+        "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+      },
+      "fcff": {
+        "amount_usd": "72987942110.754079205441722655760964820765346575971",
+        "basis": "REPORTED_CFO_CASH_PPE",
+        "cleared": true,
+        "open_items": [],
+        "operands": {
+          "cash_ppe": "52535000000",
+          "cfo": "125299000000",
+          "interest_expense": "268000000",
+          "pretax_income": "119815000000",
+          "tax_provision": "19697000000"
+        },
+        "scope": "CONSOLIDATED",
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+        ],
+        "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+        "valuation_basis_aligned": false
+      },
+      "fiscal_year": 2024,
+      "identified_net_borrowing_usd": "888000000",
+      "reported_cash_fcf_usd": "72764000000",
+      "revenue_usd": "350018000000"
+    },
+    {
+      "accession": "0001652044-26-000018",
+      "annual_end": "2025-12-31",
+      "annual_start": "2025-01-01",
+      "fcfe": {
+        "amount_usd": "105403000000",
+        "basis": "REPORTED_CFO_CASH_PPE_IDENTIFIED_NET_BORROWING",
+        "cleared": false,
+        "formula": "reported CFO - cash PP&E net of identified receipts + identified net borrowing",
+        "open_items": [
+          "G1",
+          "G2"
+        ],
+        "parent_common_amount_usd": null,
+        "parent_common_status": "UNAVAILABLE_ATTRIBUTION_NOT_DISCLOSED",
+        "scope": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION",
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        ],
+        "status": "CONSOLIDATED_BEFORE_NCI_ATTRIBUTION"
+      },
+      "fcff": {
+        "amount_usd": "73878476042.965257577474720763602936546912973946331",
+        "basis": "REPORTED_CFO_CASH_PPE",
+        "cleared": true,
+        "open_items": [],
+        "operands": {
+          "cash_ppe": "91447000000",
+          "cfo": "164713000000",
+          "interest_expense": "736000000",
+          "pretax_income": "158826000000",
+          "tax_provision": "26656000000"
+        },
+        "scope": "CONSOLIDATED",
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        ],
+        "status": "AVAILABLE_UNDER_REPORTED_CASH_CONVENTION",
+        "valuation_basis_aligned": false
+      },
+      "fiscal_year": 2025,
+      "identified_net_borrowing_usd": "32137000000",
+      "reported_cash_fcf_usd": "73266000000",
+      "revenue_usd": "402836000000"
+    }
+  ],
+  "readiness": {
+    "adoption_record": "docs/company-resolutions/execution-2026-11-04/accepted-policy.json",
+    "amounts_changed": false,
+    "contract": "Consolidated historical availability is separate from exact parent cash attribution, forecast alignment, equity-value and per-share review.",
+    "counts": {
+      "available_stated_convention": 10,
+      "missing_required_input": 0,
+      "parent_common_fcfe_available": 0,
+      "provisional_financing": 0
+    },
+    "financial_review_status": "OPEN",
+    "gates": [
+      {
+        "detail": "10 available under stated conventions; 0 provisional; 0 missing required inputs.",
+        "id": "history",
+        "label": "Historical calculations",
+        "status": "SCOPED_AVAILABILITY"
+      },
+      {
+        "detail": "Consolidated FCFE needs minority cash attribution.",
+        "id": "parent_cash",
+        "label": "Parent-common cash attribution",
+        "status": "UNAVAILABLE"
+      },
+      {
+        "detail": "A reviewed SBC, tax and investment bridge is required. No cross-basis FCFF CAGR or automatic calibration.",
+        "id": "comparison",
+        "label": "History-to-forecast comparison",
+        "status": "NOT_CLEARED"
+      },
+      {
+        "detail": "Manual forecasting remains available. Financing, discount rate, taxes and terminal inputs require their own validation.",
+        "id": "forecast",
+        "label": "Forward valuation assumptions",
+        "status": "REVIEW_SEPARATELY"
+      },
+      {
+        "detail": "Use matching cash, claims and outside-interest values; never deduct debt twice in the FCFE route.",
+        "id": "parent_value",
+        "label": "Parent equity-value bridge",
+        "status": "REVIEW_SEPARATELY"
+      },
+      {
+        "detail": "Requires a supported parent equity numerator and dated shares, classes and award treatment.",
+        "id": "per_share",
+        "label": "Fair value per share",
+        "status": "REVIEW_SEPARATELY"
+      }
+    ],
+    "history_gap_disables_manual_forecast": false,
+    "periods": [
+      {
+        "fcfe_historical_calculation": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+        "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+        "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+        "fiscal_year": 2021,
+        "parent_common_fcfe": "UNAVAILABLE_OWNERSHIP_ATTRIBUTION"
+      },
+      {
+        "fcfe_historical_calculation": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+        "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+        "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+        "fiscal_year": 2022,
+        "parent_common_fcfe": "UNAVAILABLE_OWNERSHIP_ATTRIBUTION"
+      },
+      {
+        "fcfe_historical_calculation": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+        "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+        "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+        "fiscal_year": 2023,
+        "parent_common_fcfe": "UNAVAILABLE_OWNERSHIP_ATTRIBUTION"
+      },
+      {
+        "fcfe_historical_calculation": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+        "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+        "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+        "fiscal_year": 2024,
+        "parent_common_fcfe": "UNAVAILABLE_OWNERSHIP_ATTRIBUTION"
+      },
+      {
+        "fcfe_historical_calculation": "AVAILABLE_CONSOLIDATED_STATED_CONVENTION",
+        "fcff_forecast_calibration": "NOT_CLEARED_BASIS_BRIDGE_REQUIRED",
+        "fcff_historical_calculation": "AVAILABLE_STATED_CONVENTION",
+        "fiscal_year": 2025,
+        "parent_common_fcfe": "UNAVAILABLE_OWNERSHIP_ATTRIBUTION"
+      }
+    ],
+    "prior_clearance_flags_changed": false,
+    "prior_parent_common_review_passed": false,
+    "schema_version": "cashflow-consumer-readiness-v1"
+  },
+  "resolution_sha256": "0bd3eb8a0cc67a37657da681000eb5d17e31c2e2d1c648878d04e43fe046080f",
+  "review_passed": false,
+  "roadblock_register": "docs/company-resolutions/OPEN-ROADBLOCKS.md",
+  "schema_version": "pilot-company-cashflows-v1",
+  "status": "OPEN",
+  "ticker": "GOOGL",
+  "unresolved_scope_items": [
+    "G1",
+    "G2",
+    "G3",
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ]
+}

@@ -1,5 +1,6 @@
 import {useEffect,useRef,useState} from 'react';
 import {request} from '../api';
+import {browserEnabled} from '../browser-engine/mode';
 import {entryErrors,methodOf} from '../model';
 import type {Draft,Errors} from '../model';
 import {readableMoney,fixedUnit,terminalContribution} from '../presentation';
@@ -99,5 +100,5 @@ export function Workspace({load=request}:{load?:typeof request}){
  {editor==='model'&&<ModelEditor key={state.selected+c.selectedCase} company={ticker} label={c.selectedCase} session={c} initial={seed} initialPaths={seedPaths} focusPath={focusPath} submit={w.updateValuation} close={()=>setEditor(null)}/>}
  {editor==='bridge'&&<EquityEditor key={state.selected+c.selectedCase} company={ticker} label={c.selectedCase} initial={c.bridge} anchorDate={c.draft.doc.anchor.annual_end} ev={c.ev.result} outcome={c.equity} operatingCurrent={Boolean(current)} busy={w.busy} save={applyBridge} calculate={async bridge=>{applyBridge(bridge);await w.calculate('equity');}} cancel={w.cancel} close={()=>setEditor(null)}/>}
  </>:catalog&&<section className="cv-start"><h2>Select a company</h2><p>Registered companies offer editable starting estimates with company-specific sources and assumptions.</p><details><summary>Separate software example</summary><button onClick={()=>select('demo')}>Load synthetic example</button></details></section>}
- <footer className="cv-footer">Unsaved work remains in this tab, including navigation/remounts; a full page reload clears it. Manual estimates are not independently reviewed. Cancellation may not immediately stop server work.</footer></main>{confirmation&&<Confirm value={confirmation} close={()=>setConfirmation(null)}/>}</div>;
+ <footer className="cv-footer">Unsaved work remains in this tab, including navigation/remounts; a full page reload clears it. Manual estimates are not independently reviewed. {browserEnabled()?'Calculations stay on your device; cancelling stops the calculation worker.':'Cancellation may not immediately stop server work.'}</footer></main>{confirmation&&<Confirm value={confirmation} close={()=>setConfirmation(null)}/>}</div>;
 }

@@ -1,8 +1,9 @@
+import {browserEnabled} from './browser-engine/mode';
 export class ApiError extends Error {
   constructor(public code: string, message: string, public details: string[] = []) { super(message); }
 }
 export const unavailableMessage = 'Calculations are temporarily unavailable. Your inputs are still here. Please try again later.';
-export const timeoutMessage = 'The calculation exceeded the waiting limit. Your inputs are still here. Please retry explicitly; server work may continue until its own deadline.';
+export const timeoutMessage = browserEnabled() ? 'The calculation exceeded the on-device waiting limit and was stopped. Your inputs are still here. Please retry explicitly.' : 'The calculation exceeded the waiting limit. Your inputs are still here. Please retry explicitly; server work may continue until its own deadline.';
 export function failureMessage(error: unknown): string {
   if (error instanceof ApiError) {
     if (error.code === 'busy') return 'Another calculation is in progress. Your inputs are still here. Please retry shortly.';
@@ -13,7 +14,7 @@ export function failureMessage(error: unknown): string {
   }
   return unavailableMessage;
 }
-// Render-boundary shape checks only; economic/numerical validation remains in Python.
+// Render-boundary shape checks only; numerical validation belongs to the selected engine.
 const object = (value: unknown): value is Record<string, unknown> => value !== null && typeof value === 'object' && !Array.isArray(value);
 const text = (value: unknown): value is string => typeof value === 'string';
 const decimal = (value: unknown) => text(value) && /^[+-]?(?:[0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[eE][+-]?[0-9]+)?$/.test(value);
@@ -97,7 +98,7 @@ export async function request<T>(path: string, body?: unknown, signal?: AbortSig
   if (signal?.aborted) controller.abort();
   const timer = setTimeout(() => {timedOut = true; controller.abort();}, 50000);
   try {
-    const response = await fetch(path, {
+    const response = browserEnabled() ? await (await import('./browser-engine/client')).browserResponse(path,body,controller.signal) : await fetch(path, {
       method: body === undefined ? 'GET' : 'POST', signal: controller.signal,
       headers: body === undefined ? undefined : {'Content-Type': 'application/json'},
       body: body === undefined ? undefined : JSON.stringify(body), cache: 'no-store', credentials: 'omit',

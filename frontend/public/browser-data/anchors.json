@@ -1,0 +1,1334 @@
+{
+  "synthetic-fixture-v1": {
+    "accession": "0000000123-26-000001",
+    "annual_end": "2025-12-31",
+    "annual_start": "2025-01-01",
+    "approval_details": {
+      "basis": "synthetic fixture; no actual-case approval"
+    },
+    "approval_reference": "synthetic:declaration",
+    "cik": 123,
+    "effective_reference": "synthetic:effective",
+    "form": "10-K",
+    "precision": "INF",
+    "raw_value": "100",
+    "revenue": "100",
+    "scale": 1,
+    "sign_multiplier": 1,
+    "source_details": {
+      "basis": "SYNTHETIC_FIXTURE; not a SEC observation"
+    },
+    "source_reference": "synthetic:revenue",
+    "unit": "USD"
+  },
+  "aapl-fy2025": {
+    "accession": "0000320193-25-000079",
+    "annual_end": "2025-09-27",
+    "annual_start": "2024-09-29",
+    "approval_details": {
+      "history_approval": {
+        "action": "ACCEPT_FY2021_FY2025_A2_A10",
+        "author": "User, explicit approval of AAPL A2-A10 exactly as proposed across FY2021-FY2025",
+        "authority": "Current user instruction Part1: explicitly approves A2-A10 exactly as proposed; preserve facts, unknowns, alternatives and earlier decisions.",
+        "decisions": {
+          "A10": {
+            "evidence_reference": "/aapl_history_review/periods",
+            "numerical_consequence": "16426786000/15943425000/15550061000/15116786000 shares; FY2025 accepted14773260000. Awards240427000/201501000/180247000/163326000/151574000 separate, never added.",
+            "periods": [
+              {
+                "accession": "0000320193-21-000105",
+                "annual_end": "2021-09-25",
+                "annual_start": "2020-09-27",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-22-000108",
+                "annual_end": "2022-09-24",
+                "annual_start": "2021-09-26",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-23-000106",
+                "annual_end": "2023-09-30",
+                "annual_start": "2022-09-25",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-24-000123",
+                "annual_end": "2024-09-28",
+                "annual_start": "2023-10-01",
+                "cik": 320193,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Select fiscal-end common shares at each original date/precision; keep later cover observations, EPS denominators and award populations separate. FY2025 selection unchanged.",
+            "uncertainty_and_alternative": "Alternative later cover dates differ and annual diluted weighted averages are not closing shares. Unrecognized compensation in FY2021/22 includes RSUs AND options, later RSUs only. No award valuation/dilution estimate."
+          },
+          "A2": {
+            "evidence_reference": "/aapl_history_review/periods",
+            "numerical_consequence": "Proposed proxy11284/11104/11519/11445/11698 versus PP&E note9500/8700/8500/8200/8000R. Differences1784/2404/3019/3245/3698 are population differences, NOT amortization. No extra ROU add-back.",
+            "periods": [
+              {
+                "accession": "0000320193-21-000105",
+                "annual_end": "2021-09-25",
+                "annual_start": "2020-09-27",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-22-000108",
+                "annual_end": "2022-09-24",
+                "annual_start": "2021-09-26",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-23-000106",
+                "annual_end": "2023-09-30",
+                "annual_start": "2022-09-25",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-24-000123",
+                "annual_end": "2024-09-28",
+                "annual_start": "2023-10-01",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-25-000079",
+                "annual_end": "2025-09-27",
+                "annual_start": "2024-09-29",
+                "cik": 320193,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Select each explicitly labeled CFO D&A amount as a historical noncash-cost proxy; do not call it complete expense D&A, infer amortization or assume finance amortization is included.",
+            "uncertainty_and_alternative": "Alternative keep required D&A unresolved; PP&E-only note is not complete intangible D&A. CFO versus income/inventory/lease timing is unbridged and its effect unquantified. FY2021/22 note says PP&E depreciation AND amortization, unlike later depreciation-only prose."
+          },
+          "A3": {
+            "evidence_reference": "/aapl_history_review/periods",
+            "numerical_consequence": "7906/9038/10833/11688 USDm; FY2025 accepted12863. No duplicate expense or rounding adjustment.",
+            "periods": [
+              {
+                "accession": "0000320193-21-000105",
+                "annual_end": "2021-09-25",
+                "annual_start": "2020-09-27",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-22-000108",
+                "annual_end": "2022-09-24",
+                "annual_start": "2021-09-26",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-23-000106",
+                "annual_end": "2023-09-30",
+                "annual_start": "2022-09-25",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-24-000123",
+                "annual_end": "2024-09-28",
+                "annual_start": "2023-10-01",
+                "cik": 320193,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Extend recognized SBC expense as a labeled economic-cost proxy once to FY2021-FY2024; keep separate add-back and awards. FY2025 approval remains unchanged.",
+            "uncertainty_and_alternative": "Alternative economic replacement-cost/award-value basis unavailable; recognized expense is neither cash replacement cost nor outstanding-award value."
+          },
+          "A4": {
+            "evidence_reference": "/aapl_history_review/periods",
+            "numerical_consequence": "125567/121010/112112/107525/99887 USDm. All-lease alternatives136522/132480/123930/119059/112377. Current term maturities already included; principal/fair value and commitments are not additive.",
+            "periods": [
+              {
+                "accession": "0000320193-21-000105",
+                "annual_end": "2021-09-25",
+                "annual_start": "2020-09-27",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-22-000108",
+                "annual_end": "2022-09-24",
+                "annual_start": "2021-09-26",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-23-000106",
+                "annual_end": "2023-09-30",
+                "annual_start": "2022-09-25",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-24-000123",
+                "annual_end": "2024-09-28",
+                "annual_start": "2023-10-01",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-25-000079",
+                "annual_end": "2025-09-27",
+                "annual_start": "2024-09-29",
+                "cik": 320193,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Use operating leases as service/finance leases as financing; select each named CP + term carrying + finance liability, with no additional undisclosed-borrowing adjustment. FY2025 named subtotal/convention already accepted; broader no-extra-adjustment assumption is newly proposed.",
+            "uncertainty_and_alternative": "No extra adjustment economically omits unquantified possible borrowing; not source zero, complete debt or immateriality. Alternative retain named subtotal as partial only; all-lease alternative requires aligned economics. Finance cash/expense splits remain unavailable; no MSFT D&A-inclusion assumption."
+          },
+          "A5": {
+            "evidence_reference": "/aapl_history_review/periods",
+            "numerical_consequence": "62639/48304/61555/65171 USDm; LT127877/120805/100544/91479 separate. FY2021-23 restricted total marketable17900/12700/13800R not allocated to current/LT. FY2024 known2600R cash and13200R marketable escrow stay visible.",
+            "periods": [
+              {
+                "accession": "0000320193-21-000105",
+                "annual_end": "2021-09-25",
+                "annual_start": "2020-09-27",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-22-000108",
+                "annual_end": "2022-09-24",
+                "annual_start": "2021-09-26",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-23-000106",
+                "annual_end": "2023-09-30",
+                "annual_start": "2022-09-25",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-24-000123",
+                "annual_end": "2024-09-28",
+                "annual_start": "2023-10-01",
+                "cik": 320193,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Select named current financial balances, retaining LT/restricted/strategic observations separately; do not call any current balance unrestricted or excess. FY2025 accepted54697 unchanged.",
+            "uncertainty_and_alternative": "Alternative FY2024 current less15800R identified escrow is49371R, with current-securities location explicitly corroborated by FY2025 dated comparative note. It is non-default pending a choice, not a rounding adjustment. Unknown restrictions/reserves and strategic holdings remain unquantified; gross balances must not be used as available cash."
+          },
+          "A6": {
+            "evidence_reference": "/aapl_history_review/periods",
+            "numerical_consequence": "No extra claim adjustment, not a reported zero. Source common/APIC+retained+OCI equals reported equity in all five selected filings.",
+            "periods": [
+              {
+                "accession": "0000320193-21-000105",
+                "annual_end": "2021-09-25",
+                "annual_start": "2020-09-27",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-22-000108",
+                "annual_end": "2022-09-24",
+                "annual_start": "2021-09-26",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-23-000106",
+                "annual_end": "2023-09-30",
+                "annual_start": "2022-09-25",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-24-000123",
+                "annual_end": "2024-09-28",
+                "annual_start": "2023-10-01",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-25-000079",
+                "annual_end": "2025-09-27",
+                "annual_start": "2024-09-29",
+                "cik": 320193,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "No additional preferred-equity or NCI adjustment selected, relying on each common-equity partition and wholly-owned consolidated presentation; preserve source nulls.",
+            "uncertainty_and_alternative": "Alternative quantify separate claims if evidenced; current evidence cannot bound omitted preferred/minority claims. Presentation supports an analyst choice, not an immateriality finding or exhaustive ownership proof."
+          },
+          "A7": {
+            "evidence_reference": "/aapl_history_review/periods",
+            "numerical_consequence": "No extra adjustment selected would omit a potentially unreported net claim/surplus of unbounded size; source remains null.",
+            "periods": [
+              {
+                "accession": "0000320193-21-000105",
+                "annual_end": "2021-09-25",
+                "annual_start": "2020-09-27",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-22-000108",
+                "annual_end": "2022-09-24",
+                "annual_start": "2021-09-26",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-23-000106",
+                "annual_end": "2023-09-30",
+                "annual_start": "2022-09-25",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-24-000123",
+                "annual_end": "2024-09-28",
+                "annual_start": "2023-10-01",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-25-000079",
+                "annual_end": "2025-09-27",
+                "annual_start": "2024-09-29",
+                "cik": 320193,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Propose no separate pension funded-status adjustment while retaining the recognized balance-sheet liabilities; disclose absent quantified funded status and do not invent retirement expense.",
+            "uncertainty_and_alternative": "Weaker evidence than common-equity choices: benefits/stock-plan notes do not establish pension population completeness. Alternative leave this essential claim decision blocked. User must explicitly accept this unbounded omission; no audit opinion/keyword absence establishes zero."
+          },
+          "A8": {
+            "evidence_reference": "/aapl_history_review/periods",
+            "numerical_consequence": "CFO deferred -4774/+895 then pure component unknown within Other-2227/-2266/-89; deferred provision -4774/+895/-3024/-3031/-1339 is a separate role, not a replacement. Cash taxes25385/19573/18679/26102/43369 outflows remain reported.",
+            "periods": [
+              {
+                "accession": "0000320193-21-000105",
+                "annual_end": "2021-09-25",
+                "annual_start": "2020-09-27",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-22-000108",
+                "annual_end": "2022-09-24",
+                "annual_start": "2021-09-26",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-23-000106",
+                "annual_end": "2023-09-30",
+                "annual_start": "2022-09-25",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-24-000123",
+                "annual_end": "2024-09-28",
+                "annual_start": "2023-10-01",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-25-000079",
+                "annual_end": "2025-09-27",
+                "annual_start": "2024-09-29",
+                "cik": 320193,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Retain reported provision/pretax/ETR and cash taxes; retain FY2021/22 explicit deferred-tax CFO rows. For FY2023-25 no separate pure-deferred CFO operation or pure-NOL economic-asset operation; retain mixed Other and reported tax-credit DTA without allocations.",
+            "uncertainty_and_alternative": "Alternative pure operating-tax/deferred bridge is unavailable and unnecessary only under approved consolidated-CFO path; future rate/valuation is separate. Tax-credit DTA4262/6962/8302/8856/8643 is not pure NOL or an approved valued asset. Ireland FY2024 charge/FY2025 settlement remains historical, not normalized."
+          },
+          "A9": {
+            "evidence_reference": "/aapl_history_review/periods",
+            "numerical_consequence": "Other contributions -147/+111/-2227/-2266/-89 USDm; full CFO displays tie independently, no plug or new adjustment.",
+            "periods": [
+              {
+                "accession": "0000320193-21-000105",
+                "annual_end": "2021-09-25",
+                "annual_start": "2020-09-27",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-22-000108",
+                "annual_end": "2022-09-24",
+                "annual_start": "2021-09-26",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-23-000106",
+                "annual_end": "2023-09-30",
+                "annual_start": "2022-09-25",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-24-000123",
+                "annual_end": "2024-09-28",
+                "annual_start": "2023-10-01",
+                "cik": 320193,
+                "form": "10-K"
+              },
+              {
+                "accession": "0000320193-25-000079",
+                "annual_end": "2025-09-27",
+                "annual_start": "2024-09-29",
+                "cik": 320193,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "No separately computed residual scalar for each fully bound displayed reconciliation; retain signed mixed Other rows, not a residual-defined zero.",
+            "uncertainty_and_alternative": "Alternative classify every mixed subcomponent cannot be supported from retained disclosures. Source equality does not certify operating-only cash or EBIT-based FCFF readiness."
+          }
+        },
+        "financial_sufficiency": "ONLY_APPROVED_HISTORICAL_PERIMETER",
+        "identities": [
+          {
+            "accession": "0000320193-21-000105",
+            "annual_end": "2021-09-25",
+            "annual_start": "2020-09-27",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-22-000108",
+            "annual_end": "2022-09-24",
+            "annual_start": "2021-09-26",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-23-000106",
+            "annual_end": "2023-09-30",
+            "annual_start": "2022-09-25",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-24-000123",
+            "annual_end": "2024-09-28",
+            "annual_start": "2023-10-01",
+            "cik": 320193,
+            "form": "10-K"
+          },
+          {
+            "accession": "0000320193-25-000079",
+            "annual_end": "2025-09-27",
+            "annual_start": "2024-09-29",
+            "cik": 320193,
+            "form": "10-K"
+          }
+        ],
+        "phase1_closed": false,
+        "previous": "634d053b82a9cd1c440bab7e5e8c14037371ecadf55fa2784991f37776db44f3",
+        "rationale": "Accept labeled CFO-D&A proxies, named financing/no additional borrowing and claim/pension omissions with unbounded uncertainty, gross current financial balances with known restrictions; historical perimeter only.",
+        "recorded_at_utc": "2026-10-17T15:56:35.868488+00:00",
+        "review_revision": "3c1b3b3510bc1760e914e306cc5be3733d27ae5b8feead0f398d59a127444319",
+        "schema": "aapl-treatment-acceptance-audit-v1",
+        "sequence": 2,
+        "sha256": "f0a91b70b853ec380091a779b227d742c5d1d0aa0add21fdd09e91d39cf96f62",
+        "source_commit": "d6e0ea51b19a4786a11d816d16c8678f8e7b99ba",
+        "source_revision": "61a87d70109b8de1e663b196c78b4a222d1348cd642a236b91d0e9bda0a643cd",
+        "valuation_consumption_approved": false,
+        "version": 1
+      },
+      "limitation": "Historical perimeter only; no company forecast/bridge acceptance",
+      "prior_approval_reference": "/accepted_view/approval_audit",
+      "prior_scoped_approval": {
+        "action": "ACCEPT_SCOPED_SELECTIONS",
+        "author": "User, explicit AAPL FY2025 approved-selection instruction",
+        "authority": "Current user instruction: Implement the user-approved AAPL FY2025 selections in a separate analyst view.",
+        "decisions": {
+          "cash_investments": "Current financial balances54697 USDm selected; long-term marketable securities77723 separately. Not unrestricted/excess cash; restrictions, reserves and claims remain unknown.",
+          "da_investment": "Keep CFO D&A11698 and rounded depreciation expense8000 distinct; complete expense D&A null. Cash PP&E12715, investing Other1480 and rounded noncash ROU2800 separate with source signs; no amortization residual, reinvestment sum or acquisition allocation.",
+          "historical_schedules": "Retain revenue416161, EBIT133050, CFO111482, accepted SBC expense proxy12863 once, provision20719 and cash taxes43369 in distinct roles. Select fiscal-end common14773260000, original date/precision; cover, weighted averages and RSUs151574000 separate. No future rate, award valuation or dilution estimate.",
+          "leases_borrowings": "Operating leases service, finance leases asset financing; named CP+term carrying+finance liability99887 USDm only. All-lease112377 non-default. No complete debt, cash/expense split or D&A overlap assumption.",
+          "operating_capital": "Select partial current operating capital -9159 USDm, including manufacturing vendor receivables and distribution accrual8919. Original -240 and alternatives non-default; employee, capital creditors and mixed captions unknown; no delta NWC."
+        },
+        "financial_sufficiency": "NOT_ASSESSED",
+        "phase1_closed": false,
+        "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+        "rationale": "Record the user-approved AAPL selections only; missing values, source limitations and original blockers remain.",
+        "recorded_at_utc": "2026-10-15T20:31:05.526779+00:00",
+        "schema": "aapl-treatment-acceptance-audit-v1",
+        "sequence": 1,
+        "sha256": "634d053b82a9cd1c440bab7e5e8c14037371ecadf55fa2784991f37776db44f3",
+        "source_commit": "36ef3d2fa63e712d1735e75d23ebeadc0f33bdcc",
+        "source_revision": "0433f982ab4f041012e28c6e6f302da9dea03d836b5af32dcf5c6bf57fe549c9",
+        "valuation_consumption_approved": false,
+        "version": 1
+      },
+      "revenue_acceptance": {
+        "approval_reference": "/accepted_view",
+        "completeness": "Named historical input/operation only; no complete debt/reinvestment or operating-only cash claim",
+        "evidence_references": [
+          "/aapl_history_review/periods/4/facts/revenue"
+        ],
+        "existing_approval_reference": "/accepted_view",
+        "field": "revenue",
+        "pending_decisions": [],
+        "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+      }
+    },
+    "approval_reference": "docs/company-data-preparation/aapl-analyst-input-package.json#/aapl_history_approval",
+    "cik": 320193,
+    "effective_reference": "docs/company-data-preparation/aapl-analyst-input-package.json#/aapl_current_history/periods/4/inputs/revenue",
+    "form": "10-K",
+    "precision": "-6",
+    "raw_value": "416161000000",
+    "revenue": "416161000000",
+    "scale": 1,
+    "sign_multiplier": 1,
+    "source_details": {
+      "fact": {
+        "as_of": null,
+        "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "display_unit": "USD millions",
+        "display_value": "416161",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "Selected FY2025 primary reported population: revenue",
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "occurrence_count": 4,
+        "occurrences": [
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-09-27",
+            "ordinal": 285,
+            "precision": "-6",
+            "primary_display": "416,161",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-78",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "416161000000",
+            "start": "2024-09-29",
+            "unit_id": "usd",
+            "xml_id": "f-78"
+          },
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-09-27",
+            "ordinal": 599,
+            "precision": "-6",
+            "primary_display": "416,161",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-392",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "416161000000",
+            "start": "2024-09-29",
+            "unit_id": "usd",
+            "xml_id": "f-392"
+          },
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-09-27",
+            "ordinal": 1210,
+            "precision": "-6",
+            "primary_display": "416,161",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-1021",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "416161000000",
+            "start": "2024-09-29",
+            "unit_id": "usd",
+            "xml_id": "f-1021"
+          },
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-09-27",
+            "ordinal": 1302,
+            "precision": "-6",
+            "primary_display": "416,161",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-1113",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "416161000000",
+            "start": "2024-09-29",
+            "unit_id": "usd",
+            "xml_id": "f-1113"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "unit": "USD",
+        "value": "416161000000"
+      },
+      "sources": [
+        {
+          "byte_length": 1520319,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "http_status": 200,
+          "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+          "pointer": "/artifacts/9",
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-11T17:12:47.260610+00:00",
+          "sha256": "b0dbcbbd800fd1c819007d63d884a1f8b9a5994486d0b2974a4b5b8a6e6eb80e",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+        },
+        {
+          "byte_length": 1416841,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "http_status": 200,
+          "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+          "pointer": "/artifacts/10",
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-11T17:12:47.622471+00:00",
+          "sha256": "e1076735f1c81bc96d5c1ff6e1a9d23515d6eacf52b405cb1f7da3e379ac533b",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml"
+        }
+      ]
+    },
+    "source_reference": "docs/company-data-preparation/aapl-analyst-input-package.json#/aapl_history_review/periods/4/facts/revenue",
+    "unit": "USD"
+  },
+  "meta-fy2025": {
+    "accession": "0001628280-26-003942",
+    "annual_end": "2025-12-31",
+    "annual_start": "2025-01-01",
+    "approval_details": {
+      "author": "User, explicit approval of the48 company-batch recommendations",
+      "proposal_revision": "8fedd075ac4d3ed087bb134b6a3bf409ec232d905410faa04e765f6f403b7b3d",
+      "recorded_at_utc": "2026-10-17T18:17:50.735170+00:00",
+      "review_revision": "d253b875b14907963169fd7734e01fdf2500de01d0d447cc4b7fb4fb9bbb24ec",
+      "schema": "company-treatment-acceptance-audit-v1",
+      "scope": "Accepted company-specific historical preparation only; no Phase2, complete debt/reinvestment or financial-sufficiency certification.",
+      "sequence": 1,
+      "sha256": "ac2514aa5c57e8959f38f90e9cd8687748b490a01d75647e172b2922fed54927",
+      "source_commit": "9bb110cb208ce3abcac0365c4ecf4820c498d60d",
+      "source_revision": "19907563235d652f5913f92ede3d2c41035d096f665304d35759a312b7383178",
+      "valuation_consumption_approved": false,
+      "version": 1
+    },
+    "approval_reference": "docs/company-data-preparation/meta-analyst-input-package.json#/history_approval",
+    "cik": 1326801,
+    "effective_reference": "docs/company-data-preparation/meta-analyst-input-package.json#/current_history/periods/4/inputs/revenue",
+    "form": "10-K",
+    "precision": "-6",
+    "raw_value": "200966000000",
+    "revenue": "200966000000",
+    "scale": 1,
+    "sign_multiplier": 1,
+    "source_details": {
+      "fact": {
+        "as_of": null,
+        "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "display_unit": "USD millions",
+        "display_value": "200966",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "Exact selected statement/note observation; not automatic completeness",
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "occurrence_count": 4,
+        "occurrences": [
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-12-31",
+            "ordinal": 441,
+            "precision": "-6",
+            "primary_display": "200,966",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-127",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "200966000000",
+            "start": "2025-01-01",
+            "unit_id": "usd",
+            "xml_id": "f-127"
+          },
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-12-31",
+            "ordinal": 763,
+            "precision": "-6",
+            "primary_display": "200,966",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-452",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "200966000000",
+            "start": "2025-01-01",
+            "unit_id": "usd",
+            "xml_id": "f-452"
+          },
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-12-31",
+            "ordinal": 778,
+            "precision": "-6",
+            "primary_display": "200,966",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-467",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "200966000000",
+            "start": "2025-01-01",
+            "unit_id": "usd",
+            "xml_id": "f-467"
+          },
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-12-31",
+            "ordinal": 1600,
+            "precision": "-6",
+            "primary_display": "200,966",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-1292",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "200966000000",
+            "start": "2025-01-01",
+            "unit_id": "usd",
+            "xml_id": "f-1292"
+          }
+        ],
+        "origin": "reported",
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "role": "separate_reported_observation",
+        "unit": "USD",
+        "value": "200966000000"
+      },
+      "sources": [
+        {
+          "byte_length": 2371860,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "http_status": 200,
+          "path": "docs/evidence/independent-validation-document-acquisition.json",
+          "pointer": "/artifacts/0",
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-14T08:43:40.009628+00:00",
+          "role": "primary",
+          "sha256": "4ecf3d7d694870ae63f53dca8995e92dc0646cf7dad98eafaf743c2ac24fbbc4",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+        },
+        {
+          "byte_length": 1876078,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "http_status": 200,
+          "path": "docs/evidence/income-binding-repair.json",
+          "pointer": "/artifacts/13",
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T09:25:23.628495+00:00",
+          "role": "instance",
+          "sha256": "6ad129780910ee26dfa4edcc98d33b0929f2365f5e3d64d1fc120014924aebfe",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231_htm.xml"
+        }
+      ]
+    },
+    "source_reference": "docs/company-data-preparation/meta-analyst-input-package.json#/periods/4/facts/revenue",
+    "unit": "USD"
+  },
+  "googl-fy2025": {
+    "accession": "0001652044-26-000018",
+    "annual_end": "2025-12-31",
+    "annual_start": "2025-01-01",
+    "approval_details": {
+      "history_approval": {
+        "action": "ACCEPT_FY2021_FY2025_G1_G8",
+        "author": "User, explicit approval of Alphabet G1-G8 across frozen FY2021-FY2025",
+        "authority": "Current user instruction: explicitly approves Alphabet G1-G8; preserve source unknowns, alternatives, prior decisions and FY2025 operating-lease1m discrepancy without changing financing.",
+        "decisions": {
+          "G1": {
+            "evidence_reference": "/googl_history_review/periods",
+            "numerical_consequence": "11555/15287/11946/15311/21136 USDm. FY2021/22 captions INCLUDE impairment; separate intangible amortization/impairment886/641 remains support. Early broad two-caption alternative12441/15928 includes impairment, not pure D&A.",
+            "periods": [
+              {
+                "accession": "0001652044-22-000019",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-23-000016",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-24-000022",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-25-000014",
+                "annual_end": "2024-12-31",
+                "annual_start": "2024-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-26-000018",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Select reported PP&E noncash-cost observations as explicitly limited historical proxies, not complete expense D&A; no extra ROU addition or assumed finance/intangible inclusion.",
+            "uncertainty_and_alternative": "Alternative leave D&A required input unresolved. Later finance amortization413/553 stays separate with unproved overlap; no sum, residual amortization or invented zero. Useful-life changes reduce comparability; omitted intangible/timing effects unquantified."
+          },
+          "G2": {
+            "evidence_reference": "/googl_history_review/periods",
+            "numerical_consequence": "Total15700/19500/22100/22800/27100R versus add-back15376/19362/22460/22785/24953. Differences324/138/-360/15/2147 are not rounding adjustments. Stock-settled-only alternative15000/18800/21700/22000/24100R has narrower scope.",
+            "periods": [
+              {
+                "accession": "0001652044-22-000019",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-23-000016",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-24-000022",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-26-000018",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Use rounded total recognized SBC expense as cost proxy once in other years, preserving FY2024 approval and distinct CFO add-backs. Retain Other Bets/valuation-based scope, not just Alphabet-share awards.",
+            "uncertainty_and_alternative": "FY2025 includes increased Waymo valuation-based compensation; no supported allocation to the add-back gap. No duplicate charge, award valuation or assumption that every difference is rounding. Alternative narrower proxy omits other compensation."
+          },
+          "G3": {
+            "evidence_reference": "/googl_history_review/periods",
+            "numerical_consequence": "14930/14999/14616/15859/51043 USDm. FY2021-23 debt table already includes finance leases/other: before-costs15086/15142/14746 less156/143/130, CP explicitly0. FY2024 term11882+CP2300+finance1677; FY2025 term48543+CP0+finance2500.",
+            "periods": [
+              {
+                "accession": "0001652044-22-000019",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-23-000016",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-24-000022",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-25-000014",
+                "annual_end": "2024-12-31",
+                "annual_start": "2024-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-26-000018",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Operating leases service, finance asset financing; select the period-specific named reported debt/finance population with no additional undisclosed borrowing adjustment. Respect the changed debt table perimeter.",
+            "uncertainty_and_alternative": "Omitted borrowing unbounded, not complete debt or immateriality. Never add older finance2086/2142/1746 again. Early LongTermDebt15440/15312/14862 is a future-payment schedule, not carrying. FY2024/25 finance principal405/1988 already in debt repayments12701/32427; early separate cash splits unavailable. FY2025 operating lease parent15954 versus components15953 is an unresolved1m source difference, not a plug or amended tolerance."
+          },
+          "G4": {
+            "evidence_reference": "/googl_history_review/periods",
+            "numerical_consequence": "139649/113762/110916/95657/126843 USDm. Nonmarketable parent29549/30492/31008/37982/68687 separate. Candidate pairs27571/27600R,28529/28500R,28766/28800R,35531/35500R,64094/64100R remain unselected alternatives, not amounts to add.",
+            "periods": [
+              {
+                "accession": "0001652044-22-000019",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-23-000016",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-24-000022",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-26-000018",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Select gross named current cash/marketable balances in other periods, keeping strategic/nonmarketable/restricted observations and precision alternatives separately. Preserve FY2024 selected95657.",
+            "uncertainty_and_alternative": "Not unrestricted/excess cash; unknown restrictions/reserves remain. Long restricted marketable803/1400/266 in FY2022/23/24 only; absent FY2021/25 binding is not zero. Equity-method holdings overlap parents; FY2025 unbound subamount is not a residual-derived allocation."
+          },
+          "G5": {
+            "evidence_reference": "/googl_history_review/periods",
+            "numerical_consequence": "NCI4300/3800/3400/4200/3400R; redeemable unknown/1100R/1100R/1100R/841 is included, never added. Fines9799/9106/9525/6322/15594; gross NOL DTA1790/2557/2965/3472/4953 before valuation/realizability.",
+            "periods": [
+              {
+                "accession": "0001652044-22-000019",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-23-000016",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-24-000022",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-25-000014",
+                "annual_end": "2024-12-31",
+                "annual_start": "2024-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-26-000018",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Retain disclosed total NCI INCLUDING redeemable subsets, source-reported preferred0, legal/tax claims and gross NOL DTA separately; no all-claims sum or pure-NOL economic-value operation.",
+            "uncertainty_and_alternative": "Source-preferred zero is actual tagged presentation, not an inferred no-claims assumption. Existing claims remain; no exhaustive undisclosed-claim coverage or deduction. UTB precision alternatives are not recognized liability totals or amounts to add to tax captions; no economic tax-asset valuation."
+          },
+          "G6": {
+            "evidence_reference": "/googl_history_review/periods",
+            "numerical_consequence": "No new quantified adjustment; omitted net obligations/assets remain unbounded. No invented pension amount or retirement expense.",
+            "periods": [
+              {
+                "accession": "0001652044-22-000019",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-23-000016",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-24-000022",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-25-000014",
+                "annual_end": "2024-12-31",
+                "annual_start": "2024-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-26-000018",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Propose no separately selected pension funded-status or other unidentified claim adjustment, preserving source unknowns and the disclosed recognized claims.",
+            "uncertainty_and_alternative": "Retained disclosures do not establish full funded-status coverage. This is a new weak-evidence analyst omission, not a peer approval or immateriality finding. Alternative keep requirement blocked; explicit user acceptance is essential if this omission is to satisfy the historical perimeter."
+          },
+          "G7": {
+            "evidence_reference": "/googl_history_review/periods",
+            "numerical_consequence": "14/14/13/13/13 terms independently tie91652/91495/101746/125299/164713. Other-213/+1030/+4330/+3419/+2108 retained; no residual0 or balancing item.",
+            "periods": [
+              {
+                "accession": "0001652044-22-000019",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-23-000016",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-24-000022",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-25-000014",
+                "annual_end": "2024-12-31",
+                "annual_start": "2024-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-26-000018",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "No separate residual scalar for independently bound displayed CFO; preserve every mixed row and source sign.",
+            "uncertainty_and_alternative": "CFO is consolidated, not organic/unlevered cash. Seven movements are net of acquisition effects as stated, not book delta NWC or proof of all FX/reclassification allocations. Alternative classify all mixed subamounts unsupported."
+          },
+          "G8": {
+            "evidence_reference": "/googl_history_review/periods",
+            "numerical_consequence": "A/B/C millions:300.737/44.665/316.719;5964/883/6002;5899/870/5691;5835/861/5515;5822/837/5429. Reported aggregate662.121/12849/12460/12211/12088 independently observed. FY2022 executed20:1 split; FY2021 remains original pre-split.",
+            "periods": [
+              {
+                "accession": "0001652044-22-000019",
+                "annual_end": "2021-12-31",
+                "annual_start": "2021-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-23-000016",
+                "annual_end": "2022-12-31",
+                "annual_start": "2022-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-24-000022",
+                "annual_end": "2023-12-31",
+                "annual_start": "2023-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              },
+              {
+                "accession": "0001652044-26-000018",
+                "annual_end": "2025-12-31",
+                "annual_start": "2025-01-01",
+                "cik": 1652044,
+                "form": "10-K"
+              }
+            ],
+            "recommendation": "Retain each actual dated A/B/C common population and independently reported aggregate as source observations; no automatic class/award sum or economic class equivalence. Preserve FY2024 accepted view.",
+            "uncertainty_and_alternative": "Alternative explicitly split-normalized FY2021 classes would be20x the original, not extra shares or forecast dilution; not selected here. Cover dates and annual EPS/RSUs remain separate; early EPS nondimensional totals unbound are supporting gaps, not invented issuer totals."
+          }
+        },
+        "financial_sufficiency": "ONLY_APPROVED_HISTORICAL_PERIMETER",
+        "identities": [
+          {
+            "accession": "0001652044-22-000019",
+            "annual_end": "2021-12-31",
+            "annual_start": "2021-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          {
+            "accession": "0001652044-23-000016",
+            "annual_end": "2022-12-31",
+            "annual_start": "2022-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          {
+            "accession": "0001652044-24-000022",
+            "annual_end": "2023-12-31",
+            "annual_start": "2023-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          {
+            "accession": "0001652044-25-000014",
+            "annual_end": "2024-12-31",
+            "annual_start": "2024-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          },
+          {
+            "accession": "0001652044-26-000018",
+            "annual_end": "2025-12-31",
+            "annual_start": "2025-01-01",
+            "cik": 1652044,
+            "form": "10-K"
+          }
+        ],
+        "phase1_closed": false,
+        "previous": "de1a2a13771c251f77c8ccd2354d935023c048e0af64a2cacadfa9b438f4923c",
+        "rationale": "Accept limited D&A proxies including early impairment and omitted components, SBC expense once, named financing and gross financial balances, known claims without overlap and unbounded unidentified/pension omission, no CFO residual and dated classes/split boundary. Historical preparation only.",
+        "recorded_at_utc": "2026-10-17T16:54:52.741263+00:00",
+        "review_revision": "5e21bf0f4c6b917cc7a12092cf8222b62e3815cb12d4cf52bf04fb00199c58f7",
+        "schema": "googl-treatment-acceptance-audit-v1",
+        "sequence": 2,
+        "sha256": "728eaf073b0ef2fb5234f835e018e2290f7c3eac652cc91cb05e14cdef41d847",
+        "source_commit": "2b6b6504129b1eda1d595f54f34b0eded4acbc8b",
+        "source_revision": "37dd597e3734dfc66695fbd99ca3353c048326c4b4a437a06c9aeda28724e071",
+        "valuation_consumption_approved": false,
+        "version": 1
+      },
+      "limitation": "Historical perimeter only; no company forecast/bridge acceptance",
+      "prior_approval_reference": "/accepted_view/approval_audit",
+      "prior_scoped_approval": {
+        "action": "ACCEPT_SCOPED_SELECTIONS",
+        "author": "User, explicit Alphabet FY2024 approved-selection instruction",
+        "authority": "Current user instruction: Implement the user-approved Alphabet FY2024 selections.",
+        "decisions": {
+          "DA-INVESTMENT": "CFO depreciation15311 and finance amortization413 separate; complete expense D&A null; cash PP&E52535, combined2931, Other2667, creditors and noncash additions separate with source signs; no sum or inclusion assumption.",
+          "FINANCIAL-CLAIMS": "Select current financial95657, not unrestricted/excess; restricted266 and strategic/precision alternatives separate; NCI4200 includes redeemable1100, never5300; claims/commitments separate, no net debt or exhaustive coverage.",
+          "HISTORICAL-SCHEDULES": "Revenue350018, EBIT112390, CFO125299; accepted rounded SBC expense22800 once versus add-back22785; historical tax roles and dated classes/source aggregate/EPS/awards separate; no future rate, interest proxy, rounding plug or dilution.",
+          "LEASE-FINANCING": "Operating service / finance asset financing; named term+CP+finance15859 USDm only, all-lease30437 non-default; principal405 already within repayments12701; no complete debt, lease cash or borrowing interest.",
+          "OPERATING-CAPITAL": "Select rounded partial current operating capital13342 USDm including reviewed manual-note3200; whole AP/fines alternatives non-default; inventory/supplier/other allocations unknown; no opening or delta/completeness."
+        },
+        "financial_sufficiency": "NOT_ASSESSED",
+        "phase1_closed": false,
+        "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+        "rationale": "Record only the approved Alphabet historical selections; preserve unavailable amounts, prior proposals and original blockers.",
+        "recorded_at_utc": "2026-10-15T21:14:24.133192+00:00",
+        "schema": "googl-treatment-acceptance-audit-v1",
+        "sequence": 1,
+        "sha256": "de1a2a13771c251f77c8ccd2354d935023c048e0af64a2cacadfa9b438f4923c",
+        "source_commit": "3422da1a9a369055b0b7cdc6197610112b9fd47f",
+        "source_revision": "367e519c8a3cdf0f0e05acb19d9addc14eb37c1e7da70445be74a2af41d0021e",
+        "valuation_consumption_approved": false,
+        "version": 1
+      },
+      "revenue_acceptance": {
+        "approval_reference": null,
+        "completeness": "Named historical population only, no economic completeness",
+        "evidence_references": [
+          "/googl_history_review/periods/4/facts/revenue"
+        ],
+        "existing_approval_reference": null,
+        "field": "revenue",
+        "pending_decisions": [],
+        "status": "SATISFIED_WITHIN_SOURCE_OR_PRIOR_SCOPE"
+      }
+    },
+    "approval_reference": "docs/company-data-preparation/googl-analyst-input-package.json#/googl_history_approval",
+    "cik": 1652044,
+    "effective_reference": "docs/company-data-preparation/googl-analyst-input-package.json#/googl_current_history/periods/4/inputs/revenue",
+    "form": "10-K",
+    "precision": "-6",
+    "raw_value": "402836000000",
+    "revenue": "402836000000",
+    "scale": 1,
+    "sign_multiplier": 1,
+    "source_details": {
+      "fact": {
+        "as_of": null,
+        "concept": "Revenues",
+        "display_unit": "USD millions",
+        "display_value": "402836",
+        "evidence_depth": "exact_primary_inline_and_instance_verified",
+        "evidence_label": "fact_source_reported",
+        "instance_source": "FY2025-instance",
+        "location": "Approved direct revenue semantics, independently bound primary/instance",
+        "namespace": "http://fasb.org/us-gaap/2025",
+        "occurrence_count": 5,
+        "occurrences": [
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-12-31",
+            "ordinal": 665,
+            "precision": "-6",
+            "primary_display": "402,836",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-190",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "402836000000",
+            "start": "2025-01-01",
+            "unit_id": "usd",
+            "xml_id": "f-190"
+          },
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-12-31",
+            "ordinal": 984,
+            "precision": "-6",
+            "primary_display": "402,836",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-511",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "402836000000",
+            "start": "2025-01-01",
+            "unit_id": "usd",
+            "xml_id": "f-511"
+          },
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-12-31",
+            "ordinal": 1020,
+            "precision": "-6",
+            "primary_display": "402,836",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-547",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "402836000000",
+            "start": "2025-01-01",
+            "unit_id": "usd",
+            "xml_id": "f-547"
+          },
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-12-31",
+            "ordinal": 1314,
+            "precision": "-6",
+            "primary_display": "402,836",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-848",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "402836000000",
+            "start": "2025-01-01",
+            "unit_id": "usd",
+            "xml_id": "f-848"
+          },
+          {
+            "context_id": "c-1",
+            "dimensions": [],
+            "end": "2025-12-31",
+            "ordinal": 2238,
+            "precision": "-6",
+            "primary_display": "402,836",
+            "primary_format": "ixt:num-dot-decimal",
+            "primary_locator": "inline#f-1784",
+            "primary_scale": 6,
+            "primary_sign": "+",
+            "raw_value": "402836000000",
+            "start": "2025-01-01",
+            "unit_id": "usd",
+            "xml_id": "f-1784"
+          }
+        ],
+        "precision": "-6",
+        "precision_variants": [
+          "-6"
+        ],
+        "primary_source": "FY2025-primary",
+        "unit": "USD",
+        "value": "402836000000"
+      },
+      "sources": [
+        {
+          "basis": "original_receipt",
+          "byte_equivalence_verified": true,
+          "byte_length": 2616610,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "http_status": 200,
+          "original_http_status": 200,
+          "original_retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+          "original_sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "path": "docs/evidence/analyst-operating-nwc-response-bodies.json",
+          "pointer": "/artifacts/32",
+          "prior_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/32",
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-11T17:13:00.053250+00:00",
+          "sha256": "7159a6ced86ba8e07b679705285717667ae182600b8048a359b2d6442d6295a3",
+          "source_id": "FY2025-primary",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+        },
+        {
+          "basis": "existing_authorized_refresh_not_recovered_original_metadata",
+          "byte_equivalence_verified": true,
+          "byte_length": 2880903,
+          "digest_type": "sha256_sec_response_body_bytes",
+          "http_status": 200,
+          "original_http_status": null,
+          "original_retrieved_at_utc": null,
+          "original_sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+          "path": "docs/evidence/income-sweep-backlog-acquisition.json",
+          "pointer": "/artifacts/3",
+          "prior_reference": "docs/evidence/analyst-operating-nwc-response-bodies.json#/artifacts/33",
+          "representation": "sec_response_body_bytes",
+          "retrieved_at_utc": "2026-10-13T08:41:53.892047+00:00",
+          "sha256": "03df38b77f4e4045efb3a100ddbadcc752494d916beb523897439c1484f87df2",
+          "source_id": "FY2025-instance",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml"
+        }
+      ]
+    },
+    "source_reference": "docs/company-data-preparation/googl-analyst-input-package.json#/googl_history_review/periods/4/facts/revenue",
+    "unit": "USD"
+  }
+}

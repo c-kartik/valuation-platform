@@ -1,5 +1,17 @@
 # AGENTS.md
 
+## Parallel browser engine — November 5, 2026
+
+The user authorizes a parallel JavaScript/TypeScript valuation engine and static
+portfolio integration, with the existing Python pipeline left untouched and
+available for switching back. Do not replace Python acquisition/normalization,
+change its source or financial policies, or retire GCP under this migration.
+The ordinary frontend build retains Python/API execution; `build:browser` fixes
+execution to the browser without an automatic backend fallback. See
+`docs/browser-engine-migration.md` for parity evidence, static dataset refresh,
+release prerequisites and remaining hosting access work. Wider issuer expansion
+and new financial conventions remain outside this engineering migration.
+
 ## Project
 
 Automated Equity Valuation Platform.
