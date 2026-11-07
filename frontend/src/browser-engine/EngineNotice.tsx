@@ -1,2 +1,3 @@
 import {browserEnabled} from './mode';
-export function EngineNotice(){return browserEnabled()?<aside aria-label="Calculation mode" style={{background:'#101e34',color:'#f0d49a',padding:'8px 16px',fontSize:13,display:'flex',gap:16,flexWrap:'wrap',justifyContent:'space-between'}}><span>Browser preview · Calculations run on your device · Company data is a prepared snapshot</span><a href="/" style={{color:'inherit'}}>Portfolio</a></aside>:null;}
+import './EngineNotice.css';
+export function EngineNotice(){return browserEnabled()?<aside aria-label="Calculation mode" className="engine-header"><a href="/" className="engine-home" aria-label="K. Chaturvedi home">K<span>. </span>Chaturvedi</a><span className="engine-notice">Browser preview · Calculations run on your device · Company data is a prepared snapshot</span></aside>:null;}

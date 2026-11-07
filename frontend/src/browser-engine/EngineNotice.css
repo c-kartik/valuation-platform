@@ -1,0 +1,7 @@
+.engine-header{background:#101e34;color:#f0d49a;padding:8px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px 24px;flex-wrap:wrap}
+.engine-home{display:inline-flex;align-items:center;min-height:44px;color:#fff;text-decoration:none;font-family:Georgia,'Times New Roman',serif;font-size:20px;font-weight:700;letter-spacing:.01em;white-space:nowrap}
+.engine-home span{color:#c9a84c;white-space:pre}
+.engine-home:hover{color:#f0d49a}
+.engine-home:focus-visible{outline:2px solid #f0d49a;outline-offset:4px;border-radius:2px}
+.engine-notice{font-size:13px;line-height:1.5}
+@media(max-width:600px){.engine-header{gap:0;padding-bottom:12px}.engine-notice{flex-basis:100%;font-size:12px}}
