@@ -1,0 +1,8 @@
+.model-export{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
+.model-export>button{min-height:40px;padding:8px 13px;border:1px solid #b8c6cf;border-radius:6px;background:white;color:#17384b;font:600 12px/1.4 system-ui,sans-serif;cursor:pointer}
+.model-export>button:hover{background:#f2f5f7}
+.model-export>button:focus-visible{outline:2px solid #aa8534;outline-offset:3px}
+.model-export>button:disabled{opacity:.65;cursor:wait}
+.model-export>[role=alert]{max-width:360px;color:#a12d2d;font:12px/1.5 system-ui,sans-serif}
+.cv-editor footer .model-export{margin:0}
+.cv-company>div>.model-export{display:flex;margin:10px 0}

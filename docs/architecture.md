@@ -1,5 +1,16 @@
 # Architecture
 
+## Excel model snapshots — November 7, 2026
+
+The workspace can download the selected company's assumptions and current state
+as an XLSX snapshot, including all saved scenarios and an open editor draft.
+Capture occurs before asynchronous work. A lazy browser-only ExcelJS writer
+creates readable sheets plus a checksummed exact JSON state; it neither changes
+financial calculations nor submits pending edits. No upload/backend is involved.
+Workbook import and Excel recalculation are outside this feature. See
+[Excel snapshot contract](excel-model-snapshots.md) for scope, precision, status
+binding, validation and future-loader requirements.
+
 ## Parallel browser execution — November 5, 2026
 
 Confirmed refresh workflow: the existing Python acquisition/preparation pipeline

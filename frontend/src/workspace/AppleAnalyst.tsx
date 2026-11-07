@@ -41,7 +41,7 @@ function readForm(form:Form):AppleAssumptions{
   return [key,new D(raw).times(key==='additional_claims_usd'?'1000000':'0.01').toFixed()];
  })) as AppleAssumptions;
 }
-export function AppleAnalyst({result,stale,busy,active=true,label='Base',load=request}:{result:Result;stale:boolean;busy:boolean;active?:boolean;label?:string;load?:typeof request}){
+export function AppleAnalyst({result,stale,busy,active=true,label='Base',load=request,capture}:{capture?:(value:import('./modelSnapshot').AnalystSnapshot)=>void;result:Result;stale:boolean;busy:boolean;active?:boolean;label?:string;load?:typeof request}){
  const [form,setForm]=useState<Form>(initialForm),[pending,setPending]=useState(false),[failure,setFailure]=useState(''),[details,setDetails]=useState<string[]>([]);
  const [saved,setSaved]=useState<{data:AppleAnalystResult;binding:string;formKey:string}|null>(null);
  const revision=useRef(new Revisions()),controller=useRef<AbortController|null>(null),attempts=useRef(new Set<string>());
@@ -49,6 +49,7 @@ export function AppleAnalyst({result,stale,busy,active=true,label='Base',load=re
  const unsupported=(base.terminal_valuation as {method?:string}|undefined)?.method==='exit_multiple';
  const isApple=result.submitted_inputs.anchor.kind==='aapl-fy2025';
  const outdated=stale||saved?.binding!==binding||saved?.formKey!==formKey;
+ useEffect(()=>{capture?.({form,status:pending?'calculating':!saved?'not_calculated':outdated?'stale':'current',result:saved?.data??null,resultForm:saved?JSON.parse(saved.formKey):null});},[capture,form,saved,pending,outdated]);
  const submitted=useRef({result,binding,formKey,form,base});submitted.current={result,binding,formKey,form,base};
  function stop(){revision.current.edit();controller.current?.abort();setPending(false);}
  useEffect(()=>{stop();setFailure('');setDetails([]);return()=>{revision.current.edit();controller.current?.abort();};},[binding,stale]);

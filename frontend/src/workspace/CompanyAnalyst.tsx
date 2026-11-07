@@ -49,7 +49,7 @@ function readForm(form:Form):CompanyAssumptions{
   return [key,new D(raw).times(moneyInput(key)?'1000000':'0.01').toFixed()];
  })) as CompanyAssumptions;
 }
-export function CompanyAnalyst({ticker,result,stale,busy,active=true,label='Base',load=request}:{ticker:CompanyTicker;result:Result;stale:boolean;busy:boolean;active?:boolean;label?:string;load?:typeof request}){
+export function CompanyAnalyst({ticker,result,stale,busy,active=true,label='Base',load=request,capture}:{capture?:(value:import('./modelSnapshot').AnalystSnapshot)=>void;ticker:CompanyTicker;result:Result;stale:boolean;busy:boolean;active?:boolean;label?:string;load?:typeof request}){
  const [form,setForm]=useState<Form>(emptyForm),[profile,setProfile]=useState<CompanyProfile|null>(null),[profilePending,setProfilePending]=useState(false),[profileRetry,setProfileRetry]=useState(0);
  const [pending,setPending]=useState(false),[failure,setFailure]=useState(''),[details,setDetails]=useState<string[]>([]);
  const [saved,setSaved]=useState<{data:CompanyAnalystResult;binding:string;formKey:string}|null>(null);
@@ -60,6 +60,7 @@ export function CompanyAnalyst({ticker,result,stale,busy,active=true,label='Base
  const currentProfile=profile?.ticker===ticker&&profile.model_origin===result.submitted_inputs.anchor.annual_end?profile:null;
  const name=currentProfile?.name??(ticker==='META'?'Meta Platforms':'Alphabet');
  const outdated=stale||saved?.binding!==binding||saved?.formKey!==formKey;
+ useEffect(()=>{capture?.({form,status:pending?'calculating':!saved?'not_calculated':outdated?'stale':'current',result:saved?.data??null,resultForm:saved?JSON.parse(saved.formKey):null,profile:currentProfile});},[capture,form,saved,pending,outdated,currentProfile]);
  const submitted=useRef({result,binding,formKey,form,base,ticker,profile:currentProfile});submitted.current={result,binding,formKey,form,base,ticker,profile:currentProfile};
  useEffect(()=>{
   if(!correctIssuer)return;
