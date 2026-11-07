@@ -1,5 +1,16 @@
 # Project Status
 
+## Portfolio logo restored — November 7, 2026
+
+The valuation header now shows a clickable K. Chaturvedi wordmark at the top
+left, linking to the portfolio homepage. The separate Portfolio link is removed.
+The calculation notice stays visible and wraps below the logo on phones.
+Source commit `8bdf367`, published portfolio commit `aeae630`. Production build,
+40-file artifact/reference and loopback route checks pass. Desktop and 390px
+phone previews pass; the live logo opens the homepage, the old link is absent,
+and the default valuation still calculates without console errors. All Python
+and frozen financial assets remain unchanged. No financial logic changed.
+
 ## Production browser deployment — November 6, 2026
 
 The user explicitly authorized deployment to the existing portfolio. The
