@@ -6,7 +6,7 @@ const companies=[{kind:'meta',company:'META',name:'Meta Platforms'},{kind:'googl
 function setup(disabled=false){const onSelect=vi.fn();render(<><CompanySearch companies={companies} selected="googl" disabled={disabled} onSelect={onSelect}/><button>Outside</button></>);return {input:screen.getByRole('combobox',{name:'Company'}),onSelect};}
 const tickers=()=>screen.queryAllByRole('option').map(e=>e.querySelector('strong')?.textContent);
 it('shows exactly three suggestions on focus without selecting or loading a company',()=>{
- const {input,onSelect}=setup();expect((input as HTMLInputElement).value).toBe('GOOGL · Alphabet');
+ const {input,onSelect}=setup();expect((input as HTMLInputElement).value).toBe('');expect(input.getAttribute('placeholder')).toBe('Search');
  fireEvent.focus(input);expect(tickers()).toEqual(['META','GOOGL','AAPL']);expect(input.getAttribute('aria-expanded')).toBe('true');expect(onSelect).not.toHaveBeenCalled();
 });
 it('updates on every letter, matches names without case sensitivity, and restores suggestions when cleared',()=>{
@@ -19,11 +19,11 @@ it('updates on every letter, matches names without case sensitivity, and restore
 it('prioritizes an exact ticker ahead of other partial matches',()=>{
  const {input}=setup();fireEvent.change(input,{target:{value:'MSFT'}});expect(tickers()).toEqual(['MSFT']);
 });
-it('supports keyboard selection and restores the selected label on Escape without changing company',async()=>{
+it('supports keyboard selection and restores the empty search on Escape without changing company',async()=>{
  const user=userEvent.setup(),{input,onSelect}=setup();await user.click(input);await user.keyboard('{ArrowDown}{Enter}');
  expect(onSelect).toHaveBeenCalledWith('googl');expect(screen.queryByRole('listbox')).toBeNull();
  await user.click(input);await user.type(input,'apple');expect(tickers()).toEqual(['AAPL']);await user.keyboard('{Escape}');
- expect((input as HTMLInputElement).value).toBe('GOOGL · Alphabet');expect(onSelect).toHaveBeenCalledTimes(1);
+ expect((input as HTMLInputElement).value).toBe('');expect(onSelect).toHaveBeenCalledTimes(1);
  await user.click(input);expect(tickers()).toHaveLength(3);
 });
 it('selects by pointer and closes on outside click or Tab without accidental selection',async()=>{

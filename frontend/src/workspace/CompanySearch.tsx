@@ -5,7 +5,6 @@ export type SearchCompany={kind:string;company:string;name:string};
 export function CompanySearch({companies,selected,disabled=false,onSelect}:{companies:SearchCompany[];selected:string;disabled?:boolean;onSelect:(kind:string)=>void}){
  const id=useId(),root=useRef<HTMLDivElement>(null);
  const [open,setOpen]=useState(false),[query,setQuery]=useState(''),[active,setActive]=useState(0);
- const chosen=companies.find(c=>c.kind===selected);
  const term=query.trim().toLowerCase();
  const rank=(c:SearchCompany)=>c.company.toLowerCase()===term?0:c.company.toLowerCase().startsWith(term)?1:c.name.toLowerCase().startsWith(term)?2:3;
  const matches=term?companies.filter(c=>`${c.company} ${c.name}`.toLowerCase().includes(term)).sort((a,b)=>rank(a)-rank(b)):companies.slice(0,3);
@@ -19,10 +18,10 @@ export function CompanySearch({companies,selected,disabled=false,onSelect}:{comp
   document.addEventListener('pointerdown',outside);
   return()=>document.removeEventListener('pointerdown',outside);
  },[open]);
- return <div className="company-search cv-company-tools" ref={root} onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget as Node|null))close();}}>
+ return <div className="company-search" ref={root} onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget as Node|null))close();}}>
   <label htmlFor={id}>Company</label>
   <input id={id} type="text" role="combobox" aria-autocomplete="list" aria-expanded={open} aria-controls={open?`${id}-list`:undefined} aria-activedescendant={open&&matches.length?`${id}-option-${index}`:undefined}
-   autoComplete="off" spellCheck={false} disabled={disabled} placeholder="Search by ticker or company" value={open?query:chosen?`${chosen.company} · ${chosen.name}`:''}
+   autoComplete="off" spellCheck={false} disabled={disabled} placeholder="Search" value={open?query:''}
    onFocus={show} onClick={()=>{if(!open)show();}} onChange={e=>{setQuery(e.target.value);setActive(0);setOpen(true);}}
    onKeyDown={e=>{
     if(e.key==='Escape'){e.preventDefault();close();}
