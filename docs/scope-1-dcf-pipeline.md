@@ -56,3 +56,6 @@ Preparation traceability alone is not financial-input sufficiency. Specialized
 issuers require an appropriate methodology rather than forced operating-company
 DCF coverage. The broader [universe-review pause](phase1-universe-pause-checkpoint.md)
 remains in force until the user explicitly resumes a named issuer/scope.
+
+GitHub checkpoint: [completed issue #1](https://github.com/c-kartik/valuation-platform/issues/1),
+[closed Scope 1 milestone](https://github.com/c-kartik/valuation-platform/milestone/1).

@@ -7,6 +7,24 @@ names retain their original meanings. Registering this roadmap does not start
 development, choose a data subscription, approve new numerical defaults or
 resume paused universe reviews.
 
+## GitHub roadmap tracking
+
+- [Scope 2 parent roadmap #2](https://github.com/c-kartik/valuation-platform/issues/2)
+- [Scope 2 milestone](https://github.com/c-kartik/valuation-platform/milestone/2) — OPEN, implementation not started.
+- [Scope 1 checkpoint #1](https://github.com/c-kartik/valuation-platform/issues/1) and [milestone](https://github.com/c-kartik/valuation-platform/milestone/1) — CLOSED for the qualified three-company DCF pilot.
+
+| Work item | Issue |
+| --- | --- |
+| S2.0 Shared data foundation | [#3](https://github.com/c-kartik/valuation-platform/issues/3) |
+| S2.1 Overview/comparison chart | [#4](https://github.com/c-kartik/valuation-platform/issues/4) |
+| S2.2 Earnings/multiple drivers | [#5](https://github.com/c-kartik/valuation-platform/issues/5) |
+| S2.3 Earnings-event study | [#6](https://github.com/c-kartik/valuation-platform/issues/6) |
+| S2.4 Dated DCF dip finder | [#7](https://github.com/c-kartik/valuation-platform/issues/7) |
+| Per-ticker feature acceptance | [#8](https://github.com/c-kartik/valuation-platform/issues/8) |
+
+All Scope 2 issues begin OPEN with `scope:2` and `planning` labels. No deadline,
+provider spend or implementation start is implied. Historical curves remain deferred.
+
 ## Objective and initial universe
 
 Connect business performance, observed market behaviour and disclosed valuation
