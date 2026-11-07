@@ -3,7 +3,7 @@
 import path from 'node:path';
 import {readFile,readdir,stat} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {hasRecognizableSecret} from './public-asset-checks.mjs';
+import {hasRecognizableSecret,javascriptAssetReferences} from './public-asset-checks.mjs';
 const output=path.resolve(process.argv[2]??'/Users/kc/Documents/Codex/2026-11-05/valuation-platform-local/outputs/browser-portfolio');
 const origin=process.argv[3];if(origin&&!/^http:\/\/127\.0\.0\.1:\d+$/.test(origin))throw new Error('Only loopback validation is supported');
 const root=path.join(output,'public');
@@ -21,7 +21,7 @@ for(const file of manifest.files){
  const text=bytes.toString('utf8');
  if(/https?:\/\/[^\s"'<>]*(?:\.run\.app|\.cloudfunctions\.net|\.firebaseio\.com|127\.0\.0\.1|localhost)(?::\d+)?/i.test(text))reject('Cloud/loopback backend URL in public artifact: '+file.path);
  if(hasRecognizableSecret(text))reject('Recognizable secret material: '+file.path);
- const refs=file.path.endsWith('.html')?[...text.matchAll(/(?:src|href)=["']([^"']+)["']/g)].map(m=>m[1]):file.path.endsWith('.css')?[...text.matchAll(/url\(["']?([^\s)'";]+)["']?\)/g)].map(m=>m[1]):/\.(?:js|mjs)$/.test(file.path)?[...text.matchAll(/["']((?:\.?\.?\/)[^"'\s]+\.(?:js|mjs|css)(?:\?[^"'\s]*)?)["']/g)].map(m=>m[1]):[];
+ const refs=file.path.endsWith('.html')?[...text.matchAll(/(?:src|href)=["']([^"']+)["']/g)].map(m=>m[1]):file.path.endsWith('.css')?[...text.matchAll(/url\(["']?([^\s)'";]+)["']?\)/g)].map(m=>m[1]):/\.(?:js|mjs)$/.test(file.path)?javascriptAssetReferences(text):[];
  for(const ref of refs){
   if(/^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(ref))continue;
   let target=new URL(ref,'https://static.invalid/'+file.path).pathname;target=decodeURIComponent(target).slice(1);
