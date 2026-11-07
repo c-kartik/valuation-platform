@@ -1,5 +1,18 @@
 # Project Status
 
+## Search integrated into logo bar — November 7, 2026
+
+Moved company search into the right side of the portfolio logo bar, widened the
+desktop field to 620px, and removed the separate selection row. The field now
+shows a grey Search placeholder when idle rather than repeating the selected
+company name. Its accessible Company label is retained without a visible label.
+Three suggestions, per-letter filtering, keyboard controls and existing company
+session retention remain intact. The logo/search stay on one row on phones.
+Source `ea860da`, portfolio release `92ebada`. All 55 affected interaction and
+workspace tests, the browser production build and static package/route checks
+pass. Desktop/390px layout and Apple search/selection were checked in browser.
+Python and frozen financial assets verify unchanged.
+
 ## Live header simplified — November 7, 2026
 
 Removed the browser-preview/device-calculation/snapshot sentence at the user's
