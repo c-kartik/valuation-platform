@@ -1,5 +1,14 @@
 # Project Status
 
+## Live header simplified — November 7, 2026
+
+Removed the browser-preview/device-calculation/snapshot sentence at the user's
+request, retaining the clickable K. Chaturvedi home logo. The header is now a
+navigation landmark. Published portfolio commit `ece4785`, source `0686919`.
+Production build and 40-file artifact checks pass; live browser verification
+confirms the sentence is absent, the logo links to `/`, and Base calculates.
+All Python and frozen financial assets verify unchanged.
+
 ## Portfolio logo restored — November 7, 2026
 
 The valuation header now shows a clickable K. Chaturvedi wordmark at the top
