@@ -1,5 +1,25 @@
 # AGENTS.md
 
+## Product scopes — November 7, 2026
+
+Scope 1 is the [DCF pipeline and workspace](docs/scope-1-dcf-pipeline.md),
+implemented/deployed for AAPL/META/GOOGL under their named analyst-ready-with-
+qualifications contracts. This is not completion of the whole issuer universe.
+Scope 2 is the subsequent [Company Research Dashboard](docs/scope-2-research-dashboard.md):
+shared data foundation, overview/comparison chart, earnings/multiple return
+drivers, earnings-event study and DCF dip finder. **Scope 2 is logged/planned;
+implementation is NOT STARTED.** No provider, budget, new numeric defaults,
+current-date valuation policy or historical intrinsic-value reconstruction is
+approved by logging the scope. Begin implementation only on a subsequent request.
+
+Future tickers follow the [onboarding gates](docs/ticker-onboarding-checklist.md):
+separate evidence-accounted preparation, Scope 1 financial-input sufficiency,
+and per-feature Scope 2 acceptance in the [register](docs/scope-2-ticker-register.md).
+Keep original Python and accepted issuer conventions unchanged. New data tooling
+is additive; public browser assets contain no provider secrets. The existing
+universe-review pause remains in force. Scope 1/2 product labels do not renumber
+historical Phase 1H/Phase 2A records or implicitly resume other issuer work.
+
 ## Parallel browser engine — November 5, 2026
 
 The user authorizes a parallel JavaScript/TypeScript valuation engine and static

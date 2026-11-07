@@ -1,5 +1,38 @@
 # Financial Methodology
 
+## Scope 2 methodology proposals — November 7, 2026
+
+The [Scope 2 plan](scope-2-research-dashboard.md) records new consumers after the
+completed three-company Scope 1 DCF contracts. These are specifications to resolve
+before implementation, not new financial values or amendments to accepted models.
+
+- Shared observations distinguish financial periods, actual public availability,
+  source/retrieval/review dates and valuation origins; preserve restatement vintages.
+- Overview metrics require defined units/perimeters and source sufficiency. Annual
+  steps/points are not invented quarterly/monthly data. Historical FCFF/FCFE keep
+  existing issuer/ownership/estimate qualifications; ROIC/TTM/net-debt definitions
+  require separate review before exposure.
+- Return drivers use P = EPS × P/E with matched positive EPS, share/split basis
+  and information cutoff; reconcile multiplicatively. Separate dividend-inclusive
+  performance and any later approved additive/log interaction attribution.
+- Initial event studies propose benchmark-adjusted daily AR = stock return minus
+  benchmark return, CAR = sum of AR, predefined trading-day windows and sourced
+  announcement/session timing. Benchmark, window/return conventions and any later
+  alpha/beta estimation policy remain to be selected. Report exclusions and sample
+  limits; do not claim a validated trading strategy from three issuers.
+- Dip-finder discount (V−P)/V, upside (V−P)/P, drawdown P/H−1 and threshold
+  V×(1−m) have distinct denominators/meanings. V is positive equity value per
+  matching share, never enterprise value. Primary FCFF and secondary FCFE remain
+  separate. No company threshold/default margin is approved by the examples.
+- Current-date dip classifications require a new valuation-date/elapsed-period/
+  dated-bridge/freshness contract. Preserve existing fiscal-end valuations and
+  their later-filed-information labels. Historical curves require separately
+  accepted dated vintages/reconstruction, never backfilled current assumptions.
+
+The [market contract](market-data-contract.md) and per-issuer acceptance records
+must resolve these gates before consumers ship. Existing financial policies,
+frozen preparation records and the unchanged Python pipeline remain controlling.
+
 ## Browser-engine equivalence boundary — November 5, 2026
 
 The parallel TypeScript engine is an implementation migration, not a new

@@ -1,38 +1,34 @@
 # Automated Equity Valuation Platform
 
-The [parallel browser engine](docs/browser-engine-migration.md) runs the existing
-valuation workspace on-device from prepared static company data. The original
-Python pipeline and API remain intact. JavaScript is the default development
-and build path; `dev:python` and `build:python` explicitly select the retained API.
-`npm run build:browser` in `frontend/` prepares an optional backend-free build for
-the portfolio's `/valuation/` route. Publishing to the existing Netlify account
-remains pending account access; this does not switch the live website.
+## Product roadmap
 
-[Codex Cloud/mobile setup](docs/codex-cloud.md) provides portable installation,
-verification, supervised app startup and the original42-company research snapshot.
-Read the [cloud handoff](docs/cloud-work-handoff.md) before continuing financial review.
+| Scope | Status | Reference |
+| --- | --- | --- |
+| **Scope 1 — DCF pipeline and valuation workspace** | Completed and deployed for AAPL, META and GOOGL, with documented qualifications | [Completion boundaries and acceptance](docs/scope-1-dcf-pipeline.md) |
+| **Scope 2 — Company Research Dashboard** | Planned; implementation NOT STARTED | [Feature scope, data and acceptance gates](docs/scope-2-research-dashboard.md) |
 
-[Manual company cash-flow resolutions](docs/company-resolutions/README.md) now
-record each approved treatment, source, before/after amount and remaining gap.
-The first [Apple record](docs/company-resolutions/AAPL/README.md) reproduces its
-financing and operating-method review without silently changing chart values.
-[Meta](docs/company-resolutions/META/README.md) and [Alphabet](docs/company-resolutions/GOOGL/README.md)
-now have approved treatment records too. Meta historical FCFF nets identified
-PP&E receipts (+245m/+221m in FY2022/23); FCFE financing/ownership gaps stay explicit.
+The [live valuation workspace](https://kartikchaturvedi.com/valuation/) uses the
+[JavaScript browser engine](docs/browser-engine-migration.md), prepared static
+company data, company search and [Excel model-state saving](docs/excel-model-snapshots.md).
+The original Python SEC pipeline remains intact for manual refresh; Python API
+execution remains an explicit opt-in. Browser computation is the default.
 
-[Registered starting profiles](docs/registered-preloads.md) now cover Alphabet, Meta
-and Apple through one reproducible pipeline. Company selection loads its own
-source-backed estimates and editable forecast policy. Alphabet inputs are unchanged.
-Top50 expansion remains a later, separate step.
+Scope 2 adds the company overview/comparison chart, earnings-versus-multiple
+return drivers, earnings-event study and a dated DCF dip finder, after a shared
+data foundation. Historical intrinsic-value curves are deferred. Every additional
+ticker follows the [onboarding checklist](docs/ticker-onboarding-checklist.md)
+and [per-feature register](docs/scope-2-ticker-register.md); acceptance does not
+transfer automatically from the three pilots. Broader issuer work remains
+[paused](docs/phase1-universe-pause-checkpoint.md).
 
-Three-company historical FCFF now uses the [adopted CFO method](docs/historical-cfo-fcff-adoption.md):
-13 of 15 FY2021–25 observations available, with Apple FY2024–25 missing interest.
-Charts disclose the difference from the EBIT-based forecast; no missing inputs
-are estimated and no forecast assumptions or EV are changed.
+Current issuer acceptance records and the [qualification crosswalk](docs/company-resolutions/OPEN-ROADBLOCKS.md)
+supersede older historical milestones below. Financial policies and remaining
+limitations stay explicit. [Cloud/mobile setup](docs/codex-cloud.md) and the
+[cloud handoff](docs/cloud-work-handoff.md) cover portable development.
 
 A full-stack equity valuation platform combining SEC financial data extraction, financial statement normalization, and automated valuation analysis.
 
-## Planned Capabilities
+## Original capability outline
 
 - Accept a US stock ticker
 - Retrieve historical financial data primarily from SEC EDGAR/XBRL
@@ -47,7 +43,10 @@ The initial methodology targets US-listed non-financial operating companies.
 Specialized financial and other structures will require separate methodology
 where the operating-company FCFF framework is not appropriate.
 
-## Current Status
+## Historical implementation milestones
+
+The notes below retain earlier implementation checkpoints; use the product roadmap
+and linked current acceptance records above for present status.
 
 The local workspace now offers a [proposed GOOGL starting model](docs/googl-preload-worked-model.md)
 from pinned public sources and [versioned estimation rules](docs/googl-preload-methodology.md).

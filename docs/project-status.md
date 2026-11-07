@@ -1,5 +1,23 @@
 # Project Status
 
+## Product roadmap: Scope 1 then Scope 2 — November 7, 2026
+
+The user requested a clearly logged second scope after the DCF pipeline, with a
+reusable path for future tickers. [Scope 1](scope-1-dcf-pipeline.md) records the
+completed, deployed AAPL/META/GOOGL core under existing analyst-ready-with-
+qualifications acceptance; broader universe/source work is not declared complete.
+[Scope 2](scope-2-research-dashboard.md) is the subsequent Company Research
+Dashboard: shared data → overview → earnings/multiple return drivers → earnings
+events → DCF dip finder. **Scope 2 implementation is NOT STARTED.**
+
+The [market contract](market-data-contract.md), [onboarding checklist](ticker-onboarding-checklist.md)
+and [ticker register](scope-2-ticker-register.md) separate preparation traceability,
+DCF input sufficiency and feature-specific readiness. Providers/rights/budget,
+metric definitions, benchmark/event rules and current-date valuation policy remain
+explicit decisions. Historical intrinsic-value reconstruction is deferred.
+Existing Python, accepted financial policies and paused universe review remain
+preserved. Logging the roadmap does not begin feature development.
+
 ## Excel saving deployed — November 7, 2026
 
 **Download Excel** saves a selected company's model as an XLSX snapshot from the
