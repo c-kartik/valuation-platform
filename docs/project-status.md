@@ -1,5 +1,29 @@
 # Project Status
 
+## Excel saving deployed — November 7, 2026
+
+**Download Excel** saves a selected company's model as an XLSX snapshot from the
+main workspace or either editor. All saved scenarios, current inputs, open
+model/bridge drafts, analyst inputs, previous results/status, sources and exact
+decimal state are preserved. Missing/invalid entries remain saveable; nothing is
+submitted or recalculated by export. The workbook is a values snapshot; Excel
+recalculation and website file loading are not implemented. See
+[snapshot contract](excel-model-snapshots.md).
+
+Client source `ee53931`, packaging checks `3183b71`, published portfolio
+`2a484a7`. All 467 frontend tests passed; nine export tests were rechecked after
+formatting refinements. Five package checks cover real PEM/token markers and ESM
+dependencies without false-positive library parser/module-map matches. Production
+build and 41-file static artifact validation pass. All 396 Python files and frozen
+datasets verify unchanged.
+
+Real live downloads for AAPL, META and GOOGL reopen successfully with matching
+state checksums and unchanged Base FCFF/FCFE outputs. Browser tests also save an
+unfinished ten-year editor, unsaved bridge and modified analyst inputs, correctly
+retaining prior result bindings. Independent workbook import/render review and
+390px editor checks pass. No production console/CSP error was observed. The
+writer loads only on demand and runs on-device; no backend hosting is required.
+
 ## Search integrated into logo bar — November 7, 2026
 
 Moved company search into the right side of the portfolio logo bar, widened the
