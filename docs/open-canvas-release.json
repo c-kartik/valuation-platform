@@ -1,0 +1,45 @@
+{
+  "schema": "open-canvas-release/v1",
+  "status": "deployed-and-live-verified",
+  "url": "https://kartikchaturvedi.com/valuation/",
+  "implementation_commit": "dd1f2f1869c6860c9469f168c5f36629af48a486",
+  "portfolio_commit": "4aa836333dd8a5a299a63c4ee636273dca7b6e5c",
+  "frontend_tests": {
+    "full_suite_passed": 480,
+    "suites": 42,
+    "final_targeted_passed": 27
+  },
+  "public_artifact": {
+    "files": 44,
+    "local_references": 57,
+    "loopback_validation": "PASS",
+    "live_resource_matches": 9
+  },
+  "preserved": {
+    "original_python_files": 396,
+    "browser_engine_fixtures": 128,
+    "original_data_packages": true,
+    "browser_engine_source": true,
+    "worker_bundle": "worker-CQaMtdDA.js",
+    "workbook_bundle": "modelWorkbook-CbcrZZbm.js"
+  },
+  "live_base_outputs": {
+    "GOOGL": {
+      "fcff_value_per_share": "125.91",
+      "enterprise_value_display": "$1.42tn"
+    },
+    "AAPL": {
+      "fcff_value_per_share": "175.46",
+      "enterprise_value_display": "$2.58tn"
+    },
+    "META": {
+      "fcff_value_per_share": "374.70",
+      "enterprise_value_display": "$944.60bn"
+    }
+  },
+  "limits": [
+    "Desktop responsive browser checks; physical iPhone/Safari acceptance not established",
+    "Existing financial conventions, model dates and qualifications retained",
+    "Broader universe and original market-dependent Scope 2 remain deferred"
+  ]
+}

@@ -1,5 +1,8 @@
 # Open Canvas company page
 
+Deployed and live-verified at [the valuation page](https://kartikchaturvedi.com/valuation/).
+Release identifiers and preservation checks: [release receipt](open-canvas-release.json).
+
 The user approved the full-page Open Canvas mockup on November 9, 2026 and
 requested implementation with real data and existing calculations. This release
 changes presentation and interaction only; it adopts none of the mockup's

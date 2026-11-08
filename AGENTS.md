@@ -1,5 +1,14 @@
 # AGENTS.md
 
+## Open Canvas company page — November 9, 2026
+
+The approved full-page Open Canvas design is implemented and deployed. Use the
+existing reporting packages, chart history contract, validated analyst outputs
+and calculation actions; never import illustrative mockup valuation formulas or
+values. Preserve original Python and JS engines, data policies, model dates,
+qualifications and missing-value behavior. See `docs/open-canvas.md` and the
+release receipt for current UI/source boundaries and verification.
+
 ## Financial-statement reporting — November 9, 2026
 
 The user shelved market-price features and subsequently authorized historical
