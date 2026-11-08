@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-09",
+  "url": "https://kartikchaturvedi.com/valuation/",
+  "source_commit": "0581129",
+  "portfolio_commit": "d126f08ed0a02a9d103b6eb0f90f3c440b29b6c9",
+  "netlify_deploy_id": "6af0e3dbaadad49d835c0ede",
+  "netlify_status": "published",
+  "previous_portfolio_commit": "2a484a7",
+  "checks": {
+    "frontend_tests": 471,
+    "reporting_tests": 7,
+    "annual_metric_tieouts": 126,
+    "displayed_quarter_bridges": 60,
+    "discrete_quarter_comparisons": 135,
+    "reported_derived_differences_1m": 12,
+    "independent_filing_operand_checks": 54,
+    "independent_filing_scope": "Latest displayed quarter and latest annual totals only",
+    "python_baseline_files_unchanged": 396,
+    "dcf_assets_unchanged": 15,
+    "parity_fixtures_unchanged": 128,
+    "packaging_checks": 5,
+    "public_release_files": 44,
+    "public_reference_checks": 57
+  },
+  "live_issuers": {
+    "GOOGL": {
+      "quarters": 20,
+      "through": "2026-09-30",
+      "enterprise_value_display": "$1.42tn"
+    },
+    "AAPL": {
+      "quarters": 20,
+      "through": "2026-09-26",
+      "enterprise_value_display": "$2.58tn"
+    },
+    "META": {
+      "quarters": 20,
+      "through": "2026-09-30",
+      "enterprise_value_display": "$944.60bn"
+    }
+  },
+  "limitations": [
+    "Other operating reconciliation is a disclosed aggregate.",
+    "Derived YTD quarters retain reported-versus-derived differences.",
+    "Historical reporting does not update existing DCF inputs.",
+    "Phone-width browser check, not a physical-device Safari acceptance test."
+  ]
+}

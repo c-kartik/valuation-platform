@@ -3,7 +3,7 @@
 Implemented November 9, 2026 for GOOGL, then AAPL and META. This is the user's
 replacement financial-statements-only direction after shelving market-price
 features. It does not resume the original market-data roadmap or wider universe.
-Local implementation and verification are separate from production deployment.
+Production deployed November 9, 2026. [Release receipt](quarterly-reporting-release.json) records the source/build, Netlify release and live verification. [GitHub checkpoint #9](https://github.com/c-kartik/valuation-platform/issues/9).
 
 ## Architecture and separation
 

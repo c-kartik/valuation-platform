@@ -1315,5 +1315,5 @@ See [reporting contract, dates, commands and limitations](../quarterly-reporting
 source snapshots in `data/quarterly-reporting/sources/`, and the issuer's retained
 filing-validation receipt. Financial-input sufficiency is established only for
 this named descriptive consumer, with these qualifications. Existing DCF and
-broader-universe readiness statuses are unchanged. Production deployment is a
-separate release step.
+broader-universe readiness statuses are unchanged. Production deployment and live three-company checks are recorded in
+`docs/quarterly-reporting-release.json`.

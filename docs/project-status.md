@@ -2,12 +2,12 @@
 
 ## Financial-statement reporting — November 9, 2026
 
-Historical trends and a cash-flow bridge are implemented locally above the DCF
+Historical trends and a cash-flow bridge are implemented and deployed above the DCF
 for Alphabet, Apple and Meta using an additive consumer of existing SEC pipeline
 components. [Contract, validation, refresh and limitations](quarterly-reporting.md).
 The 20-quarter static packages are separate from accepted DCF datasets; original
 Python and DCF inputs remain unchanged. Market-price-dependent Scope 2 work
-is deferred. Production deployment is separate from this implementation record.
+is deferred. Production deployed November 9, 2026; see the reporting contract and release receipt.
 
 Validation: 471 frontend tests, seven reporting tests, 60 displayed-quarter
 bridges, 126 annual metric tie-outs across preparation history, and 54 independent
