@@ -5678,3 +5678,13 @@ valuation-platform/
 ├── .gitignore
 └── requirements.txt
 ```
+
+### Reporting chart presentation revision — November 9, 2026
+
+Reviewed the original Alphabet mockup against the first implementation and
+restored separate chart panels, smooth shape-preserving lines, shared moving
+hover tooltip/crosshair, previewing metric readouts and selectable legend lines.
+Click/tap or keyboard selection synchronizes the existing bridge and quarter
+selector. 474 frontend tests pass; desktop and 390px browser checks cover
+GOOGL/AAPL/META. Reporting source packages, original Python and DCF unchanged.
+See `quarterly-reporting.md` for the interaction contract and verification limits.

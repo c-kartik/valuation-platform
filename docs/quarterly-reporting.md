@@ -111,3 +111,26 @@ quarterly forecast adoption, historical prices and exports of this new history
 are not part of this consumer. Existing DCF Excel downloads retain their scope.
 Other tickers require explicit preparation/financial sufficiency and validation;
 three successful pilot packages do not establish whole-universe readiness.
+
+## Mockup alignment — November 9, 2026
+
+Review of the original `alphabet-trends-cashflow.html` mockup found that the
+first live implementation flattened its separate panels, used point-heavy
+straight segments, replaced shared hover readouts with native titles, and omitted
+legend toggles. The reporting UI now restores the company introduction and
+separate historical-trends/cash-bridge panels, with shape-preserving cubic curves,
+one shared cursor-following tooltip, quarter crosshair and active-series markers.
+Legend controls show/hide lines while retaining at least one visible series.
+
+Hover previews the nearest real observation in the tooltip and metric cards;
+leaving restores the selected quarter. Clicking/tapping selects the quarter for
+the dropdown and cash bridge. Keyboard arrows/Home/End select quarters; Escape
+hides the tooltip. Touch retains vertical page scrolling. Curves pass through
+observations, flatten at turning points and do not create overshoot or values for
+intermediate dates. Null observations remain gaps. No financial definition,
+source package, preparation policy, DCF code or accepted input changed.
+
+Validation: 474 frontend tests pass, including pointer-preview/restoration,
+keyboard selection, legend controls and curve bounds/gaps. Browser checks cover
+all three issuers, shared tooltip movement and a 390px phone viewport without
+horizontal overflow. Physical iPhone/Safari testing remains outside these checks.
