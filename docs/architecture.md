@@ -2217,3 +2217,13 @@ Only FY2024 is registered. Raw precision/roles/confirmations and explicit null
 unknowns survive serialization. Reported CFO bridge validation is not an
 adjusted subtotal or economic calculation. Existing AAPL/MSFT contracts and
 sidecars are unchanged. See [implementation evidence](googl-alternative-historical-cash-flow-inputs.md#implemented-isolated-fy2024-reported-input-bundle).
+
+## Open Canvas presentation (November 2026)
+
+The company page composes quarterly reporting with the existing workspace and
+analyst calculation components. `CanvasForecastChart` renders the existing
+`chartRows`/Decimal-axis contract; `CanvasRateControls` submits through the
+unchanged whole-model update action. Current analyst results feed a revision-
+bound per-share headline, with enterprise-value fallback and explicit manual
+Stage C labelling. The mockup's illustrative calculations are excluded. See
+[Open Canvas](open-canvas.md).

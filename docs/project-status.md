@@ -5688,3 +5688,14 @@ Click/tap or keyboard selection synchronizes the existing bridge and quarter
 selector. 474 frontend tests pass; desktop and 390px browser checks cover
 GOOGL/AAPL/META. Reporting source packages, original Python and DCF unchanged.
 See `quarterly-reporting.md` for the interaction contract and verification limits.
+
+### Open Canvas company page — November 9, 2026
+
+Implemented the approved full-page design using existing reporting packages,
+annual history, submitted results and validated analyst outputs. A combined
+revenue/FCFF chart retains historical/forecast basis breaks and optional ten-year
+forecasts. Quick rate controls submit through the original whole-model action;
+existing editors, scenarios, sensitivities, sources and Excel saving remain.
+Python, JS engine, data packages and DCF conventions unchanged. See
+[Open Canvas](open-canvas.md) for the source boundary and validation: 480 frontend
+tests plus actual three-company desktop/mobile and Excel checks.
