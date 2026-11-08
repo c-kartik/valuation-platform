@@ -27,3 +27,10 @@ Do not copy a pilot's completion badge or financial assumptions.
 Per-feature status must link to a source package, method version, tests and named
 consumer acceptance before it changes to ready. Historical DCF curves (S2.4H)
 remain a separately scoped deferred milestone for every issuer.
+
+## Financial-statements-only consumer — November 9, 2026
+
+GOOGL/AAPL/META each have 20-quarter descriptive reporting prepared and integrated
+locally under [the separate reporting contract](quarterly-reporting.md). This
+does not change original market-feature readiness cells. Filing checks cover
+latest-quarter/latest-annual operands; Other remains grouped.

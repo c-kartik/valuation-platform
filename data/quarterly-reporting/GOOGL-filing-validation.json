@@ -1,0 +1,251 @@
+{
+  "ticker": "GOOGL",
+  "as_of": "2026-11-09",
+  "source_snapshot_sha256": "9fb30c0e40a250e5b590a52c55f129949378dbee275c607675deaf7a16b51c74",
+  "filings": 3,
+  "checks": 18,
+  "evidence": [
+    {
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "value": 131953000000,
+      "accession": "0001652044-26-000084",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+      "contexts": [
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": 80598000000,
+      "accession": "0001652044-26-000071",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630_htm.xml",
+      "contexts": [
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "value": 127149000000,
+      "accession": "0001652044-26-000084",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+      "contexts": [
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": 84859000000,
+      "accession": "0001652044-26-000071",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630_htm.xml",
+      "contexts": [
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:NetIncomeLoss",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "value": 201239000000,
+      "accession": "0001652044-26-000084",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+      "contexts": [
+        "c-1",
+        "c-1",
+        "c-1",
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:NetIncomeLoss",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": 174771000000,
+      "accession": "0001652044-26-000071",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630_htm.xml",
+      "contexts": [
+        "c-1",
+        "c-1",
+        "c-1",
+        "c-1",
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "value": 121042000000,
+      "accession": "0001652044-26-000084",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+      "contexts": [
+        "c-1",
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": 80466000000,
+      "accession": "0001652044-26-000071",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630_htm.xml",
+      "contexts": [
+        "c-1",
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:Revenues",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "value": 357269000000,
+      "accession": "0001652044-26-000084",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+      "contexts": [
+        "c-1",
+        "c-1",
+        "c-1",
+        "c-1",
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:Revenues",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": 229692000000,
+      "accession": "0001652044-26-000071",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630_htm.xml",
+      "contexts": [
+        "c-1",
+        "c-1",
+        "c-1",
+        "c-1",
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:ShareBasedCompensation",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "value": 23338000000,
+      "accession": "0001652044-26-000084",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+      "contexts": [
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:ShareBasedCompensation",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "value": 14708000000,
+      "accession": "0001652044-26-000071",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630_htm.xml",
+      "contexts": [
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:Revenues",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "value": 402836000000,
+      "accession": "0001652044-26-000018",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+      "contexts": [
+        "c-1",
+        "c-1",
+        "c-1",
+        "c-1",
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "value": 129039000000,
+      "accession": "0001652044-26-000018",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+      "contexts": [
+        "c-1",
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:NetIncomeLoss",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "value": 132170000000,
+      "accession": "0001652044-26-000018",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+      "contexts": [
+        "c-1",
+        "c-1",
+        "c-1",
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "value": 164713000000,
+      "accession": "0001652044-26-000018",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+      "contexts": [
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "value": 91447000000,
+      "accession": "0001652044-26-000018",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+      "contexts": [
+        "c-1"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "concept": "us-gaap:ShareBasedCompensation",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "value": 24953000000,
+      "accession": "0001652044-26-000018",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+      "contexts": [
+        "c-1"
+      ],
+      "status": "MATCH"
+    }
+  ],
+  "scope": "Latest quarter and its YTD operands plus latest annual totals; not independent re-extraction of every displayed quarter."
+}

@@ -1,5 +1,21 @@
 # Architecture
 
+## Financial-statement reporting — November 9, 2026
+
+Historical trends and a cash-flow bridge are implemented locally above the DCF
+for Alphabet, Apple and Meta using an additive consumer of existing SEC pipeline
+components. [Contract, validation, refresh and limitations](quarterly-reporting.md).
+The 20-quarter static packages are separate from accepted DCF datasets; original
+Python and DCF inputs remain unchanged. Market-price-dependent Scope 2 work
+is deferred. Production deployment is separate from this implementation record.
+
+Validation: 471 frontend tests, seven reporting tests, 60 displayed-quarter
+bridges, 126 annual metric tie-outs across preparation history, and 54 independent
+latest-quarter/latest-annual filing-XBRL checks. Existing 396 Python files, 15 DCF
+assets and 128 parity fixtures retain their baseline hashes. The integrity test
+transport now preserves a Node buffer's realm for WebCrypto under jsdom; no
+production integrity or valuation code changed.
+
 ## Excel model snapshots — November 7, 2026
 
 The workspace can download the selected company's assumptions and current state

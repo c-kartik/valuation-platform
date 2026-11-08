@@ -1,6 +1,17 @@
 # Scope 2 — Company Research Dashboard
 
-**Status: scope approved for logging; implementation NOT STARTED.**
+## Revised direction — November 9, 2026
+
+The user shelved market-price features and selected a financial-statements-only
+route: historical trends and a cash-flow bridge ahead of the existing DCF.
+[The implemented reporting contract](quarterly-reporting.md) records the additive
+GOOGL → AAPL/META pilot, selection, validation and refresh. This is a narrower
+replacement consumer, not completion of S2.0–S2.4 or the historical market roadmap
+below. Those original price-dependent milestones remain deferred. No provider,
+market-price ingestion, valuation-date change or wider-universe work is resumed.
+
+
+**Original market roadmap: DEFERRED. Statements-only replacement: see above.**
 Owner direction: November 7, 2026. This is the second product scope, following
 [Scope 1 — DCF pipeline](scope-1-dcf-pipeline.md). Historical Phase 1H/Phase 2A
 names retain their original meanings. Registering this roadmap does not start

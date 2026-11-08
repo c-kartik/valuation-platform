@@ -1,0 +1,4320 @@
+{
+  "as_of": "2026-11-09",
+  "basis": "First eligible disclosure within each fiscal-period cohort; annual Q4 balances to the selected original annual filing. Descriptive history, not latest-restated or an as-known backtest.",
+  "company": "Meta Platforms, Inc.",
+  "currency": "USD",
+  "limitations": [
+    "FCF is CFO less cash PP&E purchases, not FCFF or FCFE.",
+    "Other operating reconciliation is CFO minus net income minus SBC; it groups remaining noncash and operating asset/liability movements, not an independently reported line.",
+    "SBC add-back describes reported CFO, not an assertion that compensation is economically free.",
+    "Comparative revisions and unsupported fiscal calendars require separate review; missing required inputs stop publication."
+  ],
+  "policy": "quarterly-reported-usd-v1",
+  "rows": [
+    {
+      "end": "2021-12-31",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-22-000018",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2021-12-31",
+              "filed": "2022-02-03",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/",
+              "start": "2021-01-01",
+              "value": 18567000000
+            },
+            {
+              "accession": "0001326801-21-000065",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2021-09-30",
+              "filed": "2021-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/",
+              "start": "2021-01-01",
+              "value": 13198000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-22-000018",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2021-12-31",
+              "filed": "2022-02-03",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/",
+              "start": "2021-01-01",
+              "value": 57683000000
+            },
+            {
+              "accession": "0001326801-21-000065",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2021-09-30",
+              "filed": "2021-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/",
+              "start": "2021-01-01",
+              "value": 39579000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-22-000018",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2021-12-31",
+              "filed": "2022-02-03",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/",
+              "start": "2021-01-01",
+              "value": 39370000000
+            },
+            {
+              "accession": "0001326801-21-000065",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2021-09-30",
+              "filed": "2021-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/",
+              "start": "2021-01-01",
+              "value": 29085000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-22-000018",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2021-12-31",
+              "filed": "2022-02-03",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/",
+              "start": "2021-01-01",
+              "value": 46753000000
+            },
+            {
+              "accession": "0001326801-21-000065",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2021-09-30",
+              "filed": "2021-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/",
+              "start": "2021-01-01",
+              "value": 34168000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-22-000018",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2021-12-31",
+              "filed": "2022-02-03",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/",
+              "start": "2021-01-01",
+              "value": 117929000000
+            },
+            {
+              "accession": "0001326801-21-000065",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2021-09-30",
+              "filed": "2021-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/",
+              "start": "2021-01-01",
+              "value": 84258000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-22-000018",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2021-12-31",
+              "filed": "2022-02-03",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/",
+              "start": "2021-01-01",
+              "value": 9164000000
+            },
+            {
+              "accession": "0001326801-21-000065",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2021-09-30",
+              "filed": "2021-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000065/",
+              "start": "2021-01-01",
+              "value": 6757000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2021,
+      "id": "FY2021-Q4",
+      "quarter": 4,
+      "start": "2021-10-01",
+      "values": {
+        "cash_capex": 5369000000,
+        "cfo": 18104000000,
+        "fcf": 12735000000,
+        "fcf_margin": 0.3782186451248849,
+        "net_income": 10285000000,
+        "operating_income": 12585000000,
+        "operating_margin": 0.37376377297971547,
+        "other_operating": 5412000000,
+        "revenue": 33671000000,
+        "sbc": 2407000000
+      }
+    },
+    {
+      "end": "2022-03-31",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-22-000057",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2022-03-31",
+              "filed": "2022-04-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+              "start": "2022-01-01",
+              "value": 5441000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-22-000057",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2022-03-31",
+              "filed": "2022-04-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+              "start": "2022-01-01",
+              "value": 14076000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-22-000057",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2022-03-31",
+              "filed": "2022-04-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+              "start": "2022-01-01",
+              "value": 7465000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-22-000057",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2022-03-31",
+              "filed": "2022-04-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+              "start": "2022-01-01",
+              "value": 8524000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-22-000057",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2022-03-31",
+              "filed": "2022-04-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+              "start": "2022-01-01",
+              "value": 27908000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-22-000057",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2022-03-31",
+              "filed": "2022-04-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+              "start": "2022-01-01",
+              "value": 2498000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2022,
+      "id": "FY2022-Q1",
+      "quarter": 1,
+      "start": "2022-01-01",
+      "values": {
+        "cash_capex": 5441000000,
+        "cfo": 14076000000,
+        "fcf": 8635000000,
+        "fcf_margin": 0.30940948831876164,
+        "net_income": 7465000000,
+        "operating_income": 8524000000,
+        "operating_margin": 0.30543213415508097,
+        "other_operating": 4113000000,
+        "revenue": 27908000000,
+        "sbc": 2498000000
+      }
+    },
+    {
+      "end": "2022-06-30",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-22-000082",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2022-06-30",
+              "filed": "2022-07-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+              "start": "2022-01-01",
+              "value": 13013000000
+            },
+            {
+              "accession": "0001326801-22-000057",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2022-03-31",
+              "filed": "2022-04-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+              "start": "2022-01-01",
+              "value": 5441000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-22-000082",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2022-06-30",
+              "filed": "2022-07-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+              "start": "2022-01-01",
+              "value": 26272000000
+            },
+            {
+              "accession": "0001326801-22-000057",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2022-03-31",
+              "filed": "2022-04-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+              "start": "2022-01-01",
+              "value": 14076000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-22-000082",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2022-06-30",
+              "filed": "2022-07-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+              "start": "2022-01-01",
+              "value": 14152000000
+            },
+            {
+              "accession": "0001326801-22-000057",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2022-03-31",
+              "filed": "2022-04-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+              "start": "2022-01-01",
+              "value": 7465000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-22-000082",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2022-06-30",
+              "filed": "2022-07-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+              "start": "2022-01-01",
+              "value": 16881000000
+            },
+            {
+              "accession": "0001326801-22-000057",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2022-03-31",
+              "filed": "2022-04-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+              "start": "2022-01-01",
+              "value": 8524000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-22-000082",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2022-06-30",
+              "filed": "2022-07-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+              "start": "2022-01-01",
+              "value": 56729000000
+            },
+            {
+              "accession": "0001326801-22-000057",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2022-03-31",
+              "filed": "2022-04-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+              "start": "2022-01-01",
+              "value": 27908000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-22-000082",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2022-06-30",
+              "filed": "2022-07-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+              "start": "2022-01-01",
+              "value": 5850000000
+            },
+            {
+              "accession": "0001326801-22-000057",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2022-03-31",
+              "filed": "2022-04-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+              "start": "2022-01-01",
+              "value": 2498000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2022,
+      "id": "FY2022-Q2",
+      "quarter": 2,
+      "start": "2022-04-01",
+      "values": {
+        "cash_capex": 7572000000,
+        "cfo": 12196000000,
+        "fcf": 4624000000,
+        "fcf_margin": 0.16043856909892093,
+        "net_income": 6687000000,
+        "operating_income": 8357000000,
+        "operating_margin": 0.28996218035460253,
+        "other_operating": 2157000000,
+        "revenue": 28821000000,
+        "sbc": 3352000000
+      }
+    },
+    {
+      "end": "2022-09-30",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-22-000108",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2022-09-30",
+              "filed": "2022-10-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+              "start": "2022-01-01",
+              "value": 22388000000
+            },
+            {
+              "accession": "0001326801-22-000082",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2022-06-30",
+              "filed": "2022-07-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+              "start": "2022-01-01",
+              "value": 13013000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-22-000108",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2022-09-30",
+              "filed": "2022-10-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+              "start": "2022-01-01",
+              "value": 35964000000
+            },
+            {
+              "accession": "0001326801-22-000082",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2022-06-30",
+              "filed": "2022-07-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+              "start": "2022-01-01",
+              "value": 26272000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-22-000108",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2022-09-30",
+              "filed": "2022-10-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+              "start": "2022-01-01",
+              "value": 18547000000
+            },
+            {
+              "accession": "0001326801-22-000082",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2022-06-30",
+              "filed": "2022-07-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+              "start": "2022-01-01",
+              "value": 14152000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-22-000108",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2022-09-30",
+              "filed": "2022-10-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+              "start": "2022-01-01",
+              "value": 22545000000
+            },
+            {
+              "accession": "0001326801-22-000082",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2022-06-30",
+              "filed": "2022-07-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+              "start": "2022-01-01",
+              "value": 16881000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-22-000108",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2022-09-30",
+              "filed": "2022-10-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+              "start": "2022-01-01",
+              "value": 84444000000
+            },
+            {
+              "accession": "0001326801-22-000082",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2022-06-30",
+              "filed": "2022-07-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+              "start": "2022-01-01",
+              "value": 56729000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-22-000108",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2022-09-30",
+              "filed": "2022-10-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+              "start": "2022-01-01",
+              "value": 8984000000
+            },
+            {
+              "accession": "0001326801-22-000082",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2022-06-30",
+              "filed": "2022-07-28",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+              "start": "2022-01-01",
+              "value": 5850000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2022,
+      "id": "FY2022-Q3",
+      "quarter": 3,
+      "start": "2022-07-01",
+      "values": {
+        "cash_capex": 9375000000,
+        "cfo": 9692000000,
+        "fcf": 317000000,
+        "fcf_margin": 0.01143784953996031,
+        "net_income": 4395000000,
+        "operating_income": 5664000000,
+        "operating_margin": 0.20436586685910157,
+        "other_operating": 2163000000,
+        "revenue": 27715000000,
+        "sbc": 3134000000
+      }
+    },
+    {
+      "end": "2022-12-31",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-23-000013",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2022-12-31",
+              "filed": "2023-02-02",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/",
+              "start": "2022-01-01",
+              "value": 31431000000
+            },
+            {
+              "accession": "0001326801-22-000108",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2022-09-30",
+              "filed": "2022-10-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+              "start": "2022-01-01",
+              "value": 22388000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-23-000013",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2022-12-31",
+              "filed": "2023-02-02",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/",
+              "start": "2022-01-01",
+              "value": 50475000000
+            },
+            {
+              "accession": "0001326801-22-000108",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2022-09-30",
+              "filed": "2022-10-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+              "start": "2022-01-01",
+              "value": 35964000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-23-000013",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2022-12-31",
+              "filed": "2023-02-02",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/",
+              "start": "2022-01-01",
+              "value": 23200000000
+            },
+            {
+              "accession": "0001326801-22-000108",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2022-09-30",
+              "filed": "2022-10-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+              "start": "2022-01-01",
+              "value": 18547000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-23-000013",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2022-12-31",
+              "filed": "2023-02-02",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/",
+              "start": "2022-01-01",
+              "value": 28944000000
+            },
+            {
+              "accession": "0001326801-22-000108",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2022-09-30",
+              "filed": "2022-10-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+              "start": "2022-01-01",
+              "value": 22545000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-23-000013",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2022-12-31",
+              "filed": "2023-02-02",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/",
+              "start": "2022-01-01",
+              "value": 116609000000
+            },
+            {
+              "accession": "0001326801-22-000108",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2022-09-30",
+              "filed": "2022-10-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+              "start": "2022-01-01",
+              "value": 84444000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-23-000013",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2022-12-31",
+              "filed": "2023-02-02",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/",
+              "start": "2022-01-01",
+              "value": 11992000000
+            },
+            {
+              "accession": "0001326801-22-000108",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2022-09-30",
+              "filed": "2022-10-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+              "start": "2022-01-01",
+              "value": 8984000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2022,
+      "id": "FY2022-Q4",
+      "quarter": 4,
+      "start": "2022-10-01",
+      "values": {
+        "cash_capex": 9043000000,
+        "cfo": 14511000000,
+        "fcf": 5468000000,
+        "fcf_margin": 0.16999844551531168,
+        "net_income": 4653000000,
+        "operating_income": 6399000000,
+        "operating_margin": 0.19894295041193844,
+        "other_operating": 6850000000,
+        "revenue": 32165000000,
+        "sbc": 3008000000
+      }
+    },
+    {
+      "end": "2023-03-31",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-23-000067",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2023-03-31",
+              "filed": "2023-04-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+              "start": "2023-01-01",
+              "value": 6842000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-23-000067",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2023-03-31",
+              "filed": "2023-04-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+              "start": "2023-01-01",
+              "value": 13998000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-23-000067",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2023-03-31",
+              "filed": "2023-04-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+              "start": "2023-01-01",
+              "value": 5709000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-23-000067",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2023-03-31",
+              "filed": "2023-04-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+              "start": "2023-01-01",
+              "value": 7227000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-23-000067",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2023-03-31",
+              "filed": "2023-04-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+              "start": "2023-01-01",
+              "value": 28645000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-23-000067",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2023-03-31",
+              "filed": "2023-04-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+              "start": "2023-01-01",
+              "value": 3051000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2023,
+      "id": "FY2023-Q1",
+      "quarter": 1,
+      "start": "2023-01-01",
+      "values": {
+        "cash_capex": 6842000000,
+        "cfo": 13998000000,
+        "fcf": 7156000000,
+        "fcf_margin": 0.2498167219410019,
+        "net_income": 5709000000,
+        "operating_income": 7227000000,
+        "operating_margin": 0.2522953395007855,
+        "other_operating": 5238000000,
+        "revenue": 28645000000,
+        "sbc": 3051000000
+      }
+    },
+    {
+      "end": "2023-06-30",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-23-000093",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2023-06-30",
+              "filed": "2023-07-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+              "start": "2023-01-01",
+              "value": 13058000000
+            },
+            {
+              "accession": "0001326801-23-000067",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2023-03-31",
+              "filed": "2023-04-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+              "start": "2023-01-01",
+              "value": 6842000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-23-000093",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2023-06-30",
+              "filed": "2023-07-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+              "start": "2023-01-01",
+              "value": 31307000000
+            },
+            {
+              "accession": "0001326801-23-000067",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2023-03-31",
+              "filed": "2023-04-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+              "start": "2023-01-01",
+              "value": 13998000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-23-000093",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2023-06-30",
+              "filed": "2023-07-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+              "start": "2023-01-01",
+              "value": 13498000000
+            },
+            {
+              "accession": "0001326801-23-000067",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2023-03-31",
+              "filed": "2023-04-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+              "start": "2023-01-01",
+              "value": 5709000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-23-000093",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2023-06-30",
+              "filed": "2023-07-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+              "start": "2023-01-01",
+              "value": 16619000000
+            },
+            {
+              "accession": "0001326801-23-000067",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2023-03-31",
+              "filed": "2023-04-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+              "start": "2023-01-01",
+              "value": 7227000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-23-000093",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2023-06-30",
+              "filed": "2023-07-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+              "start": "2023-01-01",
+              "value": 60645000000
+            },
+            {
+              "accession": "0001326801-23-000067",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2023-03-31",
+              "filed": "2023-04-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+              "start": "2023-01-01",
+              "value": 28645000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-23-000093",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2023-06-30",
+              "filed": "2023-07-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+              "start": "2023-01-01",
+              "value": 7111000000
+            },
+            {
+              "accession": "0001326801-23-000067",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2023-03-31",
+              "filed": "2023-04-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+              "start": "2023-01-01",
+              "value": 3051000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2023,
+      "id": "FY2023-Q2",
+      "quarter": 2,
+      "start": "2023-04-01",
+      "values": {
+        "cash_capex": 6216000000,
+        "cfo": 17309000000,
+        "fcf": 11093000000,
+        "fcf_margin": 0.34665625,
+        "net_income": 7789000000,
+        "operating_income": 9392000000,
+        "operating_margin": 0.2935,
+        "other_operating": 5460000000,
+        "revenue": 32000000000,
+        "sbc": 4060000000
+      }
+    },
+    {
+      "end": "2023-09-30",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-23-000103",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2023-09-30",
+              "filed": "2023-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+              "start": "2023-01-01",
+              "value": 19601000000
+            },
+            {
+              "accession": "0001326801-23-000093",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2023-06-30",
+              "filed": "2023-07-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+              "start": "2023-01-01",
+              "value": 13058000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-23-000103",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2023-09-30",
+              "filed": "2023-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+              "start": "2023-01-01",
+              "value": 51709000000
+            },
+            {
+              "accession": "0001326801-23-000093",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2023-06-30",
+              "filed": "2023-07-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+              "start": "2023-01-01",
+              "value": 31307000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-23-000103",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2023-09-30",
+              "filed": "2023-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+              "start": "2023-01-01",
+              "value": 25081000000
+            },
+            {
+              "accession": "0001326801-23-000093",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2023-06-30",
+              "filed": "2023-07-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+              "start": "2023-01-01",
+              "value": 13498000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-23-000103",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2023-09-30",
+              "filed": "2023-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+              "start": "2023-01-01",
+              "value": 30367000000
+            },
+            {
+              "accession": "0001326801-23-000093",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2023-06-30",
+              "filed": "2023-07-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+              "start": "2023-01-01",
+              "value": 16619000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-23-000103",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2023-09-30",
+              "filed": "2023-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+              "start": "2023-01-01",
+              "value": 94791000000
+            },
+            {
+              "accession": "0001326801-23-000093",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2023-06-30",
+              "filed": "2023-07-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+              "start": "2023-01-01",
+              "value": 60645000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-23-000103",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2023-09-30",
+              "filed": "2023-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+              "start": "2023-01-01",
+              "value": 10603000000
+            },
+            {
+              "accession": "0001326801-23-000093",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2023-06-30",
+              "filed": "2023-07-27",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+              "start": "2023-01-01",
+              "value": 7111000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2023,
+      "id": "FY2023-Q3",
+      "quarter": 3,
+      "start": "2023-07-01",
+      "values": {
+        "cash_capex": 6543000000,
+        "cfo": 20402000000,
+        "fcf": 13859000000,
+        "fcf_margin": 0.4058747730334446,
+        "net_income": 11583000000,
+        "operating_income": 13748000000,
+        "operating_margin": 0.4026240262402624,
+        "other_operating": 5327000000,
+        "revenue": 34146000000,
+        "sbc": 3492000000
+      }
+    },
+    {
+      "end": "2023-12-31",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-24-000012",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2023-12-31",
+              "filed": "2024-02-02",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/",
+              "start": "2023-01-01",
+              "value": 27266000000
+            },
+            {
+              "accession": "0001326801-23-000103",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2023-09-30",
+              "filed": "2023-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+              "start": "2023-01-01",
+              "value": 19601000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-24-000012",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2023-12-31",
+              "filed": "2024-02-02",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/",
+              "start": "2023-01-01",
+              "value": 71113000000
+            },
+            {
+              "accession": "0001326801-23-000103",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2023-09-30",
+              "filed": "2023-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+              "start": "2023-01-01",
+              "value": 51709000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-24-000012",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2023-12-31",
+              "filed": "2024-02-02",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/",
+              "start": "2023-01-01",
+              "value": 39098000000
+            },
+            {
+              "accession": "0001326801-23-000103",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2023-09-30",
+              "filed": "2023-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+              "start": "2023-01-01",
+              "value": 25081000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-24-000012",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2023-12-31",
+              "filed": "2024-02-02",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/",
+              "start": "2023-01-01",
+              "value": 46751000000
+            },
+            {
+              "accession": "0001326801-23-000103",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2023-09-30",
+              "filed": "2023-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+              "start": "2023-01-01",
+              "value": 30367000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-24-000012",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2023-12-31",
+              "filed": "2024-02-02",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/",
+              "start": "2023-01-01",
+              "value": 134902000000
+            },
+            {
+              "accession": "0001326801-23-000103",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2023-09-30",
+              "filed": "2023-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+              "start": "2023-01-01",
+              "value": 94791000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-24-000012",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2023-12-31",
+              "filed": "2024-02-02",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/",
+              "start": "2023-01-01",
+              "value": 14027000000
+            },
+            {
+              "accession": "0001326801-23-000103",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2023-09-30",
+              "filed": "2023-10-26",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+              "start": "2023-01-01",
+              "value": 10603000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2023,
+      "id": "FY2023-Q4",
+      "quarter": 4,
+      "start": "2023-10-01",
+      "values": {
+        "cash_capex": 7665000000,
+        "cfo": 19404000000,
+        "fcf": 11739000000,
+        "fcf_margin": 0.29266286056194063,
+        "net_income": 14017000000,
+        "operating_income": 16384000000,
+        "operating_margin": 0.4084665054473835,
+        "other_operating": 1963000000,
+        "revenue": 40111000000,
+        "sbc": 3424000000
+      }
+    },
+    {
+      "end": "2024-03-31",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-24-000049",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2024-03-31",
+              "filed": "2024-04-25",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+              "start": "2024-01-01",
+              "value": 6400000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-24-000049",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2024-03-31",
+              "filed": "2024-04-25",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+              "start": "2024-01-01",
+              "value": 19246000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-24-000049",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2024-03-31",
+              "filed": "2024-04-25",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+              "start": "2024-01-01",
+              "value": 12369000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-24-000049",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2024-03-31",
+              "filed": "2024-04-25",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+              "start": "2024-01-01",
+              "value": 13818000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-24-000049",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2024-03-31",
+              "filed": "2024-04-25",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+              "start": "2024-01-01",
+              "value": 36455000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-24-000049",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2024-03-31",
+              "filed": "2024-04-25",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+              "start": "2024-01-01",
+              "value": 3562000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2024,
+      "id": "FY2024-Q1",
+      "quarter": 1,
+      "start": "2024-01-01",
+      "values": {
+        "cash_capex": 6400000000,
+        "cfo": 19246000000,
+        "fcf": 12846000000,
+        "fcf_margin": 0.3523796461390756,
+        "net_income": 12369000000,
+        "operating_income": 13818000000,
+        "operating_margin": 0.3790426553284872,
+        "other_operating": 3315000000,
+        "revenue": 36455000000,
+        "sbc": 3562000000
+      }
+    },
+    {
+      "end": "2024-06-30",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-24-000069",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2024-06-30",
+              "filed": "2024-08-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+              "start": "2024-01-01",
+              "value": 14573000000
+            },
+            {
+              "accession": "0001326801-24-000049",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2024-03-31",
+              "filed": "2024-04-25",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+              "start": "2024-01-01",
+              "value": 6400000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-24-000069",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2024-06-30",
+              "filed": "2024-08-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+              "start": "2024-01-01",
+              "value": 38616000000
+            },
+            {
+              "accession": "0001326801-24-000049",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2024-03-31",
+              "filed": "2024-04-25",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+              "start": "2024-01-01",
+              "value": 19246000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-24-000069",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2024-06-30",
+              "filed": "2024-08-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+              "start": "2024-01-01",
+              "value": 25834000000
+            },
+            {
+              "accession": "0001326801-24-000049",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2024-03-31",
+              "filed": "2024-04-25",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+              "start": "2024-01-01",
+              "value": 12369000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-24-000069",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2024-06-30",
+              "filed": "2024-08-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+              "start": "2024-01-01",
+              "value": 28665000000
+            },
+            {
+              "accession": "0001326801-24-000049",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2024-03-31",
+              "filed": "2024-04-25",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+              "start": "2024-01-01",
+              "value": 13818000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-24-000069",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2024-06-30",
+              "filed": "2024-08-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+              "start": "2024-01-01",
+              "value": 75527000000
+            },
+            {
+              "accession": "0001326801-24-000049",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2024-03-31",
+              "filed": "2024-04-25",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+              "start": "2024-01-01",
+              "value": 36455000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-24-000069",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2024-06-30",
+              "filed": "2024-08-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+              "start": "2024-01-01",
+              "value": 8178000000
+            },
+            {
+              "accession": "0001326801-24-000049",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2024-03-31",
+              "filed": "2024-04-25",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+              "start": "2024-01-01",
+              "value": 3562000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2024,
+      "id": "FY2024-Q2",
+      "quarter": 2,
+      "start": "2024-04-01",
+      "values": {
+        "cash_capex": 8173000000,
+        "cfo": 19370000000,
+        "fcf": 11197000000,
+        "fcf_margin": 0.28657350532350534,
+        "net_income": 13465000000,
+        "operating_income": 14847000000,
+        "operating_margin": 0.37999078624078625,
+        "other_operating": 1289000000,
+        "revenue": 39072000000,
+        "sbc": 4616000000
+      }
+    },
+    {
+      "end": "2024-09-30",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-24-000081",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2024-09-30",
+              "filed": "2024-10-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+              "start": "2024-01-01",
+              "value": 22831000000
+            },
+            {
+              "accession": "0001326801-24-000069",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2024-06-30",
+              "filed": "2024-08-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+              "start": "2024-01-01",
+              "value": 14573000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-24-000081",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2024-09-30",
+              "filed": "2024-10-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+              "start": "2024-01-01",
+              "value": 63340000000
+            },
+            {
+              "accession": "0001326801-24-000069",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2024-06-30",
+              "filed": "2024-08-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+              "start": "2024-01-01",
+              "value": 38616000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-24-000081",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2024-09-30",
+              "filed": "2024-10-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+              "start": "2024-01-01",
+              "value": 41522000000
+            },
+            {
+              "accession": "0001326801-24-000069",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2024-06-30",
+              "filed": "2024-08-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+              "start": "2024-01-01",
+              "value": 25834000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-24-000081",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2024-09-30",
+              "filed": "2024-10-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+              "start": "2024-01-01",
+              "value": 46016000000
+            },
+            {
+              "accession": "0001326801-24-000069",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2024-06-30",
+              "filed": "2024-08-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+              "start": "2024-01-01",
+              "value": 28665000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-24-000081",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2024-09-30",
+              "filed": "2024-10-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+              "start": "2024-01-01",
+              "value": 116116000000
+            },
+            {
+              "accession": "0001326801-24-000069",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2024-06-30",
+              "filed": "2024-08-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+              "start": "2024-01-01",
+              "value": 75527000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001326801-24-000081",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2024-09-30",
+              "filed": "2024-10-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+              "start": "2024-01-01",
+              "value": 12428000000
+            },
+            {
+              "accession": "0001326801-24-000069",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2024-06-30",
+              "filed": "2024-08-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+              "start": "2024-01-01",
+              "value": 8178000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2024,
+      "id": "FY2024-Q3",
+      "quarter": 3,
+      "start": "2024-07-01",
+      "values": {
+        "cash_capex": 8258000000,
+        "cfo": 24724000000,
+        "fcf": 16466000000,
+        "fcf_margin": 0.4056764147921851,
+        "net_income": 15688000000,
+        "operating_income": 17351000000,
+        "operating_margin": 0.4274803518194585,
+        "other_operating": 4786000000,
+        "revenue": 40589000000,
+        "sbc": 4250000000
+      }
+    },
+    {
+      "end": "2024-12-31",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-25-000017",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/",
+              "start": "2024-01-01",
+              "value": 37256000000
+            },
+            {
+              "accession": "0001326801-24-000081",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2024-09-30",
+              "filed": "2024-10-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+              "start": "2024-01-01",
+              "value": 22831000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-25-000017",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/",
+              "start": "2024-01-01",
+              "value": 91328000000
+            },
+            {
+              "accession": "0001326801-24-000081",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2024-09-30",
+              "filed": "2024-10-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+              "start": "2024-01-01",
+              "value": 63340000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-25-000017",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/",
+              "start": "2024-01-01",
+              "value": 62360000000
+            },
+            {
+              "accession": "0001326801-24-000081",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2024-09-30",
+              "filed": "2024-10-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+              "start": "2024-01-01",
+              "value": 41522000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-25-000017",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/",
+              "start": "2024-01-01",
+              "value": 69380000000
+            },
+            {
+              "accession": "0001326801-24-000081",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2024-09-30",
+              "filed": "2024-10-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+              "start": "2024-01-01",
+              "value": 46016000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-25-000017",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/",
+              "start": "2024-01-01",
+              "value": 164501000000
+            },
+            {
+              "accession": "0001326801-24-000081",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2024-09-30",
+              "filed": "2024-10-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+              "start": "2024-01-01",
+              "value": 116116000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001326801-25-000017",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/",
+              "start": "2024-01-01",
+              "value": 16690000000
+            },
+            {
+              "accession": "0001326801-24-000081",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2024-09-30",
+              "filed": "2024-10-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+              "start": "2024-01-01",
+              "value": 12428000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2024,
+      "id": "FY2024-Q4",
+      "quarter": 4,
+      "start": "2024-10-01",
+      "values": {
+        "cash_capex": 14425000000,
+        "cfo": 27988000000,
+        "fcf": 13563000000,
+        "fcf_margin": 0.2803141469463677,
+        "net_income": 20838000000,
+        "operating_income": 23364000000,
+        "operating_margin": 0.48287692466673554,
+        "other_operating": 2888000000,
+        "revenue": 48385000000,
+        "sbc": 4262000000
+      }
+    },
+    {
+      "end": "2025-03-31",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-25-000054",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2025-03-31",
+              "filed": "2025-05-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+              "start": "2025-01-01",
+              "value": 12941000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-25-000054",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2025-03-31",
+              "filed": "2025-05-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+              "start": "2025-01-01",
+              "value": 24026000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-25-000054",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2025-03-31",
+              "filed": "2025-05-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+              "start": "2025-01-01",
+              "value": 16644000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-25-000054",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2025-03-31",
+              "filed": "2025-05-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+              "start": "2025-01-01",
+              "value": 17555000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-25-000054",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2025-03-31",
+              "filed": "2025-05-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+              "start": "2025-01-01",
+              "value": 42314000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001326801-25-000054",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2025-03-31",
+              "filed": "2025-05-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+              "start": "2025-01-01",
+              "value": 4147000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2025,
+      "id": "FY2025-Q1",
+      "quarter": 1,
+      "start": "2025-01-01",
+      "values": {
+        "cash_capex": 12941000000,
+        "cfo": 24026000000,
+        "fcf": 11085000000,
+        "fcf_margin": 0.2619700335586331,
+        "net_income": 16644000000,
+        "operating_income": 17555000000,
+        "operating_margin": 0.414874509618566,
+        "other_operating": 3235000000,
+        "revenue": 42314000000,
+        "sbc": 4147000000
+      }
+    },
+    {
+      "end": "2025-06-30",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-25-036791",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+              "start": "2025-01-01",
+              "value": 29479000000
+            },
+            {
+              "accession": "0001326801-25-000054",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2025-03-31",
+              "filed": "2025-05-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+              "start": "2025-01-01",
+              "value": 12941000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-25-036791",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+              "start": "2025-01-01",
+              "value": 49587000000
+            },
+            {
+              "accession": "0001326801-25-000054",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2025-03-31",
+              "filed": "2025-05-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+              "start": "2025-01-01",
+              "value": 24026000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-25-036791",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+              "start": "2025-01-01",
+              "value": 34981000000
+            },
+            {
+              "accession": "0001326801-25-000054",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2025-03-31",
+              "filed": "2025-05-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+              "start": "2025-01-01",
+              "value": 16644000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-25-036791",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+              "start": "2025-01-01",
+              "value": 37997000000
+            },
+            {
+              "accession": "0001326801-25-000054",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2025-03-31",
+              "filed": "2025-05-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+              "start": "2025-01-01",
+              "value": 17555000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-25-036791",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+              "start": "2025-01-01",
+              "value": 89830000000
+            },
+            {
+              "accession": "0001326801-25-000054",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2025-03-31",
+              "filed": "2025-05-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+              "start": "2025-01-01",
+              "value": 42314000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-25-036791",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+              "start": "2025-01-01",
+              "value": 8981000000
+            },
+            {
+              "accession": "0001326801-25-000054",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2025-03-31",
+              "filed": "2025-05-01",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+              "start": "2025-01-01",
+              "value": 4147000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2025,
+      "id": "FY2025-Q2",
+      "quarter": 2,
+      "start": "2025-04-01",
+      "values": {
+        "cash_capex": 16538000000,
+        "cfo": 25561000000,
+        "fcf": 9023000000,
+        "fcf_margin": 0.1898939304655274,
+        "net_income": 18337000000,
+        "operating_income": 20442000000,
+        "operating_margin": 0.43021298089064736,
+        "other_operating": 2390000000,
+        "revenue": 47516000000,
+        "sbc": 4834000000
+      }
+    },
+    {
+      "end": "2025-09-30",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-25-047240",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2025-09-30",
+              "filed": "2025-10-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+              "start": "2025-01-01",
+              "value": 48308000000
+            },
+            {
+              "accession": "0001628280-25-036791",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+              "start": "2025-01-01",
+              "value": 29479000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-25-047240",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2025-09-30",
+              "filed": "2025-10-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+              "start": "2025-01-01",
+              "value": 79586000000
+            },
+            {
+              "accession": "0001628280-25-036791",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+              "start": "2025-01-01",
+              "value": 49587000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-25-047240",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2025-09-30",
+              "filed": "2025-10-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+              "start": "2025-01-01",
+              "value": 37690000000
+            },
+            {
+              "accession": "0001628280-25-036791",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+              "start": "2025-01-01",
+              "value": 34981000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-25-047240",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2025-09-30",
+              "filed": "2025-10-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+              "start": "2025-01-01",
+              "value": 58531000000
+            },
+            {
+              "accession": "0001628280-25-036791",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+              "start": "2025-01-01",
+              "value": 37997000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-25-047240",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2025-09-30",
+              "filed": "2025-10-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+              "start": "2025-01-01",
+              "value": 141073000000
+            },
+            {
+              "accession": "0001628280-25-036791",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+              "start": "2025-01-01",
+              "value": 89830000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-25-047240",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2025-09-30",
+              "filed": "2025-10-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+              "start": "2025-01-01",
+              "value": 14537000000
+            },
+            {
+              "accession": "0001628280-25-036791",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+              "start": "2025-01-01",
+              "value": 8981000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2025,
+      "id": "FY2025-Q3",
+      "quarter": 3,
+      "start": "2025-07-01",
+      "values": {
+        "cash_capex": 18829000000,
+        "cfo": 29999000000,
+        "fcf": 11170000000,
+        "fcf_margin": 0.2179809925258084,
+        "net_income": 2709000000,
+        "operating_income": 20534000000,
+        "operating_margin": 0.4007181468688406,
+        "other_operating": 21734000000,
+        "revenue": 51243000000,
+        "sbc": 5556000000
+      }
+    },
+    {
+      "end": "2025-12-31",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001628280-26-003942",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2025-12-31",
+              "filed": "2026-01-29",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+              "start": "2025-01-01",
+              "value": 69691000000
+            },
+            {
+              "accession": "0001628280-25-047240",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2025-09-30",
+              "filed": "2025-10-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+              "start": "2025-01-01",
+              "value": 48308000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001628280-26-003942",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2025-12-31",
+              "filed": "2026-01-29",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+              "start": "2025-01-01",
+              "value": 115800000000
+            },
+            {
+              "accession": "0001628280-25-047240",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2025-09-30",
+              "filed": "2025-10-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+              "start": "2025-01-01",
+              "value": 79586000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001628280-26-003942",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2025-12-31",
+              "filed": "2026-01-29",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+              "start": "2025-01-01",
+              "value": 60458000000
+            },
+            {
+              "accession": "0001628280-25-047240",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2025-09-30",
+              "filed": "2025-10-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+              "start": "2025-01-01",
+              "value": 37690000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001628280-26-003942",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2025-12-31",
+              "filed": "2026-01-29",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+              "start": "2025-01-01",
+              "value": 83276000000
+            },
+            {
+              "accession": "0001628280-25-047240",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2025-09-30",
+              "filed": "2025-10-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+              "start": "2025-01-01",
+              "value": 58531000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001628280-26-003942",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2025-12-31",
+              "filed": "2026-01-29",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+              "start": "2025-01-01",
+              "value": 200966000000
+            },
+            {
+              "accession": "0001628280-25-047240",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2025-09-30",
+              "filed": "2025-10-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+              "start": "2025-01-01",
+              "value": 141073000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "full year minus nine months",
+          "operands": [
+            {
+              "accession": "0001628280-26-003942",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2025-12-31",
+              "filed": "2026-01-29",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+              "start": "2025-01-01",
+              "value": 20427000000
+            },
+            {
+              "accession": "0001628280-25-047240",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2025-09-30",
+              "filed": "2025-10-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+              "start": "2025-01-01",
+              "value": 14537000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2025,
+      "id": "FY2025-Q4",
+      "quarter": 4,
+      "start": "2025-10-01",
+      "values": {
+        "cash_capex": 21383000000,
+        "cfo": 36214000000,
+        "fcf": 14831000000,
+        "fcf_margin": 0.2476249311271768,
+        "net_income": 22768000000,
+        "operating_income": 24745000000,
+        "operating_margin": 0.4131534569983137,
+        "other_operating": 7556000000,
+        "revenue": 59893000000,
+        "sbc": 5890000000
+      }
+    },
+    {
+      "end": "2026-03-31",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001628280-26-028526",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2026-03-31",
+              "filed": "2026-04-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+              "start": "2026-01-01",
+              "value": 18997000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001628280-26-028526",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2026-03-31",
+              "filed": "2026-04-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+              "start": "2026-01-01",
+              "value": 32226000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001628280-26-028526",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2026-03-31",
+              "filed": "2026-04-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+              "start": "2026-01-01",
+              "value": 26773000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001628280-26-028526",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2026-03-31",
+              "filed": "2026-04-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+              "start": "2026-01-01",
+              "value": 22872000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001628280-26-028526",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2026-03-31",
+              "filed": "2026-04-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+              "start": "2026-01-01",
+              "value": 56311000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_REPORTED",
+          "method": "reported first quarter",
+          "operands": [
+            {
+              "accession": "0001628280-26-028526",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2026-03-31",
+              "filed": "2026-04-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+              "start": "2026-01-01",
+              "value": 6032000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2026,
+      "id": "FY2026-Q1",
+      "quarter": 1,
+      "start": "2026-01-01",
+      "values": {
+        "cash_capex": 18997000000,
+        "cfo": 32226000000,
+        "fcf": 13229000000,
+        "fcf_margin": 0.23492745644723056,
+        "net_income": 26773000000,
+        "operating_income": 22872000000,
+        "operating_margin": 0.40617286143027115,
+        "other_operating": -579000000,
+        "revenue": 56311000000,
+        "sbc": 6032000000
+      }
+    },
+    {
+      "end": "2026-06-30",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-26-050705",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+              "start": "2026-01-01",
+              "value": 49113000000
+            },
+            {
+              "accession": "0001628280-26-028526",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2026-03-31",
+              "filed": "2026-04-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+              "start": "2026-01-01",
+              "value": 18997000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-26-050705",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+              "start": "2026-01-01",
+              "value": 64088000000
+            },
+            {
+              "accession": "0001628280-26-028526",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2026-03-31",
+              "filed": "2026-04-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+              "start": "2026-01-01",
+              "value": 32226000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-26-050705",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+              "start": "2026-01-01",
+              "value": 42621000000
+            },
+            {
+              "accession": "0001628280-26-028526",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2026-03-31",
+              "filed": "2026-04-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+              "start": "2026-01-01",
+              "value": 26773000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-26-050705",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+              "start": "2026-01-01",
+              "value": 41647000000
+            },
+            {
+              "accession": "0001628280-26-028526",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2026-03-31",
+              "filed": "2026-04-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+              "start": "2026-01-01",
+              "value": 22872000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-26-050705",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+              "start": "2026-01-01",
+              "value": 117111000000
+            },
+            {
+              "accession": "0001628280-26-028526",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2026-03-31",
+              "filed": "2026-04-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+              "start": "2026-01-01",
+              "value": 56311000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-26-050705",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+              "start": "2026-01-01",
+              "value": 13690000000
+            },
+            {
+              "accession": "0001628280-26-028526",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2026-03-31",
+              "filed": "2026-04-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+              "start": "2026-01-01",
+              "value": 6032000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2026,
+      "id": "FY2026-Q2",
+      "quarter": 2,
+      "start": "2026-04-01",
+      "values": {
+        "cash_capex": 30116000000,
+        "cfo": 31862000000,
+        "fcf": 1746000000,
+        "fcf_margin": 0.028717105263157894,
+        "net_income": 15848000000,
+        "operating_income": 18775000000,
+        "operating_margin": 0.30879934210526316,
+        "other_operating": 8356000000,
+        "revenue": 60800000000,
+        "sbc": 7658000000
+      }
+    },
+    {
+      "end": "2026-09-30",
+      "evidence": {
+        "cash_capex": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-26-066773",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2026-09-30",
+              "filed": "2026-10-22",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/",
+              "start": "2026-01-01",
+              "value": 83055000000
+            },
+            {
+              "accession": "0001628280-26-050705",
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+              "start": "2026-01-01",
+              "value": 49113000000
+            }
+          ]
+        },
+        "cfo": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-26-066773",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2026-09-30",
+              "filed": "2026-10-22",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/",
+              "start": "2026-01-01",
+              "value": 96873000000
+            },
+            {
+              "accession": "0001628280-26-050705",
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+              "start": "2026-01-01",
+              "value": 64088000000
+            }
+          ]
+        },
+        "net_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-26-066773",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2026-09-30",
+              "filed": "2026-10-22",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/",
+              "start": "2026-01-01",
+              "value": 52481000000
+            },
+            {
+              "accession": "0001628280-26-050705",
+              "concept": "us-gaap:NetIncomeLoss",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+              "start": "2026-01-01",
+              "value": 42621000000
+            }
+          ]
+        },
+        "operating_income": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-26-066773",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2026-09-30",
+              "filed": "2026-10-22",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/",
+              "start": "2026-01-01",
+              "value": 54635000000
+            },
+            {
+              "accession": "0001628280-26-050705",
+              "concept": "us-gaap:OperatingIncomeLoss",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+              "start": "2026-01-01",
+              "value": 41647000000
+            }
+          ]
+        },
+        "revenue": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-26-066773",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2026-09-30",
+              "filed": "2026-10-22",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/",
+              "start": "2026-01-01",
+              "value": 181712000000
+            },
+            {
+              "accession": "0001628280-26-050705",
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+              "start": "2026-01-01",
+              "value": 117111000000
+            }
+          ]
+        },
+        "sbc": {
+          "classification": "SEC_SUPPORTED_DERIVATION",
+          "method": "successive YTD difference",
+          "operands": [
+            {
+              "accession": "0001628280-26-066773",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2026-09-30",
+              "filed": "2026-10-22",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/",
+              "start": "2026-01-01",
+              "value": 21053000000
+            },
+            {
+              "accession": "0001628280-26-050705",
+              "concept": "us-gaap:ShareBasedCompensation",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+              "start": "2026-01-01",
+              "value": 13690000000
+            }
+          ]
+        }
+      },
+      "fiscal_year": 2026,
+      "id": "FY2026-Q3",
+      "quarter": 3,
+      "start": "2026-07-01",
+      "values": {
+        "cash_capex": 33942000000,
+        "cfo": 32785000000,
+        "fcf": -1157000000,
+        "fcf_margin": -0.017909939474621137,
+        "net_income": 9860000000,
+        "operating_income": 12988000000,
+        "operating_margin": 0.2010495193572855,
+        "other_operating": 15562000000,
+        "revenue": 64601000000,
+        "sbc": 7363000000
+      }
+    }
+  ],
+  "schema_version": 1,
+  "source_snapshot_sha256": "74717d4c4b6af8d3ec54b3ca1887d42f221d7e747b6b1468189dfab5f67e2be7",
+  "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001326801.json",
+  "ticker": "META",
+  "validation": {
+    "annual_tie_outs": [
+      {
+        "annual": {
+          "accession": "0001326801-20-000013",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2019-12-31",
+          "filed": "2020-01-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680120000013/",
+          "start": "2019-01-01",
+          "value": 70697000000
+        },
+        "fiscal_year": 2019,
+        "metric": "revenue",
+        "sum_quarters": 70697000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-20-000013",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2019-12-31",
+          "filed": "2020-01-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680120000013/",
+          "start": "2019-01-01",
+          "value": 23986000000
+        },
+        "fiscal_year": 2019,
+        "metric": "operating_income",
+        "sum_quarters": 23986000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-20-000013",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2019-12-31",
+          "filed": "2020-01-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680120000013/",
+          "start": "2019-01-01",
+          "value": 18485000000
+        },
+        "fiscal_year": 2019,
+        "metric": "net_income",
+        "sum_quarters": 18485000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-20-000013",
+          "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "end": "2019-12-31",
+          "filed": "2020-01-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680120000013/",
+          "start": "2019-01-01",
+          "value": 36314000000
+        },
+        "fiscal_year": 2019,
+        "metric": "cfo",
+        "sum_quarters": 36314000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-20-000013",
+          "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "end": "2019-12-31",
+          "filed": "2020-01-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680120000013/",
+          "start": "2019-01-01",
+          "value": 15102000000
+        },
+        "fiscal_year": 2019,
+        "metric": "cash_capex",
+        "sum_quarters": 15102000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-20-000013",
+          "concept": "us-gaap:ShareBasedCompensation",
+          "end": "2019-12-31",
+          "filed": "2020-01-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680120000013/",
+          "start": "2019-01-01",
+          "value": 4836000000
+        },
+        "fiscal_year": 2019,
+        "metric": "sbc",
+        "sum_quarters": 4836000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-21-000014",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2020-12-31",
+          "filed": "2021-01-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000014/",
+          "start": "2020-01-01",
+          "value": 85965000000
+        },
+        "fiscal_year": 2020,
+        "metric": "revenue",
+        "sum_quarters": 85965000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-21-000014",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2020-12-31",
+          "filed": "2021-01-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000014/",
+          "start": "2020-01-01",
+          "value": 32671000000
+        },
+        "fiscal_year": 2020,
+        "metric": "operating_income",
+        "sum_quarters": 32671000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-21-000014",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2020-12-31",
+          "filed": "2021-01-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000014/",
+          "start": "2020-01-01",
+          "value": 29146000000
+        },
+        "fiscal_year": 2020,
+        "metric": "net_income",
+        "sum_quarters": 29146000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-21-000014",
+          "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "end": "2020-12-31",
+          "filed": "2021-01-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000014/",
+          "start": "2020-01-01",
+          "value": 38747000000
+        },
+        "fiscal_year": 2020,
+        "metric": "cfo",
+        "sum_quarters": 38747000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-21-000014",
+          "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "end": "2020-12-31",
+          "filed": "2021-01-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000014/",
+          "start": "2020-01-01",
+          "value": 15115000000
+        },
+        "fiscal_year": 2020,
+        "metric": "cash_capex",
+        "sum_quarters": 15115000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-21-000014",
+          "concept": "us-gaap:ShareBasedCompensation",
+          "end": "2020-12-31",
+          "filed": "2021-01-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680121000014/",
+          "start": "2020-01-01",
+          "value": 6536000000
+        },
+        "fiscal_year": 2020,
+        "metric": "sbc",
+        "sum_quarters": 6536000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-22-000018",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2021-12-31",
+          "filed": "2022-02-03",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/",
+          "start": "2021-01-01",
+          "value": 117929000000
+        },
+        "fiscal_year": 2021,
+        "metric": "revenue",
+        "sum_quarters": 117929000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-22-000018",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2021-12-31",
+          "filed": "2022-02-03",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/",
+          "start": "2021-01-01",
+          "value": 46753000000
+        },
+        "fiscal_year": 2021,
+        "metric": "operating_income",
+        "sum_quarters": 46753000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-22-000018",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2021-12-31",
+          "filed": "2022-02-03",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/",
+          "start": "2021-01-01",
+          "value": 39370000000
+        },
+        "fiscal_year": 2021,
+        "metric": "net_income",
+        "sum_quarters": 39370000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-22-000018",
+          "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "end": "2021-12-31",
+          "filed": "2022-02-03",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/",
+          "start": "2021-01-01",
+          "value": 57683000000
+        },
+        "fiscal_year": 2021,
+        "metric": "cfo",
+        "sum_quarters": 57683000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-22-000018",
+          "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "end": "2021-12-31",
+          "filed": "2022-02-03",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/",
+          "start": "2021-01-01",
+          "value": 18567000000
+        },
+        "fiscal_year": 2021,
+        "metric": "cash_capex",
+        "sum_quarters": 18567000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-22-000018",
+          "concept": "us-gaap:ShareBasedCompensation",
+          "end": "2021-12-31",
+          "filed": "2022-02-03",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000018/",
+          "start": "2021-01-01",
+          "value": 9164000000
+        },
+        "fiscal_year": 2021,
+        "metric": "sbc",
+        "sum_quarters": 9164000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-23-000013",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2022-12-31",
+          "filed": "2023-02-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/",
+          "start": "2022-01-01",
+          "value": 116609000000
+        },
+        "fiscal_year": 2022,
+        "metric": "revenue",
+        "sum_quarters": 116609000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-23-000013",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2022-12-31",
+          "filed": "2023-02-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/",
+          "start": "2022-01-01",
+          "value": 28944000000
+        },
+        "fiscal_year": 2022,
+        "metric": "operating_income",
+        "sum_quarters": 28944000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-23-000013",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2022-12-31",
+          "filed": "2023-02-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/",
+          "start": "2022-01-01",
+          "value": 23200000000
+        },
+        "fiscal_year": 2022,
+        "metric": "net_income",
+        "sum_quarters": 23200000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-23-000013",
+          "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "end": "2022-12-31",
+          "filed": "2023-02-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/",
+          "start": "2022-01-01",
+          "value": 50475000000
+        },
+        "fiscal_year": 2022,
+        "metric": "cfo",
+        "sum_quarters": 50475000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-23-000013",
+          "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "end": "2022-12-31",
+          "filed": "2023-02-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/",
+          "start": "2022-01-01",
+          "value": 31431000000
+        },
+        "fiscal_year": 2022,
+        "metric": "cash_capex",
+        "sum_quarters": 31431000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-23-000013",
+          "concept": "us-gaap:ShareBasedCompensation",
+          "end": "2022-12-31",
+          "filed": "2023-02-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000013/",
+          "start": "2022-01-01",
+          "value": 11992000000
+        },
+        "fiscal_year": 2022,
+        "metric": "sbc",
+        "sum_quarters": 11992000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-24-000012",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2023-12-31",
+          "filed": "2024-02-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/",
+          "start": "2023-01-01",
+          "value": 134902000000
+        },
+        "fiscal_year": 2023,
+        "metric": "revenue",
+        "sum_quarters": 134902000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-24-000012",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2023-12-31",
+          "filed": "2024-02-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/",
+          "start": "2023-01-01",
+          "value": 46751000000
+        },
+        "fiscal_year": 2023,
+        "metric": "operating_income",
+        "sum_quarters": 46751000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-24-000012",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2023-12-31",
+          "filed": "2024-02-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/",
+          "start": "2023-01-01",
+          "value": 39098000000
+        },
+        "fiscal_year": 2023,
+        "metric": "net_income",
+        "sum_quarters": 39098000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-24-000012",
+          "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "end": "2023-12-31",
+          "filed": "2024-02-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/",
+          "start": "2023-01-01",
+          "value": 71113000000
+        },
+        "fiscal_year": 2023,
+        "metric": "cfo",
+        "sum_quarters": 71113000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-24-000012",
+          "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "end": "2023-12-31",
+          "filed": "2024-02-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/",
+          "start": "2023-01-01",
+          "value": 27266000000
+        },
+        "fiscal_year": 2023,
+        "metric": "cash_capex",
+        "sum_quarters": 27266000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-24-000012",
+          "concept": "us-gaap:ShareBasedCompensation",
+          "end": "2023-12-31",
+          "filed": "2024-02-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/",
+          "start": "2023-01-01",
+          "value": 14027000000
+        },
+        "fiscal_year": 2023,
+        "metric": "sbc",
+        "sum_quarters": 14027000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-25-000017",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2024-12-31",
+          "filed": "2025-01-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/",
+          "start": "2024-01-01",
+          "value": 164501000000
+        },
+        "fiscal_year": 2024,
+        "metric": "revenue",
+        "sum_quarters": 164501000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-25-000017",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2024-12-31",
+          "filed": "2025-01-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/",
+          "start": "2024-01-01",
+          "value": 69380000000
+        },
+        "fiscal_year": 2024,
+        "metric": "operating_income",
+        "sum_quarters": 69380000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-25-000017",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2024-12-31",
+          "filed": "2025-01-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/",
+          "start": "2024-01-01",
+          "value": 62360000000
+        },
+        "fiscal_year": 2024,
+        "metric": "net_income",
+        "sum_quarters": 62360000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-25-000017",
+          "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "end": "2024-12-31",
+          "filed": "2025-01-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/",
+          "start": "2024-01-01",
+          "value": 91328000000
+        },
+        "fiscal_year": 2024,
+        "metric": "cfo",
+        "sum_quarters": 91328000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-25-000017",
+          "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "end": "2024-12-31",
+          "filed": "2025-01-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/",
+          "start": "2024-01-01",
+          "value": 37256000000
+        },
+        "fiscal_year": 2024,
+        "metric": "cash_capex",
+        "sum_quarters": 37256000000
+      },
+      {
+        "annual": {
+          "accession": "0001326801-25-000017",
+          "concept": "us-gaap:ShareBasedCompensation",
+          "end": "2024-12-31",
+          "filed": "2025-01-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/",
+          "start": "2024-01-01",
+          "value": 16690000000
+        },
+        "fiscal_year": 2024,
+        "metric": "sbc",
+        "sum_quarters": 16690000000
+      },
+      {
+        "annual": {
+          "accession": "0001628280-26-003942",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-12-31",
+          "filed": "2026-01-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+          "start": "2025-01-01",
+          "value": 200966000000
+        },
+        "fiscal_year": 2025,
+        "metric": "revenue",
+        "sum_quarters": 200966000000
+      },
+      {
+        "annual": {
+          "accession": "0001628280-26-003942",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2025-12-31",
+          "filed": "2026-01-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+          "start": "2025-01-01",
+          "value": 83276000000
+        },
+        "fiscal_year": 2025,
+        "metric": "operating_income",
+        "sum_quarters": 83276000000
+      },
+      {
+        "annual": {
+          "accession": "0001628280-26-003942",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2025-12-31",
+          "filed": "2026-01-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+          "start": "2025-01-01",
+          "value": 60458000000
+        },
+        "fiscal_year": 2025,
+        "metric": "net_income",
+        "sum_quarters": 60458000000
+      },
+      {
+        "annual": {
+          "accession": "0001628280-26-003942",
+          "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "end": "2025-12-31",
+          "filed": "2026-01-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+          "start": "2025-01-01",
+          "value": 115800000000
+        },
+        "fiscal_year": 2025,
+        "metric": "cfo",
+        "sum_quarters": 115800000000
+      },
+      {
+        "annual": {
+          "accession": "0001628280-26-003942",
+          "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "end": "2025-12-31",
+          "filed": "2026-01-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+          "start": "2025-01-01",
+          "value": 69691000000
+        },
+        "fiscal_year": 2025,
+        "metric": "cash_capex",
+        "sum_quarters": 69691000000
+      },
+      {
+        "annual": {
+          "accession": "0001628280-26-003942",
+          "concept": "us-gaap:ShareBasedCompensation",
+          "end": "2025-12-31",
+          "filed": "2026-01-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+          "start": "2025-01-01",
+          "value": 20427000000
+        },
+        "fiscal_year": 2025,
+        "metric": "sbc",
+        "sum_quarters": 20427000000
+      }
+    ],
+    "bridge_checks": 20,
+    "discrete_quarter_checks": [
+      {
+        "derived": 27908000000,
+        "difference": 0,
+        "metric": "revenue",
+        "quarter_id": "FY2022-Q1",
+        "reported": {
+          "accession": "0001326801-22-000057",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2022-03-31",
+          "filed": "2022-04-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+          "start": "2022-01-01",
+          "value": 27908000000
+        }
+      },
+      {
+        "derived": 8524000000,
+        "difference": 0,
+        "metric": "operating_income",
+        "quarter_id": "FY2022-Q1",
+        "reported": {
+          "accession": "0001326801-22-000057",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2022-03-31",
+          "filed": "2022-04-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+          "start": "2022-01-01",
+          "value": 8524000000
+        }
+      },
+      {
+        "derived": 7465000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2022-Q1",
+        "reported": {
+          "accession": "0001326801-22-000057",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2022-03-31",
+          "filed": "2022-04-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000057/",
+          "start": "2022-01-01",
+          "value": 7465000000
+        }
+      },
+      {
+        "derived": 28821000000,
+        "difference": -1000000,
+        "metric": "revenue",
+        "quarter_id": "FY2022-Q2",
+        "reported": {
+          "accession": "0001326801-22-000082",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2022-06-30",
+          "filed": "2022-07-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+          "start": "2022-04-01",
+          "value": 28822000000
+        }
+      },
+      {
+        "derived": 8357000000,
+        "difference": -1000000,
+        "metric": "operating_income",
+        "quarter_id": "FY2022-Q2",
+        "reported": {
+          "accession": "0001326801-22-000082",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2022-06-30",
+          "filed": "2022-07-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+          "start": "2022-04-01",
+          "value": 8358000000
+        }
+      },
+      {
+        "derived": 6687000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2022-Q2",
+        "reported": {
+          "accession": "0001326801-22-000082",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2022-06-30",
+          "filed": "2022-07-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+          "start": "2022-04-01",
+          "value": 6687000000
+        }
+      },
+      {
+        "derived": 27715000000,
+        "difference": 1000000,
+        "metric": "revenue",
+        "quarter_id": "FY2022-Q3",
+        "reported": {
+          "accession": "0001326801-22-000108",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2022-09-30",
+          "filed": "2022-10-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+          "start": "2022-07-01",
+          "value": 27714000000
+        }
+      },
+      {
+        "derived": 5664000000,
+        "difference": 0,
+        "metric": "operating_income",
+        "quarter_id": "FY2022-Q3",
+        "reported": {
+          "accession": "0001326801-22-000108",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2022-09-30",
+          "filed": "2022-10-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+          "start": "2022-07-01",
+          "value": 5664000000
+        }
+      },
+      {
+        "derived": 4395000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2022-Q3",
+        "reported": {
+          "accession": "0001326801-22-000108",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2022-09-30",
+          "filed": "2022-10-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+          "start": "2022-07-01",
+          "value": 4395000000
+        }
+      },
+      {
+        "derived": 28645000000,
+        "difference": 0,
+        "metric": "revenue",
+        "quarter_id": "FY2023-Q1",
+        "reported": {
+          "accession": "0001326801-23-000067",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2023-03-31",
+          "filed": "2023-04-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+          "start": "2023-01-01",
+          "value": 28645000000
+        }
+      },
+      {
+        "derived": 7227000000,
+        "difference": 0,
+        "metric": "operating_income",
+        "quarter_id": "FY2023-Q1",
+        "reported": {
+          "accession": "0001326801-23-000067",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2023-03-31",
+          "filed": "2023-04-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+          "start": "2023-01-01",
+          "value": 7227000000
+        }
+      },
+      {
+        "derived": 5709000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2023-Q1",
+        "reported": {
+          "accession": "0001326801-23-000067",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2023-03-31",
+          "filed": "2023-04-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000067/",
+          "start": "2023-01-01",
+          "value": 5709000000
+        }
+      },
+      {
+        "derived": 32000000000,
+        "difference": 1000000,
+        "metric": "revenue",
+        "quarter_id": "FY2023-Q2",
+        "reported": {
+          "accession": "0001326801-23-000093",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2023-06-30",
+          "filed": "2023-07-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+          "start": "2023-04-01",
+          "value": 31999000000
+        }
+      },
+      {
+        "derived": 9392000000,
+        "difference": 0,
+        "metric": "operating_income",
+        "quarter_id": "FY2023-Q2",
+        "reported": {
+          "accession": "0001326801-23-000093",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2023-06-30",
+          "filed": "2023-07-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+          "start": "2023-04-01",
+          "value": 9392000000
+        }
+      },
+      {
+        "derived": 7789000000,
+        "difference": 1000000,
+        "metric": "net_income",
+        "quarter_id": "FY2023-Q2",
+        "reported": {
+          "accession": "0001326801-23-000093",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2023-06-30",
+          "filed": "2023-07-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+          "start": "2023-04-01",
+          "value": 7788000000
+        }
+      },
+      {
+        "derived": 34146000000,
+        "difference": 0,
+        "metric": "revenue",
+        "quarter_id": "FY2023-Q3",
+        "reported": {
+          "accession": "0001326801-23-000103",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2023-09-30",
+          "filed": "2023-10-26",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+          "start": "2023-07-01",
+          "value": 34146000000
+        }
+      },
+      {
+        "derived": 13748000000,
+        "difference": 0,
+        "metric": "operating_income",
+        "quarter_id": "FY2023-Q3",
+        "reported": {
+          "accession": "0001326801-23-000103",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2023-09-30",
+          "filed": "2023-10-26",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+          "start": "2023-07-01",
+          "value": 13748000000
+        }
+      },
+      {
+        "derived": 11583000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2023-Q3",
+        "reported": {
+          "accession": "0001326801-23-000103",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2023-09-30",
+          "filed": "2023-10-26",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/",
+          "start": "2023-07-01",
+          "value": 11583000000
+        }
+      },
+      {
+        "derived": 36455000000,
+        "difference": 0,
+        "metric": "revenue",
+        "quarter_id": "FY2024-Q1",
+        "reported": {
+          "accession": "0001326801-24-000049",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2024-03-31",
+          "filed": "2024-04-25",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+          "start": "2024-01-01",
+          "value": 36455000000
+        }
+      },
+      {
+        "derived": 13818000000,
+        "difference": 0,
+        "metric": "operating_income",
+        "quarter_id": "FY2024-Q1",
+        "reported": {
+          "accession": "0001326801-24-000049",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2024-03-31",
+          "filed": "2024-04-25",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+          "start": "2024-01-01",
+          "value": 13818000000
+        }
+      },
+      {
+        "derived": 12369000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2024-Q1",
+        "reported": {
+          "accession": "0001326801-24-000049",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2024-03-31",
+          "filed": "2024-04-25",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000049/",
+          "start": "2024-01-01",
+          "value": 12369000000
+        }
+      },
+      {
+        "derived": 39072000000,
+        "difference": 1000000,
+        "metric": "revenue",
+        "quarter_id": "FY2024-Q2",
+        "reported": {
+          "accession": "0001326801-24-000069",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2024-06-30",
+          "filed": "2024-08-01",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+          "start": "2024-04-01",
+          "value": 39071000000
+        }
+      },
+      {
+        "derived": 14847000000,
+        "difference": 0,
+        "metric": "operating_income",
+        "quarter_id": "FY2024-Q2",
+        "reported": {
+          "accession": "0001326801-24-000069",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2024-06-30",
+          "filed": "2024-08-01",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+          "start": "2024-04-01",
+          "value": 14847000000
+        }
+      },
+      {
+        "derived": 13465000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2024-Q2",
+        "reported": {
+          "accession": "0001326801-24-000069",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2024-06-30",
+          "filed": "2024-08-01",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+          "start": "2024-04-01",
+          "value": 13465000000
+        }
+      },
+      {
+        "derived": 40589000000,
+        "difference": 0,
+        "metric": "revenue",
+        "quarter_id": "FY2024-Q3",
+        "reported": {
+          "accession": "0001326801-24-000081",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2024-09-30",
+          "filed": "2024-10-31",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+          "start": "2024-07-01",
+          "value": 40589000000
+        }
+      },
+      {
+        "derived": 17351000000,
+        "difference": 1000000,
+        "metric": "operating_income",
+        "quarter_id": "FY2024-Q3",
+        "reported": {
+          "accession": "0001326801-24-000081",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2024-09-30",
+          "filed": "2024-10-31",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+          "start": "2024-07-01",
+          "value": 17350000000
+        }
+      },
+      {
+        "derived": 15688000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2024-Q3",
+        "reported": {
+          "accession": "0001326801-24-000081",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2024-09-30",
+          "filed": "2024-10-31",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+          "start": "2024-07-01",
+          "value": 15688000000
+        }
+      },
+      {
+        "derived": 42314000000,
+        "difference": 0,
+        "metric": "revenue",
+        "quarter_id": "FY2025-Q1",
+        "reported": {
+          "accession": "0001326801-25-000054",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-03-31",
+          "filed": "2025-05-01",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+          "start": "2025-01-01",
+          "value": 42314000000
+        }
+      },
+      {
+        "derived": 17555000000,
+        "difference": 0,
+        "metric": "operating_income",
+        "quarter_id": "FY2025-Q1",
+        "reported": {
+          "accession": "0001326801-25-000054",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2025-03-31",
+          "filed": "2025-05-01",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+          "start": "2025-01-01",
+          "value": 17555000000
+        }
+      },
+      {
+        "derived": 16644000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2025-Q1",
+        "reported": {
+          "accession": "0001326801-25-000054",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2025-03-31",
+          "filed": "2025-05-01",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/",
+          "start": "2025-01-01",
+          "value": 16644000000
+        }
+      },
+      {
+        "derived": 47516000000,
+        "difference": 0,
+        "metric": "revenue",
+        "quarter_id": "FY2025-Q2",
+        "reported": {
+          "accession": "0001628280-25-036791",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-06-30",
+          "filed": "2025-07-31",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+          "start": "2025-04-01",
+          "value": 47516000000
+        }
+      },
+      {
+        "derived": 20442000000,
+        "difference": 1000000,
+        "metric": "operating_income",
+        "quarter_id": "FY2025-Q2",
+        "reported": {
+          "accession": "0001628280-25-036791",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2025-06-30",
+          "filed": "2025-07-31",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+          "start": "2025-04-01",
+          "value": 20441000000
+        }
+      },
+      {
+        "derived": 18337000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2025-Q2",
+        "reported": {
+          "accession": "0001628280-25-036791",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2025-06-30",
+          "filed": "2025-07-31",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+          "start": "2025-04-01",
+          "value": 18337000000
+        }
+      },
+      {
+        "derived": 51243000000,
+        "difference": 1000000,
+        "metric": "revenue",
+        "quarter_id": "FY2025-Q3",
+        "reported": {
+          "accession": "0001628280-25-047240",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-09-30",
+          "filed": "2025-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+          "start": "2025-07-01",
+          "value": 51242000000
+        }
+      },
+      {
+        "derived": 20534000000,
+        "difference": -1000000,
+        "metric": "operating_income",
+        "quarter_id": "FY2025-Q3",
+        "reported": {
+          "accession": "0001628280-25-047240",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2025-09-30",
+          "filed": "2025-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+          "start": "2025-07-01",
+          "value": 20535000000
+        }
+      },
+      {
+        "derived": 2709000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2025-Q3",
+        "reported": {
+          "accession": "0001628280-25-047240",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2025-09-30",
+          "filed": "2025-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+          "start": "2025-07-01",
+          "value": 2709000000
+        }
+      },
+      {
+        "derived": 56311000000,
+        "difference": 0,
+        "metric": "revenue",
+        "quarter_id": "FY2026-Q1",
+        "reported": {
+          "accession": "0001628280-26-028526",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-03-31",
+          "filed": "2026-04-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+          "start": "2026-01-01",
+          "value": 56311000000
+        }
+      },
+      {
+        "derived": 22872000000,
+        "difference": 0,
+        "metric": "operating_income",
+        "quarter_id": "FY2026-Q1",
+        "reported": {
+          "accession": "0001628280-26-028526",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2026-03-31",
+          "filed": "2026-04-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+          "start": "2026-01-01",
+          "value": 22872000000
+        }
+      },
+      {
+        "derived": 26773000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2026-Q1",
+        "reported": {
+          "accession": "0001628280-26-028526",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2026-03-31",
+          "filed": "2026-04-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/",
+          "start": "2026-01-01",
+          "value": 26773000000
+        }
+      },
+      {
+        "derived": 60800000000,
+        "difference": -1000000,
+        "metric": "revenue",
+        "quarter_id": "FY2026-Q2",
+        "reported": {
+          "accession": "0001628280-26-050705",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-06-30",
+          "filed": "2026-07-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+          "start": "2026-04-01",
+          "value": 60801000000
+        }
+      },
+      {
+        "derived": 18775000000,
+        "difference": 0,
+        "metric": "operating_income",
+        "quarter_id": "FY2026-Q2",
+        "reported": {
+          "accession": "0001628280-26-050705",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2026-06-30",
+          "filed": "2026-07-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+          "start": "2026-04-01",
+          "value": 18775000000
+        }
+      },
+      {
+        "derived": 15848000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2026-Q2",
+        "reported": {
+          "accession": "0001628280-26-050705",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2026-06-30",
+          "filed": "2026-07-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+          "start": "2026-04-01",
+          "value": 15848000000
+        }
+      },
+      {
+        "derived": 64601000000,
+        "difference": 0,
+        "metric": "revenue",
+        "quarter_id": "FY2026-Q3",
+        "reported": {
+          "accession": "0001628280-26-066773",
+          "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-10-22",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/",
+          "start": "2026-07-01",
+          "value": 64601000000
+        }
+      },
+      {
+        "derived": 12988000000,
+        "difference": 0,
+        "metric": "operating_income",
+        "quarter_id": "FY2026-Q3",
+        "reported": {
+          "accession": "0001628280-26-066773",
+          "concept": "us-gaap:OperatingIncomeLoss",
+          "end": "2026-09-30",
+          "filed": "2026-10-22",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/",
+          "start": "2026-07-01",
+          "value": 12988000000
+        }
+      },
+      {
+        "derived": 9860000000,
+        "difference": 0,
+        "metric": "net_income",
+        "quarter_id": "FY2026-Q3",
+        "reported": {
+          "accession": "0001628280-26-066773",
+          "concept": "us-gaap:NetIncomeLoss",
+          "end": "2026-09-30",
+          "filed": "2026-10-22",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/",
+          "start": "2026-07-01",
+          "value": 9860000000
+        }
+      }
+    ],
+    "excluded_periods": []
+  }
+}

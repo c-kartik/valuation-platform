@@ -1797,3 +1797,10 @@ The [local horizon extension](../ten-year-horizon.md) adds explicit manual years
 or financial-input sufficiency status. GOOGL's separate five-year proposed
 profile supplies no extra-year estimates; refresh preserves manual additional
 years. No expanded preparation coverage or valuation-use approval is inferred.
+
+## Quarterly descriptive reporting — November 9, 2026
+
+[Shared contract](../quarterly-reporting.md): GOOGL, AAPL and META have named
+qualified descriptive consumers. Their issuer records retain source evidence,
+selection policy, validation scope and remaining limits. Original valuation-input
+classifications and other issuers are unchanged.

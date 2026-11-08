@@ -1291,3 +1291,29 @@ status changes. The additional-year preload policy remains unresolved.
 ## Three-company cash-flow implementation — November3
 
 New [company evidence/treatments](../company-resolutions/GOOGL/implementation-2026-11-03/README.md) and the [shared execution log](../company-resolutions/implementation-2026-11-03/implementation-log.json) cover approved research, recurring-tax review, partial SBC bridge and source-bound share schedules. Runtime review data retain all five FY2021–25 periods, metric basis, scope and status; provisional funding and missing parent allocation remain explicit. No original accepted history, source bank or earlier approval is overwritten. Financial sufficiency stays OPEN for the full FCFF/parent-common FCFE contract.
+
+## Quarterly reporting consumer — November 9, 2026
+
+The user authorized historical trends and a cash-flow bridge ahead of the DCF.
+An additive consumer reuses existing Company Facts retrieval/parsing and filing
+XBRL evidence without changing this issuer's accepted DCF inputs or policies.
+The previous annual/valuation decisions remain authoritative for their scopes.
+
+Conflict addressed: reported annual and cumulative interim observations cannot
+be displayed as standalone calendar quarters. Use actual fiscal boundaries and
+YTD differences under `quarterly-reported-usd-v1`, retaining original-disclosure
+cohort selection and all source operands. Missing/conflicting values fail closed.
+No synthesized quarterly estimates or market data are introduced.
+
+The named descriptive reporting consumer has 20 fiscal quarters, 42 preparatory
+annual metric tie-outs and 18 independent filing-XBRL operand matches for latest
+quarter/latest annual evidence. These are different validation scopes; they do
+not certify independent re-extraction of every quarter. “Other” in the bridge is
+a disclosed residual aggregate, not a complete working-capital explanation.
+
+See [reporting contract, dates, commands and limitations](../quarterly-reporting.md),
+source snapshots in `data/quarterly-reporting/sources/`, and the issuer's retained
+filing-validation receipt. Financial-input sufficiency is established only for
+this named descriptive consumer, with these qualifications. Existing DCF and
+broader-universe readiness statuses are unchanged. Production deployment is a
+separate release step.

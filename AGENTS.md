@@ -1,5 +1,17 @@
 # AGENTS.md
 
+## Financial-statement reporting — November 9, 2026
+
+The user shelved market-price features and subsequently authorized historical
+trends and a cash-flow bridge using existing pipeline components, Alphabet first,
+then Apple/Meta, displayed before DCF. See `docs/quarterly-reporting.md`.
+This narrow implementation supersedes NOT STARTED only for the new descriptive
+reporting consumer. Original price-dependent Scope 2 features remain deferred.
+Do not modify original Python modules, approved annual inputs or DCF assumptions
+when refreshing reporting. Keep snapshots, policy versions, per-issuer records
+and validation scopes explicit; Other remains a disclosed aggregate. Source/data
+versions must be committed together before a later snapshot replaces them.
+
 ## Product scopes — November 7, 2026
 
 Scope 1 is the [DCF pipeline and workspace](docs/scope-1-dcf-pipeline.md),
