@@ -236,3 +236,15 @@ it('shows a recovered first profile for review when the user has already edited 
  fireEvent.click(adopt);await screen.findByRole('region',{name:'Interactive revenue and FCFF chart'});
  expect(screen.getByRole('complementary',{name:'Active model summary'}).textContent).toContain('13.25%');
 });
+
+it('honors a company deep link instead of the default or the remembered selection',async()=>{
+ const load=transport();
+ const first=renderHook(()=>useWorkspace(load,'META'));
+ await waitFor(()=>expect(first.result.current.state.selected).toBe('meta-fy2025'));
+ expect(vi.mocked(load).mock.calls.some(c=>c[0]==='/api/v1/preloads/googl')).toBeFalsy();
+ first.unmount();
+ const second=renderHook(({ticker})=>useWorkspace(load,ticker),{initialProps:{ticker:'GOOGL'}});
+ await waitFor(()=>expect(second.result.current.state.selected).toBe('googl-fy2025'));
+ second.rerender({ticker:'META'});
+ await waitFor(()=>expect(second.result.current.state.selected).toBe('meta-fy2025'));
+});

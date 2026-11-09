@@ -40,7 +40,7 @@ function newMemory(){
   subscribe:(fn:()=>void)=>{listeners.add(fn);return()=>{listeners.delete(fn);};},
   notify:()=>listeners.forEach(fn=>fn())};
 }
-export function useWorkspace(load:typeof request=request){
+export function useWorkspace(load:typeof request=request,initialCompany?:string){
  const [catalog,setCatalog]=useState<Catalog|null>(null),[catalogFailure,setCatalogFailure]=useState(''),[attempt,setAttempt]=useState(0);
  const memory=memories.get(load)??newMemory();memories.set(load,memory);
  const live=memory,state=useSyncExternalStore(memory.subscribe,()=>memory.current);
@@ -59,7 +59,8 @@ export function useWorkspace(load:typeof request=request){
   return()=>{memory.subscribers--;memory.retire=setTimeout(()=>{if(!memory.subscribers)stop();},100);};
  },[memory]);
  // Fresh opening selects the supported proposed profile; incomplete issuers remain selectable.
- useEffect(()=>{if(catalog&&!live.current.selected&&catalog.entries.some(e=>e.kind==='googl-fy2025'))select('googl-fy2025');},[catalog]);
+ const initialSelection=useRef<string|undefined>(undefined);
+ useEffect(()=>{if(!catalog)return;const requested=initialCompany?catalog.entries.find(e=>e.company===initialCompany):undefined;if(requested&&initialSelection.current!==initialCompany){initialSelection.current=initialCompany;select(requested.kind);}else if(!initialCompany&&!live.current.selected&&catalog.entries.some(e=>e.kind==='googl-fy2025'))select('googl-fy2025');},[catalog,initialCompany]);
  function stop(){evRevision.current.edit();equityRevision.current.edit();setRevision.current.edit();gridRevision.current.edit();reverseRevision.current.edit();gate.cancel();
   const kind=live.current.selected;if(kind)change(kind,s=>({...s,cases:Object.fromEntries(Object.entries(s.cases).filter((entry):entry is [string,CaseState]=>Boolean(entry[1])).map(([label,c])=>[label,{...c,ev:c.ev.phase==='calculating'?invalidate(c.ev):c.ev,equity:c.equity.phase==='calculating'?invalidate(c.equity):c.equity,grid:c.grid.phase==='calculating'?staleGrid(c.grid):c.grid,reverse:c.reverse.phase==='calculating'?staleReverse(c.reverse):c.reverse}])) as Session['cases'],scenario:s.scenario.phase==='calculating'?invalidateSet(s.scenario):s.scenario}));
  }

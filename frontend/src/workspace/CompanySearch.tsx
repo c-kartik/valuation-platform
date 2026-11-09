@@ -2,7 +2,7 @@ import {useEffect,useId,useRef,useState} from 'react';
 import './CompanySearch.css';
 
 export type SearchCompany={kind:string;company:string;name:string};
-export function CompanySearch({companies,selected,disabled=false,onSelect}:{companies:SearchCompany[];selected:string;disabled?:boolean;onSelect:(kind:string)=>void}){
+export function CompanySearch({companies,selected,disabled=false,onSelect,label='Company',placeholder='Search'}:{companies:SearchCompany[];selected:string;disabled?:boolean;label?:string;placeholder?:string;onSelect:(kind:string)=>void}){
  const id=useId(),root=useRef<HTMLDivElement>(null);
  const [open,setOpen]=useState(false),[query,setQuery]=useState(''),[active,setActive]=useState(0);
  const term=query.trim().toLowerCase();
@@ -19,9 +19,9 @@ export function CompanySearch({companies,selected,disabled=false,onSelect}:{comp
   return()=>document.removeEventListener('pointerdown',outside);
  },[open]);
  return <div className="company-search" ref={root} onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget as Node|null))close();}}>
-  <label htmlFor={id}>Company</label>
+  <label htmlFor={id}>{label}</label>
   <input id={id} type="text" role="combobox" aria-autocomplete="list" aria-expanded={open} aria-controls={open?`${id}-list`:undefined} aria-activedescendant={open&&matches.length?`${id}-option-${index}`:undefined}
-   autoComplete="off" spellCheck={false} disabled={disabled} placeholder="Search" value={open?query:''}
+   autoComplete="off" spellCheck={false} disabled={disabled} placeholder={placeholder} value={open?query:''}
    onFocus={show} onClick={()=>{if(!open)show();}} onChange={e=>{setQuery(e.target.value);setActive(0);setOpen(true);}}
    onKeyDown={e=>{
     if(e.key==='Escape'){e.preventDefault();close();}

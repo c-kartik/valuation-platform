@@ -1,3 +1,13 @@
+## Valuation landing and portfolio navigation — November 9, 2026
+
+`/valuation/` opens a catalog-driven landing page, not a default company.
+`?company=GOOGL|AAPL|META` opens the existing company workspace. Keep search
+counts tied to prepared catalog entries, preserve native links and browser Back,
+and retain the full-width navy branding. Portfolio navigation says Valuation;
+the platform leads Selected Work and the website CV list. This is presentation
+and routing only; original Python/DCF engines, data and qualifications remain
+unchanged. See `docs/valuation-landing.md`.
+
 ## Apple / Meta cash allocation acceptance — November 9, 2026
 
 The user explicitly extends cash allocation and Inside PP&E to AAPL/META.

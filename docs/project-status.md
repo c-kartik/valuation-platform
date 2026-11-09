@@ -1,3 +1,11 @@
+## Valuation landing and portfolio discovery — November 9, 2026
+
+Added the catalog-driven valuation landing page, shareable company selection,
+and a return-to-companies link. Portfolio Selected Work features the platform
+above Alphabet research and the pipeline; the website CV list leads with the
+platform and navigation reads Valuation. [Routing and release contract](valuation-landing.md).
+Original Python/DCF engines and financial assets remain unchanged.
+
 ## Apple and Meta cash allocation / PP&E — November 9, 2026
 
 Extended the approved sections to AAPL/META using their reported cash-flow
