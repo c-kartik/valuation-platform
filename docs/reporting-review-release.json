@@ -26,8 +26,18 @@
   "original_browser_assets_hash_verified": 15,
   "engine_fixtures_hash_verified": 128,
   "publication": {
-    "status": "READY_FOR_DEPLOYMENT",
-    "url": "https://kartikchaturvedi.com/valuation/"
+    "status": "LIVE_VERIFIED",
+    "url": "https://kartikchaturvedi.com/valuation/",
+    "source_commit": "92ac276",
+    "portfolio_commit": "ebce614",
+    "live_file_hash_matches": 7,
+    "all_reporting_datasets": "unchanged; exact match to audited packages",
+    "live_company_acceptance": [
+      "GOOGL",
+      "AAPL",
+      "META"
+    ],
+    "screenshot": "/Users/kc/Documents/Codex/outputs/reporting-review-release-2026-11-09/live-review.png"
   },
   "changes": "Reporting-only validator guards; independent whole-window audit tooling/evidence. Reporting values, definitions, DCF engines and inputs unchanged.",
   "limitations": [

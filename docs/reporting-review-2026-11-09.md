@@ -67,7 +67,9 @@ The production page passed 280 systematic quarter/view checks:
   failure/retry and stale issuer responses. These UI checks do not change DCF.
 
 Machine-readable browser checks are retained in the release review output
-folder. The production build passes; the original 396 Python files, 15 browser
+folder. All 487 frontend tests and 17 reporting tests pass. The reporting validation
+changes are deployed and the live bundle and all six reporting packages match
+the reviewed artifact. The production build passes; the original 396 Python files, 15 browser
 assets and 128 original engine fixtures match their preservation baseline.
 
 ## Improvements made during review
