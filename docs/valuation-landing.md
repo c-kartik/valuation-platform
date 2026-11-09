@@ -33,3 +33,12 @@ Validation: frontend regression suite, browser-only build, preserved-asset hash
 verification, packaged static-site validation, and actual browser checks of
 search, all three selections, direct links/reload/Back, portfolio/CV structure and
 phone layouts. Publication evidence is recorded in `valuation-landing-release.json`.
+
+## Copy refinement — November 9, 2026
+
+Public platform naming is Equity Valuation Platform. Removed Automated from
+website HTML, including portfolio/CV naming. The search placeholder retains its
+dynamic count; the redundant count above it is removed. Feature headings are
+Filings Insight, Cash Flow Analysis and Test your assumptions. The main hero
+headline remains pending the user’s choice; Financial Analysis & Equity Valuation
+is proposed. This is copy/style only with no model or data changes.
