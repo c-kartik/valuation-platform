@@ -58,3 +58,6 @@ At the user’s request, restored the exact headline sizes and spacing from befo
 the search-prominence adjustment. The compact layout is superseded. A shorter
 headline is being selected separately; feature names, search and company data
 remain unchanged.
+
+The user selected **Equity Valuation** as the shorter headline. It replaces the
+previous two-part heading without changing the restored type scale or spacing.
