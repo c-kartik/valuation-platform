@@ -39,6 +39,5 @@ phone layouts. Publication evidence is recorded in `valuation-landing-release.js
 Public platform naming is Equity Valuation Platform. Removed Automated from
 website HTML, including portfolio/CV naming. The search placeholder retains its
 dynamic count; the redundant count above it is removed. Feature headings are
-Filings Insight, Cash Flow Analysis and Test your assumptions. The main hero
-headline remains pending the user’s choice; Financial Analysis & Equity Valuation
-is proposed. This is copy/style only with no model or data changes.
+Filings Insight, Cash Flow Analysis and Test your assumptions. The user selected Financial Analysis & Equity Valuation as the main hero
+headline, with consistent navy styling across both lines. This is copy/style only with no model or data changes.
