@@ -50,8 +50,16 @@
     "Existing displayed Base FCFF/share: GOOGL125.91,AAPL175.46,META374.70"
   ],
   "publication": {
-    "status": "READY_FOR_DEPLOYMENT",
-    "url": "https://kartikchaturvedi.com/valuation/"
+    "status": "LIVE_VERIFIED",
+    "url": "https://kartikchaturvedi.com/valuation/",
+    "source_commit": "7e034dc",
+    "portfolio_commit": "a4414da",
+    "live_exact_hash_matches": 5,
+    "artifact_files": 47,
+    "local_references": 57,
+    "loopback_routes": "PASS",
+    "live_ui": "Alphabet segments and expanded Services verified; Base DCF125.91 preserved",
+    "screenshot": "/Users/kc/Documents/Codex/outputs/revenue-mix-release-2026-11-09/live-revenue-mix.png"
   },
   "limitations": [
     "Descriptive cohort history, not an as-known backtest",

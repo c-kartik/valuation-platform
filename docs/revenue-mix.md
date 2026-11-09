@@ -1,6 +1,6 @@
 # Revenue mix — financial-statement reporting extension
 
-Implemented November 9, 2026. Scope: GOOGL first, then AAPL/META; 20 fiscal
+Implemented and production-deployed November 9, 2026. [Release receipt](revenue-mix-release.json). Scope: GOOGL first, then AAPL/META; 20 fiscal
 quarters matching each accepted consolidated reporting package. This adds a
 separate descriptive reporting consumer and does not resume market-price work,
 modify original Python normalization, update DCF assumptions/anchors, or certify
