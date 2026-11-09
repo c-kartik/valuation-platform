@@ -7,7 +7,9 @@ existing reporting packages, chart history contract, validated analyst outputs
 and calculation actions; never import illustrative mockup valuation formulas or
 values. Preserve original Python and JS engines, data policies, model dates,
 qualifications and missing-value behavior. See `docs/open-canvas.md` and the
-release receipt for current UI/source boundaries and verification.
+release receipt for current UI/source boundaries and verification. Keep the
+full-width navy header, white K. Chaturvedi logo with gold dot, and right-aligned
+search field; the user explicitly restored that branding after the redesign.
 
 ## Financial-statement reporting — November 9, 2026
 
