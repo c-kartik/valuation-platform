@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-09",
+  "scope": "Landing and portfolio copy refinement",
+  "status": "published-and-browser-verified",
+  "valuation_commit": "f6703f5",
+  "portfolio_commit": "c106ddb",
+  "headline": "Financial Analysis & Equity Valuation",
+  "features": [
+    "Filings Insight",
+    "Cash Flow Analysis",
+    "Test your assumptions"
+  ],
+  "changes": [
+    "Removed Automated from all public HTML",
+    "Removed duplicate Explore N companies line; kept dynamic search placeholder count",
+    "Consistent navy headline styling"
+  ],
+  "checks": {
+    "targeted_tests": 13,
+    "targeted_suites": 2,
+    "browser_build": "PASS",
+    "static_artifact": "50 files / 59 local references PASS",
+    "preservation": "15 assets / 396 Python files / 128 fixtures PASS",
+    "live_browser": "Headline, feature headings, supported companies, no duplicate count verified",
+    "phone_width": 390,
+    "phone_overflow": false
+  },
+  "unchanged": "Financial data, original Python and DCF engines, model defaults, workbook logic",
+  "screenshot": {
+    "path": "/Users/kc/Documents/Codex/outputs/valuation-copy-headline-release/live-landing.png",
+    "sha256": "144d420ffdb7c9932c754257944c9eee1779322d4037a890cad5cb7b27312f11"
+  }
+}
