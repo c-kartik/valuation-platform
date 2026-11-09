@@ -50,3 +50,11 @@ phones, and 40px to 34px on narrow phones. Tightened hero padding and the
 spacing around the intro and suggested companies so search appears higher.
 Search width, input size, typography family, colors and company behavior stay
 the same. CSS-only change; no financial or model changes.
+
+
+## Layout rollback — November 9, 2026
+
+At the user’s request, restored the exact headline sizes and spacing from before
+the search-prominence adjustment. The compact layout is superseded. A shorter
+headline is being selected separately; feature names, search and company data
+remain unchanged.
