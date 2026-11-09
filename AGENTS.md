@@ -1,3 +1,12 @@
+## Cash allocation and PP&E — November 9, 2026
+
+The user approved the Alphabet cash-allocation and separate Inside PP&E mockups.
+Use the additive offline consumer and independent static package described in
+`docs/cash-allocation.md`. Preserve all original Python/DCF pipelines and inputs.
+Annual/quarterly/TTM are cash-flow periods; PP&E uses independently selected
+2024/2025 year-end asset balances, never an inferred capex split. Other issuers
+require reviewed mappings and separate acceptance; absent captions remain null.
+
 # AGENTS.md
 
 ## Revenue mix — November 9, 2026

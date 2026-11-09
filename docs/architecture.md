@@ -2235,3 +2235,11 @@ unchanged whole-model update action. Current analyst results feed a revision-
 bound per-share headline, with enterprise-value fallback and explicit manual
 Stage C labelling. The mockup's illustrative calculations are excluded. See
 [Open Canvas](open-canvas.md).
+
+## Cash-allocation reporting extension — November 9, 2026
+
+The additive offline script `scripts/prepare_cash_allocation.py` consumes retained
+GOOGL filing instances and the accepted reporting cohort. Its independent static
+package feeds `CashAllocation.tsx`, ahead of DCF. It has no valuation-engine or
+refresh-service dependency; load failures leave other reporting/DCF available.
+[Consumer, evidence and preservation contract](cash-allocation.md).

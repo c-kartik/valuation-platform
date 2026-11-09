@@ -1695,3 +1695,11 @@ Historical reported-CFO calculations retain their own tax, SBC and cash-investme
 basis. A partial reported-CFO-minus-reported-SBC-add-back schedule does not by
 itself establish valuation-aligned FCFF or FCFE. No missing historical value is
 replaced with forecast assumptions. The full three-company review stays OPEN.
+
+## Descriptive cash allocation and PP&E — November 9, 2026
+
+[Alphabet cash allocation](cash-allocation.md) reconciles signed investing and
+financing components, net securities/debt and cash changes without residual
+plugs. TTM sums four cash-flow quarters. PP&E composition is a separate stock
+measurement at year-end, including the filing's finance-lease asset scope, and
+cannot attribute annual cash capex. None of these figures feeds DCF/FCFF/FCFE.

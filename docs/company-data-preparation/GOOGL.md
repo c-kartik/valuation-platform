@@ -1,3 +1,14 @@
+## Cash-allocation reporting consumer — November 9, 2026
+
+The user approved a new descriptive consumer of retained filing data for the
+cash-allocation/Inside PP&E mockups. [Exact contract](../cash-allocation.md)
+records component signs, dimensions, optional null captions, first-disclosure
+cohorts and refresh gates. Five annuals/20 quarters/17 TTM windows and both PP&E
+comparatives reconcile to retained filings. This adds source-rich reporting
+only: no parent-common cash attribution, original normalized value, sufficiency
+status, DCF input or ownership-policy decision changes. Other issuers remain
+outside this consumer's acceptance.
+
 # GOOGL — company data preparation
 
 ## Named analyst-consumer sufficiency — November4,2026

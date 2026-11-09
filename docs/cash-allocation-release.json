@@ -1,0 +1,61 @@
+{
+  "schema": "cash-allocation-release/v1",
+  "date": "2026-11-09",
+  "scope": [
+    "Alphabet cash allocation",
+    "Inside PP&E"
+  ],
+  "tickers": [
+    "GOOGL"
+  ],
+  "status": "LOCAL_VALIDATED_PUBLICATION_PENDING",
+  "data_sha256": "416bf02ffe1508c08413e19cb416c84fbe0902aa3bc40b6ab9705e46013f9255",
+  "validation": {
+    "annual_periods": 5,
+    "filings": 21,
+    "ppe_balances": 2,
+    "quarterly_periods": 20,
+    "reported_periods": 21,
+    "ttm_periods": 17
+  },
+  "approved_mock_cash_amount_comparisons": 966,
+  "frontend_full_suite": 491,
+  "frontend_final_targeted": 45,
+  "python_reporting_tests": 22,
+  "preservation": {
+    "original_python_files": 396,
+    "original_browser_assets": 15,
+    "engine_fixtures": 128,
+    "tracked_protected_files_unchanged": 453,
+    "dcf_inputs_and_methods": "unchanged"
+  },
+  "browser_checks": {
+    "cash_modes": [
+      "annual",
+      "quarterly",
+      "ttm"
+    ],
+    "cash_drawdown_and_2026_equity_issuance": "checked",
+    "ppe_years": [
+      "2024",
+      "2025"
+    ],
+    "independent_ppe_dates": "checked",
+    "phone_widths": [
+      390,
+      320
+    ],
+    "horizontal_overflow": "none observed",
+    "base_per_share": {
+      "GOOGL": "125.91",
+      "AAPL": "175.46",
+      "META": "374.70"
+    }
+  },
+  "limitations": [
+    "Alphabet-only new features; no automatic Apple/Meta or universe expansion",
+    "PP&E reviewed balances only for December 31 2024/2025",
+    "No physical iPhone/Safari certification",
+    "No new export scope; DCF workbook unchanged"
+  ]
+}

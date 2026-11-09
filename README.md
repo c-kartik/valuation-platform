@@ -800,3 +800,6 @@ Run the deterministic unit tests with:
 ```bash
 PYTHONPATH=src python -m unittest discover -v
 ```
+
+Alphabet also includes [cash allocation and a separate Inside PP&E drill-down](docs/cash-allocation.md),
+using retained SEC evidence; original Python/DCF pipelines remain unchanged.
