@@ -41,3 +41,12 @@ website HTML, including portfolio/CV naming. The search placeholder retains its
 dynamic count; the redundant count above it is removed. Feature headings are
 Filings Insight, Cash Flow Analysis and Test your assumptions. The user selected Financial Analysis & Equity Valuation as the main hero
 headline, with consistent navy styling across both lines. This is copy/style only with no model or data changes.
+
+
+## Search prominence — November 9, 2026
+
+Reduced the hero headline from 66px to 54px on desktop, 47px to 38px on
+phones, and 40px to 34px on narrow phones. Tightened hero padding and the
+spacing around the intro and suggested companies so search appears higher.
+Search width, input size, typography family, colors and company behavior stay
+the same. CSS-only change; no financial or model changes.
