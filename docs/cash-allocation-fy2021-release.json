@@ -1,7 +1,7 @@
 {
   "schema": "cash-allocation-fy2021-release/v1",
   "date": "2026-11-09",
-  "status": "LOCAL_VALIDATED_PUBLICATION_PENDING",
+  "status": "DEPLOYED_AND_LIVE_VERIFIED",
   "policy": "alphabet-cash-allocation-v2",
   "data_sha256": "6c9fbe5e69f4a7dbf0063c97e820445fecf9c7daa0548d38914fcd1265967ac8",
   "validation": {
@@ -37,5 +37,26 @@
     "engine_fixtures": 128,
     "original_quarterly_reporting": "unchanged",
     "dcf_inputs_and_methods": "unchanged"
+  },
+  "publication": {
+    "url": "https://kartikchaturvedi.com/valuation/",
+    "implementation_commit": "bf8a402",
+    "portfolio_commit": "ce1b3d1",
+    "workspace_bundle": "workspace-B_gxWB1u.js",
+    "css_bundle": "workspace-D96taiwc.css",
+    "artifact_files": 48,
+    "loopback_validation": "PASS",
+    "live_data_exact_match": true,
+    "live_fy2021_q1_cfo": "$19.29B",
+    "live_fcff_per_share": "$125.91",
+    "browser_errors": 0,
+    "screenshot": "/Users/kc/Documents/Codex/outputs/cash-allocation-full-fy2021-release/live-fy2021-q1.png"
+  },
+  "browser_checks": {
+    "all_fy2021_quarters": "PASS",
+    "first_ttm_window": "FY2021 Q4; Q1\u2013Q3 unavailable",
+    "year_then_quarter_controls": "PASS",
+    "phone_width": 390,
+    "horizontal_overflow": false
   }
 }
