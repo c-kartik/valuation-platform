@@ -8,7 +8,7 @@
   "tickers": [
     "GOOGL"
   ],
-  "status": "LOCAL_VALIDATED_PUBLICATION_PENDING",
+  "status": "DEPLOYED_AND_LIVE_VERIFIED",
   "data_sha256": "416bf02ffe1508c08413e19cb416c84fbe0902aa3bc40b6ab9705e46013f9255",
   "validation": {
     "annual_periods": 5,
@@ -57,5 +57,22 @@
     "PP&E reviewed balances only for December 31 2024/2025",
     "No physical iPhone/Safari certification",
     "No new export scope; DCF workbook unchanged"
-  ]
+  ],
+  "publication": {
+    "url": "https://kartikchaturvedi.com/valuation/",
+    "implementation_commit": "a311ac6",
+    "portfolio_commit": "3f38ca6",
+    "workspace_bundle": "workspace-Bm88jE9c.js",
+    "css_bundle": "workspace-BFmmVJXv.css",
+    "artifact_files": 48,
+    "artifact_local_references": 57,
+    "loopback_routes": "PASS",
+    "live_package_hash_matches": true,
+    "live_modes_and_ppe_dates": "verified",
+    "live_alphabet_fcff_per_share": "125.91",
+    "live_alphabet_enterprise_value": "$1.42tn",
+    "console_errors": 0,
+    "screenshot": "/Users/kc/Documents/Codex/outputs/cash-allocation-release-a311ac6/live-ppe.png"
+  },
+  "frontend_test_execution": "All 491 passed with --maxWorkers=2; initial unconstrained parallel run timed out one existing preload test. Final changed reporting/workspace targets: 45 passed."
 }

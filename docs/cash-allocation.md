@@ -1,7 +1,7 @@
 # Alphabet cash allocation and Inside PP&E
 
 User-approved implementation of the two cash-allocation mockups, November 9,
-2026. Alphabet only. Apple/Meta reporting remains unchanged; this is not approval
+2026. Deployed and live-verified at [the valuation page](https://kartikchaturvedi.com/valuation/). Alphabet only. Apple/Meta reporting remains unchanged; this is not approval
 of additional issuer mappings, revised valuation inputs or resumed universe work.
 
 ## Consumer and preservation boundary
@@ -83,6 +83,9 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/prepare_cash_allocation.py --
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/prepare_cash_allocation.py
 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python -m unittest discover -s tests/reporting -v
 ```
+
+Frontend verification: `npm --prefix frontend test -- --maxWorkers=2` and
+`npm --prefix frontend run build:browser` using Node 22.12+.
 
 The first command is read-only reproduction; the second writes only the new
 package. This consumer has no network option. Refresh the established quarterly
