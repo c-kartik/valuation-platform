@@ -14,7 +14,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-POLICY = 'alphabet-cash-allocation-v1'
+POLICY = 'alphabet-cash-allocation-v2'
 X = '{http://www.xbrl.org/2003/instance}'
 D = '{http://xbrl.org/2006/xbrldi}'
 # sign converts XBRL payment-positive amounts to signed cash flows.
@@ -146,10 +146,52 @@ def combine(rows, coefficients, **metadata):
     return result
 
 
+def retain_extension_sources(root=ROOT):
+    """Explicitly retain two earliest-disclosure 2021 quarters in a new store."""
+    import os
+    from valuation_platform.sec.client import SECClient
+    from valuation_platform.sec.filing_xbrl import discover_extracted_xbrl
+    from valuation_platform.sec.submissions import SECFiling
+    from valuation_platform.sec.tickers import SECCompanyIdentity
+    from datetime import datetime, timezone
+    require(bool(os.environ.get('SEC_USER_AGENT')), 'Set an identifying SEC_USER_AGENT')
+    original=json.loads((root/'data/reporting-audit/GOOGL-sources.json').read_text())['files']
+    directory=root/'data/cash-allocation/sources/GOOGL';directory.mkdir(parents=True,exist_ok=True)
+    target=root/'data/cash-allocation/GOOGL-sources.json'
+    manifest=json.loads(target.read_text()) if target.exists() else {'ticker':'GOOGL','files':{}}
+    client=SECClient(os.environ['SEC_USER_AGENT'],timeout=45)
+    class Retainer:
+        def get_bytes(self,url):
+            name=sha(url.encode())+'.gz';entry=manifest['files'].get(url);path=directory/name
+            if entry:
+                raw=gzip.decompress(path.read_bytes());require(sha(raw)==entry['sha256'],'Extension source hash mismatch');return raw
+            raw=client.get_bytes(url);path.write_bytes(gzip.compress(raw,mtime=0));manifest['files'][url]={'file':name,'sha256':sha(raw)};return raw
+        def get_json(self,url):
+            return json.loads(self.get_bytes(url))
+    filings={}
+    for url,entry in original.items():
+        if 'submissions/' not in url:continue
+        raw=gzip.decompress((root/'data/reporting-audit/sources/GOOGL'/entry['file']).read_bytes());require(sha(raw)==entry['sha256'],'Submission hash mismatch')
+        payload=json.loads(raw);columns=payload.get('filings',{}).get('recent',payload)
+        if 'accessionNumber' in columns:
+            for i,acc in enumerate(columns['accessionNumber']):
+                if acc in ['0001652044-21-000020','0001652044-21-000047']:
+                    filings[acc]=SECFiling(acc,columns['form'][i],date.fromisoformat(columns['filingDate'][i]),date.fromisoformat(columns['reportDate'][i]),columns['primaryDocument'][i])
+    company=SECCompanyIdentity('GOOGL',1652044,'0001652044','Alphabet','SEC',datetime.now(timezone.utc));retainer=Retainer()
+    for acc in ['0001652044-21-000020','0001652044-21-000047']:
+        require(acc in filings,'Missing retained submission metadata')
+        artifact=discover_extracted_xbrl(retainer,company,filings[acc]);retainer.get_bytes(artifact.source_url)
+    target.write_text(json.dumps(manifest,indent=2,sort_keys=True)+'\n')
+
+
 def prepare(root=ROOT):
     history_bytes = (root/'frontend/public/research-data/GOOGL.json').read_bytes()
     history = json.loads(history_bytes)
     manifest = json.loads((root/'data/reporting-audit/GOOGL-sources.json').read_text())['files']
+    extra_bytes=(root/'data/cash-allocation/GOOGL-sources.json').read_bytes()
+    extra_manifest=json.loads(extra_bytes)['files']
+    require(not set(extra_manifest).intersection(manifest), 'Extension must not replace original sources')
+    manifest={**manifest,**extra_manifest}
     instances, periods = {}, {}
     def instance(o):
         accession = o['accession']
@@ -157,7 +199,8 @@ def prepare(root=ROOT):
             urls = [u for u in manifest if '/'+accession.replace('-','')+'/' in u and u.endswith('.xml')]
             require(len(urls)==1, 'Ambiguous retained filing')
             u = urls[0]
-            raw = gzip.decompress((root/'data/reporting-audit/sources/GOOGL'/manifest[u]['file']).read_bytes())
+            source_dir='data/cash-allocation/sources/GOOGL' if u in extra_manifest else 'data/reporting-audit/sources/GOOGL'
+            raw = gzip.decompress((root/source_dir/manifest[u]['file']).read_bytes())
             require(sha(raw)==manifest[u]['sha256'], 'Retained source hash mismatch')
             require(o['filed']<=history['as_of'], 'Source after review cutoff')
             instances[accession] = Instance(raw, u, o['filed'])
@@ -183,8 +226,31 @@ def prepare(root=ROOT):
     for a in annual_ops:
         r = cumulative(a['annual'])
         annual.append({**r,'id':'FY'+str(a['fiscal_year']),'operand_ids':[r['id']], 'label':'FY'+str(a['fiscal_year'])})
+    # Extend only this cash-allocation consumer. The original 20-quarter history
+    # and all its selected accessions/values remain unchanged.
+    facts_bytes=(root/'data/quarterly-reporting/sources/GOOGL.json.gz').read_bytes()
+    facts=json.loads(gzip.decompress(facts_bytes))['facts']['us-gaap']
+    initial_year=annual_ops[0]['fiscal_year']
+    require(initial_year==2021,'Review the initial-year extension before changing coverage')
+    early=[]
+    for quarter,end in [(1,'2021-03-31'),(2,'2021-06-30'),(3,'2021-09-30')]:
+        def earliest(concept):
+            eligible=[f for f in facts[concept]['units']['USD'] if f.get('start')=='2021-01-01' and f['end']==end and f['filed']<=history['as_of'] and f['form']=='10-Q']
+            require(bool(eligible),'Missing early-quarter Company Facts anchor')
+            f=min(eligible,key=lambda r:(r['filed'],r['accn']))
+            return {'accession':f['accn'],'start':f['start'],'end':f['end'],'filed':f['filed'],'value':f['val']}
+        op=earliest('NetCashProvidedByUsedInOperatingActivities');capex=earliest('PaymentsToAcquirePropertyPlantAndEquipment')
+        require(capex['accession']==op['accession'],'Early-quarter capex/CFO filing disagreement')
+        current=cumulative(op)
+        require(-current['values']['ppe']==capex['value'],'Cash capex contradicts earliest Company Facts')
+        previous=early[-1]['evidence']['cfo']['operands'][0] if early else None
+        early.append({'id':f'FY2021-Q{quarter}','start':f'2021-{(quarter-1)*3+1:02d}-01','end':end,
+            'values':{'cfo':op['value']-(previous['value'] if previous else 0),
+                'cash_capex':capex['value']-(early[-1]['capex_ytd'] if early else 0)},
+            'capex_ytd':capex['value'],'evidence':{'cfo':{'operands':[op]+([previous] if previous else []),
+                'method':'reported' if quarter==1 else 'successive YTD differences'}}})
     quarters = []
-    for q in history['rows']:
+    for q in early+history['rows']:
         operands = [cumulative(o) for o in q['evidence']['cfo']['operands']]
         if len(operands)==1:
             row = {**operands[0],'id':q['id'],'label':q['id'].replace('-',' '),'operand_ids':[operands[0]['id']]}
@@ -192,7 +258,13 @@ def prepare(root=ROOT):
             row = combine(operands,[1,-1],id=q['id'],label=q['id'].replace('-',' '),start=q['start'],end=q['end'],
                 method=q['evidence']['cfo']['method'],operand_ids=[r['id'] for r in operands])
         require(row['values']['cfo']==q['values']['cfo'] and -row['values']['ppe']==q['values']['cash_capex'], 'Quarter contradicts existing reporting')
+        require(not quarters or str(date.fromisoformat(quarters[-1]['end'])+timedelta(days=1))==row['start'],'Nonconsecutive cash quarters')
         quarters.append(row)
+    for year_row in annual:
+        selected=[q for q in quarters if q['id'].split('-')[0]==year_row['id']]
+        require(len(selected)==4,'Incomplete annual cash-allocation cohort')
+        for k in FIELDS:
+            require(sum(amount(q,k) for q in selected)==amount(year_row,k),'Annual quarter tie failed: '+year_row['id']+' '+k)
     ttm = [combine(quarters[i-3:i+1],[1]*4,id=quarters[i]['id'],label='TTM · '+quarters[i]['label'],
         start=quarters[i-3]['start'],end=quarters[i]['end'],method='sum of four standalone quarters',
         operand_ids=[q['id'] for q in quarters[i-3:i+1]]) for i in range(3,len(quarters))]
@@ -212,7 +284,7 @@ def prepare(root=ROOT):
             'composition_basis':'Approximate share of technical infrastructure, disclosed for both dates in the 2025 PP&E note; not a cash-capex split.'})
     sources = {a:{'source_url':ins.url,'filed':ins.filed,'sha256':ins.hash} for a,ins in sorted(instances.items())}
     return {'schema_version':1,'policy':POLICY,'ticker':'GOOGL','as_of':history['as_of'],'currency':'USD',
-        'history_snapshot_sha256':sha(history_bytes),'history_source_snapshot_sha256':history['source_snapshot_sha256'],
+        'extension_manifest_sha256':sha(extra_bytes),'company_facts_sha256':sha(facts_bytes),'history_snapshot_sha256':sha(history_bytes),'history_source_snapshot_sha256':history['source_snapshot_sha256'],
         'basis':'Accepted first-disclosure annual/YTD cohort; standalone quarters by subtraction; TTM sums four complete quarters.',
         'annual':annual,'quarterly':quarters,'ttm':ttm,'reported_periods':periods,'ppe':ppe,'sources':sources,
         'validation':{'annual_periods':len(annual),'quarterly_periods':len(quarters),'ttm_periods':len(ttm),
@@ -227,8 +299,11 @@ def prepare(root=ROOT):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--fetch-missing',action='store_true',help='Retain the specifically approved 2021 source filings')
     parser.add_argument('--check',action='store_true',help='Reproduce in memory and compare with committed package')
-    args=parser.parse_args(); package=prepare(); output=ROOT/'frontend/public/cash-allocation/GOOGL.json'
+    args=parser.parse_args()
+    if args.fetch_missing:retain_extension_sources()
+    package=prepare(); output=ROOT/'frontend/public/cash-allocation/GOOGL.json'
     content=json.dumps(package,indent=2,sort_keys=True)+'\n'
     if args.check:
         require(output.read_text()==content,'Cash-allocation package is not reproducible')

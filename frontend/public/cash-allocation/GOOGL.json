@@ -1758,7 +1758,9 @@
   ],
   "as_of": "2026-11-09",
   "basis": "Accepted first-disclosure annual/YTD cohort; standalone quarters by subtraction; TTM sums four complete quarters.",
+  "company_facts_sha256": "9fb30c0e40a250e5b590a52c55f129949378dbee275c607675deaf7a16b51c74",
   "currency": "USD",
+  "extension_manifest_sha256": "a221e895574b0d78e57178f0c3e03b994851d317a864324966145992d20b2fb6",
   "history_snapshot_sha256": "2ae90846adc9ba50676f122e08d81247230e0aab15a58171e16cb26b3f838675",
   "history_source_snapshot_sha256": "9fb30c0e40a250e5b590a52c55f129949378dbee275c607675deaf7a16b51c74",
   "limitations": [
@@ -1769,7 +1771,7 @@
     "PP&E dates are independent year-end balances, not quarterly/TTM spending categories. No cash capex breakdown is inferred.",
     "Existing DCF inputs, model dates and financial definitions are unchanged."
   ],
-  "policy": "alphabet-cash-allocation-v1",
+  "policy": "alphabet-cash-allocation-v2",
   "ppe": [
     {
       "composition_basis": "Approximate share of technical infrastructure, disclosed for both dates in the 2025 PP&E note; not a cash-capex split.",
@@ -2081,6 +2083,973 @@
     }
   ],
   "quarterly": [
+    {
+      "end": "2021-03-31",
+      "evidence": {
+        "acquisitions": {
+          "concept": "{http://www.google.com/20210331}AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 1666000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -1666000000
+        },
+        "awards": {
+          "concept": "{http://www.google.com/20210331}NetProceedsPaymentsRelatedToStockBasedAwardActivities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 2184000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -2184000000
+        },
+        "buybacks": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}PaymentsForRepurchaseOfCommonStock",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 11395000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -11395000000
+        },
+        "cfo": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}NetCashProvidedByUsedInOperatingActivities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 19289000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 19289000000
+        },
+        "change": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 157000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 157000000
+        },
+        "closing": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "context_ids": [
+            "i5780254e05c64ce890f33df7a5f236b7_I20210331"
+          ],
+          "dimensions": [],
+          "end": null,
+          "filed": "2021-04-28",
+          "instant": "2021-03-31",
+          "reported_value": 26622000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": null,
+          "value": 26622000000
+        },
+        "commonIssued": null,
+        "debtProceeds": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}ProceedsFromDebtNetOfIssuanceCosts",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 900000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 900000000
+        },
+        "debtRepayments": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}RepaymentsOfDebtAndCapitalLeaseObligations",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 937000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -937000000
+        },
+        "dividends": null,
+        "financing": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}NetCashProvidedByUsedInFinancingActivities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": -13606000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -13606000000
+        },
+        "fx": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": -143000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -143000000
+        },
+        "investing": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}NetCashProvidedByUsedInInvestingActivities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": -5383000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -5383000000
+        },
+        "marketablePurchases": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}PaymentsToAcquireMarketableSecurities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 36426000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -36426000000
+        },
+        "marketableSales": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}ProceedsFromSaleAndMaturityOfMarketableSecurities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 39248000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 39248000000
+        },
+        "minority": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}ProceedsFromMinorityShareholders",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 10000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 10000000
+        },
+        "opening": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "context_ids": [
+            "ia9242de3eddb46ab92d9e98b32a34f1e_I20201231"
+          ],
+          "dimensions": [],
+          "end": null,
+          "filed": "2021-04-28",
+          "instant": "2020-12-31",
+          "reported_value": 26465000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": null,
+          "value": 26465000000
+        },
+        "otherFinancing": null,
+        "otherInvesting": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}PaymentsForProceedsFromOtherInvestingActivities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": -30000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 30000000
+        },
+        "otherPurchases": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}PaymentsToAcquireOtherInvestments",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 646000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -646000000
+        },
+        "otherSales": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}ProceedsFromSaleAndMaturityOfOtherInvestments",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 19000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 19000000
+        },
+        "ppe": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 5942000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -5942000000
+        },
+        "preferredIssued": null
+      },
+      "id": "FY2021-Q1",
+      "label": "FY2021 Q1",
+      "method": "reported",
+      "operand_ids": [
+        "0001652044-21-000020:2021-01-01:2021-03-31"
+      ],
+      "start": "2021-01-01",
+      "values": {
+        "acquisitions": -1666000000,
+        "awards": -2184000000,
+        "buybacks": -11395000000,
+        "cfo": 19289000000,
+        "change": 157000000,
+        "closing": 26622000000,
+        "commonIssued": null,
+        "debtProceeds": 900000000,
+        "debtRepayments": -937000000,
+        "dividends": null,
+        "financing": -13606000000,
+        "fx": -143000000,
+        "investing": -5383000000,
+        "marketablePurchases": -36426000000,
+        "marketableSales": 39248000000,
+        "minority": 10000000,
+        "opening": 26465000000,
+        "otherFinancing": null,
+        "otherInvesting": 30000000,
+        "otherPurchases": -646000000,
+        "otherSales": 19000000,
+        "ppe": -5942000000,
+        "preferredIssued": null
+      }
+    },
+    {
+      "end": "2021-06-30",
+      "evidence": {
+        "acquisitions": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "awards": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "buybacks": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "cfo": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "change": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "commonIssued": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "debtProceeds": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "debtRepayments": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "dividends": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "financing": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "fx": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "investing": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "marketablePurchases": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "marketableSales": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "minority": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "otherFinancing": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "otherInvesting": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "otherPurchases": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "otherSales": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "ppe": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        },
+        "preferredIssued": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000020:2021-01-01:2021-03-31"
+            }
+          ]
+        }
+      },
+      "id": "FY2021-Q2",
+      "label": "FY2021 Q2",
+      "method": "successive YTD differences",
+      "operand_ids": [
+        "0001652044-21-000047:2021-01-01:2021-06-30",
+        "0001652044-21-000020:2021-01-01:2021-03-31"
+      ],
+      "start": "2021-04-01",
+      "values": {
+        "acquisitions": -308000000,
+        "awards": -2453000000,
+        "buybacks": -12796000000,
+        "cfo": 21890000000,
+        "change": -2992000000,
+        "closing": 23630000000,
+        "commonIssued": null,
+        "debtProceeds": 6699000000,
+        "debtRepayments": -7741000000,
+        "dividends": null,
+        "financing": -15991000000,
+        "fx": 183000000,
+        "investing": -9074000000,
+        "marketablePurchases": -24183000000,
+        "marketableSales": 21419000000,
+        "minority": 300000000,
+        "opening": 26622000000,
+        "otherFinancing": null,
+        "otherInvesting": 23000000,
+        "otherPurchases": -766000000,
+        "otherSales": 237000000,
+        "ppe": -5496000000,
+        "preferredIssued": null
+      }
+    },
+    {
+      "end": "2021-09-30",
+      "evidence": {
+        "acquisitions": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "awards": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "buybacks": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "cfo": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "change": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "commonIssued": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "debtProceeds": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "debtRepayments": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "dividends": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "financing": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "fx": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "investing": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "marketablePurchases": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "marketableSales": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "minority": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "otherFinancing": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "otherInvesting": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "otherPurchases": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "otherSales": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "ppe": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        },
+        "preferredIssued": {
+          "method": "successive YTD differences",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "0001652044-21-000057:2021-01-01:2021-09-30"
+            },
+            {
+              "coefficient": -1,
+              "period_id": "0001652044-21-000047:2021-01-01:2021-06-30"
+            }
+          ]
+        }
+      },
+      "id": "FY2021-Q3",
+      "label": "FY2021 Q3",
+      "method": "successive YTD differences",
+      "operand_ids": [
+        "0001652044-21-000057:2021-01-01:2021-09-30",
+        "0001652044-21-000047:2021-01-01:2021-06-30"
+      ],
+      "start": "2021-07-01",
+      "values": {
+        "acquisitions": -259000000,
+        "awards": -2602000000,
+        "buybacks": -12610000000,
+        "cfo": 25539000000,
+        "change": 89000000,
+        "closing": 23719000000,
+        "commonIssued": null,
+        "debtProceeds": 6350000000,
+        "debtRepayments": -6392000000,
+        "dividends": null,
+        "financing": -15254000000,
+        "fx": -146000000,
+        "investing": -10050000000,
+        "marketablePurchases": -34497000000,
+        "marketableSales": 31459000000,
+        "minority": 0,
+        "opening": 23630000000,
+        "otherFinancing": null,
+        "otherInvesting": 388000000,
+        "otherPurchases": -656000000,
+        "otherSales": 334000000,
+        "ppe": -6819000000,
+        "preferredIssued": null
+      }
+    },
     {
       "end": "2021-12-31",
       "evidence": {
@@ -8503,6 +9472,688 @@
     }
   ],
   "reported_periods": {
+    "0001652044-21-000020:2021-01-01:2021-03-31": {
+      "end": "2021-03-31",
+      "evidence": {
+        "acquisitions": {
+          "concept": "{http://www.google.com/20210331}AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 1666000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -1666000000
+        },
+        "awards": {
+          "concept": "{http://www.google.com/20210331}NetProceedsPaymentsRelatedToStockBasedAwardActivities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 2184000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -2184000000
+        },
+        "buybacks": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}PaymentsForRepurchaseOfCommonStock",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 11395000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -11395000000
+        },
+        "cfo": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}NetCashProvidedByUsedInOperatingActivities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 19289000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 19289000000
+        },
+        "change": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 157000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 157000000
+        },
+        "closing": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "context_ids": [
+            "i5780254e05c64ce890f33df7a5f236b7_I20210331"
+          ],
+          "dimensions": [],
+          "end": null,
+          "filed": "2021-04-28",
+          "instant": "2021-03-31",
+          "reported_value": 26622000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": null,
+          "value": 26622000000
+        },
+        "commonIssued": null,
+        "debtProceeds": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}ProceedsFromDebtNetOfIssuanceCosts",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 900000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 900000000
+        },
+        "debtRepayments": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}RepaymentsOfDebtAndCapitalLeaseObligations",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 937000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -937000000
+        },
+        "dividends": null,
+        "financing": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}NetCashProvidedByUsedInFinancingActivities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": -13606000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -13606000000
+        },
+        "fx": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": -143000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -143000000
+        },
+        "investing": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}NetCashProvidedByUsedInInvestingActivities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": -5383000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -5383000000
+        },
+        "marketablePurchases": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}PaymentsToAcquireMarketableSecurities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 36426000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -36426000000
+        },
+        "marketableSales": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}ProceedsFromSaleAndMaturityOfMarketableSecurities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 39248000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 39248000000
+        },
+        "minority": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}ProceedsFromMinorityShareholders",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 10000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 10000000
+        },
+        "opening": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "context_ids": [
+            "ia9242de3eddb46ab92d9e98b32a34f1e_I20201231"
+          ],
+          "dimensions": [],
+          "end": null,
+          "filed": "2021-04-28",
+          "instant": "2020-12-31",
+          "reported_value": 26465000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": null,
+          "value": 26465000000
+        },
+        "otherFinancing": null,
+        "otherInvesting": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}PaymentsForProceedsFromOtherInvestingActivities",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": -30000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 30000000
+        },
+        "otherPurchases": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}PaymentsToAcquireOtherInvestments",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 646000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -646000000
+        },
+        "otherSales": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}ProceedsFromSaleAndMaturityOfOtherInvestments",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 19000000,
+          "sign": 1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": 19000000
+        },
+        "ppe": {
+          "concept": "{http://fasb.org/us-gaap/2020-01-31}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_ids": [
+            "i9dc1c36e62f14a6e9b2b5eaceae816a8_D20210101-20210331"
+          ],
+          "dimensions": [],
+          "end": "2021-03-31",
+          "filed": "2021-04-28",
+          "instant": null,
+          "reported_value": 5942000000,
+          "sign": -1,
+          "source_sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml",
+          "start": "2021-01-01",
+          "value": -5942000000
+        },
+        "preferredIssued": null
+      },
+      "id": "0001652044-21-000020:2021-01-01:2021-03-31",
+      "method": "reported",
+      "start": "2021-01-01",
+      "values": {
+        "acquisitions": -1666000000,
+        "awards": -2184000000,
+        "buybacks": -11395000000,
+        "cfo": 19289000000,
+        "change": 157000000,
+        "closing": 26622000000,
+        "commonIssued": null,
+        "debtProceeds": 900000000,
+        "debtRepayments": -937000000,
+        "dividends": null,
+        "financing": -13606000000,
+        "fx": -143000000,
+        "investing": -5383000000,
+        "marketablePurchases": -36426000000,
+        "marketableSales": 39248000000,
+        "minority": 10000000,
+        "opening": 26465000000,
+        "otherFinancing": null,
+        "otherInvesting": 30000000,
+        "otherPurchases": -646000000,
+        "otherSales": 19000000,
+        "ppe": -5942000000,
+        "preferredIssued": null
+      }
+    },
+    "0001652044-21-000047:2021-01-01:2021-06-30": {
+      "end": "2021-06-30",
+      "evidence": {
+        "acquisitions": {
+          "concept": "{http://www.google.com/20210630}AcquisitionsNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 1974000000,
+          "sign": -1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": -1974000000
+        },
+        "awards": {
+          "concept": "{http://www.google.com/20210630}NetProceedsPaymentsRelatedToStockBasedAwardActivities",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 4637000000,
+          "sign": -1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": -4637000000
+        },
+        "buybacks": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}PaymentsForRepurchaseOfCommonStock",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 24191000000,
+          "sign": -1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": -24191000000
+        },
+        "cfo": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}NetCashProvidedByUsedInOperatingActivities",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 41179000000,
+          "sign": 1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": 41179000000
+        },
+        "change": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": -2835000000,
+          "sign": 1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": -2835000000
+        },
+        "closing": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "context_ids": [
+            "i0566bb4c360d4ab1a505eb8ff57d7819_I20210630"
+          ],
+          "dimensions": [],
+          "end": null,
+          "filed": "2021-07-28",
+          "instant": "2021-06-30",
+          "reported_value": 23630000000,
+          "sign": 1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": null,
+          "value": 23630000000
+        },
+        "commonIssued": null,
+        "debtProceeds": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}ProceedsFromDebtNetOfIssuanceCosts",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 7599000000,
+          "sign": 1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": 7599000000
+        },
+        "debtRepayments": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}RepaymentsOfDebtAndCapitalLeaseObligations",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 8678000000,
+          "sign": -1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": -8678000000
+        },
+        "dividends": null,
+        "financing": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}NetCashProvidedByUsedInFinancingActivities",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": -29597000000,
+          "sign": 1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": -29597000000
+        },
+        "fx": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 40000000,
+          "sign": 1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": 40000000
+        },
+        "investing": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}NetCashProvidedByUsedInInvestingActivities",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": -14457000000,
+          "sign": 1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": -14457000000
+        },
+        "marketablePurchases": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}PaymentsToAcquireMarketableSecurities",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 60609000000,
+          "sign": -1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": -60609000000
+        },
+        "marketableSales": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}ProceedsFromSaleAndMaturityOfMarketableSecurities",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 60667000000,
+          "sign": 1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": 60667000000
+        },
+        "minority": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}ProceedsFromMinorityShareholders",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 310000000,
+          "sign": 1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": 310000000
+        },
+        "opening": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "context_ids": [
+            "i2ae8b09d0c154e668d578980fbd7aa5a_I20201231"
+          ],
+          "dimensions": [],
+          "end": null,
+          "filed": "2021-07-28",
+          "instant": "2020-12-31",
+          "reported_value": 26465000000,
+          "sign": 1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": null,
+          "value": 26465000000
+        },
+        "otherFinancing": null,
+        "otherInvesting": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}PaymentsForProceedsFromOtherInvestingActivities",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": -53000000,
+          "sign": -1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": 53000000
+        },
+        "otherPurchases": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}PaymentsToAcquireOtherInvestments",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 1412000000,
+          "sign": -1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": -1412000000
+        },
+        "otherSales": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}ProceedsFromSaleAndMaturityOfOtherInvestments",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 256000000,
+          "sign": 1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": 256000000
+        },
+        "ppe": {
+          "concept": "{http://fasb.org/us-gaap/2021-01-31}PaymentsToAcquirePropertyPlantAndEquipment",
+          "context_ids": [
+            "i85b2363210c14782a22ef489e5da2540_D20210101-20210630"
+          ],
+          "dimensions": [],
+          "end": "2021-06-30",
+          "filed": "2021-07-28",
+          "instant": null,
+          "reported_value": 11438000000,
+          "sign": -1,
+          "source_sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml",
+          "start": "2021-01-01",
+          "value": -11438000000
+        },
+        "preferredIssued": null
+      },
+      "id": "0001652044-21-000047:2021-01-01:2021-06-30",
+      "method": "reported",
+      "start": "2021-01-01",
+      "values": {
+        "acquisitions": -1974000000,
+        "awards": -4637000000,
+        "buybacks": -24191000000,
+        "cfo": 41179000000,
+        "change": -2835000000,
+        "closing": 23630000000,
+        "commonIssued": null,
+        "debtProceeds": 7599000000,
+        "debtRepayments": -8678000000,
+        "dividends": null,
+        "financing": -29597000000,
+        "fx": 40000000,
+        "investing": -14457000000,
+        "marketablePurchases": -60609000000,
+        "marketableSales": 60667000000,
+        "minority": 310000000,
+        "opening": 26465000000,
+        "otherFinancing": null,
+        "otherInvesting": 53000000,
+        "otherPurchases": -1412000000,
+        "otherSales": 256000000,
+        "ppe": -11438000000,
+        "preferredIssued": null
+      }
+    },
     "0001652044-21-000057:2021-01-01:2021-09-30": {
       "end": "2021-09-30",
       "evidence": {
@@ -15907,6 +17558,16 @@
   },
   "schema_version": 1,
   "sources": {
+    "0001652044-21-000020": {
+      "filed": "2021-04-28",
+      "sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml"
+    },
+    "0001652044-21-000047": {
+      "filed": "2021-07-28",
+      "sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml"
+    },
     "0001652044-21-000057": {
       "filed": "2021-10-27",
       "sha256": "a9cd4f82617b022ec0e09349f18428a0737bf5d1680c37e9cef6d0ef083a0733",
@@ -16015,6 +17676,1449 @@
   },
   "ticker": "GOOGL",
   "ttm": [
+    {
+      "end": "2021-12-31",
+      "evidence": {
+        "acquisitions": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "awards": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "buybacks": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "cfo": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "change": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "commonIssued": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "debtProceeds": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "debtRepayments": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "dividends": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "financing": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "fx": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "investing": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "marketablePurchases": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "marketableSales": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "minority": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "otherFinancing": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "otherInvesting": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "otherPurchases": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "otherSales": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "ppe": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        },
+        "preferredIssued": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            }
+          ]
+        }
+      },
+      "id": "FY2021-Q4",
+      "label": "TTM \u00b7 FY2021 Q4",
+      "method": "sum of four standalone quarters",
+      "operand_ids": [
+        "FY2021-Q1",
+        "FY2021-Q2",
+        "FY2021-Q3",
+        "FY2021-Q4"
+      ],
+      "start": "2021-01-01",
+      "values": {
+        "acquisitions": -2618000000,
+        "awards": -10162000000,
+        "buybacks": -50274000000,
+        "cfo": 91652000000,
+        "change": -5520000000,
+        "closing": 20945000000,
+        "commonIssued": null,
+        "debtProceeds": 20199000000,
+        "debtRepayments": -21435000000,
+        "dividends": null,
+        "financing": -61362000000,
+        "fx": -287000000,
+        "investing": -35523000000,
+        "marketablePurchases": -135196000000,
+        "marketableSales": 128294000000,
+        "minority": 310000000,
+        "opening": 26465000000,
+        "otherFinancing": null,
+        "otherInvesting": 541000000,
+        "otherPurchases": -2838000000,
+        "otherSales": 934000000,
+        "ppe": -24640000000,
+        "preferredIssued": null
+      }
+    },
+    {
+      "end": "2022-03-31",
+      "evidence": {
+        "acquisitions": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "awards": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "buybacks": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "cfo": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "change": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "commonIssued": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "debtProceeds": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "debtRepayments": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "dividends": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "financing": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "fx": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "investing": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "marketablePurchases": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "marketableSales": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "minority": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "otherFinancing": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "otherInvesting": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "otherPurchases": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "otherSales": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "ppe": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        },
+        "preferredIssued": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q2"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            }
+          ]
+        }
+      },
+      "id": "FY2022-Q1",
+      "label": "TTM \u00b7 FY2022 Q1",
+      "method": "sum of four standalone quarters",
+      "operand_ids": [
+        "FY2021-Q2",
+        "FY2021-Q3",
+        "FY2021-Q4",
+        "FY2022-Q1"
+      ],
+      "start": "2021-04-01",
+      "values": {
+        "acquisitions": -1125000000,
+        "awards": -10894000000,
+        "buybacks": -52179000000,
+        "cfo": 97469000000,
+        "change": -5736000000,
+        "closing": 20886000000,
+        "commonIssued": null,
+        "debtProceeds": 35721000000,
+        "debtRepayments": -36918000000,
+        "dividends": null,
+        "financing": -63970000000,
+        "fx": -44000000,
+        "investing": -39191000000,
+        "marketablePurchases": -127232000000,
+        "marketableSales": 118825000000,
+        "minority": 300000000,
+        "opening": 26622000000,
+        "otherFinancing": null,
+        "otherInvesting": 866000000,
+        "otherPurchases": -2968000000,
+        "otherSales": 927000000,
+        "ppe": -28484000000,
+        "preferredIssued": null
+      }
+    },
+    {
+      "end": "2022-06-30",
+      "evidence": {
+        "acquisitions": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "awards": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "buybacks": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "cfo": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "change": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "commonIssued": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "debtProceeds": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "debtRepayments": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "dividends": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "financing": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "fx": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "investing": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "marketablePurchases": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "marketableSales": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "minority": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "otherFinancing": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "otherInvesting": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "otherPurchases": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "otherSales": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "ppe": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        },
+        "preferredIssued": {
+          "method": "sum of four standalone quarters",
+          "terms": [
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q3"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2021-Q4"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q1"
+            },
+            {
+              "coefficient": 1,
+              "period_id": "FY2022-Q2"
+            }
+          ]
+        }
+      },
+      "id": "FY2022-Q2",
+      "label": "TTM \u00b7 FY2022 Q2",
+      "method": "sum of four standalone quarters",
+      "operand_ids": [
+        "FY2021-Q3",
+        "FY2021-Q4",
+        "FY2022-Q1",
+        "FY2022-Q2"
+      ],
+      "start": "2021-07-01",
+      "values": {
+        "acquisitions": -1880000000,
+        "awards": -10705000000,
+        "buybacks": -54580000000,
+        "cfo": 95001000000,
+        "change": -5694000000,
+        "closing": 17936000000,
+        "commonIssued": null,
+        "debtProceeds": 41828000000,
+        "debtRepayments": -42339000000,
+        "dividends": null,
+        "financing": -65796000000,
+        "fx": -595000000,
+        "investing": -34304000000,
+        "marketablePurchases": -124786000000,
+        "marketableSales": 123001000000,
+        "minority": 0,
+        "opening": 23630000000,
+        "otherFinancing": null,
+        "otherInvesting": 1064000000,
+        "otherPurchases": -2690000000,
+        "otherSales": 803000000,
+        "ppe": -29816000000,
+        "preferredIssued": null
+      }
+    },
     {
       "end": "2022-09-30",
       "evidence": {
@@ -24195,10 +27299,10 @@
   ],
   "validation": {
     "annual_periods": 5,
-    "filings": 21,
+    "filings": 23,
     "ppe_balances": 2,
-    "quarterly_periods": 20,
-    "reported_periods": 21,
-    "ttm_periods": 17
+    "quarterly_periods": 23,
+    "reported_periods": 23,
+    "ttm_periods": 20
   }
 }

@@ -6,6 +6,9 @@ Use the additive offline consumer and independent static package described in
 Annual/quarterly/TTM are cash-flow periods; PP&E uses independently selected
 2024/2025 year-end asset balances, never an inferred capex split. Other issuers
 require reviewed mappings and separate acceptance; absent captions remain null.
+The subsequent full-FY2021 amendment uses cash-allocation policy v2: 23 quarters,
+20 full TTM windows and year-then-quarter controls. New FY2021 sources are
+isolated in `data/cash-allocation/`; preserve existing 20-quarter report assets.
 
 # AGENTS.md
 

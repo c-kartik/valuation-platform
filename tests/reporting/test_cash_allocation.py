@@ -17,7 +17,7 @@ class CashAllocationTests(unittest.TestCase):
     def test_deterministic_offline_package_matches_committed_source(self):
         self.assertEqual(self.package,json.loads((ROOT/'frontend/public/cash-allocation/GOOGL.json').read_text()))
         self.assertEqual(cash.prepare(),self.package)
-        self.assertEqual([len(self.package[k]) for k in ['annual','quarterly','ttm','ppe']],[5,20,17,2])
+        self.assertEqual([len(self.package[k]) for k in ['annual','quarterly','ttm','ppe']],[5,23,20,2])
 
     def test_every_period_reconciles_without_missing_caption_zeros(self):
         for r in list(self.package['reported_periods'].values())+self.package['annual']+self.package['quarterly']+self.package['ttm']:
@@ -28,7 +28,18 @@ class CashAllocationTests(unittest.TestCase):
         self.assertEqual(annual[-1]['values']['ppe'],-91447000000)
         self.assertEqual(annual[-1]['values']['cfo'],164713000000)
         self.assertTrue(any(sum(r['values'][k] for k in ['cfo','investing','financing'])<0 for r in self.package['quarterly']))
-        self.assertEqual(self.package['ttm'][0]['id'],'FY2022-Q3')
+        self.assertEqual(self.package['ttm'][0]['id'],'FY2021-Q4')
+
+    def test_complete_fy2021_and_all_annual_component_ties(self):
+        quarters=self.package['quarterly'][:4]
+        self.assertEqual([q['id'] for q in quarters],['FY2021-Q1','FY2021-Q2','FY2021-Q3','FY2021-Q4'])
+        self.assertEqual([q['values']['cfo'] for q in quarters],[19289000000,21890000000,25539000000,24934000000])
+        self.assertEqual([q['values']['ppe'] for q in quarters],[-5942000000,-5496000000,-6819000000,-6383000000])
+        for annual in self.package['annual']:
+            year=[q for q in self.package['quarterly'] if q['id'].startswith(annual['id']+'-')]
+            self.assertEqual(len(year),4)
+            for key in cash.FIELDS:
+                self.assertEqual(sum(cash.amount(q,key) for q in year),cash.amount(annual,key))
 
     def test_ppe_scope_and_exact_reconciliation(self):
         for r in self.package['ppe']:

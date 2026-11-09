@@ -15,13 +15,13 @@ The new component loads this separate static package and appears after the cash
 bridge and ahead of DCF. Loading failures/retries are isolated; company switches
 abort/ignore stale responses. Only Alphabet exposes the section/navigation link.
 
-## Cash allocation policy: alphabet-cash-allocation-v1
+## Cash allocation policy: alphabet-cash-allocation-v2
 
-- Five annual cohorts: FY2021–FY2025; 20 quarters: FY2021 Q4–FY2026 Q3.
+- Five annual cohorts: FY2021–FY2025; 23 quarters: FY2021 Q1–FY2026 Q3.
 - Annual values and YTD operands use exactly the accessions/dates selected by the
   existing consolidated reporting policy. Q1 is reported; Q2/Q3 are successive
-  YTD differences; Q4 is annual less nine months. The 17 full TTM windows begin
-  at FY2022 Q3 and sum four standalone quarters. Earlier incomplete TTM is absent.
+  YTD differences; Q4 is annual less nine months. The 20 full TTM windows begin
+  at FY2021 Q4 and sum four standalone quarters. Earlier incomplete TTM is absent.
 - Amounts are exact integer USD, displayed in billions using existing Decimal
   rounding. XBRL payment-positive facts are explicitly mapped to signed cash
   flows. Namespace, entity, whole-entity context, USD units, periods, ambiguity,
@@ -88,7 +88,10 @@ Frontend verification: `npm --prefix frontend test -- --maxWorkers=2` and
 `npm --prefix frontend run build:browser` using Node 22.12+.
 
 The first command is read-only reproduction; the second writes only the new
-package. This consumer has no network option. Refresh the established quarterly
+package. The explicit `--fetch-missing` option retains only the two approved FY2021 Q1/Q2
+filings and their SEC directory indexes in the new `data/cash-allocation/` store;
+normal preparation and `--check` remain offline. Set an identifying
+`SEC_USER_AGENT` and `PYTHONPATH=src` when retaining those sources. Refresh the established quarterly
 pipeline and retained filing audit separately under their own instructions,
 then review changed source mappings/optional omissions and the PP&E note,
 reproduce and test the new package, update this issuer record, and commit the
@@ -103,3 +106,33 @@ record. Alphabet is a pilot, not automatic universe readiness.
 Validation and publication evidence: [release receipt](cash-allocation-release.json).
 Exports retain their existing DCF-only scope. No new provider, server, scheduled
 refresh, current price or valuation-methodology approval is introduced.
+
+## Full FY2021 and grouped quarter controls — November 9, 2026
+
+This coverage amendment supersedes v1's FY2021-Q4 starting point only for the
+cash-allocation consumer. FY2021 Q1/Q2 use their original first-disclosure
+10-Qs, `0001652044-21-000020` (filed April 28) and
+`0001652044-21-000047` (filed July 28), newly retained from SEC. Q3 uses the
+already-retained `0001652044-21-000057` (filed October 27). The frozen Company
+Facts snapshot independently anchors earliest CFO/capex values; raw filing facts
+provide all allocation components. No original reporting snapshot is rewritten.
+Both new source files and their directory indexes retain URL/content hashes;
+the package records the extension-manifest and Company Facts snapshot digests.
+
+All 21 flow captions across each full FY2021–FY2025 cohort tie to the annual
+statement (105 ties), with no residual plug. FY2021 quarterly CFO is
+$19.289bn / $21.890bn / $25.539bn / $24.934bn; cash PP&E purchases are
+$5.942bn / $5.496bn / $6.819bn / $6.383bn. All 42 previously published cash
+periods and both PP&E balances retain exactly the same values/evidence.
+The original trends/revenue-mix/earnings bridge remain at their accepted
+20-quarter coverage.
+
+Quarterly and TTM controls now show fiscal-year buttons followed by Q1–Q4 for
+the selected year. Changing year preserves the quarter when available, otherwise
+selects that year's latest available period. Future quarters and incomplete TTM
+windows are disabled; in particular the first complete TTM is FY2021 Q4. Annual
+mode retains five year buttons. PP&E dates remain independently selected.
+
+[Full-FY2021 release verification](cash-allocation-fy2021-release.json) records the
+current coverage and grouped-control acceptance; the original release receipt
+remains a historical record.

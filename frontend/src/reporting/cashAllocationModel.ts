@@ -7,7 +7,7 @@ export type CashFact={value:number;reported_value:number;sign:number;concept:str
 export type CashPeriod={id:string;label?:string;start:string;end:string;method:string;operand_ids?:string[];values:CashValues;evidence:Record<string,CashFact|{method:string;terms:{coefficient:number;period_id:string}[]}|null>};
 export type PPEKey='technical'|'office'|'other'|'service'|'pending'|'depreciation'|'net';
 export type PPEBalance={year:string;date:string;values:Record<PPEKey,number>;evidence:Record<PPEKey,CashFact>;servers_network_share_approx:number;composition_basis:string};
-export type CashAllocationReport={schema_version:1;policy:string;ticker:string;as_of:string;currency:'USD';history_snapshot_sha256:string;history_source_snapshot_sha256:string;basis:string;annual:CashPeriod[];quarterly:CashPeriod[];ttm:CashPeriod[];reported_periods:Record<string,CashPeriod>;ppe:PPEBalance[];sources:Record<string,{source_url:string;filed:string;sha256:string}>;limitations:string[]};
+export type CashAllocationReport={schema_version:1;policy:string;ticker:string;as_of:string;currency:'USD';extension_manifest_sha256:string;company_facts_sha256:string;history_snapshot_sha256:string;history_source_snapshot_sha256:string;basis:string;annual:CashPeriod[];quarterly:CashPeriod[];ttm:CashPeriod[];reported_periods:Record<string,CashPeriod>;ppe:PPEBalance[];sources:Record<string,{source_url:string;filed:string;sha256:string}>;limitations:string[]};
 export type AllocationMode='annual'|'quarterly'|'ttm';
 export const cashLabels:Record<CashKey,string>={cfo:'Operating cash flow',ppe:'Property & equipment purchases',marketablePurchases:'Marketable securities purchases',marketableSales:'Marketable maturities & sales',otherPurchases:'Non-marketable securities purchases',otherSales:'Non-marketable maturities & sales',acquisitions:'Acquisitions & intangible assets',otherInvesting:'Other investing activities',investing:'Net investing cash flow',awards:'Net stock-award payments',buybacks:'Share repurchases',dividends:'Dividend payments',debtProceeds:'Debt proceeds, net of issuance costs',debtRepayments:'Debt & capital-lease repayments',minority:'Sales of subsidiary interests',commonIssued:'Common stock issued',preferredIssued:'Convertible preferred stock issued',otherFinancing:'Other financing activities',financing:'Net financing cash flow',fx:'Exchange-rate effect',change:'Change in cash',opening:'Opening cash',closing:'Closing cash'};
 const optional=new Set<CashKey>(['dividends','minority','commonIssued','preferredIssued','otherFinancing']);
@@ -27,8 +27,8 @@ export function reconcileCash(r:CashPeriod){
 }
 export function validateAllocation(value:unknown,ticker:string,history:QuarterlyReport):CashAllocationReport{
  const p=value as CashAllocationReport;
- requireValue(p?.schema_version===1&&p.policy==='alphabet-cash-allocation-v1'&&ticker==='GOOGL'&&p.ticker===ticker&&p.currency==='USD'&&p.as_of===history.as_of&&p.history_source_snapshot_sha256===history.source_snapshot_sha256&&/^[a-f0-9]{64}$/.test(p.history_snapshot_sha256),'Unsupported cash-allocation package');
- requireValue(p.annual?.length===5&&p.quarterly?.length===20&&p.ttm?.length===17&&p.ppe?.length===2&&p.sources&&p.reported_periods,'Incomplete cash-allocation history');
+ requireValue(p?.schema_version===1&&p.policy==='alphabet-cash-allocation-v2'&&ticker==='GOOGL'&&p.ticker===ticker&&p.currency==='USD'&&p.as_of===history.as_of&&p.history_source_snapshot_sha256===history.source_snapshot_sha256&&/^[a-f0-9]{64}$/.test(p.history_snapshot_sha256),'Unsupported cash-allocation package');
+ requireValue(p.annual?.length===5&&p.quarterly?.length===23&&p.ttm?.length===20&&p.ppe?.length===2&&p.sources&&p.reported_periods,'Incomplete cash-allocation history');
  const sources=Object.values(p.sources);
  const validateFact=(f:CashFact)=>{requireValue(f&&Number.isSafeInteger(f.value)&&Number.isSafeInteger(f.reported_value)&&(f.sign===1||f.sign===-1)&&f.reported_value*f.sign===f.value&&Array.isArray(f.context_ids)&&f.context_ids.length&&Array.isArray(f.dimensions)&&f.filed<=p.as_of&&f.source_url.startsWith('https://www.sec.gov/Archives/edgar/data/1652044/')&&sources.some(s=>s.source_url===f.source_url&&s.sha256===f.source_sha256&&s.filed===f.filed),'Invalid cash-flow source evidence');};
  for(const [id,r]of Object.entries(p.reported_periods)){
@@ -44,11 +44,19 @@ export function validateAllocation(value:unknown,ticker:string,history:Quarterly
  const annuals=history.validation.annual_tie_outs as {metric:string;fiscal_year:number;annual:{accession:string;start:string;end:string;value:number}}[];
  const expectedAnnuals=annuals.filter(a=>a.metric==='cfo').sort((a,b)=>a.fiscal_year-b.fiscal_year).slice(-5);
  for(const [i,r]of p.annual.entries()){const a=expectedAnnuals[i];requireValue(a&&r.id===`FY${a.fiscal_year}`&&r.start===a.annual.start&&r.end===a.annual.end&&r.values.cfo===a.annual.value,'Wrong annual cohort');assertDerived(r,r.operand_ids!.map(id=>p.reported_periods[id]),[1]);requireValue(r.operand_ids![0].startsWith(a.annual.accession+':'),'Wrong annual accession');}
+ const expectedStarts=['2021-01-01','2021-04-01','2021-07-01'],expectedEnds=['2021-03-31','2021-06-30','2021-09-30'];
+ const earlyAccessions=['0001652044-21-000020','0001652044-21-000047','0001652044-21-000057'];
+ requireValue(/^[a-f0-9]{64}$/.test(p.extension_manifest_sha256)&&/^[a-f0-9]{64}$/.test(p.company_facts_sha256),'Missing extension evidence');
  for(const [i,r]of p.quarterly.entries()){
-  const h=history.rows[i],ops=h.evidence.cfo.operands,ids=ops.map(o=>`${o.accession}:${o.start}:${o.end}`);
-  requireValue(r.id===h.id&&r.start===h.start&&r.end===h.end&&r.values.cfo===h.values.cfo&&-cashAmount(r,'ppe')===h.values.cash_capex&&r.operand_ids?.join('|')===ids.join('|'),'Cash history contradicts accepted quarter');
-  assertDerived(r,ids.map(id=>p.reported_periods[id]),ops.length===1?[1]:[1,-1]);
+  const h=history.rows[i-3];
+  const ids=i<3?earlyAccessions.slice(Math.max(0,i-1),i+1).reverse().map((a,j)=>`${a}:2021-01-01:${expectedEnds[i-j]}`):h.evidence.cfo.operands.map(o=>`${o.accession}:${o.start}:${o.end}`);
+  if(i<3)requireValue(r.id===`FY2021-Q${i+1}`&&r.start===expectedStarts[i]&&r.end===expectedEnds[i],'Wrong FY2021 extension period');
+  else requireValue(r.id===h.id&&r.start===h.start&&r.end===h.end&&r.values.cfo===h.values.cfo&&-cashAmount(r,'ppe')===h.values.cash_capex,'Cash history contradicts accepted quarter');
+  requireValue(r.operand_ids?.join('|')===ids.join('|'),'Wrong quarterly filing operands');
+  if(i)requireValue(Date.parse(p.quarterly[i-1].end+'T00:00:00Z')+86400000===Date.parse(r.start+'T00:00:00Z'),'Nonconsecutive cash-allocation quarters');
+  assertDerived(r,ids.map(id=>p.reported_periods[id]),ids.length===1?[1]:[1,-1]);
  }
+ for(const a of p.annual){const rows=p.quarterly.filter(q=>q.id.startsWith(a.id+'-'));requireValue(rows.length===4,'Incomplete cash-allocation annual cohort');for(const k of flowKeys)requireValue(rows.reduce((sum,q)=>sum+cashAmount(q,k),0)===cashAmount(a,k),'Annual cash-allocation quarter tie failed');}
  for(const [i,r]of p.ttm.entries()){const input=p.quarterly.slice(i,i+4);requireValue(r.id===input[3].id&&r.start===input[0].start&&r.end===input[3].end,'Wrong TTM window');assertDerived(r,input,[1,1,1,1]);}
  for(const [i,r]of p.ppe.entries()){
   const v=r.values;

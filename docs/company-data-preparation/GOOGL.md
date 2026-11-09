@@ -1,3 +1,15 @@
+## Full FY2021 cash-allocation extension — November 9, 2026
+
+The user requested FY2021 Q1–Q3 and year-grouped quarter selection.
+[Policy v2](../cash-allocation.md#full-fy2021-and-grouped-quarter-controls--november-9-2026)
+retains the original Q1/Q2 SEC filing instances separately, selects first
+disclosure dates against the frozen Company Facts snapshot, and derives Q2/Q3
+by successive YTD differences. All FY2021 components sum exactly to the
+accepted annual statement; all 42 previous cash periods and both PP&E balances
+are unchanged. Current consumer coverage is 23 quarters / 20 complete TTM
+windows. Original Python/DCF and 20-quarter reporting packages are untouched;
+parent-common cash, ownership and readiness decisions do not change.
+
 ## Cash-allocation reporting consumer — November 9, 2026
 
 The user approved a new descriptive consumer of retained filing data for the

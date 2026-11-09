@@ -1,0 +1,21 @@
+{
+  "files": {
+    "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/goog-20210331_htm.xml": {
+      "file": "eb77205cb525ab4adc36377ff8b26c4dbc4cbc0f6b3fbdb87debac48eb34cc5e.gz",
+      "sha256": "388bf12af923426073efa3c77357c01bcc707ee7d39d01d89518ebddae4dafd0"
+    },
+    "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000020/index.json": {
+      "file": "a171c988f46202997a479b1f977896984c46bf5622263e779e2bc38376d73bde.gz",
+      "sha256": "1b563ee73cadd9e6c744c3ee7a0849680407a2a03c368e15400e66e63fc7813d"
+    },
+    "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/goog-20210630_htm.xml": {
+      "file": "57cbbe01568798f64587faed52a38d5ee95af629a1ef682d66080685f52e5e83.gz",
+      "sha256": "6073049c49f27111c68545a03994183c4a1ebec64300bc0f6c6ebe871b2de678"
+    },
+    "https://www.sec.gov/Archives/edgar/data/1652044/000165204421000047/index.json": {
+      "file": "0ba68cea643ee495e1fc0be263d19a6c92998aa8a1f02e3b97208d995f3ede6f.gz",
+      "sha256": "ff89bb26dd2b1850dc3e2a4771893b3836842f88bd0d601ab2bb030bc5ec7956"
+    }
+  },
+  "ticker": "GOOGL"
+}

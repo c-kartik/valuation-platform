@@ -1,0 +1,41 @@
+{
+  "schema": "cash-allocation-fy2021-release/v1",
+  "date": "2026-11-09",
+  "status": "LOCAL_VALIDATED_PUBLICATION_PENDING",
+  "policy": "alphabet-cash-allocation-v2",
+  "data_sha256": "6c9fbe5e69f4a7dbf0063c97e820445fecf9c7daa0548d38914fcd1265967ac8",
+  "validation": {
+    "annual_periods": 5,
+    "filings": 23,
+    "ppe_balances": 2,
+    "quarterly_periods": 23,
+    "reported_periods": 23,
+    "ttm_periods": 20
+  },
+  "annual_component_ties": 105,
+  "previous_cash_periods_unchanged": 42,
+  "previous_ppe_balances_unchanged": 2,
+  "python_reporting_tests": 23,
+  "frontend_full_suite": 491,
+  "source_extension": {
+    "accessions": [
+      "0001652044-21-000020",
+      "0001652044-21-000047"
+    ],
+    "retained_files": 4,
+    "store": "data/cash-allocation/",
+    "first_disclosure_anchors": "frozen Company Facts; all allocation components from raw filing XBRL"
+  },
+  "coverage": {
+    "quarterly": "FY2021 Q1\u2013FY2026 Q3",
+    "ttm": "FY2021 Q4\u2013FY2026 Q3"
+  },
+  "controls": "Fiscal year buttons then Q1\u2013Q4; unavailable quarters disabled; independent PP&E dates",
+  "preservation": {
+    "original_python_files": 396,
+    "original_browser_assets": 15,
+    "engine_fixtures": 128,
+    "original_quarterly_reporting": "unchanged",
+    "dcf_inputs_and_methods": "unchanged"
+  }
+}

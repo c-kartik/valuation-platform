@@ -1,7 +1,7 @@
 ## Alphabet cash allocation and PP&E — November 9, 2026
 
-Added the approved cash-allocation flow before DCF: five annual years, 20
-quarters and 17 complete TTM windows. Inside PP&E is a separate 2024/2025
+Added the approved cash-allocation flow before DCF: five annual years, 23
+quarters (all FY2021 included) and 20 complete TTM windows. Inside PP&E is a separate 2024/2025
 balance view. [Methodology and refresh contract](cash-allocation.md),
 [verification/release](cash-allocation-release.json). Alphabet only; Apple/Meta
 and original Python/DCF datasets remain unchanged. Wider issuer work stays paused.

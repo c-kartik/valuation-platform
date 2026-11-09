@@ -38,8 +38,13 @@ it('shows the approved annual flow and keeps PP&E selection independent of cash 
  fireEvent.click(screen.getByRole('button',{name:/Shareholder returns/}));expect(detail.textContent).toContain('$45.71B');expect(detail.textContent).toContain('$10.05B');
  const balanceGroup=screen.getByRole('group',{name:'PP&E balance date'});fireEvent.click(within(balanceGroup).getByRole('button',{name:'2024'}));
  const ppe=screen.getByLabelText('Property and equipment reconciliation');expect(ppe.textContent).toContain('$171.04B');
- fireEvent.click(screen.getByRole('button',{name:'Quarterly'}));expect(within(screen.getByRole('group',{name:'Cash allocation reporting periods'})).getAllByRole('button')).toHaveLength(20);expect(ppe.textContent).toContain('$171.04B');
- fireEvent.click(screen.getByRole('button',{name:'Trailing 12 months'}));expect(within(screen.getByRole('group',{name:'Cash allocation reporting periods'})).getAllByRole('button')).toHaveLength(17);
+ fireEvent.click(screen.getByRole('button',{name:'Quarterly'}));expect(within(screen.getByRole('group',{name:'Cash allocation reporting periods'})).getAllByRole('button')).toHaveLength(4);expect(ppe.textContent).toContain('$171.04B');
+ fireEvent.click(within(screen.getByRole('group',{name:'Cash allocation reporting years'})).getByRole('button',{name:'FY2021'}));
+ for(const q of [1,2,3,4]){const button=screen.getByRole('button',{name:`FY2021 Q${q}`});expect(button.hasAttribute('disabled')).toBe(false);fireEvent.click(button);expect(document.querySelector('.ca-section-controls')!.textContent).toContain(`FY2021 Q${q}`);}
+ fireEvent.click(screen.getByRole('button',{name:'Trailing 12 months'}));expect(within(screen.getByRole('group',{name:'Cash allocation reporting periods'})).getAllByRole('button')).toHaveLength(4);
+ fireEvent.click(within(screen.getByRole('group',{name:'Cash allocation reporting years'})).getByRole('button',{name:'FY2021'}));
+ expect(screen.getByRole('button',{name:'FY2021 Q1 unavailable'}).hasAttribute('disabled')).toBe(true);
+ expect(screen.getByRole('button',{name:'FY2021 Q4'}).getAttribute('aria-pressed')).toBe('true');
  fireEvent.click(screen.getByRole('button',{name:'Annual'}));fireEvent.click(screen.getByRole('button',{name:'FY2021'}));expect(screen.getByRole('button',{name:/Cash drawn before FX/})).toBeTruthy();
  fireEvent.click(within(balanceGroup).getByRole('button',{name:'2025'}));expect(ppe.textContent).toContain('$246.60B');expect(document.querySelector('.ca-section-controls')!.textContent).toContain('FY2021');
 });
