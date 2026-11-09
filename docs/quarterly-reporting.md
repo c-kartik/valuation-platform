@@ -124,7 +124,8 @@ Legend controls show/hide lines while retaining at least one visible series.
 
 Hover previews the nearest real observation in the tooltip and metric cards;
 leaving restores the selected quarter. Clicking/tapping selects the quarter for
-the dropdown and cash bridge. Keyboard arrows/Home/End select quarters; Escape
+the cash bridge. The redundant fiscal-quarter dropdown was removed at the
+user’s request on November 9; the chart remains directly selectable. Keyboard arrows/Home/End select quarters; Escape
 hides the tooltip. Touch retains vertical page scrolling. Curves pass through
 observations, flatten at turning points and do not create overshoot or values for
 intermediate dates. Null observations remain gaps. No financial definition,
