@@ -1,0 +1,78 @@
+{
+  "scope": "Valuation landing and portfolio discovery",
+  "date": "2026-11-09",
+  "status": "published-and-verified",
+  "valuation_commit": "18169eb",
+  "portfolio_source_commit": "b82e3e8",
+  "portfolio_publication_commit": "576cdaa",
+  "url": "https://kartikchaturvedi.com/valuation/",
+  "artifact": "/Users/kc/Documents/Codex/outputs/valuation-landing-release",
+  "validation": {
+    "frontend_full_suite": {
+      "files": 43,
+      "tests": 504,
+      "passed": true
+    },
+    "targeted_final_routing_suite": {
+      "files": 2,
+      "tests": 34,
+      "passed": true
+    },
+    "browser_build": "PASS",
+    "original_assets": 15,
+    "original_python_files": 396,
+    "original_fixtures": 60,
+    "extra_fixtures": 68,
+    "static_artifact_files": 50,
+    "local_reference_checks": 59,
+    "static_loopback_routes": "PASS",
+    "phone_widths": [
+      390,
+      320
+    ],
+    "browser_checks": [
+      "landing count and three suggestions",
+      "live filtering and keyboard selection",
+      "Apple correct selection and reload",
+      "Back returns to landing",
+      "Alphabet and Meta navigation and unchanged Base results",
+      "All companies return link",
+      "portfolio full-width platform / Alphabet left / pipeline right",
+      "CV platform above Alphabet",
+      "Valuation navigation label",
+      "live page console has no errors"
+    ],
+    "live_asset_checks": [
+      "stylesheet exact bytes",
+      "workspace JS exact bytes",
+      "DCF worker exact bytes",
+      "catalog exact bytes",
+      "HTML semantics verified; Netlify rewrites portfolio links to pretty URLs"
+    ]
+  },
+  "unchanged_base_values": {
+    "GOOGL": {
+      "per_share": "125.91",
+      "ev": "1.42tn"
+    },
+    "AAPL": {
+      "per_share": "175.46",
+      "ev": "2.58tn"
+    },
+    "META": {
+      "per_share": "374.70",
+      "ev": "944.60bn"
+    }
+  },
+  "preservation": "No original Python, DCF formulas, financial data, workbook logic or resume PDF changes. Only workspace initial selection/navigation changed. Existing untracked follow-up records preserved.",
+  "screenshots": {
+    "live-landing.png": {
+      "path": "/Users/kc/Documents/Codex/outputs/valuation-landing-release/live-landing.png",
+      "sha256": "477c4f1dc3841bb605ac7c8ec41ca9ccccce107faef60832ca0fdc3a69106b5a"
+    },
+    "live-selected-work.png": {
+      "path": "/Users/kc/Documents/Codex/outputs/valuation-landing-release/live-selected-work.png",
+      "sha256": "9ace808b99fecec237a6b1b3e0864e7ee7631afeb80eed32f2aedab723e6aac0"
+    }
+  }
+}
