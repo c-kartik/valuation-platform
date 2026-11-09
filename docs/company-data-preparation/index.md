@@ -1,3 +1,9 @@
+## Full-window reporting audit — November 9, 2026
+
+[GOOGL/AAPL/META review](../reporting-review-2026-11-09.md) expands isolated
+reporting verification to all displayed source operands and adds reporting-only
+validation guards. No normalized values, DCF inputs or readiness statuses change.
+
 ## Isolated revenue-mix reporting — November 9, 2026
 
 GOOGL/AAPL/META now have reviewed dimensional revenue-mix packages for their

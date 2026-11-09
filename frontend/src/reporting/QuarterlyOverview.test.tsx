@@ -72,3 +72,15 @@ it('toggles individual chart series while preserving at least one visible line',
  expect((screen.getByRole('button',{name:'Toggle Free cash flow'}) as HTMLButtonElement).disabled).toBe(true);
  fireEvent.click(revenue);expect(document.querySelectorAll('.qr-series')).toHaveLength(2);
 });
+
+it('rejects stale derived margins, mismatched fiscal labels and contradictory YTD operands',()=>{
+ for(const mutate of [
+  (p:typeof googl)=>{p.rows[0].values.operating_margin+=.01;},
+  (p:typeof googl)=>{p.rows[0].values.fcf_margin+=.01;},
+  (p:typeof googl)=>{p.rows[0].fiscal_year+=1;},
+  (p:typeof googl)=>{p.rows[0].quarter=1;},
+  (p:typeof googl)=>{p.rows[1].start='2022-01-02';},
+  (p:typeof googl)=>{p.rows[0].evidence.cfo.operands[0].value+=1;},
+  (p:typeof googl)=>{p.rows[0].evidence.cfo.operands[1].end='2021-09-29';},
+ ]){const broken=structuredClone(googl);mutate(broken);expect(()=>validateReport(broken,'GOOGL')).toThrow();}
+});

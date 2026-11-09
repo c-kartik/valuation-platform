@@ -1,0 +1,4146 @@
+{
+  "annual_metric_tieouts": 42,
+  "annual_mix_tieouts": 16,
+  "as_of": "2026-11-09",
+  "consolidated_fact_checks": 138,
+  "consolidated_facts": [
+    {
+      "accession": "0001326801-22-000018",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-12-31",
+      "start": "2021-01-01",
+      "value": 18567000000
+    },
+    {
+      "accession": "0001326801-21-000065",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "ica15184299b44591a910753cfa9238a2_D20210101-20210930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-09-30",
+      "start": "2021-01-01",
+      "value": 13198000000
+    },
+    {
+      "accession": "0001326801-22-000018",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-12-31",
+      "start": "2021-01-01",
+      "value": 57683000000
+    },
+    {
+      "accession": "0001326801-21-000065",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "ica15184299b44591a910753cfa9238a2_D20210101-20210930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-09-30",
+      "start": "2021-01-01",
+      "value": 39579000000
+    },
+    {
+      "accession": "0001326801-22-000018",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-12-31",
+      "start": "2021-01-01",
+      "value": 39370000000
+    },
+    {
+      "accession": "0001326801-21-000065",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "ica15184299b44591a910753cfa9238a2_D20210101-20210930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-09-30",
+      "start": "2021-01-01",
+      "value": 29085000000
+    },
+    {
+      "accession": "0001326801-22-000018",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-12-31",
+      "start": "2021-01-01",
+      "value": 46753000000
+    },
+    {
+      "accession": "0001326801-21-000065",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "ica15184299b44591a910753cfa9238a2_D20210101-20210930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-09-30",
+      "start": "2021-01-01",
+      "value": 34168000000
+    },
+    {
+      "accession": "0001326801-22-000018",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-12-31",
+      "start": "2021-01-01",
+      "value": 117929000000
+    },
+    {
+      "accession": "0001326801-21-000065",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ica15184299b44591a910753cfa9238a2_D20210101-20210930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-09-30",
+      "start": "2021-01-01",
+      "value": 84258000000
+    },
+    {
+      "accession": "0001326801-22-000018",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "ifeed312171954f2193c9ea49e6e70fec_D20210101-20211231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-12-31",
+      "start": "2021-01-01",
+      "value": 9164000000
+    },
+    {
+      "accession": "0001326801-21-000065",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "ica15184299b44591a910753cfa9238a2_D20210101-20210930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-09-30",
+      "start": "2021-01-01",
+      "value": 6757000000
+    },
+    {
+      "accession": "0001326801-22-000057",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "ieecb77d53c28492e8730fe6ba04ccc57_D20220101-20220331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-03-31",
+      "start": "2022-01-01",
+      "value": 5441000000
+    },
+    {
+      "accession": "0001326801-22-000057",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "ieecb77d53c28492e8730fe6ba04ccc57_D20220101-20220331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-03-31",
+      "start": "2022-01-01",
+      "value": 14076000000
+    },
+    {
+      "accession": "0001326801-22-000057",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "ieecb77d53c28492e8730fe6ba04ccc57_D20220101-20220331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-03-31",
+      "start": "2022-01-01",
+      "value": 7465000000
+    },
+    {
+      "accession": "0001326801-22-000057",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "ieecb77d53c28492e8730fe6ba04ccc57_D20220101-20220331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-03-31",
+      "start": "2022-01-01",
+      "value": 8524000000
+    },
+    {
+      "accession": "0001326801-22-000057",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ieecb77d53c28492e8730fe6ba04ccc57_D20220101-20220331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-03-31",
+      "start": "2022-01-01",
+      "value": 27908000000
+    },
+    {
+      "accession": "0001326801-22-000057",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "ieecb77d53c28492e8730fe6ba04ccc57_D20220101-20220331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-03-31",
+      "start": "2022-01-01",
+      "value": 2498000000
+    },
+    {
+      "accession": "0001326801-22-000082",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "i29bc165ba5764a109fcc7bf21ef893dd_D20220101-20220630"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-06-30",
+      "start": "2022-01-01",
+      "value": 13013000000
+    },
+    {
+      "accession": "0001326801-22-000082",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "i29bc165ba5764a109fcc7bf21ef893dd_D20220101-20220630"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-06-30",
+      "start": "2022-01-01",
+      "value": 26272000000
+    },
+    {
+      "accession": "0001326801-22-000082",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "i29bc165ba5764a109fcc7bf21ef893dd_D20220101-20220630"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-06-30",
+      "start": "2022-01-01",
+      "value": 14152000000
+    },
+    {
+      "accession": "0001326801-22-000082",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "i29bc165ba5764a109fcc7bf21ef893dd_D20220101-20220630"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-06-30",
+      "start": "2022-01-01",
+      "value": 16881000000
+    },
+    {
+      "accession": "0001326801-22-000082",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i29bc165ba5764a109fcc7bf21ef893dd_D20220101-20220630"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-06-30",
+      "start": "2022-01-01",
+      "value": 56729000000
+    },
+    {
+      "accession": "0001326801-22-000082",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "i29bc165ba5764a109fcc7bf21ef893dd_D20220101-20220630"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-06-30",
+      "start": "2022-01-01",
+      "value": 5850000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-09-30",
+      "start": "2022-01-01",
+      "value": 22388000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-09-30",
+      "start": "2022-01-01",
+      "value": 35964000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-09-30",
+      "start": "2022-01-01",
+      "value": 18547000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-09-30",
+      "start": "2022-01-01",
+      "value": 22545000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-09-30",
+      "start": "2022-01-01",
+      "value": 84444000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-09-30",
+      "start": "2022-01-01",
+      "value": 8984000000
+    },
+    {
+      "accession": "0001326801-23-000013",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-12-31",
+      "start": "2022-01-01",
+      "value": 31431000000
+    },
+    {
+      "accession": "0001326801-23-000013",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-12-31",
+      "start": "2022-01-01",
+      "value": 50475000000
+    },
+    {
+      "accession": "0001326801-23-000013",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-12-31",
+      "start": "2022-01-01",
+      "value": 23200000000
+    },
+    {
+      "accession": "0001326801-23-000013",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-12-31",
+      "start": "2022-01-01",
+      "value": 28944000000
+    },
+    {
+      "accession": "0001326801-23-000013",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-12-31",
+      "start": "2022-01-01",
+      "value": 116609000000
+    },
+    {
+      "accession": "0001326801-23-000013",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2022-12-31",
+      "start": "2022-01-01",
+      "value": 11992000000
+    },
+    {
+      "accession": "0001326801-23-000067",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-03-31",
+      "start": "2023-01-01",
+      "value": 6842000000
+    },
+    {
+      "accession": "0001326801-23-000067",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-03-31",
+      "start": "2023-01-01",
+      "value": 13998000000
+    },
+    {
+      "accession": "0001326801-23-000067",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-03-31",
+      "start": "2023-01-01",
+      "value": 5709000000
+    },
+    {
+      "accession": "0001326801-23-000067",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-03-31",
+      "start": "2023-01-01",
+      "value": 7227000000
+    },
+    {
+      "accession": "0001326801-23-000067",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-03-31",
+      "start": "2023-01-01",
+      "value": 28645000000
+    },
+    {
+      "accession": "0001326801-23-000067",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-03-31",
+      "start": "2023-01-01",
+      "value": 3051000000
+    },
+    {
+      "accession": "0001326801-23-000093",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-06-30",
+      "start": "2023-01-01",
+      "value": 13058000000
+    },
+    {
+      "accession": "0001326801-23-000093",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-06-30",
+      "start": "2023-01-01",
+      "value": 31307000000
+    },
+    {
+      "accession": "0001326801-23-000093",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-06-30",
+      "start": "2023-01-01",
+      "value": 13498000000
+    },
+    {
+      "accession": "0001326801-23-000093",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-06-30",
+      "start": "2023-01-01",
+      "value": 16619000000
+    },
+    {
+      "accession": "0001326801-23-000093",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-06-30",
+      "start": "2023-01-01",
+      "value": 60645000000
+    },
+    {
+      "accession": "0001326801-23-000093",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-06-30",
+      "start": "2023-01-01",
+      "value": 7111000000
+    },
+    {
+      "accession": "0001326801-23-000103",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-09-30",
+      "start": "2023-01-01",
+      "value": 19601000000
+    },
+    {
+      "accession": "0001326801-23-000103",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-09-30",
+      "start": "2023-01-01",
+      "value": 51709000000
+    },
+    {
+      "accession": "0001326801-23-000103",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-09-30",
+      "start": "2023-01-01",
+      "value": 25081000000
+    },
+    {
+      "accession": "0001326801-23-000103",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-09-30",
+      "start": "2023-01-01",
+      "value": 30367000000
+    },
+    {
+      "accession": "0001326801-23-000103",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-09-30",
+      "start": "2023-01-01",
+      "value": 94791000000
+    },
+    {
+      "accession": "0001326801-23-000103",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-09-30",
+      "start": "2023-01-01",
+      "value": 10603000000
+    },
+    {
+      "accession": "0001326801-24-000012",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-12-31",
+      "start": "2023-01-01",
+      "value": 27266000000
+    },
+    {
+      "accession": "0001326801-24-000012",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-12-31",
+      "start": "2023-01-01",
+      "value": 71113000000
+    },
+    {
+      "accession": "0001326801-24-000012",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-12-31",
+      "start": "2023-01-01",
+      "value": 39098000000
+    },
+    {
+      "accession": "0001326801-24-000012",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-12-31",
+      "start": "2023-01-01",
+      "value": 46751000000
+    },
+    {
+      "accession": "0001326801-24-000012",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-12-31",
+      "start": "2023-01-01",
+      "value": 134902000000
+    },
+    {
+      "accession": "0001326801-24-000012",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2023-12-31",
+      "start": "2023-01-01",
+      "value": 14027000000
+    },
+    {
+      "accession": "0001326801-24-000049",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-03-31",
+      "start": "2024-01-01",
+      "value": 6400000000
+    },
+    {
+      "accession": "0001326801-24-000049",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-03-31",
+      "start": "2024-01-01",
+      "value": 19246000000
+    },
+    {
+      "accession": "0001326801-24-000049",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-03-31",
+      "start": "2024-01-01",
+      "value": 12369000000
+    },
+    {
+      "accession": "0001326801-24-000049",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-03-31",
+      "start": "2024-01-01",
+      "value": 13818000000
+    },
+    {
+      "accession": "0001326801-24-000049",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-03-31",
+      "start": "2024-01-01",
+      "value": 36455000000
+    },
+    {
+      "accession": "0001326801-24-000049",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-03-31",
+      "start": "2024-01-01",
+      "value": 3562000000
+    },
+    {
+      "accession": "0001326801-24-000069",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-06-30",
+      "start": "2024-01-01",
+      "value": 14573000000
+    },
+    {
+      "accession": "0001326801-24-000069",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-06-30",
+      "start": "2024-01-01",
+      "value": 38616000000
+    },
+    {
+      "accession": "0001326801-24-000069",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-06-30",
+      "start": "2024-01-01",
+      "value": 25834000000
+    },
+    {
+      "accession": "0001326801-24-000069",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-06-30",
+      "start": "2024-01-01",
+      "value": 28665000000
+    },
+    {
+      "accession": "0001326801-24-000069",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-06-30",
+      "start": "2024-01-01",
+      "value": 75527000000
+    },
+    {
+      "accession": "0001326801-24-000069",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-06-30",
+      "start": "2024-01-01",
+      "value": 8178000000
+    },
+    {
+      "accession": "0001326801-24-000081",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-09-30",
+      "start": "2024-01-01",
+      "value": 22831000000
+    },
+    {
+      "accession": "0001326801-24-000081",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-09-30",
+      "start": "2024-01-01",
+      "value": 63340000000
+    },
+    {
+      "accession": "0001326801-24-000081",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-09-30",
+      "start": "2024-01-01",
+      "value": 41522000000
+    },
+    {
+      "accession": "0001326801-24-000081",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-09-30",
+      "start": "2024-01-01",
+      "value": 46016000000
+    },
+    {
+      "accession": "0001326801-24-000081",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-09-30",
+      "start": "2024-01-01",
+      "value": 116116000000
+    },
+    {
+      "accession": "0001326801-24-000081",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-09-30",
+      "start": "2024-01-01",
+      "value": 12428000000
+    },
+    {
+      "accession": "0001326801-25-000017",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-12-31",
+      "start": "2024-01-01",
+      "value": 37256000000
+    },
+    {
+      "accession": "0001326801-25-000017",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-12-31",
+      "start": "2024-01-01",
+      "value": 91328000000
+    },
+    {
+      "accession": "0001326801-25-000017",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-12-31",
+      "start": "2024-01-01",
+      "value": 62360000000
+    },
+    {
+      "accession": "0001326801-25-000017",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-12-31",
+      "start": "2024-01-01",
+      "value": 69380000000
+    },
+    {
+      "accession": "0001326801-25-000017",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-12-31",
+      "start": "2024-01-01",
+      "value": 164501000000
+    },
+    {
+      "accession": "0001326801-25-000017",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2024-12-31",
+      "start": "2024-01-01",
+      "value": 16690000000
+    },
+    {
+      "accession": "0001326801-25-000054",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-03-31",
+      "start": "2025-01-01",
+      "value": 12941000000
+    },
+    {
+      "accession": "0001326801-25-000054",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-03-31",
+      "start": "2025-01-01",
+      "value": 24026000000
+    },
+    {
+      "accession": "0001326801-25-000054",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-03-31",
+      "start": "2025-01-01",
+      "value": 16644000000
+    },
+    {
+      "accession": "0001326801-25-000054",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-03-31",
+      "start": "2025-01-01",
+      "value": 17555000000
+    },
+    {
+      "accession": "0001326801-25-000054",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-03-31",
+      "start": "2025-01-01",
+      "value": 42314000000
+    },
+    {
+      "accession": "0001326801-25-000054",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-03-31",
+      "start": "2025-01-01",
+      "value": 4147000000
+    },
+    {
+      "accession": "0001628280-25-036791",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-06-30",
+      "start": "2025-01-01",
+      "value": 29479000000
+    },
+    {
+      "accession": "0001628280-25-036791",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-06-30",
+      "start": "2025-01-01",
+      "value": 49587000000
+    },
+    {
+      "accession": "0001628280-25-036791",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-06-30",
+      "start": "2025-01-01",
+      "value": 34981000000
+    },
+    {
+      "accession": "0001628280-25-036791",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-06-30",
+      "start": "2025-01-01",
+      "value": 37997000000
+    },
+    {
+      "accession": "0001628280-25-036791",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-06-30",
+      "start": "2025-01-01",
+      "value": 89830000000
+    },
+    {
+      "accession": "0001628280-25-036791",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-06-30",
+      "start": "2025-01-01",
+      "value": 8981000000
+    },
+    {
+      "accession": "0001628280-25-047240",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-09-30",
+      "start": "2025-01-01",
+      "value": 48308000000
+    },
+    {
+      "accession": "0001628280-25-047240",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-09-30",
+      "start": "2025-01-01",
+      "value": 79586000000
+    },
+    {
+      "accession": "0001628280-25-047240",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-09-30",
+      "start": "2025-01-01",
+      "value": 37690000000
+    },
+    {
+      "accession": "0001628280-25-047240",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-09-30",
+      "start": "2025-01-01",
+      "value": 58531000000
+    },
+    {
+      "accession": "0001628280-25-047240",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-09-30",
+      "start": "2025-01-01",
+      "value": 141073000000
+    },
+    {
+      "accession": "0001628280-25-047240",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-09-30",
+      "start": "2025-01-01",
+      "value": 14537000000
+    },
+    {
+      "accession": "0001628280-26-003942",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-12-31",
+      "start": "2025-01-01",
+      "value": 69691000000
+    },
+    {
+      "accession": "0001628280-26-003942",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-12-31",
+      "start": "2025-01-01",
+      "value": 115800000000
+    },
+    {
+      "accession": "0001628280-26-003942",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-12-31",
+      "start": "2025-01-01",
+      "value": 60458000000
+    },
+    {
+      "accession": "0001628280-26-003942",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-12-31",
+      "start": "2025-01-01",
+      "value": 83276000000
+    },
+    {
+      "accession": "0001628280-26-003942",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-12-31",
+      "start": "2025-01-01",
+      "value": 200966000000
+    },
+    {
+      "accession": "0001628280-26-003942",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2025-12-31",
+      "start": "2025-01-01",
+      "value": 20427000000
+    },
+    {
+      "accession": "0001628280-26-028526",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-03-31",
+      "start": "2026-01-01",
+      "value": 18997000000
+    },
+    {
+      "accession": "0001628280-26-028526",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-03-31",
+      "start": "2026-01-01",
+      "value": 32226000000
+    },
+    {
+      "accession": "0001628280-26-028526",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-03-31",
+      "start": "2026-01-01",
+      "value": 26773000000
+    },
+    {
+      "accession": "0001628280-26-028526",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-03-31",
+      "start": "2026-01-01",
+      "value": 22872000000
+    },
+    {
+      "accession": "0001628280-26-028526",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-03-31",
+      "start": "2026-01-01",
+      "value": 56311000000
+    },
+    {
+      "accession": "0001628280-26-028526",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-03-31",
+      "start": "2026-01-01",
+      "value": 6032000000
+    },
+    {
+      "accession": "0001628280-26-050705",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-06-30",
+      "start": "2026-01-01",
+      "value": 49113000000
+    },
+    {
+      "accession": "0001628280-26-050705",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-06-30",
+      "start": "2026-01-01",
+      "value": 64088000000
+    },
+    {
+      "accession": "0001628280-26-050705",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-06-30",
+      "start": "2026-01-01",
+      "value": 42621000000
+    },
+    {
+      "accession": "0001628280-26-050705",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-06-30",
+      "start": "2026-01-01",
+      "value": 41647000000
+    },
+    {
+      "accession": "0001628280-26-050705",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-06-30",
+      "start": "2026-01-01",
+      "value": 117111000000
+    },
+    {
+      "accession": "0001628280-26-050705",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-06-30",
+      "start": "2026-01-01",
+      "value": 13690000000
+    },
+    {
+      "accession": "0001628280-26-066773",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-09-30",
+      "start": "2026-01-01",
+      "value": 83055000000
+    },
+    {
+      "accession": "0001628280-26-066773",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-09-30",
+      "start": "2026-01-01",
+      "value": 96873000000
+    },
+    {
+      "accession": "0001628280-26-066773",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-09-30",
+      "start": "2026-01-01",
+      "value": 52481000000
+    },
+    {
+      "accession": "0001628280-26-066773",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-09-30",
+      "start": "2026-01-01",
+      "value": 54635000000
+    },
+    {
+      "accession": "0001628280-26-066773",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-09-30",
+      "start": "2026-01-01",
+      "value": 181712000000
+    },
+    {
+      "accession": "0001628280-26-066773",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "c-1"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2026-09-30",
+      "start": "2026-01-01",
+      "value": 21053000000
+    },
+    {
+      "accession": "0001326801-20-000013",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "FD2019Q4YTD"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2019-12-31",
+      "start": "2019-01-01",
+      "value": 70697000000
+    },
+    {
+      "accession": "0001326801-20-000013",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "FD2019Q4YTD"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2019-12-31",
+      "start": "2019-01-01",
+      "value": 23986000000
+    },
+    {
+      "accession": "0001326801-20-000013",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "FD2019Q4YTD"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2019-12-31",
+      "start": "2019-01-01",
+      "value": 18485000000
+    },
+    {
+      "accession": "0001326801-20-000013",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "FD2019Q4YTD"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2019-12-31",
+      "start": "2019-01-01",
+      "value": 36314000000
+    },
+    {
+      "accession": "0001326801-20-000013",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "FD2019Q4YTD"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2019-12-31",
+      "start": "2019-01-01",
+      "value": 15102000000
+    },
+    {
+      "accession": "0001326801-20-000013",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "FD2019Q4YTD"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2019-12-31",
+      "start": "2019-01-01",
+      "value": 4836000000
+    },
+    {
+      "accession": "0001326801-21-000014",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ia430c26f2c43408bb9b46d03e798cb25_D20200101-20201231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-31",
+      "start": "2020-01-01",
+      "value": 85965000000
+    },
+    {
+      "accession": "0001326801-21-000014",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "ia430c26f2c43408bb9b46d03e798cb25_D20200101-20201231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-31",
+      "start": "2020-01-01",
+      "value": 32671000000
+    },
+    {
+      "accession": "0001326801-21-000014",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "ia430c26f2c43408bb9b46d03e798cb25_D20200101-20201231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-31",
+      "start": "2020-01-01",
+      "value": 29146000000
+    },
+    {
+      "accession": "0001326801-21-000014",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "ia430c26f2c43408bb9b46d03e798cb25_D20200101-20201231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-31",
+      "start": "2020-01-01",
+      "value": 38747000000
+    },
+    {
+      "accession": "0001326801-21-000014",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "ia430c26f2c43408bb9b46d03e798cb25_D20200101-20201231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-31",
+      "start": "2020-01-01",
+      "value": 15115000000
+    },
+    {
+      "accession": "0001326801-21-000014",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "ia430c26f2c43408bb9b46d03e798cb25_D20200101-20201231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-31",
+      "start": "2020-01-01",
+      "value": 6536000000
+    }
+  ],
+  "consolidated_standalone_differences": [
+    {
+      "derived": 28821000000,
+      "difference": -1000000,
+      "metric": "revenue",
+      "quarter_id": "FY2022-Q2",
+      "reported": {
+        "accession": "0001326801-22-000082",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "end": "2022-06-30",
+        "filed": "2022-07-28",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+        "start": "2022-04-01",
+        "value": 28822000000
+      }
+    },
+    {
+      "derived": 8357000000,
+      "difference": -1000000,
+      "metric": "operating_income",
+      "quarter_id": "FY2022-Q2",
+      "reported": {
+        "accession": "0001326801-22-000082",
+        "concept": "us-gaap:OperatingIncomeLoss",
+        "end": "2022-06-30",
+        "filed": "2022-07-28",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000082/",
+        "start": "2022-04-01",
+        "value": 8358000000
+      }
+    },
+    {
+      "derived": 27715000000,
+      "difference": 1000000,
+      "metric": "revenue",
+      "quarter_id": "FY2022-Q3",
+      "reported": {
+        "accession": "0001326801-22-000108",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "end": "2022-09-30",
+        "filed": "2022-10-27",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000108/",
+        "start": "2022-07-01",
+        "value": 27714000000
+      }
+    },
+    {
+      "derived": 32000000000,
+      "difference": 1000000,
+      "metric": "revenue",
+      "quarter_id": "FY2023-Q2",
+      "reported": {
+        "accession": "0001326801-23-000093",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "end": "2023-06-30",
+        "filed": "2023-07-27",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+        "start": "2023-04-01",
+        "value": 31999000000
+      }
+    },
+    {
+      "derived": 7789000000,
+      "difference": 1000000,
+      "metric": "net_income",
+      "quarter_id": "FY2023-Q2",
+      "reported": {
+        "accession": "0001326801-23-000093",
+        "concept": "us-gaap:NetIncomeLoss",
+        "end": "2023-06-30",
+        "filed": "2023-07-27",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000093/",
+        "start": "2023-04-01",
+        "value": 7788000000
+      }
+    },
+    {
+      "derived": 39072000000,
+      "difference": 1000000,
+      "metric": "revenue",
+      "quarter_id": "FY2024-Q2",
+      "reported": {
+        "accession": "0001326801-24-000069",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "end": "2024-06-30",
+        "filed": "2024-08-01",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/",
+        "start": "2024-04-01",
+        "value": 39071000000
+      }
+    },
+    {
+      "derived": 17351000000,
+      "difference": 1000000,
+      "metric": "operating_income",
+      "quarter_id": "FY2024-Q3",
+      "reported": {
+        "accession": "0001326801-24-000081",
+        "concept": "us-gaap:OperatingIncomeLoss",
+        "end": "2024-09-30",
+        "filed": "2024-10-31",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/",
+        "start": "2024-07-01",
+        "value": 17350000000
+      }
+    },
+    {
+      "derived": 20442000000,
+      "difference": 1000000,
+      "metric": "operating_income",
+      "quarter_id": "FY2025-Q2",
+      "reported": {
+        "accession": "0001628280-25-036791",
+        "concept": "us-gaap:OperatingIncomeLoss",
+        "end": "2025-06-30",
+        "filed": "2025-07-31",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/",
+        "start": "2025-04-01",
+        "value": 20441000000
+      }
+    },
+    {
+      "derived": 51243000000,
+      "difference": 1000000,
+      "metric": "revenue",
+      "quarter_id": "FY2025-Q3",
+      "reported": {
+        "accession": "0001628280-25-047240",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "end": "2025-09-30",
+        "filed": "2025-10-30",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+        "start": "2025-07-01",
+        "value": 51242000000
+      }
+    },
+    {
+      "derived": 20534000000,
+      "difference": -1000000,
+      "metric": "operating_income",
+      "quarter_id": "FY2025-Q3",
+      "reported": {
+        "accession": "0001628280-25-047240",
+        "concept": "us-gaap:OperatingIncomeLoss",
+        "end": "2025-09-30",
+        "filed": "2025-10-30",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/",
+        "start": "2025-07-01",
+        "value": 20535000000
+      }
+    },
+    {
+      "derived": 60800000000,
+      "difference": -1000000,
+      "metric": "revenue",
+      "quarter_id": "FY2026-Q2",
+      "reported": {
+        "accession": "0001628280-26-050705",
+        "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "end": "2026-06-30",
+        "filed": "2026-07-30",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/",
+        "start": "2026-04-01",
+        "value": 60801000000
+      }
+    }
+  ],
+  "filings": 23,
+  "limitations": [
+    "Exact match to retained SEC filing XBRL is not a line-by-line PDF/HTML audit or a latest-restated series.",
+    "Other is a derived aggregate, not an independently disclosed working-capital line.",
+    "Meta2021 segment comparative exception and standalone/YTD presentation differences remain explicit."
+  ],
+  "mix_standalone_differences": [
+    {
+      "derived": 451000000,
+      "difference": -1000000,
+      "quarter": "FY2022-Q2",
+      "reported": 452000000,
+      "series": "reality"
+    },
+    {
+      "derived": 27428000000,
+      "difference": -1000000,
+      "quarter": "FY2022-Q3",
+      "reported": 27429000000,
+      "series": "apps"
+    },
+    {
+      "derived": 287000000,
+      "difference": 2000000,
+      "quarter": "FY2022-Q3",
+      "reported": 285000000,
+      "series": "reality"
+    },
+    {
+      "derived": 191000000,
+      "difference": -1000000,
+      "quarter": "FY2022-Q3",
+      "reported": 192000000,
+      "series": "other_apps"
+    },
+    {
+      "derived": 277000000,
+      "difference": 1000000,
+      "quarter": "FY2023-Q2",
+      "reported": 276000000,
+      "series": "reality"
+    },
+    {
+      "derived": 33937000000,
+      "difference": 1000000,
+      "quarter": "FY2023-Q3",
+      "reported": 33936000000,
+      "series": "apps"
+    },
+    {
+      "derived": 209000000,
+      "difference": -1000000,
+      "quarter": "FY2023-Q3",
+      "reported": 210000000,
+      "series": "reality"
+    },
+    {
+      "derived": 294000000,
+      "difference": 1000000,
+      "quarter": "FY2023-Q3",
+      "reported": 293000000,
+      "series": "other_apps"
+    },
+    {
+      "derived": 38719000000,
+      "difference": 1000000,
+      "quarter": "FY2024-Q2",
+      "reported": 38718000000,
+      "series": "apps"
+    },
+    {
+      "derived": 38330000000,
+      "difference": 1000000,
+      "quarter": "FY2024-Q2",
+      "reported": 38329000000,
+      "series": "advertising"
+    },
+    {
+      "derived": 50773000000,
+      "difference": 1000000,
+      "quarter": "FY2025-Q3",
+      "reported": 50772000000,
+      "series": "apps"
+    },
+    {
+      "derived": 691000000,
+      "difference": 1000000,
+      "quarter": "FY2025-Q3",
+      "reported": 690000000,
+      "series": "other_apps"
+    },
+    {
+      "derived": 60369000000,
+      "difference": -1000000,
+      "quarter": "FY2026-Q2",
+      "reported": 60370000000,
+      "series": "apps"
+    },
+    {
+      "derived": 1006000000,
+      "difference": -1000000,
+      "quarter": "FY2026-Q2",
+      "reported": 1007000000,
+      "series": "other_apps"
+    },
+    {
+      "derived": 63062000000,
+      "difference": 1000000,
+      "quarter": "FY2026-Q3",
+      "reported": 63061000000,
+      "series": "advertising"
+    },
+    {
+      "derived": 1096000000,
+      "difference": -1000000,
+      "quarter": "FY2026-Q3",
+      "reported": 1097000000,
+      "series": "other_apps"
+    }
+  ],
+  "package_sha256": {
+    "research-data": "8c95f6fe34f24579e3dcf5fd739a27a38d0424477a7d873c510ec9950a7d34b6",
+    "revenue-mix": "ee94b77cb7a862066daaf62fad02b3a67b8d797ca350139f3eb779b809d0031e"
+  },
+  "quarter_checks": [
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2021-Q4",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2022-Q1",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2022-Q2",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2022-Q3",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2022-Q4",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2023-Q1",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2023-Q2",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2023-Q3",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2023-Q4",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2024-Q1",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2024-Q2",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2024-Q3",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2024-Q4",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2025-Q1",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2025-Q2",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2025-Q3",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2025-Q4",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2026-Q1",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2026-Q2",
+      "six_reported_metrics": "MATCH"
+    },
+    {
+      "FCF": "MATCH",
+      "margins": "MATCH",
+      "other_bridge": "MATCH",
+      "quarter": "FY2026-Q3",
+      "six_reported_metrics": "MATCH"
+    }
+  ],
+  "revenue_mix_fact_checks": 84,
+  "revenue_mix_facts": [
+    {
+      "accession": "0001326801-22-000018",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i6f833a1f9db243ae919e678169623aa3_D20210101-20211231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2021-01-31}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2021-01-31}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2021-01-31}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20211231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2021-12-31",
+      "start": "2021-01-01",
+      "value": 114934000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i2aa939c1f2c34fe8b44c2deea1c27e90_D20210101-20210930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2022}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2022}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2021-09-30",
+      "start": "2021-01-01",
+      "value": 82294000000
+    },
+    {
+      "accession": "0001326801-22-000018",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i2ce6b4d640f2408d8acb253b7498db05_D20210101-20211231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2021-01-31}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20211231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2021-12-31",
+      "start": "2021-01-01",
+      "value": 115655000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ia5fb28c87e4b4558831cbc044123996a_D20210101-20210930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2021-09-30",
+      "start": "2021-01-01",
+      "value": 82861000000
+    },
+    {
+      "accession": "0001326801-22-000018",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ice6c16f0b54f43cca2c3f11167f1263d_D20210101-20211231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2021-01-31}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2021-01-31}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2021-01-31}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20211231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2021-12-31",
+      "start": "2021-01-01",
+      "value": 721000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i79817385cf024fb2bbe21bb50122caee_D20210101-20210930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2022}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2022}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2021-09-30",
+      "start": "2021-01-01",
+      "value": 567000000
+    },
+    {
+      "accession": "0001326801-22-000018",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i5eb3b59a82854abbbd1e581e49c2ed2a_D20210101-20211231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2021-01-31}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20211231}RealityLabsMember"
+        ]
+      ],
+      "end": "2021-12-31",
+      "start": "2021-01-01",
+      "value": 2274000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ibdc09dc0f384433da05e65aff4388c35_D20210101-20210930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220930}RealityLabsMember"
+        ]
+      ],
+      "end": "2021-09-30",
+      "start": "2021-01-01",
+      "value": 1397000000
+    },
+    {
+      "accession": "0001326801-22-000057",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i1a767881f4ac456283258c9de476283e_D20220101-20220331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2021-01-31}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2021-01-31}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2021-01-31}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2022-03-31",
+      "start": "2022-01-01",
+      "value": 26998000000
+    },
+    {
+      "accession": "0001326801-22-000057",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "id8d524fc508c45b19f973866ce144062_D20220101-20220331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2021-01-31}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2022-03-31",
+      "start": "2022-01-01",
+      "value": 27213000000
+    },
+    {
+      "accession": "0001326801-22-000057",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ia4bc3b0178e24eb1a5d522ffe1b015fa_D20220101-20220331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2021-01-31}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2021-01-31}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2021-01-31}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2022-03-31",
+      "start": "2022-01-01",
+      "value": 215000000
+    },
+    {
+      "accession": "0001326801-22-000057",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ib4c88d0872bd42b4850197f12a075950_D20220101-20220331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2021-01-31}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220331}RealityLabsMember"
+        ]
+      ],
+      "end": "2022-03-31",
+      "start": "2022-01-01",
+      "value": 695000000
+    },
+    {
+      "accession": "0001326801-22-000082",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ic09dd3da2d814e2aaafdbf0ff26921a3_D20220101-20220630"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2022}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2022}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2022-06-30",
+      "start": "2022-01-01",
+      "value": 55150000000
+    },
+    {
+      "accession": "0001326801-22-000082",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i2a3e09fa948948269f9465ac26fb3807_D20220101-20220630"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2022-06-30",
+      "start": "2022-01-01",
+      "value": 55583000000
+    },
+    {
+      "accession": "0001326801-22-000082",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i34733efa46984f78b4280b9b187a12d2_D20220101-20220630"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2022}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2022}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2022-06-30",
+      "start": "2022-01-01",
+      "value": 433000000
+    },
+    {
+      "accession": "0001326801-22-000082",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "if3f35427b08e408b952429ec90fb5c53_D20220101-20220630"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220630}RealityLabsMember"
+        ]
+      ],
+      "end": "2022-06-30",
+      "start": "2022-01-01",
+      "value": 1146000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i6c4a08087cb64ea9ab701aaa5f36c9fc_D20220101-20220930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2022}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2022}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2022-09-30",
+      "start": "2022-01-01",
+      "value": 82387000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i7c086f40c2074f58ac52673d7bbc98be_D20220101-20220930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2022-09-30",
+      "start": "2022-01-01",
+      "value": 83011000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i37e4a8aa3b3746848524025c0f4eb54a_D20220101-20220930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2022}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2022}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2022-09-30",
+      "start": "2022-01-01",
+      "value": 624000000
+    },
+    {
+      "accession": "0001326801-22-000108",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ib16fb3d91c184b8ca8d4a020498c5e93_D20220101-20220930"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20220930}RealityLabsMember"
+        ]
+      ],
+      "end": "2022-09-30",
+      "start": "2022-01-01",
+      "value": 1433000000
+    },
+    {
+      "accession": "0001326801-23-000013",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i9381bca1466b48669ad8c5f2bff4b5c2_D20220101-20221231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2022}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2022}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20221231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2022-12-31",
+      "start": "2022-01-01",
+      "value": 113642000000
+    },
+    {
+      "accession": "0001326801-23-000013",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i99516c72159e45e0820c88c458a4fd01_D20220101-20221231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20221231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2022-12-31",
+      "start": "2022-01-01",
+      "value": 114450000000
+    },
+    {
+      "accession": "0001326801-23-000013",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i798a790e625f45749b7071450ac839fd_D20220101-20221231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2022}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2022}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20221231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2022-12-31",
+      "start": "2022-01-01",
+      "value": 808000000
+    },
+    {
+      "accession": "0001326801-23-000013",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i48a400bf05aa43c7856cf5276ae74a98_D20220101-20221231"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20221231}RealityLabsMember"
+        ]
+      ],
+      "end": "2022-12-31",
+      "start": "2022-01-01",
+      "value": 2159000000
+    },
+    {
+      "accession": "0001326801-23-000067",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "if7ef1bdab24e4579bbad0745ec78fb98_D20230101-20230331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2022}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2022}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20230331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2023-03-31",
+      "start": "2023-01-01",
+      "value": 28101000000
+    },
+    {
+      "accession": "0001326801-23-000067",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ibfc877cc1a734fd1977eec6a2ec4900b_D20230101-20230331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20230331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2023-03-31",
+      "start": "2023-01-01",
+      "value": 28306000000
+    },
+    {
+      "accession": "0001326801-23-000067",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i820317449173416b82b79902847bd3cc_D20230101-20230331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2022}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2022}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20230331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2023-03-31",
+      "start": "2023-01-01",
+      "value": 205000000
+    },
+    {
+      "accession": "0001326801-23-000067",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ic76ef305eecb4817a9b2431534d77ebc_D20230101-20230331"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2022}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20230331}RealityLabsMember"
+        ]
+      ],
+      "end": "2023-03-31",
+      "start": "2023-01-01",
+      "value": 339000000
+    },
+    {
+      "accession": "0001326801-23-000093",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-63"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2023}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2023}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20230630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2023-06-30",
+      "start": "2023-01-01",
+      "value": 59599000000
+    },
+    {
+      "accession": "0001326801-23-000093",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-71"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20230630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2023-06-30",
+      "start": "2023-01-01",
+      "value": 60029000000
+    },
+    {
+      "accession": "0001326801-23-000093",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-67"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2023}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2023}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20230630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2023-06-30",
+      "start": "2023-01-01",
+      "value": 430000000
+    },
+    {
+      "accession": "0001326801-23-000093",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-75"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20230630}RealityLabsMember"
+        ]
+      ],
+      "end": "2023-06-30",
+      "start": "2023-01-01",
+      "value": 616000000
+    },
+    {
+      "accession": "0001326801-23-000103",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-63"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2023}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2023}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20230930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2023-09-30",
+      "start": "2023-01-01",
+      "value": 93242000000
+    },
+    {
+      "accession": "0001326801-23-000103",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-71"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20230930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2023-09-30",
+      "start": "2023-01-01",
+      "value": 93966000000
+    },
+    {
+      "accession": "0001326801-23-000103",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-67"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2023}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2023}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20230930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2023-09-30",
+      "start": "2023-01-01",
+      "value": 724000000
+    },
+    {
+      "accession": "0001326801-23-000103",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-75"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20230930}RealityLabsMember"
+        ]
+      ],
+      "end": "2023-09-30",
+      "start": "2023-01-01",
+      "value": 825000000
+    },
+    {
+      "accession": "0001326801-24-000012",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-66"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2023}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2023}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20231231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2023-12-31",
+      "start": "2023-01-01",
+      "value": 131948000000
+    },
+    {
+      "accession": "0001326801-24-000012",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-72"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20231231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2023-12-31",
+      "start": "2023-01-01",
+      "value": 133006000000
+    },
+    {
+      "accession": "0001326801-24-000012",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-69"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2023}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2023}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20231231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2023-12-31",
+      "start": "2023-01-01",
+      "value": 1058000000
+    },
+    {
+      "accession": "0001326801-24-000012",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-75"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20231231}RealityLabsMember"
+        ]
+      ],
+      "end": "2023-12-31",
+      "start": "2023-01-01",
+      "value": 1896000000
+    },
+    {
+      "accession": "0001326801-24-000049",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-41"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2023}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2023}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20240331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2024-03-31",
+      "start": "2024-01-01",
+      "value": 35635000000
+    },
+    {
+      "accession": "0001326801-24-000049",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-45"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20240331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2024-03-31",
+      "start": "2024-01-01",
+      "value": 36015000000
+    },
+    {
+      "accession": "0001326801-24-000049",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-43"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2023}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2023}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20240331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2024-03-31",
+      "start": "2024-01-01",
+      "value": 380000000
+    },
+    {
+      "accession": "0001326801-24-000049",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-47"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2023}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20240331}RealityLabsMember"
+        ]
+      ],
+      "end": "2024-03-31",
+      "start": "2024-01-01",
+      "value": 440000000
+    },
+    {
+      "accession": "0001326801-24-000069",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-63"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2024}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2024}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2024}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20240630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2024-06-30",
+      "start": "2024-01-01",
+      "value": 73965000000
+    },
+    {
+      "accession": "0001326801-24-000069",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-71"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2024}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20240630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2024-06-30",
+      "start": "2024-01-01",
+      "value": 74734000000
+    },
+    {
+      "accession": "0001326801-24-000069",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-67"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2024}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2024}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2024}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20240630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2024-06-30",
+      "start": "2024-01-01",
+      "value": 769000000
+    },
+    {
+      "accession": "0001326801-24-000069",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-75"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2024}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20240630}RealityLabsMember"
+        ]
+      ],
+      "end": "2024-06-30",
+      "start": "2024-01-01",
+      "value": 793000000
+    },
+    {
+      "accession": "0001326801-24-000081",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-59"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2024}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2024}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2024}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20240930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2024-09-30",
+      "start": "2024-01-01",
+      "value": 113850000000
+    },
+    {
+      "accession": "0001326801-24-000081",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-67"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2024}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20240930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2024-09-30",
+      "start": "2024-01-01",
+      "value": 115053000000
+    },
+    {
+      "accession": "0001326801-24-000081",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-63"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2024}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2024}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2024}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20240930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2024-09-30",
+      "start": "2024-01-01",
+      "value": 1203000000
+    },
+    {
+      "accession": "0001326801-24-000081",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-71"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2024}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20240930}RealityLabsMember"
+        ]
+      ],
+      "end": "2024-09-30",
+      "start": "2024-01-01",
+      "value": 1063000000
+    },
+    {
+      "accession": "0001326801-25-000017",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-59"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2024}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2024}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2024}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20241231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2024-12-31",
+      "start": "2024-01-01",
+      "value": 160633000000
+    },
+    {
+      "accession": "0001326801-25-000017",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-65"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2024}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20241231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2024-12-31",
+      "start": "2024-01-01",
+      "value": 162355000000
+    },
+    {
+      "accession": "0001326801-25-000017",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-62"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2024}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2024}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2024}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20241231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2024-12-31",
+      "start": "2024-01-01",
+      "value": 1722000000
+    },
+    {
+      "accession": "0001326801-25-000017",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-68"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2024}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20241231}RealityLabsMember"
+        ]
+      ],
+      "end": "2024-12-31",
+      "start": "2024-01-01",
+      "value": 2146000000
+    },
+    {
+      "accession": "0001326801-25-000054",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-39"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2025}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2025}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20250331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2025-03-31",
+      "start": "2025-01-01",
+      "value": 41392000000
+    },
+    {
+      "accession": "0001326801-25-000054",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-43"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20250331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2025-03-31",
+      "start": "2025-01-01",
+      "value": 41902000000
+    },
+    {
+      "accession": "0001326801-25-000054",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-41"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2025}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2025}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20250331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2025-03-31",
+      "start": "2025-01-01",
+      "value": 510000000
+    },
+    {
+      "accession": "0001326801-25-000054",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-45"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20250331}RealityLabsMember"
+        ]
+      ],
+      "end": "2025-03-31",
+      "start": "2025-01-01",
+      "value": 412000000
+    },
+    {
+      "accession": "0001628280-25-036791",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-61"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2025}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2025}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20250630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2025-06-30",
+      "start": "2025-01-01",
+      "value": 87955000000
+    },
+    {
+      "accession": "0001628280-25-036791",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-69"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20250630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2025-06-30",
+      "start": "2025-01-01",
+      "value": 89048000000
+    },
+    {
+      "accession": "0001628280-25-036791",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-65"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2025}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2025}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20250630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2025-06-30",
+      "start": "2025-01-01",
+      "value": 1093000000
+    },
+    {
+      "accession": "0001628280-25-036791",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-73"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20250630}RealityLabsMember"
+        ]
+      ],
+      "end": "2025-06-30",
+      "start": "2025-01-01",
+      "value": 782000000
+    },
+    {
+      "accession": "0001628280-25-047240",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-61"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2025}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2025}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20250930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2025-09-30",
+      "start": "2025-01-01",
+      "value": 138037000000
+    },
+    {
+      "accession": "0001628280-25-047240",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-69"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20250930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2025-09-30",
+      "start": "2025-01-01",
+      "value": 139821000000
+    },
+    {
+      "accession": "0001628280-25-047240",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-65"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2025}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2025}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20250930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2025-09-30",
+      "start": "2025-01-01",
+      "value": 1784000000
+    },
+    {
+      "accession": "0001628280-25-047240",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-73"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20250930}RealityLabsMember"
+        ]
+      ],
+      "end": "2025-09-30",
+      "start": "2025-01-01",
+      "value": 1252000000
+    },
+    {
+      "accession": "0001628280-26-003942",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-57"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2025}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2025}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20251231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2025-12-31",
+      "start": "2025-01-01",
+      "value": 196175000000
+    },
+    {
+      "accession": "0001628280-26-003942",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-63"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20251231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2025-12-31",
+      "start": "2025-01-01",
+      "value": 198759000000
+    },
+    {
+      "accession": "0001628280-26-003942",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-60"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2025}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2025}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20251231}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2025-12-31",
+      "start": "2025-01-01",
+      "value": 2584000000
+    },
+    {
+      "accession": "0001628280-26-003942",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-66"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20251231}RealityLabsMember"
+        ]
+      ],
+      "end": "2025-12-31",
+      "start": "2025-01-01",
+      "value": 2207000000
+    },
+    {
+      "accession": "0001628280-26-028526",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-31"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2025}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2025}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20260331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2026-03-31",
+      "start": "2026-01-01",
+      "value": 55024000000
+    },
+    {
+      "accession": "0001628280-26-028526",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-35"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20260331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2026-03-31",
+      "start": "2026-01-01",
+      "value": 55909000000
+    },
+    {
+      "accession": "0001628280-26-028526",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-33"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2025}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2025}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20260331}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2026-03-31",
+      "start": "2026-01-01",
+      "value": 885000000
+    },
+    {
+      "accession": "0001628280-26-028526",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-37"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2025}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20260331}RealityLabsMember"
+        ]
+      ],
+      "end": "2026-03-31",
+      "start": "2026-01-01",
+      "value": 402000000
+    },
+    {
+      "accession": "0001628280-26-050705",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-49"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2026}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2026}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2026}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20260630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2026-06-30",
+      "start": "2026-01-01",
+      "value": 114387000000
+    },
+    {
+      "accession": "0001628280-26-050705",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-57"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2026}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20260630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2026-06-30",
+      "start": "2026-01-01",
+      "value": 116278000000
+    },
+    {
+      "accession": "0001628280-26-050705",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-53"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2026}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2026}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2026}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20260630}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2026-06-30",
+      "start": "2026-01-01",
+      "value": 1891000000
+    },
+    {
+      "accession": "0001628280-26-050705",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-61"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2026}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20260630}RealityLabsMember"
+        ]
+      ],
+      "end": "2026-06-30",
+      "start": "2026-01-01",
+      "value": 833000000
+    },
+    {
+      "accession": "0001628280-26-066773",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-49"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2026}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2026}AdvertisingMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2026}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20260930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2026-09-30",
+      "start": "2026-01-01",
+      "value": 177449000000
+    },
+    {
+      "accession": "0001628280-26-066773",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-57"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2026}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20260930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2026-09-30",
+      "start": "2026-01-01",
+      "value": 180436000000
+    },
+    {
+      "accession": "0001628280-26-066773",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-53"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2026}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2026}ServiceOtherMember"
+        ],
+        [
+          "{http://fasb.org/us-gaap/2026}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20260930}FamilyOfAppsMember"
+        ]
+      ],
+      "end": "2026-09-30",
+      "start": "2026-01-01",
+      "value": 2987000000
+    },
+    {
+      "accession": "0001628280-26-066773",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "c-61"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/us-gaap/2026}StatementBusinessSegmentsAxis",
+          "{http://www.facebook.com/20260930}RealityLabsMember"
+        ]
+      ],
+      "end": "2026-09-30",
+      "start": "2026-01-01",
+      "value": 1276000000
+    }
+  ],
+  "schema": "full-reporting-audit/v1",
+  "scope": "All 20 displayed quarters, all six underlying metrics, all preparation annual totals and all revenue-mix source operands. Independent direct XML selection, not only package arithmetic.",
+  "standalone_consolidated_checks": 45,
+  "standalone_mix_checks": 60,
+  "status": "MATCH",
+  "ticker": "META"
+}

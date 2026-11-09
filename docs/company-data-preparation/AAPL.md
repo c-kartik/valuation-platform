@@ -1276,3 +1276,11 @@ retained under `data/revenue-mix/` and the static revenue-mix package. See
 [the methodology and issuer decisions](../revenue-mix.md). This does not change
 original normalization, accepted DCF inputs, valuation readiness or prior issuer
 qualifications. Future snapshots require review of any mapping/recast changes.
+
+## Full-window reporting audit — November 9, 2026
+
+[Review and validation scope](../reporting-review-2026-11-09.md): all 20 displayed quarters, six
+consolidated metrics, revenue-mix dimensions, recorded standalone comparisons and
+annual ties match retained SEC filing XBRL. No source value or accepted financial
+treatment changed. Original issuer qualifications/readiness classifications and
+DCF inputs remain preserved. Receipts are in `data/reporting-audit/`.

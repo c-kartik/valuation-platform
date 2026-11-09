@@ -135,3 +135,12 @@ Validation: 474 frontend tests pass, including pointer-preview/restoration,
 keyboard selection, legend controls and curve bounds/gaps. Browser checks cover
 all three issuers, shared tooltip movement and a 390px phone viewport without
 horizontal overflow. Physical iPhone/Safari testing remains outside these checks.
+
+## Full-window review — November 9, 2026
+
+[The independent reporting review](reporting-review-2026-11-09.md) checks all
+displayed quarterly source operands, retained standalone comparisons and annual
+ties for all three companies. Its receipts supersede the earlier latest-only
+validation scope for this review, without rewriting historical receipts, amounts
+or methodology. Reporting validators were strengthened; original DCF inputs and
+pipelines remain unchanged.

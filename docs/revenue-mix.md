@@ -121,3 +121,12 @@ physical iPhone/Safari certification.
 No export changes are included: existing DCF Excel downloads keep their scope.
 Other issuers and new disclosure structures require separate reviewed mappings;
 three pilot packages are not universal segment extraction readiness.
+
+## Full-window review — November 9, 2026
+
+[The independent reporting review](reporting-review-2026-11-09.md) checks all
+displayed quarterly source operands, retained standalone comparisons and annual
+ties for all three companies. Its receipts supersede the earlier latest-only
+validation scope for this review, without rewriting historical receipts, amounts
+or methodology. Reporting validators were strengthened; original DCF inputs and
+pipelines remain unchanged.

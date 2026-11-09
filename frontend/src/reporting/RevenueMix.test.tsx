@@ -35,3 +35,7 @@ it('isolates failures, retries and ignores a late response from a previous issue
  const failed=vi.fn(load).mockRejectedValueOnce(Error('offline'));const v=render(<RevenueMix ticker="GOOGL" history={histories.GOOGL} selected={19} onSelect={()=>{}} loadMix={failed}/>);fireEvent.click(await screen.findByRole('button',{name:'Retry revenue mix'}));await screen.findByRole('slider');expect(failed).toHaveBeenCalledTimes(2);v.unmount();
  let resolve!:(value:ReturnType<typeof validateMix>)=>void;const delayed=vi.fn(load).mockImplementationOnce(()=>new Promise(r=>{resolve=r;}));const next=render(<RevenueMix ticker="GOOGL" history={histories.GOOGL} selected={19} onSelect={()=>{}} loadMix={delayed}/>);next.rerender(<RevenueMix ticker="AAPL" history={histories.AAPL} selected={19} onSelect={()=>{}} loadMix={delayed}/>);await screen.findByRole('rowheader',{name:'iPhone'});resolve(validateMix(gm,'GOOGL',histories.GOOGL));await waitFor(()=>expect(document.querySelector('.rm-table')!.textContent).toContain('iPhone'));expect(document.querySelector('.rm-table')!.textContent).not.toContain('Google Services');
 });
+
+it('rejects fiscal metadata that would misalign year-over-year comparisons',()=>{
+ for(const key of ['quarter','fiscal_year'] as const){const broken=structuredClone(gm);broken.rows[0][key]+=1;expect(()=>validateMix(broken,'GOOGL',histories.GOOGL)).toThrow();}
+});

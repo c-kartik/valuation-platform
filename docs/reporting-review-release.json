@@ -1,0 +1,39 @@
+{
+  "schema": "reporting-review-release/v1",
+  "date": "2026-11-09",
+  "scope": [
+    "historical trends",
+    "revenue mix",
+    "earnings-to-cash bridge"
+  ],
+  "tickers": [
+    "GOOGL",
+    "AAPL",
+    "META"
+  ],
+  "quarters": 60,
+  "retained_filings": 68,
+  "underlying_filing_observations": 760,
+  "standalone_comparisons": 375,
+  "annual_consolidated_ties": 126,
+  "annual_mix_ties": 73,
+  "data_corrections": 0,
+  "frontend_tests": 487,
+  "python_reporting_tests": 17,
+  "live_quarter_view_checks": 280,
+  "phone_panel_checks": 9,
+  "original_python_files_hash_verified": 396,
+  "original_browser_assets_hash_verified": 15,
+  "engine_fixtures_hash_verified": 128,
+  "publication": {
+    "status": "READY_FOR_DEPLOYMENT",
+    "url": "https://kartikchaturvedi.com/valuation/"
+  },
+  "changes": "Reporting-only validator guards; independent whole-window audit tooling/evidence. Reporting values, definitions, DCF engines and inputs unchanged.",
+  "limitations": [
+    "Matches retained filing XBRL; not a manual line-by-line HTML/PDF audit",
+    "Cohort/YTD policy and standalone presentation differences remain disclosed",
+    "Meta2021 segment comparative exception retained",
+    "No physical iPhone/Safari certification"
+  ]
+}

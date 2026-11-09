@@ -10,7 +10,7 @@ export function validateMix(value:unknown,ticker:string,history:QuarterlyReport)
  if(new Set(ids).size!==ids.length||all.some(s=>!s.id||!s.label)||p.detail.series.length&&!p.series.some(s=>s.id===p.detail.parent))throw Error('Invalid revenue hierarchy');
  for(const [i,r]of p.rows.entries()){
   const h=history.rows[i];
-  if(r.id!==h.id||r.start!==h.start||r.end!==h.end||r.total!==h.values.revenue||!Number.isSafeInteger(r.total)||r.total<=0||ids.some(k=>!Number.isSafeInteger(r.values?.[k])))throw Error('Revenue periods or amounts contradict history');
+  if(r.id!==h.id||r.fiscal_year!==h.fiscal_year||r.quarter!==h.quarter||r.start!==h.start||r.end!==h.end||r.total!==h.values.revenue||!Number.isSafeInteger(r.total)||r.total<=0||ids.some(k=>!Number.isSafeInteger(r.values?.[k])))throw Error('Revenue periods or amounts contradict history');
   if(p.series.reduce((n,s)=>n+r.values[s.id],0)!==r.total)throw Error('Revenue mix does not reconcile');
   if(p.detail.series.length&&p.detail.series.reduce((n,s)=>n+r.values[s.id],0)!==r.values[p.detail.parent!])throw Error('Revenue detail does not reconcile');
   if(!Array.isArray(r.total_evidence)||![1,2].includes(r.total_evidence.length)||r.total_evidence.some(o=>!Number.isSafeInteger(o.value))||r.total_evidence[0].value-(r.total_evidence[1]?.value??0)!==r.total)throw Error('Missing consolidated evidence');

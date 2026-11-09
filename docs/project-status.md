@@ -1,3 +1,11 @@
+## Reporting review — November 9, 2026
+
+[Independent full-window audit](reporting-review-2026-11-09.md): all 60
+quarters reconcile; 760 underlying source observations match retained filing
+XBRL, with 375 standalone comparisons re-extracted. Live checks cover all
+quarter/group/mode combinations and phone layouts. No data corrections were
+needed. Reporting-only runtime validation was strengthened; DCF is unchanged.
+
 ## Revenue mix — November 9, 2026
 
 Added the separately sourced revenue-mix section for GOOGL, AAPL and META,
