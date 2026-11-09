@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-09",
+  "scope": "Restore previous layout and shorten headline",
+  "status": "published-and-live-verified",
+  "valuation_commit": "80e3885",
+  "portfolio_commit": "06a62b9",
+  "headline": "Equity Valuation",
+  "layout": "Exact CSS from before search-spacing adjustment restored",
+  "validation": {
+    "browser_build": "PASS",
+    "static_artifact": "50 files / 59 local references PASS",
+    "original_preservation": "15 assets / 396 Python files / 128 fixtures PASS",
+    "live_desktop": "Equity Valuation; 66px; hero padding 78px 0 58px",
+    "live_phone": "47px; no horizontal overflow at 390px"
+  },
+  "financial_changes": false,
+  "screenshot": {
+    "path": "/Users/kc/Documents/Codex/outputs/valuation-short-headline-release/live-landing.png",
+    "sha256": "399720a60fbbb2698a1128065ca0871521ebacffe8a1406d2da1346088bdfa09"
+  }
+}
