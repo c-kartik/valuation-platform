@@ -1,6 +1,7 @@
 # Apple and Meta cash allocation / Inside PP&E
 
-User-approved extension, November 9, 2026. This acceptance covers Apple and Meta
+User-approved extension, November 9, 2026. Deployed and live-verified at
+[the valuation page](https://kartikchaturvedi.com/valuation/). This acceptance covers Apple and Meta
 only, alongside the already accepted Alphabet consumer. Existing Python SEC/DCF
 pipelines, financial conventions, model dates, accepted input packages and
 reporting datasets remain unchanged. This does not resume the issuer universe.
@@ -146,3 +147,7 @@ This script does not schedule or auto-publish refreshes. Other issuers need thei
 own reviewed mapping and acceptance. Existing DCF Excel export scope is unchanged.
 
 [Release and verification receipt](cash-allocation-issuers-release.json).
+
+Final source-detail checks trace derived-quarter and TTM opening/closing balances
+to their actual reported balance facts, including the prior cumulative closing
+balance used as a discrete quarter's opening cash. Amounts are unchanged.

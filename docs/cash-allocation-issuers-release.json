@@ -1,7 +1,7 @@
 {
   "schema": "cash-allocation-issuers-release/v1",
   "date": "2026-11-09",
-  "status": "LOCAL_VALIDATED_PUBLICATION_PENDING",
+  "status": "DEPLOYED_AND_LIVE_VERIFIED",
   "tickers": [
     "AAPL",
     "META"
@@ -67,5 +67,31 @@
     "No new Excel export scope",
     "Meta FY2021 category attribution follows changing YTD presentations; affected periods disclose the timing limitation."
   ],
-  "balance_provenance": "Derived-quarter and TTM opening/closing cash trace to the correct reported balance facts; amounts unchanged"
+  "balance_provenance": "Derived-quarter and TTM opening/closing cash trace to the correct reported balance facts; amounts unchanged",
+  "publication": {
+    "url": "https://kartikchaturvedi.com/valuation/",
+    "implementation_commit": "ecd7bd4",
+    "final_ui_commit": "2a248d8",
+    "portfolio_commit": "f6df2f1",
+    "previous_portfolio_commit": "2fbcefd",
+    "workspace_bundle": "workspace-CIYragu2.js",
+    "css_bundle": "workspace-BNkrZ6yG.css",
+    "artifact_files": 50,
+    "artifact_local_references": 57,
+    "loopback_validation": "PASS",
+    "live_data_exact_matches": [
+      "AAPL",
+      "META"
+    ],
+    "live_company_views": [
+      "AAPL",
+      "META"
+    ],
+    "live_source_balance_trace": "PASS; Meta FY2021 Q2 opening 2021-03-31 / closing 2021-06-30",
+    "console_errors": 0,
+    "screenshots": {
+      "AAPL": "/Users/kc/Documents/Codex/outputs/cash-allocation-apple-meta-release/live-apple-ppe.png",
+      "META": "/Users/kc/Documents/Codex/outputs/cash-allocation-apple-meta-final/live-meta-ppe.png"
+    }
+  }
 }
