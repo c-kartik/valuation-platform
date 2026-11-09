@@ -40,3 +40,11 @@ it('retries a failed issuer load and ignores a late response after switching bet
  const fail=vi.fn(load).mockRejectedValueOnce(Error('offline'));const first=render(<CashAllocation ticker="META" history={histories.META} loadAllocation={fail}/>);fireEvent.click(await screen.findByRole('button',{name:'Retry cash allocation'}));await screen.findByRole('heading',{name:'What the investment has built'});first.unmount();
  let resolve!:(p:CashAllocationReport)=>void;const delayed=vi.fn(load).mockImplementationOnce(()=>new Promise(r=>{resolve=r;}));const view=render(<CashAllocation ticker="AAPL" history={histories.AAPL} loadAllocation={delayed}/>);view.rerender(<CashAllocation ticker="META" history={histories.META} loadAllocation={delayed}/>);await screen.findByText('Construction in progress',{selector:'.ca-ppe-breakdown span'});resolve(await load('AAPL',histories.AAPL));await waitFor(()=>expect(document.querySelector('.ca-ppe')!.textContent).toContain('Construction in progress'));expect(document.querySelector('.ca-ppe')!.textContent).not.toContain('Machinery, equipment');
 });
+
+it('traces derived quarter and TTM opening/closing cash to reported balance facts',async()=>{
+ render(<CashAllocation ticker="META" history={histories.META} loadAllocation={load}/>);await screen.findByRole('heading',{name:'What the investment has built'});
+ const balanceEvidence=(name:string)=>Array.from(document.querySelectorAll('.ca-sources h4')).find(e=>e.textContent===name)!.parentElement!.textContent!;
+ fireEvent.click(screen.getByRole('button',{name:'Quarterly'}));fireEvent.click(within(screen.getByRole('group',{name:'Cash allocation reporting years'})).getByRole('button',{name:'FY2021'}));fireEvent.click(screen.getByRole('button',{name:'FY2021 Q2'}));
+ expect(document.querySelector('.ca-sources')!.textContent).toContain('FY2021 presentation qualification');expect(balanceEvidence('Opening cash')).toContain('2021-03-31');expect(balanceEvidence('Closing cash')).toContain('2021-06-30');expect(balanceEvidence('Opening cash')).not.toContain('Caption absent');
+ fireEvent.click(screen.getByRole('button',{name:'Trailing 12 months'}));expect(balanceEvidence('Opening cash')).toContain('2025-09-30');expect(balanceEvidence('Closing cash')).toContain('2026-09-30');
+});

@@ -94,7 +94,7 @@ export async function fetchAllocation(ticker:string,history:QuarterlyReport,sign
  return validateAllocation(await response.json(),ticker,history);
 }
 export type AllocationNode={id:string;label:string;flow:number;value:number;kind:string;lines:[string,number][];copy:string;color:string};
-export function allocationLabels(ticker:string){return {...cashLabels,...(ticker!=='GOOGL'?{awards:'Taxes paid on net settlement of equity awards'}:{}),...(ticker==='AAPL'?{acquisitions:'Acquisitions, net of cash acquired',otherPurchases:'Other investment purchases',otherSales:'Other investment sales / proceeds'}:{})};}
+export function allocationLabels(ticker:string){return {...cashLabels,...(ticker!=='GOOGL'?{awards:'Taxes paid on net settlement of equity awards',marketableSales:'Marketable sales / combined proceeds'}:{}),...(ticker==='AAPL'?{acquisitions:'Acquisitions, net of cash acquired',otherPurchases:'Other investment purchases',otherSales:'Other investment sales / proceeds'}:{})};}
 export function allocationModel(row:CashPeriod,ticker='GOOGL'){
  const names=allocationLabels(ticker);
  const n=(k:CashKey)=>cashAmount(row,k),nodes:AllocationNode[]=[];

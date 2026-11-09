@@ -99,6 +99,10 @@ the payment is within the $62m Other investing aggregate. Counting both produces
 a $20m discrepancy. The consumer retains the note fact as explicitly excluded
 supporting evidence, leaves the separate component null, and shows that
 exclusion/source in the UI. Investing cash flow reconciles to −$13.069bn.
+Later FY2021 YTD statements separately present non-marketable payments, so the
+YTD-difference series can shift category attribution between quarters. The UI
+explicitly qualifies affected periods: it preserves the source presentations,
+not reconstructed payment timing; total cash flows still reconcile.
 This is a statement-role rule applied before reconciliation, not a residual
 adjustment or a blanket rule to discard non-marketable investment payments.
 

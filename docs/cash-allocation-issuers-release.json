@@ -36,8 +36,8 @@
   "retained_filings": 47,
   "primary_cash_flow_statement_role_checks": 47,
   "annual_component_ties": 308,
-  "frontend_full_suite": 496,
-  "frontend_final_targeted": 9,
+  "frontend_full_suite": 497,
+  "frontend_final_targeted": 10,
   "python_reporting_tests": 29,
   "browser_checks": {
     "desktop_issuer_switching": "PASS",
@@ -64,6 +64,8 @@
     "Two PP&E balance dates per issuer; not a cash-capex breakdown",
     "First-disclosure/YTD cohort series, not latest-restated or as-known backtesting",
     "No physical iPhone/Safari certification",
-    "No new Excel export scope"
-  ]
+    "No new Excel export scope",
+    "Meta FY2021 category attribution follows changing YTD presentations; affected periods disclose the timing limitation."
+  ],
+  "balance_provenance": "Derived-quarter and TTM opening/closing cash trace to the correct reported balance facts; amounts unchanged"
 }
