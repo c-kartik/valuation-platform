@@ -1,3 +1,10 @@
+## Apple and Meta extension — November 9, 2026
+
+The user subsequently authorized the same controls and sections for AAPL/META.
+Their [separate issuer acceptance](cash-allocation-issuers.md) supersedes the
+Alphabet-only product boundary below for these two named issuers only. Alphabet's
+source package/policy remains unchanged; no generic-universe mapping is implied.
+
 # Alphabet cash allocation and Inside PP&E
 
 User-approved implementation of the two cash-allocation mockups, November 9,

@@ -1,3 +1,13 @@
+## Apple and Meta cash allocation / PP&E — November 9, 2026
+
+Extended the approved sections to AAPL/META using their reported cash-flow
+captions and PP&E categories. Apple has 24 quarters / 21 TTM windows; Meta has
+23 quarters / 20 TTM windows, both from full FY2021. Primary statement-role
+validation avoids Meta's note-only equity-investment double count. All components
+and asset balances reconcile; original DCF and other reporting data are unchanged.
+[Issuer contract](cash-allocation-issuers.md),
+[release verification](cash-allocation-issuers-release.json).
+
 ## Alphabet cash allocation and PP&E — November 9, 2026
 
 Added the approved cash-allocation flow before DCF: five annual years, 23

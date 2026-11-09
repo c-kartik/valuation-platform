@@ -2243,3 +2243,11 @@ GOOGL filing instances and the accepted reporting cohort. Its independent static
 package feeds `CashAllocation.tsx`, ahead of DCF. It has no valuation-engine or
 refresh-service dependency; load failures leave other reporting/DCF available.
 [Consumer, evidence and preservation contract](cash-allocation.md).
+
+## Apple/Meta cash-allocation consumers — November 9, 2026
+
+The additive `prepare_issuer_cash_allocation.py` uses the shared reporting-only
+XML parser (now accepts an explicit issuer CIK) plus primary HTML statement-role
+selection. New issuer packages stay separate from original reporting and DCF
+assets. The common UI validates issuer-specific cash and asset contracts, aborts
+stale loads and isolates failure. [Details](cash-allocation-issuers.md).

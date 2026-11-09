@@ -64,13 +64,13 @@ def sha(data):
 
 
 class Instance:
-    def __init__(self, data, url, filed):
+    def __init__(self, data, url, filed, entity=1652044):
         require(b'<!DOCTYPE' not in data.upper() and b'<!ENTITY' not in data.upper(), 'Unsafe XML')
         self.ns = dict(item for _, item in ET.iterparse(io.BytesIO(data), events=['start-ns']))
         self.root = ET.fromstring(data)
         self.contexts = {c.attrib['id']: c for c in self.root.findall(X+'context')}
         self.units = {u.attrib['id']: u for u in self.root.findall(X+'unit')}
-        self.url, self.filed, self.hash = url, filed, sha(data)
+        self.url, self.filed, self.hash, self.entity = url, filed, sha(data), entity
 
     def qname(self, value):
         prefix, local = value.split(':') if ':' in value else ('us-gaap', value)
@@ -88,7 +88,7 @@ class Instance:
             if c is None or c.find('.//'+D+'typedMember') is not None:
                 continue
             entity = c.findtext(X+'entity/'+X+'identifier')
-            require(entity and int(entity) == 1652044, 'Wrong filing entity')
+            require(entity and int(entity) == self.entity, 'Wrong filing entity')
             got_dims = sorted((self.qname(v.attrib['dimension']), self.qname(v.text)) for v in c.findall('.//'+D+'explicitMember'))
             if got_dims != dims:
                 continue

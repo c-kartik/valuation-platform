@@ -1,3 +1,15 @@
+## Cash allocation / PP&E consumer acceptance — November 9, 2026
+
+The user approved this additive descriptive consumer for META. The
+[issuer contract](../../cash-allocation-issuers.md) records exact caption/sign/axis
+mappings, original fiscal cohorts, source hashes and refresh gates. It covers
+full FY2021 onward, with independently selected 2024/2025 PP&E balances. Primary
+statement-role checks exclude the note-only FY2021 Q2 $20m investment payment
+from separate components because it is within Other investing. All statement
+and PP&E totals reconcile. No original normalized amount, historical FCFF/FCFE
+convention, DCF date/input, ownership decision or sufficiency status changes.
+This is descriptive reporting acceptance, not closure of unrelated roadblocks.
+
 # META — supplemental supported-seed preparation note
 
 ## Named analyst-consumer sufficiency — November4,2026

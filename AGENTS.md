@@ -1,3 +1,14 @@
+## Apple / Meta cash allocation acceptance — November 9, 2026
+
+The user explicitly extends cash allocation and Inside PP&E to AAPL/META.
+`docs/cash-allocation-issuers.md` records issuer-specific cash captions, fiscal
+calendar, PP&E categories and Meta's note-only $20m exclusion. Use both raw XBRL
+and the primary cash-flow table role; never double-count a note aggregate or
+copy Alphabet's infrastructure split. Year/quarter controls and independent PP&E
+dates are shared. Original Python/DCF engines, inputs and reporting assets remain
+unchanged. Existing Alphabet packages reproduce unchanged; wider issuers still
+require reviewed mappings and separate acceptance.
+
 ## Cash allocation and PP&E — November 9, 2026
 
 The user approved the Alphabet cash-allocation and separate Inside PP&E mockups.

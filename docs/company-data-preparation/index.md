@@ -1818,3 +1818,10 @@ years. No expanded preparation coverage or valuation-use approval is inferred.
 qualified descriptive consumers. Their issuer records retain source evidence,
 selection policy, validation scope and remaining limits. Original valuation-input
 classifications and other issuers are unchanged.
+
+## Cash-allocation reporting consumers — November 9, 2026
+
+[Named AAPL/META acceptance](../cash-allocation-issuers.md) adds descriptive
+cash allocation and PP&E to the Alphabet pilot. Exact issuer mappings and primary
+statement-role checks are separately scoped; existing preparation, sufficiency
+and financial-methodology statuses do not change. Wider issuer work stays paused.

@@ -1,0 +1,125 @@
+{
+  "files": {
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019321000010/aapl-20201226.htm": {
+      "file": "0560ada3e1bd8701b25824282e04d4a745a17fb787a17aaa6e838b184afb682a.gz",
+      "sha256": "80c643b2d3765cdb2dba48b35497c140b322ff6d99dd511404c94a99b6761aee"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019321000010/aapl-20201226_htm.xml": {
+      "file": "8e7080b1b2e57da2a2a30f0d84f3c92b5c93812f0e5822edb386174efdcca763.gz",
+      "sha256": "ac914744e7c2c860232c6f437e4e7d1b2159cc197bdf62e9a9324bbb87cf016e"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019321000010/index.json": {
+      "file": "d6c8ca51c64516d79b03940f9e09090cca404823f9d5db5393f9aa746e780b8b.gz",
+      "sha256": "3ae403844f9aea518f7fa539b96682603d367901de785c03987f91eb6a16d3f2"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019321000056/aapl-20210327.htm": {
+      "file": "1a6c0964f7bce2f68a0d4e1e4c0c9539fd7010de524713d9467b13f348d29ade.gz",
+      "sha256": "f804808e82fa353782996ba2a2a921a321c90e993d65cefbab03413c986d36d4"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019321000056/aapl-20210327_htm.xml": {
+      "file": "200790691ef34f7a0c8bb048838b1aa682e4ac294d4360ea9b8b86b125e21b75.gz",
+      "sha256": "d49d5cbe5996b568cb343429fb6684810a6c0ac8c9a8f3822fc07586681b2fd7"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019321000056/index.json": {
+      "file": "707ef9e2b7ffe25b95cd5d65970f01520f798ffd532f92a80cf1dc72a7592b91.gz",
+      "sha256": "dadb17b8d982b427493805678ef829d1eeb4f0e6929859b0254736b83bc04f30"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019321000065/aapl-20210626.htm": {
+      "file": "6f93b2835b8850320aefd4df9d9205e58ba90a95527e76e5f5a2c37e59161a68.gz",
+      "sha256": "5c2d05c0d829616d1e2319b464b4299ba4bcc852f3b49db5a523fa7eb87a2730"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019321000065/aapl-20210626_htm.xml": {
+      "file": "3a208d4bcb369d3f1178208c21556598b529b0c981e27882a13c7c848425c87d.gz",
+      "sha256": "91a7b39cad1e680d0096913c516ac6e939b2ea5e3c05992f23d48f2126d05f59"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019321000065/index.json": {
+      "file": "ddc285b00d1c19cf035bcfc3164aade444c8b76464d545a614f9417ab219b6ff.gz",
+      "sha256": "02a35659650b8c569bb2c293d8807b0f0af6ddc9d60aa2663e527bdbc1988858"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019321000105/aapl-20210925.htm": {
+      "file": "e938002d5e35873400afd893f777bee915d06b62bebb28d9ad890f080367866c.gz",
+      "sha256": "695ee3626db57ca1e890755120d6155188107ae36ae57b8e5c69c2f258b8dc64"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019322000007/aapl-20211225.htm": {
+      "file": "eed9e352f345f7a5f316c0569bae36cd4dc079044e36e521583a1b5d79012358.gz",
+      "sha256": "bd106a5cd494a54d6c239394d51511dc6b1c5762c6a83d4b75e470381f77191b"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019322000059/aapl-20220326.htm": {
+      "file": "973ab7bfed4060d3aab1ab9b89f0cbe12184fe25e197a77833489b0397f7e1ad.gz",
+      "sha256": "36aa34376821968740c10d0c4fae5c8194673da0a869372f40308d87bc31e11a"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019322000070/aapl-20220625.htm": {
+      "file": "f26592792004e89d5f6fa94f9503749f828188e6f29c4a16096bb41724002280.gz",
+      "sha256": "53efb69eb0ded559cec7ee7a181c8870df6ce91291b548a1145571313fce485b"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm": {
+      "file": "3f169e84ede68a6ae10dbc044278cb5717ad5626b64f8b5c0cb5be539d562d9f.gz",
+      "sha256": "39b7e6b86114f3e269d75fa4fc7afdf647128f86c7a7d3ac72d2aa14bb08ea89"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019323000006/aapl-20221231.htm": {
+      "file": "199e6273d241ac7bfd04f084fdaa16f282654d53ed49827b7120a11f2df8900f.gz",
+      "sha256": "184eaa778a87d5deb21ca0dd70647c9b8a94579dd2703eaa48768dd607391e87"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019323000064/aapl-20230401.htm": {
+      "file": "199c06cf984102a05e0e7ab8b1208d756a129c961c8f574d97286546ba03ca47.gz",
+      "sha256": "d4541f12872eb9f668961427ea91c662b9f132ff5973b720e4cd9c345aba1442"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019323000077/aapl-20230701.htm": {
+      "file": "fc873f5589f3356334f3817c9de9c96d4d65adf9ca5f5f8bd7ed1fc67a267dc4.gz",
+      "sha256": "66062b9e86d4d182faf3606f5941b017e47b0fa014983cd085095150e07aabcc"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm": {
+      "file": "f5addff0463519e9b1955ec31e70b710d872c827b14a39e3d87006d5ea8f068e.gz",
+      "sha256": "8523fa49d3dc0c82a096e6654d6e382d5f14697b764c46f2366e0965b5b97af1"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019324000006/aapl-20231230.htm": {
+      "file": "9e233806f21c0fb989a3f6cda76be2da227db691347c29a85b2835f4075ec894.gz",
+      "sha256": "34a1e60514beb48b3a6fac7777e768704ba025b76412a204c0fe1f2e5b2dec28"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019324000069/aapl-20240330.htm": {
+      "file": "aa6694e2ae95fac878c1aa1272869996d4aa74f845ac9e1f07324522b7294254.gz",
+      "sha256": "401cdbf265c114e0d7a050580c01cc589518a2c44fed3c8a35a294899eef643a"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019324000081/aapl-20240629.htm": {
+      "file": "10aeb986375f1afa6800347ed70e4ee06eb9f6248dad60a71d23b63e7707468d.gz",
+      "sha256": "3679d5ad274412dfb6c89784cc84820de1707208c660effcc8904fbfc9372791"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm": {
+      "file": "79c8ddcc838900d6a752dfcacfbd0ac4bc2f92819af72e17bc579ea71f54ee96.gz",
+      "sha256": "c7c799b5231e471edd4ce5033395adbfc329e433e29dc69d91a2cb7af8b6cd26"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019325000008/aapl-20241228.htm": {
+      "file": "0f2236e4d843a369e588ca0b88e4c5e03d8c89d66eb4e2bc5eba34ea6ba20023.gz",
+      "sha256": "456d526e6cc21a1e002a9548c12209b3a6527e778976a6655d45ece2bf424b05"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019325000057/aapl-20250329.htm": {
+      "file": "0c054b46e6de81f1a6c2d0c15480d9b8ce8ca16c6a6272f34e897bfdb3ce9e06.gz",
+      "sha256": "40a1c4b74a9b8bf02b4768abca18828beacccb6c556499c4d0b3e49b26271b21"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/aapl-20250628.htm": {
+      "file": "47a68347b452e4bf22d1637505c5104d630e82068059c6b718b2803b3209657d.gz",
+      "sha256": "b000e3ff285bcf2145aefcbdefb0e08b15ffa9483082270ac75d8f9e3088ca4a"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm": {
+      "file": "9a1590d0917107a7b31cc7b82b144987885c7c2fac68bc1d8c58fc81a10e3731.gz",
+      "sha256": "8cad428e50b4683fcf5f5d87bbb5e3efecc8721ad365d642d6a647629d63e314"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/aapl-20251227.htm": {
+      "file": "7e7d3a9ca6fca897f0c4e11ac9152c25652d1fc250c06ba0a11ed3ec23bdd348.gz",
+      "sha256": "26ae57e605b23b57b8ed812c0846c77be187f6cab83ee20a7a60dcbc7c6ac896"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm": {
+      "file": "340e6571c584979afa29953d095b8e79550b510843a830152bcbc3241a0e9bfd.gz",
+      "sha256": "747c230e0258485bd77ed336eaf7f7965506b24dd62f4015a58be31efa91e89c"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm": {
+      "file": "5c93994347d1959e4c956327b03350c790b872b1827968b1e95f23b86434f186.gz",
+      "sha256": "92ecdd2783fcc41d9da32739c87672fece2fcc3475f7c249cefcc4b5588d9d02"
+    },
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm": {
+      "file": "58614811a639dc08fd39fcf3cc99d3654865d71afb5e491acee329efe4d791af.gz",
+      "sha256": "26f653329048525930ff2f4983ece2e2ec57a69b36b377dd1f0abcb61f331402"
+    }
+  },
+  "ticker": "AAPL"
+}

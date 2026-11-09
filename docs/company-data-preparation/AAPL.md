@@ -1,3 +1,16 @@
+## Cash allocation / PP&E consumer acceptance — November 9, 2026
+
+The user approved this additive descriptive consumer for AAPL. The
+[issuer contract](../cash-allocation-issuers.md) records exact caption/sign/axis
+mappings, earliest-disclosure fiscal cohorts, source hashes, cash/subtotal/PP&E
+reconciliation, missing-caption handling and refresh gates. Full FY2021 onward
+is covered in cash allocation; PP&E uses the latest annual filing's two
+comparative balance dates. No original normalized amount, DCF assumption,
+valuation date, parent-common cash attribution or preparation/sufficiency status
+changes. Original historical trends/revenue mix/earnings bridge assets remain
+unchanged. This is not an extension of financial-methodology acceptance to other
+issuers or closure of unrelated parent roadblocks.
+
 # AAPL — company data preparation
 
 ## Named analyst consumer sufficiency — November4,2026

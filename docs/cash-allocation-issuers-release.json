@@ -1,0 +1,69 @@
+{
+  "schema": "cash-allocation-issuers-release/v1",
+  "date": "2026-11-09",
+  "status": "LOCAL_VALIDATED_PUBLICATION_PENDING",
+  "tickers": [
+    "AAPL",
+    "META"
+  ],
+  "validation": {
+    "AAPL": {
+      "annual_component_ties": 168,
+      "annual_periods": 6,
+      "filings": 24,
+      "ppe_balances": 2,
+      "quarterly_periods": 24,
+      "reported_periods": 24,
+      "ttm_periods": 21
+    },
+    "META": {
+      "annual_component_ties": 140,
+      "annual_periods": 5,
+      "filings": 23,
+      "ppe_balances": 2,
+      "quarterly_periods": 23,
+      "reported_periods": 23,
+      "ttm_periods": 20
+    }
+  },
+  "data_sha256": {
+    "AAPL": "1917c2fe359d20cc1e88f0ec620513f9d6837960b3fba99c6a9333d61b6466a1",
+    "META": "649901fd747a03523dc269bf6f97ad9e6c7465704aa519d85bbcd4b75ebb2d88"
+  },
+  "raw_source_observations_replayed": 897,
+  "cash_flow_observations": 865,
+  "ppe_observations": 32,
+  "retained_filings": 47,
+  "primary_cash_flow_statement_role_checks": 47,
+  "annual_component_ties": 308,
+  "frontend_full_suite": 496,
+  "frontend_final_targeted": 9,
+  "python_reporting_tests": 29,
+  "browser_checks": {
+    "desktop_issuer_switching": "PASS",
+    "quarterly_and_ttm_controls": "PASS; both earliest FY2021 TTM windows verified with actual fiscal dates",
+    "independent_ppe_dates": "PASS",
+    "phone_width": 390,
+    "horizontal_overflow": "none observed",
+    "base_values_per_share": {
+      "GOOGL": "125.91",
+      "AAPL": "175.46",
+      "META": "374.70"
+    }
+  },
+  "preservation": {
+    "original_python_files": 396,
+    "original_browser_assets": 15,
+    "engine_fixtures": 128,
+    "alphabet_cash_allocation_package": "unchanged; deterministic reproduction",
+    "original_quarterly_and_revenue_mix_packages": "unchanged",
+    "dcf_inputs_and_methods": "unchanged"
+  },
+  "limitations": [
+    "Only the named three issuers accepted; no automatic universe mapping",
+    "Two PP&E balance dates per issuer; not a cash-capex breakdown",
+    "First-disclosure/YTD cohort series, not latest-restated or as-known backtesting",
+    "No physical iPhone/Safari certification",
+    "No new Excel export scope"
+  ]
+}

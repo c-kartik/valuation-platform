@@ -1703,3 +1703,11 @@ financing components, net securities/debt and cash changes without residual
 plugs. TTM sums four cash-flow quarters. PP&E composition is a separate stock
 measurement at year-end, including the filing's finance-lease asset scope, and
 cannot attribute annual cash capex. None of these figures feeds DCF/FCFF/FCFE.
+
+## Apple/Meta descriptive cash allocation — November 9, 2026
+
+[Issuer reporting rules](cash-allocation-issuers.md) preserve Apple fiscal dates,
+separate commercial-paper/lease/venture/asset-sale cash flows, exclude tagged
+note-only amounts already within statement aggregates, and use actual PP&E asset
+classes. Absent FX/caption values stay null. These historical reporting treatments
+do not change any DCF/FCFF/FCFE methodology or inputs.

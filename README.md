@@ -803,3 +803,6 @@ PYTHONPATH=src python -m unittest discover -v
 
 Alphabet also includes [cash allocation and a separate Inside PP&E drill-down](docs/cash-allocation.md),
 using retained SEC evidence; original Python/DCF pipelines remain unchanged.
+
+[Cash allocation and issuer-specific Inside PP&E](docs/cash-allocation-issuers.md) now
+cover Alphabet, Apple and Meta, with independent year-end balance dates and no DCF input changes.
