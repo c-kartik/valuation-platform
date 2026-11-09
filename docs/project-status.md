@@ -1,3 +1,11 @@
+## Revenue mix — November 9, 2026
+
+Added the separately sourced revenue-mix section for GOOGL, AAPL and META,
+between historical trends and the cash bridge. All 60 quarterly totals reconcile
+to accepted consolidated revenue; nested detail replaces its parent.
+[Methodology, source evidence and limitations](revenue-mix.md). Original Python
+and DCF pipelines/inputs remain unchanged; broader issuer work stays paused.
+
 # Project Status
 
 ## Financial-statement reporting — November 9, 2026

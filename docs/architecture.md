@@ -1,3 +1,11 @@
+## Revenue-mix reporting consumer — November 9, 2026
+
+`reporting/revenue_mix.py` and `scripts/prepare_revenue_mix.py` consume retained
+filing-dimensional facts through the existing SEC parser and produce isolated
+`frontend/public/revenue-mix` assets. `RevenueMix.tsx` validates against the
+consolidated reporting package and shares quarter selection only, with no DCF
+input dependency. [Policy and issuer exceptions](revenue-mix.md).
+
 # Architecture
 
 ## Financial-statement reporting — November 9, 2026

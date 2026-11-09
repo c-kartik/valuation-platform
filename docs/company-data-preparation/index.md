@@ -1,3 +1,11 @@
+## Isolated revenue-mix reporting — November 9, 2026
+
+GOOGL/AAPL/META now have reviewed dimensional revenue-mix packages for their
+20-quarter reporting windows. [Policy, validation and issuer-specific exceptions](../revenue-mix.md).
+The new reporting consumer does not modify frozen normalization or existing
+financial-input sufficiency/readiness classifications. Other issuers remain
+outside this feature until separately mapped and validated.
+
 # Company data preparation register
 
 ## Meta/Alphabet analyst-use extension — November4,2026

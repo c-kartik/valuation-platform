@@ -1,0 +1,62 @@
+{
+  "schema": "revenue-mix-release/v1",
+  "date": "2026-11-09",
+  "tickers": {
+    "GOOGL": {
+      "quarters": 20,
+      "operand_total_checks": 35,
+      "parent_detail_checks": 20,
+      "annual_category_checks": 32,
+      "same_filing_discrete_checks": 105,
+      "standalone_differences": 0,
+      "package_sha256": "3720736f9da0191da2ef27024c1e705fbf9790730c8920a096133a161ad90171"
+    },
+    "AAPL": {
+      "quarters": 20,
+      "operand_total_checks": 35,
+      "parent_detail_checks": 0,
+      "annual_category_checks": 25,
+      "same_filing_discrete_checks": 75,
+      "standalone_differences": 0,
+      "package_sha256": "b8a802c722c2e8c51dedf9d681d522292c7a7727babb13cbeff4c2c48dd09f91"
+    },
+    "META": {
+      "quarters": 20,
+      "operand_total_checks": 35,
+      "parent_detail_checks": 20,
+      "annual_category_checks": 16,
+      "same_filing_discrete_checks": 60,
+      "standalone_differences": 16,
+      "package_sha256": "ee94b77cb7a862066daaf62fad02b3a67b8d797ca350139f3eb779b809d0031e"
+    }
+  },
+  "validation": {
+    "python_reporting_tests": 14,
+    "existing_frontend_tests": 480,
+    "new_frontend_tests": 5,
+    "reporting_frontend_tests": 12,
+    "original_python_files_hash_verified": 396,
+    "original_browser_assets_hash_verified": 15,
+    "engine_fixtures_hash_verified": 128,
+    "build": "PASS"
+  },
+  "preservation": "Only new reporting module/script/data; original Python and DCF sources/inputs unchanged. Workspace change only renumbers Valuation to 04.",
+  "browser_checks": [
+    "Alphabet segment and detail totals",
+    "Apple product labels and fiscal dates",
+    "Meta detail, standalone differences and recast disclosure",
+    "Shared quarter keyboard selection updates cash bridge",
+    "390px layout: document width375 within viewport390",
+    "Existing displayed Base FCFF/share: GOOGL125.91,AAPL175.46,META374.70"
+  ],
+  "publication": {
+    "status": "READY_FOR_DEPLOYMENT",
+    "url": "https://kartikchaturvedi.com/valuation/"
+  },
+  "limitations": [
+    "Descriptive cohort history, not an as-known backtest",
+    "Meta2021 comparative segment exception disclosed",
+    "No wider ticker readiness or exports added",
+    "Physical iPhone/Safari untested"
+  ]
+}

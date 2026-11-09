@@ -564,3 +564,13 @@ filing-validation receipt. Financial-input sufficiency is established only for
 this named descriptive consumer, with these qualifications. Existing DCF and
 broader-universe readiness statuses are unchanged. Production deployment and live three-company checks are recorded in
 `docs/quarterly-reporting-release.json`.
+
+## Revenue-mix reporting extension — November 9, 2026
+
+The separately authorized descriptive revenue-mix consumer is implemented for
+20 quarters matching this issuer’s consolidated reporting history. Source facts,
+period operands, dimension/member mappings, reconciliations and exceptions are
+retained under `data/revenue-mix/` and the static revenue-mix package. See
+[the methodology and issuer decisions](../../revenue-mix.md). This does not change
+original normalization, accepted DCF inputs, valuation readiness or prior issuer
+qualifications. Future snapshots require review of any mapping/recast changes.

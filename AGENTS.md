@@ -1,5 +1,15 @@
 # AGENTS.md
 
+## Revenue mix — November 9, 2026
+
+The user authorizes an additive filing-dimensional revenue-mix consumer, Alphabet
+first and reconciled, then Apple/Meta, before the cash bridge and DCF. Preserve
+all original Python modules, DCF engines/input packages and quarterly reporting
+assets. See `docs/revenue-mix.md` for explicit mappings, Alphabet hedge tagging,
+Meta 2021 recast exception and standalone/YTD differences. New tickers require
+reviewed mappings and exact reconciliation; never fill absent categories with zero.
+
+
 ## Open Canvas company page — November 9, 2026
 
 The approved full-page Open Canvas design is implemented and deployed. Use the
