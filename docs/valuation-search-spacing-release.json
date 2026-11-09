@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-09",
+  "scope": "Smaller landing headline and tighter search spacing",
+  "valuation_commit": "2b6bd5b",
+  "portfolio_commit": "98672f0",
+  "changes": {
+    "headline_px": {
+      "desktop": [
+        66,
+        54
+      ],
+      "phone": [
+        47,
+        38
+      ],
+      "narrow_phone": [
+        40,
+        34
+      ]
+    },
+    "hero_padding_desktop": [
+      48,
+      40
+    ],
+    "search_input_size_unchanged": true
+  },
+  "validation": {
+    "browser_build": "PASS",
+    "static_artifact": "50 files / 59 references / loopback routes PASS",
+    "original_assets": "15 assets / 396 Python files / 128 fixtures PASS",
+    "local_browser": "54px desktop / 38px phone; search filters correctly; no phone overflow",
+    "live_browser": "54px headline; search top 364px; three suggested companies loaded"
+  },
+  "financial_changes": false,
+  "status": "published-and-live-verified",
+  "screenshot": {
+    "path": "/Users/kc/Documents/Codex/outputs/valuation-search-spacing-release/live-landing.png",
+    "sha256": "848386541bbaf3f6188776475f077757bc9d08859341ad41e9ebf3f49f46de36"
+  }
+}
