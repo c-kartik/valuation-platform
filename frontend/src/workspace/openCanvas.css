@@ -33,7 +33,7 @@
 .open-canvas .oc-company-nav+.oc-chapter-band{margin-top:0}
 .open-canvas .oc-chapter-band+.ca-shared-controls{margin-top:0;border-top:0;padding-top:0!important}
 .open-canvas .cw-workspace .cv-page{border-top:0;padding-top:0}
-.open-canvas .cv-page>.oc-chapter-band{margin-top:0}
+.open-canvas .cv-page>.oc-chapter-band{margin-top:28px}
 .open-canvas #company-cash-analysis{scroll-margin-top:20px}
 @media(max-width:700px){
  .open-canvas .oc-chapter-band{padding:17px 16px;align-items:flex-start;flex-direction:column;gap:10px;margin-top:24px;margin-bottom:20px}
