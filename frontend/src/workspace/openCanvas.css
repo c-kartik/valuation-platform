@@ -12,3 +12,11 @@
 @media(max-width:450px){.open-canvas{padding:0 16px 16px}.open-canvas .engine-header{width:calc(100% + 32px);margin:0 -16px;padding:8px 16px;gap:12px}.open-canvas .engine-home{font-size:19px}.open-canvas .oc-company-nav a{min-height:40px;display:inline-flex;align-items:center}.open-canvas .qr-heading h1{font-size:48px}.open-canvas .qr-toolbar{gap:16px}.open-canvas .qr-toolbar label{max-width:100%}.open-canvas .qr-overview select{font-size:16px}.open-canvas .qr-reconciliation{grid-template-columns:1fr;gap:12px}.open-canvas .qr-reconciliation div{display:flex;justify-content:space-between;align-items:center;gap:12px}.open-canvas .qr-reconciliation dd{margin:0}.open-canvas .oc-rate-controls{grid-template-columns:1fr}.open-canvas .oc-value .cv-ev{font-size:76px}.open-canvas .oc-chart-readout strong{font-size:24px}.open-canvas .oc-mobile-year select{font-size:16px}.open-canvas .cw-sidebar .cw-summary-list{gap:10px 18px}.open-canvas .cw-summary-row strong{font-size:20px}.open-canvas .cw-nav a{min-height:40px}.open-canvas .oc-chart-caption{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.open-canvas *{scroll-behavior:auto!important}}
 .open-canvas .oc-model-label,.open-canvas .oc-preload-note{font-size:11px;color:var(--oc-muted)}.open-canvas .oc-preload-note{margin:0 0 20px}.open-canvas .oc-value p{font-weight:400}.open-canvas .oc-year-buttons{padding-right:60px}.open-canvas .oc-margin-path{stroke:#397965;stroke-width:2}.open-canvas .oc-margin-point{fill:#397965}
+
+/* Keep the research disclosures compact and share their adjoining divider. */
+.open-canvas .ca-ppe{margin-bottom:0}
+.open-canvas .ca-panel>.ca-sources{margin:0;padding:0;border-top:0}
+.open-canvas .qr-overview>.qr-sources{margin:0;padding:0}
+.open-canvas .ca-panel>.ca-sources>summary,
+.open-canvas .qr-overview>.qr-sources>summary{min-height:40px;padding:8px 0;box-sizing:border-box}
+.open-canvas .cw-workspace .cv-page{margin-top:12px;padding-top:16px}

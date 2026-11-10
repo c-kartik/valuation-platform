@@ -153,3 +153,7 @@ annual/quarterly/TTM selection. Individual flow values, reconciliations, source
 packages, Inside PP&E and all original Python/DCF calculations are unchanged.
 Validation: browser production build and 10 existing cash-allocation component
 checks passed across Alphabet, Apple and Meta.
+
+The subsequent spacing adjustment removes the empty band between Inside PP&E
+and the reconciliation disclosure, uses compact 40px disclosure rows, and reduces
+the transition spacing before DCF. Disclosure content and calculations are unchanged.
