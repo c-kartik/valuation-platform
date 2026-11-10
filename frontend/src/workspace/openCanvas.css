@@ -21,3 +21,23 @@
 .open-canvas .qr-overview>.qr-sources>summary{min-height:40px;padding:8px 0;box-sizing:border-box}
 .open-canvas .qr-overview>.qr-sources>summary{min-height:0;padding:6px 0;line-height:1.4}
 .open-canvas .cw-workspace .cv-page{margin-top:0;padding-top:16px}
+
+/* Layout Option 2 — Chapter bands. All feature components remain mounted. */
+.open-canvas .oc-chapter-band{display:flex;justify-content:space-between;align-items:center;gap:20px;background:#101e34;color:#fff;padding:20px 24px;margin:30px 0 24px;scroll-margin-top:20px}
+.open-canvas .oc-chapter-eyebrow{display:block;color:#d8bf7a;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.open-canvas .oc-chapter-band h2{font:28px/1.2 Georgia,serif;letter-spacing:-.4px;margin:5px 0 0;color:#fff}
+.open-canvas .oc-chapter-band nav{display:flex;gap:8px 20px;flex-wrap:wrap;justify-content:flex-end}
+.open-canvas .oc-chapter-band a{color:#c5d3dd;font-size:12px;text-decoration:none;text-underline-offset:4px;padding:5px 0}
+.open-canvas .oc-chapter-band a:hover{color:#fff;text-decoration:underline}
+.open-canvas .oc-chapter-band a:focus-visible{outline:2px solid #d8bf7a;outline-offset:4px}
+.open-canvas .oc-company-nav+.oc-chapter-band{margin-top:0}
+.open-canvas .oc-chapter-band+.ca-shared-controls{margin-top:0;border-top:0;padding-top:0!important}
+.open-canvas .cw-workspace .cv-page{border-top:0;padding-top:0}
+.open-canvas .cv-page>.oc-chapter-band{margin-top:0}
+.open-canvas #company-cash-analysis{scroll-margin-top:20px}
+@media(max-width:700px){
+ .open-canvas .oc-chapter-band{padding:17px 16px;align-items:flex-start;flex-direction:column;gap:10px;margin-top:24px;margin-bottom:20px}
+ .open-canvas .oc-chapter-band h2{font-size:26px}
+ .open-canvas .oc-chapter-band nav{justify-content:flex-start;gap:6px 20px}
+ .open-canvas .oc-chapter-band a{min-height:36px;display:inline-flex;align-items:center}
+}

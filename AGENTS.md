@@ -1,3 +1,13 @@
+## Saved layout options — November 10, 2026
+
+Option 1 is frozen as `layout-option-1` / `layout/option-1` in both source and
+portfolio repositories. Option 2 (Chapter bands) is the deployed `main` layout,
+saved as `layout-option-2` / `layout/option-2`. See `docs/layout-options.md`.
+Preserve all existing features when changing presentation: Financials groups
+features 1–2; Cash Flow Analysis groups 3–4 with shared period controls; Valuation
+groups 5. No financial data, Python pipeline, DCF engine or export changes are
+part of this layout scope. Keep saved Option 1 references intact.
+
 ## Valuation landing and portfolio navigation — November 9, 2026
 
 `/valuation/` opens a catalog-driven landing page, not a default company.
