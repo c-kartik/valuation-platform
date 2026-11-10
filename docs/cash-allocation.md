@@ -157,3 +157,7 @@ checks passed across Alphabet, Apple and Meta.
 The subsequent spacing adjustment removes the empty band between Inside PP&E
 and the reconciliation disclosure, uses compact 40px disclosure rows, and reduces
 the transition spacing before DCF. Disclosure content and calculations are unchanged.
+
+Final policy-row follow-up removes the remaining 12px margin before the DCF
+border and the policy summary's forced 40px minimum height. The closed policy
+row now uses only its text line plus 6px padding above and below.

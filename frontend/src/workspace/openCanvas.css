@@ -19,4 +19,5 @@
 .open-canvas .qr-overview>.qr-sources{margin:0;padding:0}
 .open-canvas .ca-panel>.ca-sources>summary,
 .open-canvas .qr-overview>.qr-sources>summary{min-height:40px;padding:8px 0;box-sizing:border-box}
-.open-canvas .cw-workspace .cv-page{margin-top:12px;padding-top:16px}
+.open-canvas .qr-overview>.qr-sources>summary{min-height:0;padding:6px 0;line-height:1.4}
+.open-canvas .cw-workspace .cv-page{margin-top:0;padding-top:16px}
