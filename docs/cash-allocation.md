@@ -143,3 +143,13 @@ mode retains five year buttons. PP&E dates remain independently selected.
 [Full-FY2021 release verification](cash-allocation-fy2021-release.json) records the
 current coverage and grouped-control acceptance; the original release receipt
 remains a historical record.
+
+## Compact cash-allocation presentation — November 10, 2026
+
+Removed the redundant CFO/business-investment/shareholder-return summary row.
+The flow now shows its pooled total once, labelled “Total cash”, between the
+sources and uses labels; the total remains visible on mobile and updates with
+annual/quarterly/TTM selection. Individual flow values, reconciliations, source
+packages, Inside PP&E and all original Python/DCF calculations are unchanged.
+Validation: browser production build and 10 existing cash-allocation component
+checks passed across Alphabet, Apple and Meta.
