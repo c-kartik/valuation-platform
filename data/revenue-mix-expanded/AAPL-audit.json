@@ -1,0 +1,1450 @@
+{
+  "annual_category_checks": [
+    {
+      "fiscal_year": 2021,
+      "reported_annual": 191973000000,
+      "series": "iphone",
+      "sum_quarters": 191973000000
+    },
+    {
+      "fiscal_year": 2021,
+      "reported_annual": 35190000000,
+      "series": "mac",
+      "sum_quarters": 35190000000
+    },
+    {
+      "fiscal_year": 2021,
+      "reported_annual": 31862000000,
+      "series": "ipad",
+      "sum_quarters": 31862000000
+    },
+    {
+      "fiscal_year": 2021,
+      "reported_annual": 38367000000,
+      "series": "wearables",
+      "sum_quarters": 38367000000
+    },
+    {
+      "fiscal_year": 2021,
+      "reported_annual": 68425000000,
+      "series": "services",
+      "sum_quarters": 68425000000
+    },
+    {
+      "fiscal_year": 2022,
+      "reported_annual": 205489000000,
+      "series": "iphone",
+      "sum_quarters": 205489000000
+    },
+    {
+      "fiscal_year": 2022,
+      "reported_annual": 40177000000,
+      "series": "mac",
+      "sum_quarters": 40177000000
+    },
+    {
+      "fiscal_year": 2022,
+      "reported_annual": 29292000000,
+      "series": "ipad",
+      "sum_quarters": 29292000000
+    },
+    {
+      "fiscal_year": 2022,
+      "reported_annual": 41241000000,
+      "series": "wearables",
+      "sum_quarters": 41241000000
+    },
+    {
+      "fiscal_year": 2022,
+      "reported_annual": 78129000000,
+      "series": "services",
+      "sum_quarters": 78129000000
+    },
+    {
+      "fiscal_year": 2023,
+      "reported_annual": 200583000000,
+      "series": "iphone",
+      "sum_quarters": 200583000000
+    },
+    {
+      "fiscal_year": 2023,
+      "reported_annual": 29357000000,
+      "series": "mac",
+      "sum_quarters": 29357000000
+    },
+    {
+      "fiscal_year": 2023,
+      "reported_annual": 28300000000,
+      "series": "ipad",
+      "sum_quarters": 28300000000
+    },
+    {
+      "fiscal_year": 2023,
+      "reported_annual": 39845000000,
+      "series": "wearables",
+      "sum_quarters": 39845000000
+    },
+    {
+      "fiscal_year": 2023,
+      "reported_annual": 85200000000,
+      "series": "services",
+      "sum_quarters": 85200000000
+    },
+    {
+      "fiscal_year": 2024,
+      "reported_annual": 201183000000,
+      "series": "iphone",
+      "sum_quarters": 201183000000
+    },
+    {
+      "fiscal_year": 2024,
+      "reported_annual": 29984000000,
+      "series": "mac",
+      "sum_quarters": 29984000000
+    },
+    {
+      "fiscal_year": 2024,
+      "reported_annual": 26694000000,
+      "series": "ipad",
+      "sum_quarters": 26694000000
+    },
+    {
+      "fiscal_year": 2024,
+      "reported_annual": 37005000000,
+      "series": "wearables",
+      "sum_quarters": 37005000000
+    },
+    {
+      "fiscal_year": 2024,
+      "reported_annual": 96169000000,
+      "series": "services",
+      "sum_quarters": 96169000000
+    },
+    {
+      "fiscal_year": 2025,
+      "reported_annual": 209586000000,
+      "series": "iphone",
+      "sum_quarters": 209586000000
+    },
+    {
+      "fiscal_year": 2025,
+      "reported_annual": 33708000000,
+      "series": "mac",
+      "sum_quarters": 33708000000
+    },
+    {
+      "fiscal_year": 2025,
+      "reported_annual": 28023000000,
+      "series": "ipad",
+      "sum_quarters": 28023000000
+    },
+    {
+      "fiscal_year": 2025,
+      "reported_annual": 35686000000,
+      "series": "wearables",
+      "sum_quarters": 35686000000
+    },
+    {
+      "fiscal_year": 2025,
+      "reported_annual": 109158000000,
+      "series": "services",
+      "sum_quarters": 109158000000
+    },
+    {
+      "fiscal_year": 2026,
+      "reported_annual": 254098000000,
+      "series": "iphone",
+      "sum_quarters": 254098000000
+    },
+    {
+      "fiscal_year": 2026,
+      "reported_annual": 37929000000,
+      "series": "mac",
+      "sum_quarters": 37929000000
+    },
+    {
+      "fiscal_year": 2026,
+      "reported_annual": 27929000000,
+      "series": "ipad",
+      "sum_quarters": 27929000000
+    },
+    {
+      "fiscal_year": 2026,
+      "reported_annual": 35577000000,
+      "series": "wearables",
+      "sum_quarters": 35577000000
+    },
+    {
+      "fiscal_year": 2026,
+      "reported_annual": 123301000000,
+      "series": "services",
+      "sum_quarters": 123301000000
+    }
+  ],
+  "metric_fact_checks": [
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i6e431846933d461fb8c8c0bdf98c9758_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 111439000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "i6e431846933d461fb8c8c0bdf98c9758_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 33534000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "i6e431846933d461fb8c8c0bdf98c9758_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 28755000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "i6e431846933d461fb8c8c0bdf98c9758_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 38763000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "i6e431846933d461fb8c8c0bdf98c9758_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 3500000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "i6e431846933d461fb8c8c0bdf98c9758_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 2020000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i02c0f3e92d75432fbe3c6a24022bf7b0_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 201023000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i6e431846933d461fb8c8c0bdf98c9758_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 111439000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "i02c0f3e92d75432fbe3c6a24022bf7b0_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 61037000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "i6e431846933d461fb8c8c0bdf98c9758_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 33534000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "i02c0f3e92d75432fbe3c6a24022bf7b0_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 52385000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "i6e431846933d461fb8c8c0bdf98c9758_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 28755000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "i02c0f3e92d75432fbe3c6a24022bf7b0_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 62744000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "i6e431846933d461fb8c8c0bdf98c9758_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 38763000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "i02c0f3e92d75432fbe3c6a24022bf7b0_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 5769000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "i6e431846933d461fb8c8c0bdf98c9758_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 3500000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "i02c0f3e92d75432fbe3c6a24022bf7b0_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 4001000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "i6e431846933d461fb8c8c0bdf98c9758_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 2020000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i3e54cd289f784c00834c533af8f84d35_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 282457000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i02c0f3e92d75432fbe3c6a24022bf7b0_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 201023000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "i3e54cd289f784c00834c533af8f84d35_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 85163000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "i02c0f3e92d75432fbe3c6a24022bf7b0_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 61037000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "i3e54cd289f784c00834c533af8f84d35_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 74129000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "i02c0f3e92d75432fbe3c6a24022bf7b0_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 52385000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "i3e54cd289f784c00834c533af8f84d35_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 83838000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "i02c0f3e92d75432fbe3c6a24022bf7b0_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 62744000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "i3e54cd289f784c00834c533af8f84d35_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 7862000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "i02c0f3e92d75432fbe3c6a24022bf7b0_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 5769000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "i3e54cd289f784c00834c533af8f84d35_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 5961000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "i02c0f3e92d75432fbe3c6a24022bf7b0_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 4001000000
+    },
+    {
+      "accession": "0000320193-21-000105",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i55e5364a9af5491886caee077afe8d44_D20200927-20210925"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-09-25",
+      "start": "2020-09-27",
+      "value": 365817000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i3e54cd289f784c00834c533af8f84d35_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 282457000000
+    },
+    {
+      "accession": "0000320193-21-000105",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "i55e5364a9af5491886caee077afe8d44_D20200927-20210925"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-09-25",
+      "start": "2020-09-27",
+      "value": 108949000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "context_ids": [
+        "i3e54cd289f784c00834c533af8f84d35_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 85163000000
+    },
+    {
+      "accession": "0000320193-21-000105",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "i55e5364a9af5491886caee077afe8d44_D20200927-20210925"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-09-25",
+      "start": "2020-09-27",
+      "value": 94680000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "us-gaap:NetIncomeLoss",
+      "context_ids": [
+        "i3e54cd289f784c00834c533af8f84d35_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 74129000000
+    },
+    {
+      "accession": "0000320193-21-000105",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "i55e5364a9af5491886caee077afe8d44_D20200927-20210925"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-09-25",
+      "start": "2020-09-27",
+      "value": 104038000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "context_ids": [
+        "i3e54cd289f784c00834c533af8f84d35_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 83838000000
+    },
+    {
+      "accession": "0000320193-21-000105",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "i55e5364a9af5491886caee077afe8d44_D20200927-20210925"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-09-25",
+      "start": "2020-09-27",
+      "value": 11085000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context_ids": [
+        "i3e54cd289f784c00834c533af8f84d35_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 7862000000
+    },
+    {
+      "accession": "0000320193-21-000105",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "i55e5364a9af5491886caee077afe8d44_D20200927-20210925"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-09-25",
+      "start": "2020-09-27",
+      "value": 7906000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "us-gaap:ShareBasedCompensation",
+      "context_ids": [
+        "i3e54cd289f784c00834c533af8f84d35_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 5961000000
+    }
+  ],
+  "quarters": [
+    "FY2021-Q1",
+    "FY2021-Q2",
+    "FY2021-Q3",
+    "FY2021-Q4"
+  ],
+  "revenue_fact_checks": [
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i1f92f5e245c14946a235f270eb995444_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20201226}IPhoneMember"
+        ]
+      ],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 65597000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i9d1d590e4c8b493e944e5c277b83ed84_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20201226}MacMember"
+        ]
+      ],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 8675000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "iceeb2e8b0f5749eaa81de63885a7f240_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20201226}IPadMember"
+        ]
+      ],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 8435000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i9246e05e064a4562821881cc6d3331b9_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20201226}WearablesHomeandAccessoriesMember"
+        ]
+      ],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 12971000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i5da579f376c2423d9a781544cea94c8c_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2020-01-31}ServiceMember"
+        ]
+      ],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 15761000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i29291bc665194ba794bab2b4a9c8622b_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210327}IPhoneMember"
+        ]
+      ],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 113535000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i1f92f5e245c14946a235f270eb995444_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20201226}IPhoneMember"
+        ]
+      ],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 65597000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ic27bd2af5c124ef0b6a3b5d6e9925fd4_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210327}MacMember"
+        ]
+      ],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 17777000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i9d1d590e4c8b493e944e5c277b83ed84_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20201226}MacMember"
+        ]
+      ],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 8675000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ib6b070c31abb41d59a8bfaa66555d72e_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210327}IPadMember"
+        ]
+      ],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 16242000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "iceeb2e8b0f5749eaa81de63885a7f240_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20201226}IPadMember"
+        ]
+      ],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 8435000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i22ffbbc27ad44f76bf7de95259070980_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210327}WearablesHomeandAccessoriesMember"
+        ]
+      ],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 20807000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i9246e05e064a4562821881cc6d3331b9_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20201226}WearablesHomeandAccessoriesMember"
+        ]
+      ],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 12971000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i79b7259f38be4fbfaf1e6a4f7c15e3f9_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2020-01-31}ServiceMember"
+        ]
+      ],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 32662000000
+    },
+    {
+      "accession": "0000320193-21-000010",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i5da579f376c2423d9a781544cea94c8c_D20200927-20201226"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2020-01-31}ServiceMember"
+        ]
+      ],
+      "end": "2020-12-26",
+      "start": "2020-09-27",
+      "value": 15761000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i4b6889042f634b85a76d5afb07724b63_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210626}IPhoneMember"
+        ]
+      ],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 153105000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i29291bc665194ba794bab2b4a9c8622b_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210327}IPhoneMember"
+        ]
+      ],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 113535000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i16c238bd5e344d039d46256b2e3305c3_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210626}MacMember"
+        ]
+      ],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 26012000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ic27bd2af5c124ef0b6a3b5d6e9925fd4_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210327}MacMember"
+        ]
+      ],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 17777000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ib1063cad4978440c906a0619f4de43e2_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210626}IPadMember"
+        ]
+      ],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 23610000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ib6b070c31abb41d59a8bfaa66555d72e_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210327}IPadMember"
+        ]
+      ],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 16242000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i6c3255f4af4940e2bbaec7519da39414_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210626}WearablesHomeandAccessoriesMember"
+        ]
+      ],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 29582000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i22ffbbc27ad44f76bf7de95259070980_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210327}WearablesHomeandAccessoriesMember"
+        ]
+      ],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 20807000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "iae75fcc109ba40c5aca426a41153ed10_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2020-01-31}ServiceMember"
+        ]
+      ],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 50148000000
+    },
+    {
+      "accession": "0000320193-21-000056",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i79b7259f38be4fbfaf1e6a4f7c15e3f9_D20200927-20210327"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2020-01-31}ServiceMember"
+        ]
+      ],
+      "end": "2021-03-27",
+      "start": "2020-09-27",
+      "value": 32662000000
+    },
+    {
+      "accession": "0000320193-21-000105",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i84614d008b4d4d41831ba87bac3ea57d_D20200927-20210925"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2021-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210925}IPhoneMember"
+        ]
+      ],
+      "end": "2021-09-25",
+      "start": "2020-09-27",
+      "value": 191973000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i4b6889042f634b85a76d5afb07724b63_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210626}IPhoneMember"
+        ]
+      ],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 153105000000
+    },
+    {
+      "accession": "0000320193-21-000105",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i70f7b77f324e46ae9e3c54330ada95ec_D20200927-20210925"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2021-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210925}MacMember"
+        ]
+      ],
+      "end": "2021-09-25",
+      "start": "2020-09-27",
+      "value": 35190000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i16c238bd5e344d039d46256b2e3305c3_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210626}MacMember"
+        ]
+      ],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 26012000000
+    },
+    {
+      "accession": "0000320193-21-000105",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "if0891a26d01b4ea59f65b5998cae36f1_D20200927-20210925"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2021-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210925}IPadMember"
+        ]
+      ],
+      "end": "2021-09-25",
+      "start": "2020-09-27",
+      "value": 31862000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ib1063cad4978440c906a0619f4de43e2_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210626}IPadMember"
+        ]
+      ],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 23610000000
+    },
+    {
+      "accession": "0000320193-21-000105",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "ifc47642a3e864efb800531fce864095b_D20200927-20210925"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2021-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210925}WearablesHomeandAccessoriesMember"
+        ]
+      ],
+      "end": "2021-09-25",
+      "start": "2020-09-27",
+      "value": 38367000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i6c3255f4af4940e2bbaec7519da39414_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://www.apple.com/20210626}WearablesHomeandAccessoriesMember"
+        ]
+      ],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 29582000000
+    },
+    {
+      "accession": "0000320193-21-000105",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "i4a1ee49a01af4007b6691ed3db6bb5ad_D20200927-20210925"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2021-01-31}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2021-01-31}ServiceMember"
+        ]
+      ],
+      "end": "2021-09-25",
+      "start": "2020-09-27",
+      "value": 68425000000
+    },
+    {
+      "accession": "0000320193-21-000065",
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ids": [
+        "iae75fcc109ba40c5aca426a41153ed10_D20200927-20210626"
+      ],
+      "decimals": [
+        "-6"
+      ],
+      "dimensions": [
+        [
+          "{http://fasb.org/srt/2020-01-31}ProductOrServiceAxis",
+          "{http://fasb.org/us-gaap/2020-01-31}ServiceMember"
+        ]
+      ],
+      "end": "2021-06-26",
+      "start": "2020-09-27",
+      "value": 50148000000
+    }
+  ],
+  "scope": "Newly exposed FY2021 quarters; independent retained XML metric and dimensional fact checks",
+  "status": "MATCH",
+  "ticker": "AAPL"
+}

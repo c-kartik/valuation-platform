@@ -43,3 +43,6 @@ labels. Use the source repository for implementation and the portfolio repositor
 for the matching deployable static files. Preserve current unrelated work when
 reviewing or restoring a saved layout; changes to presentation do not authorize
 changes to financial inputs or methodology.
+
+FY2021 Q1 coverage correction: the expanded chart data and source audit are
+recorded in `docs/fy2021-history-extension.md`; original layout tags stay frozen.

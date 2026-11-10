@@ -9,7 +9,7 @@ export function validateBridgeHistory(value:unknown,history:QuarterlyReport,allo
  // Two overlapping 20-quarter windows reuse the existing source/operand checks.
  validateReport({...p,rows:p.rows.slice(0,20)},history.ticker);
  validateReport({...p,rows:p.rows.slice(-20)},history.ticker);
- if(JSON.stringify(p.rows.slice(-20))!==JSON.stringify(history.rows))throw Error('Cash bridge changed accepted quarterly observations');
+ if(JSON.stringify(p.rows.slice(-20))!==JSON.stringify(history.rows.slice(-20)))throw Error('Cash bridge changed accepted quarterly observations');
  for(const mode of ['annual','quarterly','ttm'] as const)for(const period of allocation[mode])bridgeForPeriod(p,period);
  return p;
 }

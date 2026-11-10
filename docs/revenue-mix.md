@@ -130,3 +130,7 @@ ties for all three companies. Its receipts supersede the earlier latest-only
 validation scope for this review, without rewriting historical receipts, amounts
 or methodology. Reporting validators were strengthened; original DCF inputs and
 pipelines remain unchanged.
+
+FY2021 Q1 display extension: see [the expanded source/methodology record](fy2021-history-extension.md).
+Expanded packages preserve the original 20 displayed rows and disclose Meta
+Q1–Q3 comparative 2022 segment sources explicitly.

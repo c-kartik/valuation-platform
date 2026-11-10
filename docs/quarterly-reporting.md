@@ -144,3 +144,7 @@ ties for all three companies. Its receipts supersede the earlier latest-only
 validation scope for this review, without rewriting historical receipts, amounts
 or methodology. Reporting validators were strengthened; original DCF inputs and
 pipelines remain unchanged.
+
+Full FY2021 chart coverage now uses the additive expanded display contract in
+[fy2021-history-extension.md](fy2021-history-extension.md); original 20-quarter
+packages remain the unchanged baseline.

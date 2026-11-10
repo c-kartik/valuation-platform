@@ -1830,3 +1830,9 @@ Shared cash-analysis consumer (November 10, 2026): AAPL/GOOGL/META now use
 additive bridge-history packages for the existing cash-allocation fiscal cohort.
 See [shared-period methodology](../cash-allocation.md#shared-cash-analysis-periods--november-10-2026).
 Original preparation and valuation-readiness classifications are unchanged.
+
+FY2021 historical chart correction (November 10, 2026): GOOGL/AAPL/META
+Historical trends and Revenue mix now begin at fiscal Q1. Independent source
+checks and the Meta comparative-presentation exception are recorded in
+[the extension methodology](../fy2021-history-extension.md). Existing baseline
+packages and valuation classifications remain unchanged.

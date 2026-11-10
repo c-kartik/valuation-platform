@@ -24,7 +24,7 @@ export function validateMix(value:unknown,ticker:string,history:QuarterlyReport)
  return p;
 }
 export async function fetchMix(ticker:string,history:QuarterlyReport,signal:AbortSignal){
- const response=await fetch(`${(import.meta as ImportMeta & {env:{BASE_URL:string}}).env.BASE_URL}revenue-mix/${ticker}.json`,{signal});
+ const response=await fetch(`${(import.meta as ImportMeta & {env:{BASE_URL:string}}).env.BASE_URL}${history.rows.length>20?'revenue-mix-expanded':'revenue-mix'}/${ticker}.json`,{signal});
  if(!response.ok)throw Error('Revenue mix unavailable');
  return validateMix(await response.json(),ticker,history);
 }
