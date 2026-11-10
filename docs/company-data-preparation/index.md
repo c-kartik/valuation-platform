@@ -1825,3 +1825,8 @@ classifications and other issuers are unchanged.
 cash allocation and PP&E to the Alphabet pilot. Exact issuer mappings and primary
 statement-role checks are separately scoped; existing preparation, sufficiency
 and financial-methodology statuses do not change. Wider issuer work stays paused.
+
+Shared cash-analysis consumer (November 10, 2026): AAPL/GOOGL/META now use
+additive bridge-history packages for the existing cash-allocation fiscal cohort.
+See [shared-period methodology](../cash-allocation.md#shared-cash-analysis-periods--november-10-2026).
+Original preparation and valuation-readiness classifications are unchanged.

@@ -1,0 +1,20 @@
+import {useEffect,useState} from 'react';
+import type {QuarterlyReport} from './model';
+import {CashAllocation} from './CashAllocation';
+import {CashBridgePanel} from './CashBridge';
+import {fetchAllocation} from './cashAllocationModel';
+import type {CashAllocationReport,AllocationMode} from './cashAllocationModel';
+import {bridgeForPeriod,fetchBridgeHistory} from './cashBridgePeriods';
+function CashAnalysisView({allocation:report,bridge:history}:{allocation:CashAllocationReport;bridge:QuarterlyReport}){
+ const [mode,setMode]=useState<AllocationMode>('annual'),[periodId,setPeriodId]=useState(report.annual.at(-1)!.id);
+ const periods=report[mode],row=periods.find(p=>p.id===periodId)??periods.at(-1)!,bridge=bridgeForPeriod(history,row);
+ const years=[...new Set(periods.map(p=>p.id.split('-')[0]))],selectedYear=row.id.split('-')[0];
+ const selectYear=(year:string)=>{const available=periods.filter(p=>p.id.split('-')[0]===year);setPeriodId((available.find(p=>p.id.split('-')[1]===row.id.split('-')[1])??available.at(-1)!).id);};
+ return <><div className="ca-shared-controls ca-panel" role="region" aria-label="Period for both cash-flow charts"><span className="qr-eyebrow">Cash-flow analysis · shared reporting period</span><div className="ca-section-controls"><div className="ca-toggle" role="group" aria-label="Cash allocation period basis">{(['annual','quarterly','ttm']as const).map(m=><button type="button" key={m} aria-pressed={mode===m} onClick={()=>{setMode(m);setPeriodId(report[m].at(-1)!.id);}}>{m==='annual'?'Annual':m==='quarterly'?'Quarterly':'Trailing 12 months'}</button>)}</div><p aria-live="polite">{row.label} · {row.start} — {row.end} · USD billions</p></div><div className="ca-period-navigation"><div className="ca-periods" role="group" aria-label={mode==='annual'?'Cash allocation reporting periods':'Cash allocation reporting years'}>{years.map(year=><button type="button" key={year} aria-pressed={year===selectedYear} onClick={()=>selectYear(year)}>{year}</button>)}</div>{mode!=='annual'&&<div className="ca-quarter-periods" role="group" aria-label="Cash allocation reporting periods">{[1,2,3,4].map(q=>{const id=`${selectedYear}-Q${q}`,period=periods.find(p=>p.id===id);return <button type="button" key={q} disabled={!period} aria-label={`${selectedYear} Q${q}${!period?' unavailable':''}`} aria-pressed={id===row.id} onClick={()=>setPeriodId(id)}>Q{q}</button>;})}</div>}</div></div><CashBridgePanel row={bridge} label={`${mode==='ttm'?'TTM ending ':''}${row.label}`} start={row.start} end={row.end}/><CashAllocation ticker={report.ticker} history={history} preparedReport={report} selection={{mode,periodId:row.id}}/></>;
+}
+export function CashAnalysis({ticker,history,loadAllocation=fetchAllocation,loadBridge=fetchBridgeHistory}:{ticker:string;history:QuarterlyReport;loadAllocation?:typeof fetchAllocation;loadBridge?:typeof fetchBridgeHistory}){
+ const [loaded,setLoaded]=useState<{history:QuarterlyReport;allocation:CashAllocationReport;bridge:QuarterlyReport}|null>(null),[error,setError]=useState(false),[attempt,setAttempt]=useState(0);
+ useEffect(()=>{setLoaded(null);setError(false);const controller=new AbortController();loadAllocation(ticker,history,controller.signal).then(async allocation=>({allocation,bridge:await loadBridge(ticker,history,allocation,controller.signal)})).then(data=>{if(!controller.signal.aborted)setLoaded({history,...data});}).catch(()=>{if(!controller.signal.aborted)setError(true);});return()=>controller.abort();},[ticker,history,loadAllocation,loadBridge,attempt]);
+ if(loaded?.history!==history||loaded.allocation.ticker!==ticker)return <div className="ca-analysis-status" role="status">{error?'Cash-flow charts could not be loaded. The DCF remains available.':'Loading cash-flow analysis…'}{error&&<button type="button" onClick={()=>setAttempt(a=>a+1)}>Retry cash-flow analysis</button>}</div>;
+ return <CashAnalysisView key={ticker+loaded.allocation.history_snapshot_sha256} allocation={loaded.allocation} bridge={loaded.bridge}/>;
+}

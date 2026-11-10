@@ -7,14 +7,14 @@ import {QuarterlyOverview} from './QuarterlyOverview';
 import {validateReport} from './model';
 const fixtures:Record<string,unknown>={GOOGL:googl,AAPL:apple,META:meta};
 const loader=async(ticker:string)=>validateReport(fixtures[ticker],ticker);
-it('shows twenty actual fiscal quarters, preserves negative FCF, and synchronizes bridge selection',async()=>{
+it('shows twenty actual fiscal quarters, preserves negative FCF, and synchronizes trend readouts',async()=>{
  render(<QuarterlyOverview ticker="GOOGL" loadReport={loader}/>);
  const chart=await screen.findByRole('slider',{name:'Explore historical quarters'});
  expect(chart.getAttribute('aria-valuemax')).toBe('19');
  expect(screen.queryByRole('combobox')).toBeNull();
- expect(document.querySelector('.qr-bridge')!.textContent).toContain('−$9.07B');
+ expect(document.querySelector('.qr-stats')!.textContent).toContain('−$9.07B');
  fireEvent.keyDown(chart,{key:'Home'});
- expect(document.querySelector('.qr-bridge')!.textContent).toContain('FY2021 Q4');
+ expect(document.querySelector('.qr-readout-quarter')!.textContent).toContain('FY2021 Q4');
  fireEvent.click(screen.getByRole('button',{name:'Margins'}));
  expect(screen.getByRole('img',{name:/Quarterly Operating margin, FCF margin; percent/})).toBeTruthy();
  expect(document.querySelector('.qr-stats')!.textContent).toContain('%');
@@ -46,13 +46,13 @@ it('previews all metric values on pointer movement, restores selection on leave 
  fireEvent(chart,new MouseEvent('pointermove',{bubbles:true,clientX:48,clientY:80}));
  expect(screen.getByRole('tooltip').textContent).toContain('FY2021 Q4');
  expect(document.querySelector('.qr-readout-quarter')!.textContent).toContain('exploring');
- expect(document.querySelector('.qr-bridge')!.textContent).toContain('FY2026 Q3');
+ expect(document.querySelector('.qr-readout-quarter')!.textContent).toContain('exploring');
  fireEvent.pointerLeave(chart);
  expect(screen.queryByRole('tooltip')).toBeNull();
  expect(document.querySelector('.qr-readout-quarter')!.textContent).toContain('FY2026 Q3');
  fireEvent.focus(chart);fireEvent.keyDown(chart,{key:'Home'});
  expect(chart.getAttribute('aria-valuenow')).toBe('0');
- expect(document.querySelector('.qr-bridge')!.textContent).toContain('FY2021 Q4');
+ expect(document.querySelector('.qr-readout-quarter')!.textContent).toContain('FY2021 Q4');
  fireEvent.keyDown(chart,{key:'ArrowRight'});
  expect(screen.getByRole('tooltip').textContent).toContain('FY2022 Q1');
  expect(document.querySelector('.qr-readout-quarter')!.textContent).toContain('FY2022 Q1');

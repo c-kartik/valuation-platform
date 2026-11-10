@@ -11,3 +11,14 @@
 .ca-ppe-focus-single{grid-template-columns:1fr}.ca-ppe .ca-balance:has(>div:nth-child(3):last-child){grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:700px){.ca-ppe .ca-balance:has(>div:nth-child(3):last-child){grid-template-columns:1fr 1fr}}
 
 .ca-balance-absence{display:block;font-size:12px;color:var(--ca-muted);margin-top:10px;line-height:1.5}
+
+.ca-shared-controls{position:sticky;top:0;z-index:12;background:var(--ca-paper);padding:12px 0!important;margin-top:30px;border-bottom:1px solid var(--ca-rule)}
+.ca-shared-controls>.qr-eyebrow{display:block;margin-bottom:10px}
+.ca-shared-controls .ca-section-controls{margin-bottom:8px}
+.ca-shared-controls .ca-period-navigation{margin-bottom:0}
+.ca-selected-period{font-size:12px;color:var(--ca-muted);margin:0 0 18px}
+.ca-shared-controls+.qr-bridge{margin-top:20px;padding-top:0;border-top:0}
+.ca-analysis-status{margin-top:30px;font-size:12px}
+.open-canvas #company-cash-bridge,.open-canvas #company-cash-allocation{scroll-margin-top:230px}
+.open-canvas .ca-shared-controls+.qr-bridge{margin-top:20px;padding-top:0;border-top:0}
+@media(max-width:700px){.open-canvas #company-cash-bridge,.open-canvas #company-cash-allocation{scroll-margin-top:280px}}

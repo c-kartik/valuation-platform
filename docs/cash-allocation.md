@@ -161,3 +161,40 @@ the transition spacing before DCF. Disclosure content and calculations are uncha
 Final policy-row follow-up removes the remaining 12px margin before the DCF
 border and the policy summary's forced 40px minimum height. The closed policy
 row now uses only its text line plus 6px padding above and below.
+
+## Shared cash-analysis periods — November 10, 2026
+
+Features 03 (earnings-to-cash bridge) and 04 (cash allocation) now share one
+sticky Annual / Quarterly / Trailing 12 months selector above the bridge, retaining
+year-then-quarter navigation. Both graph captions show the selected fiscal period
+and exact dates. Historical trends/revenue mix keep their independent chart
+selection; Inside PP&E keeps its independent year-end balance date. DCF is unchanged.
+
+`CashAnalysis.tsx` owns the selection and loads the existing allocation package
+plus the additive `public/cash-bridge/<ticker>.json` package. The original bridge
+renderer is retained in `CashBridge.tsx`. `cashBridgePeriods.ts` sums only the
+complete selected quarterly window; it checks both bridge identities and exact
+CFO/cash-capex agreement with every allocation annual, quarter and TTM period.
+Annual amounts are sums of the four accepted fiscal quarters, already checked
+against the selected annual filings by the existing reporting policy. TTM uses
+four consecutive fiscal quarters, respecting Apple's fiscal calendar.
+
+Offline reproduction:
+
+```sh
+PYTHONPATH=src python3 scripts/prepare_cash_bridge_periods.py
+```
+
+This new script calls the existing unchanged reporting preparer with 23 quarters
+for Alphabet/Meta and 24 for Apple, reading the retained SEC Company Facts
+snapshots. It asserts the existing final 20 observations remain identical and all
+extension dates/CFO/cash capex match the previously accepted allocation package.
+It writes only the new bridge consumer packages. Original reporting files,
+Python modules, DCF inputs and valuation engines are untouched. This extends
+only descriptive reporting coverage; it does not extend valuation readiness.
+
+Browser validation reuses the existing source/operand validator on overlapping
+20-quarter windows covering the whole extension, checks snapshot identity and
+unchanged accepted observations, and reconciles every displayed period before
+rendering. Component tests cover shared selection, early FY2021, TTM, separate
+PP&E dates, issuer changes and failed-load retry. No new SEC retrieval occurs.

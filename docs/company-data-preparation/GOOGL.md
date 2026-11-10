@@ -1358,3 +1358,14 @@ consolidated metrics, revenue-mix dimensions, recorded standalone comparisons an
 annual ties match retained SEC filing XBRL. No source value or accepted financial
 treatment changed. Original issuer qualifications/readiness classifications and
 DCF inputs remain preserved. Receipts are in `data/reporting-audit/`.
+
+## Shared cash-analysis reporting consumer — November 10, 2026
+
+The additive GOOGL bridge package follows the existing retained SEC quarterly
+policy and covers the accepted cash-allocation cohort from FY2021. Original
+20-quarter observations, filing snapshots and valuation inputs are unchanged.
+All annual/quarterly/TTM bridge CFO and cash capex match the allocation periods;
+net income + SBC + Other = CFO and CFO − cash capex = FCF. See
+[shared-period methodology](../cash-allocation.md#shared-cash-analysis-periods--november-10-2026)
+for reproducible preparation, source-window validation and scope limits. This
+acceptance is descriptive reporting only and changes no broader readiness status.
