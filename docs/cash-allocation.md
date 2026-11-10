@@ -147,8 +147,8 @@ remains a historical record.
 ## Compact cash-allocation presentation — November 10, 2026
 
 Removed the redundant CFO/business-investment/shareholder-return summary row.
-The flow now shows its pooled total once, labelled “Total cash”, between the
-sources and uses labels; the total remains visible on mobile and updates with
+The flow now shows its pooled total once, labelled “Total cash”, at the top right beside the
+section heading; the total remains visible on mobile and updates with
 annual/quarterly/TTM selection. Individual flow values, reconciliations, source
 packages, Inside PP&E and all original Python/DCF calculations are unchanged.
 Validation: browser production build and 10 existing cash-allocation component
