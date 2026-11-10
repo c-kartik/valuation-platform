@@ -248,3 +248,23 @@ it('honors a company deep link instead of the default or the remembered selectio
  second.rerender({ticker:'META'});
  await waitFor(()=>expect(second.result.current.state.selected).toBe('meta-fy2025'));
 });
+
+it('switches terminal methods from the main valuation without scenario navigation or losing growth inputs',async()=>{
+ const load=vi.mocked(transport());render(<Workspace load={load} initialCompany="GOOGL"/>);
+ const control=await screen.findByRole('region',{name:'Terminal method'});
+ await waitFor(()=>expect(within(control).getByRole('button',{name:'Exit multiple'}).hasAttribute('disabled')).toBe(false));
+ expect(within(control).getByRole('button',{name:'Perpetual growth'}).getAttribute('aria-pressed')).toBe('true');
+ const before=load.mock.calls.length;
+ fireEvent.click(within(control).getByRole('button',{name:'Exit multiple'}));
+ expect(within(control).getByRole('button',{name:'Exit multiple'}).getAttribute('aria-pressed')).toBe('true');
+ expect(within(control).getByRole('button',{name:'Enter exit multiple'})).toBeTruthy();
+ expect(screen.queryByRole('combobox',{name:'Terminal method'})).toBeNull();
+ expect(document.querySelector('.oc-value')!.textContent).toContain('Inputs required');
+ fireEvent.click(within(control).getByRole('button',{name:'Perpetual growth'}));
+ await waitFor(()=>expect(document.querySelector('.oc-value')!.textContent).toContain('Current calculation'));
+ expect(control.textContent).toContain('Terminal growth · 10%');
+ expect(within(control).queryByRole('button',{name:'Enter exit multiple'})).toBeNull();
+ // Exact request caching may reuse the prior result; no empty exit request is sent.
+ for(const [,body] of load.mock.calls.slice(before))if(body)expect((body as any).terminal_valuation.method).toBe('perpetual_growth');
+ expect(screen.queryByRole('dialog')).toBeNull();
+});

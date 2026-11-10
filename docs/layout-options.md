@@ -46,3 +46,23 @@ changes to financial inputs or methodology.
 
 FY2021 Q1 coverage correction: the expanded chart data and source audit are
 recorded in `docs/fy2021-history-extension.md`; original layout tags stay frozen.
+
+## Prominent terminal-method control — November 10, 2026
+
+Option 2 now places Perpetual growth / Exit multiple buttons directly above the
+main valuation summary/chart, outside the subsection tabs. The old scenario-only
+selector is removed. Existing session state owns both methods and preserves their
+inputs. Valid, preloaded company cases recalculate through the existing action;
+missing exit inputs show “Not set” and an “Enter exit multiple” action opening the
+existing assumption editor. Pending unapplied rate edits block switching to avoid
+silently discarding a draft.
+
+The default method remains perpetual growth and exit multiples remain unset.
+Selecting market-comparable multiples and changing the initial default are
+explicitly deferred until their methodology is agreed. No new financial values,
+market data, valuation engine changes or Python changes are included here.
+
+Validation: production build, 29 preload/UI tests, 8 method tests and 10 scenario
+tests passed. Browser checks confirmed a manual test multiple recalculates,
+returning to growth restores the original EV, and the control fits a 390px
+viewport. The test multiple was local only and cleared by reload.
