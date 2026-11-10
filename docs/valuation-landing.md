@@ -61,3 +61,10 @@ remain unchanged.
 
 The user selected **Equity Valuation** as the shorter headline. It replaces the
 previous two-part heading without changing the restored type scale or spacing.
+
+
+## Redundant label removal — November 10, 2026
+
+Removed only the small Equity Valuation Platform label above the Equity
+Valuation headline at the user’s request. Existing headline, styles, search,
+feature copy and financial behavior are unchanged.
