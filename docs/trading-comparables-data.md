@@ -72,3 +72,7 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python -m unittest discover -
 ```
 
 For a later snapshot, use `capture_sources.py --output <new-empty-directory>` with identifying `SEC_USER_AGENT`, review the new sources/cutoff and deliberately promote them as a new snapshot together with outputs. Existing freezes cannot be overwritten by the capture command. `prepare.py --refresh` retrieves only missing filing evidence; it does not silently replace Company Facts. No new cloud service or paid provider is required for these SEC financials.
+
+## Approved available-data interface — November 11, 2026
+
+The additive [detachable feature](trading-comparables-feature.md) publishes a reviewed projection of these prepared financials plus same-filing prior/current segment growth. Public observations, sources and contexts are retained in `frontend/public/features/trading-comparables/GOOGL.json`; the original prepared financials and DCF inputs remain byte-preserved. Financial methodology/market readiness above remains OPEN.

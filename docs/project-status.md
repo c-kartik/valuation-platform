@@ -1,3 +1,7 @@
+## Detachable comparables interface — November 11, 2026
+
+Added Alphabet section 06 under the existing 05–06 Valuation band, with direct cloud/advertising comparisons and same-filing YoY segment growth, peer financials, sources and pending valuation-input views. One flag removes the feature and its loading/navigation. 522 frontend tests, 19 preparation/export tests, browser build and desktop/phone/disconnect checks pass. Original Python/DCF source, inputs and calculations remain unchanged. Broader EV/D&A/share/price review stays OPEN. [Feature boundary and operation](trading-comparables-feature.md).
+
 ## Trading-comparables preparation — November 11, 2026
 
 Prepared an isolated SEC financial research package for Alphabet, Meta, Pinterest, Reddit, The Trade Desk, Microsoft and Amazon. Selected operands have 182 filing-level matches; 32 business reconciliations and 15 safety/snapshot tests pass. **Parent scope remains OPEN:** D&A/EBITDA, EV classifications, market-date shares and permitted prices remain review gates. No frontend, original Python source, DCF inputs or exit defaults changed. See [methodology and evidence scope](trading-comparables-data.md).

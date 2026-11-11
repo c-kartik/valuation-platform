@@ -1,3 +1,7 @@
+## Alphabet comparables display projection — November 11, 2026
+
+Seven existing peer records now link the [isolated available-data feature](../trading-comparables-feature.md). Same-filing segment-growth observations are confined to its projection. No underlying approved financial package, universe classification or DCF acceptance changes.
+
 ## Separate trading-comparables consumer — November 11, 2026
 
 GOOGL/META/PINS/RDDT/TTD/MSFT/AMZN have additive peer-preparation records under the [isolated comparables contract](../trading-comparables-data.md). This does not resume the paused universe review, alter existing analyst acceptance, or confer EV/EBITDA/valuation readiness. PINS/RDDT/TTD are peer-only additions outside the frozen universe register.

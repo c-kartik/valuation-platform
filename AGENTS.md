@@ -1,3 +1,7 @@
+## Detachable Alphabet trading comparables — November 11, 2026
+
+The user approves the available-data comparables interface as independent section 6 alongside DCF section 5 in the Valuation chapter. The single flag in `frontend/src/features/trading-comparables/config.ts` disconnects mounting, lazy code/styles, data loading and navigation. All feature code/styles/state remain inside that folder; use existing prepared financials through its isolated public data projection. No DCF/engine/Python-source/default changes. Alphabet only until other target peer maps are reviewed. GCP/Workspace, Pinterest proxy and missing profit/market fields must stay explicit. See `docs/trading-comparables-feature.md`; the broader financial/market methodology scope remains OPEN. This supersedes the old "Valuation groups 5" presentation rule only by adding detachable section 6.
+
 ## Saved layout options — November 10, 2026
 
 Option 1 is frozen as `layout-option-1` / `layout/option-1` in both source and

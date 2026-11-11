@@ -1,3 +1,7 @@
+## Isolated Alphabet peer-display consumer — November 11, 2026
+
+The [detachable comparables interface](../trading-comparables-feature.md) reads this issuer's existing consolidated financial preparation. New same-filing July–September comparative segment observations, where disclosed, preserve exact contexts and SEC sources in the isolated feature JSON; no value is inferred for unsupported breakdowns. Public display does not alter prior company/DCF acceptance, approve EBITDA or EV classifications, or establish a market-date valuation. Remaining qualifications and peer-data scope below stay in force.
+
 ## Separate trading-comparables preparation — November 11, 2026
 
 **Status: OPEN; no new DCF acceptance.** Official consolidated Company Facts plus retained latest annual/interim filing XML support the isolated financial package at `data/trading-comparables/prepared/TTD.json` and business review at `data/trading-comparables/business-review/TTD.json`. See [shared selection, accounting, evidence and gap contract](../trading-comparables-data.md).

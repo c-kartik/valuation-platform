@@ -66,3 +66,7 @@ Validation: production build, 29 preload/UI tests, 8 method tests and 10 scenari
 tests passed. Browser checks confirmed a manual test multiple recalculates,
 returning to growth restores the original EV, and the control fits a 390px
 viewport. The test multiple was local only and cleared by reload.
+
+## Detachable section 6 — November 11, 2026
+
+Alphabet now groups DCF (5) and Trading Comparables (6) under Valuation. The latter is independently disconnectable; other companies retain section 5 only. Frozen Option 1/2 tags remain unchanged. See [feature contract](trading-comparables-feature.md).
