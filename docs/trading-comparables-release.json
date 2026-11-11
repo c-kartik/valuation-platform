@@ -1,0 +1,38 @@
+{
+  "status": "published-and-live-verified",
+  "verified_at": "2026-11-11T08:42:16.048212+00:00",
+  "source_commit": "d380d8a",
+  "portfolio_commit": "7a9a085",
+  "publication": "Existing Netlify site via authorized portfolio main push",
+  "site_id": "4439ee14-d894-45b4-84a9-be3ef68eb870",
+  "url": "https://kartikchaturvedi.com/valuation/?company=GOOGL#company-trading-comparables",
+  "public_feature_sha256": "eea1149d311c6c65108cea28b015f76e000ad2b17fbe4a620e6a32d2d122968d",
+  "checks": {
+    "frontend_tests": 522,
+    "python_preparation_export_tests": 19,
+    "static_release_files": 60,
+    "static_local_references": 67,
+    "approved_data_assets_unchanged": 15,
+    "original_python_files_unchanged": 396,
+    "parity_fixtures_unchanged": 60,
+    "extra_parity_fixtures_unchanged": 68,
+    "desktop": true,
+    "phone_width": 390,
+    "local_disconnect_removes_section_link_and_preserves_dcf": true,
+    "local_reconnect": true,
+    "packaged_release_browser_load": true,
+    "live_data_bytes_match": true,
+    "live_new_entry": true,
+    "live_section_navigation": true,
+    "live_alphabet_default_dcf_ev": "$1.42tn",
+    "live_alphabet_default_fcff_value_per_share": "$125.91"
+  },
+  "limits": [
+    "Alphabet target only; other target peer maps are not approved.",
+    "Market-price sourcing/rights, EV/share classifications and comparable EBITDA remain open.",
+    "Financial snapshot date remains separate from the DCF analytical anchor.",
+    "Phone-sized desktop-browser rendering is not an actual iPhone Safari test."
+  ],
+  "disconnect": "Set tradingComparables.enabled=false in frontend/src/features/trading-comparables/config.ts, rebuild and republish.",
+  "screenshot": "/Users/kc/Documents/Codex/outputs/trading-comparables-live-desktop.jpg"
+}

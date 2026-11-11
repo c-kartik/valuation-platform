@@ -41,3 +41,7 @@ Use the repository's Node 22 runtime. New snapshots need reviewed sources/mappin
 - Actual desktop and 390px checks cover direct comparisons, tabs, balances and readable responsive layout. Tables scroll within the feature; there is no document-level horizontal overflow.
 - Actual disconnect/reconnect check removes/restores the section and link while the DCF remains available at its existing Alphabet Base calculation ($1.42tn EV / $125.91 FCFF value per share under the unchanged default snapshot). This is preservation evidence, not an updated market valuation.
 - Frontend tests reject unsupported issuers, incorrect growth, accidental market/default values and late loads after unmount. No production website change is implied by tests; publication is recorded separately.
+
+## Publication
+
+Published and live-verified on November 11, 2026 through the existing portfolio repository (`7a9a085`), using source implementation `d380d8a`. The live feature JSON matches the release bytes and the page loads the new entry. Section-6 navigation and the unchanged Alphabet default DCF were checked on production. See [release receipt](trading-comparables-release.json).
