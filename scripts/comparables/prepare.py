@@ -21,7 +21,8 @@ from valuation_platform.sec.tickers import SECCompanyIdentity
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / 'data/trading-comparables'
 ISSUERS = {'GOOGL': 1652044, 'META': 1326801, 'PINS': 1506293,
-           'RDDT': 1713445, 'TTD': 1671933, 'MSFT': 789019, 'AMZN': 1018724}
+           'RDDT': 1713445, 'TTD': 1671933, 'MSFT': 789019, 'AMZN': 1018724,
+           'AAPL': 320193, 'DELL': 1571996, 'HPQ': 47217, 'NFLX': 1065280, 'SNAP': 1564408}
 FLOW = {
     'revenue': ['RevenueFromContractWithCustomerExcludingAssessedTax', 'Revenues', 'SalesRevenueNet'],
     'ebit': ['OperatingIncomeLoss'],
@@ -141,7 +142,7 @@ def prepare(ticker, cutoff, refresh=False):
     facts_path = BASE / 'sources' / f'{ticker}-companyfacts.json.gz'
     facts = load(facts_path)
     tags = {k: list(v) for k, v in FLOW.items()}
-    if ticker == 'AMZN':
+    if ticker in ('AMZN', 'HPQ'):
         tags['cash_capex'] = ['PaymentsToAcquireProductiveAssets']
     # Do not substitute depreciation-only or note-only D&A into EBITDA.
     annual_periods = sorted({(o['start'], o['end']) for _, o in observations(facts, tags['revenue'], cutoff)

@@ -1,3 +1,9 @@
+## Apple/Meta comparables display scope — November 11, 2026
+
+Reuses the approved product revenue-mix fiscal quarters; Q4 is annual less nine months, not a new reported standalone amount. Product components reconcile to the existing total. Latest TTM is FY2026 annual, with no interim addition. No product-level EBIT is invented.
+
+[Selection, sources, reconciliation, alternatives and remaining gates](../trading-comparables-apple-meta.md). Preparation evidence is retained under `data/trading-comparables/`; this grants no new original DCF acceptance. Missing values stay unavailable; market-date prices/shares, EV classifications and EBITDA conventions remain unresolved. Existing issuer decisions below are preserved.
+
 ## Cash allocation / PP&E consumer acceptance — November 9, 2026
 
 The user approved this additive descriptive consumer for AAPL. The

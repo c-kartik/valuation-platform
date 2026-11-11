@@ -1,0 +1,301 @@
+{
+  "as_of": "2026-11-11",
+  "limitations": [
+    "Microsoft old/new reporting structures are not spliced; unmatched old structure remains unavailable.",
+    "Pinterest and Trade Desk product-level profit breakdowns are not inferred.",
+    "Segment operating income is a management allocation measure, not standalone company EBIT.",
+    "AWS/Azure have no separately traded enterprise value."
+  ],
+  "matches": 3,
+  "mismatches": 0,
+  "periods": [
+    {
+      "accession": "0001564408-26-000013",
+      "end": "2025-12-31",
+      "fields": {
+        "advertising": {
+          "evidence": [
+            {
+              "accession": "0001564408-26-000013",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-76",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "AdvertisingRevenueMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000013/snap-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "5186077000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 5186077000
+        },
+        "ebit": {
+          "accession": "0001564408-26-000013",
+          "concept": "OperatingIncomeLoss",
+          "end": "2025-12-31",
+          "filed": "2026-02-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000013/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": -532167000
+        },
+        "other_revenue": {
+          "evidence": [
+            {
+              "accession": "0001564408-26-000013",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-79",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "OtherRevenueMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000013/snap-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "745370000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 745370000
+        },
+        "revenue": {
+          "accession": "0001564408-26-000013",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-12-31",
+          "filed": "2026-02-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000013/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 5931447000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "advertising",
+            "other_revenue"
+          ],
+          "difference_usd": 0,
+          "name": "consolidated_revenue",
+          "reported_total": 5931447000,
+          "status": "MATCH",
+          "sum": 5931447000,
+          "target": "revenue"
+        }
+      ],
+      "start": "2025-01-01"
+    },
+    {
+      "accession": "0001564408-26-000067",
+      "end": "2026-09-30",
+      "fields": {
+        "advertising": {
+          "evidence": [
+            {
+              "accession": "0001564408-26-000067",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-88",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "AdvertisingRevenueMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/snap-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "3898772000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 3898772000
+        },
+        "ebit": {
+          "accession": "0001564408-26-000067",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-09-30",
+          "filed": "2026-11-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": -168454000
+        },
+        "other_revenue": {
+          "evidence": [
+            {
+              "accession": "0001564408-26-000067",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-92",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "OtherRevenueMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/snap-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "951483000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 951483000
+        },
+        "revenue": {
+          "accession": "0001564408-26-000067",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-11-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 4850255000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "advertising",
+            "other_revenue"
+          ],
+          "difference_usd": 0,
+          "name": "consolidated_revenue",
+          "reported_total": 4850255000,
+          "status": "MATCH",
+          "sum": 4850255000,
+          "target": "revenue"
+        }
+      ],
+      "start": "2026-01-01"
+    },
+    {
+      "accession": "0001564408-26-000067",
+      "end": "2026-09-30",
+      "fields": {
+        "advertising": {
+          "evidence": [
+            {
+              "accession": "0001564408-26-000067",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-86",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "AdvertisingRevenueMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/snap-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "1372788000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 1372788000
+        },
+        "ebit": {
+          "accession": "0001564408-26-000067",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-09-30",
+          "filed": "2026-11-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/",
+          "start": "2026-07-01",
+          "status": "SEC_REPORTED",
+          "value": 76716000
+        },
+        "other_revenue": {
+          "evidence": [
+            {
+              "accession": "0001564408-26-000067",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-90",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "OtherRevenueMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/snap-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "349683000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 349683000
+        },
+        "revenue": {
+          "accession": "0001564408-26-000067",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-11-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/",
+          "start": "2026-07-01",
+          "status": "SEC_REPORTED",
+          "value": 1722471000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "advertising",
+            "other_revenue"
+          ],
+          "difference_usd": 0,
+          "name": "consolidated_revenue",
+          "reported_total": 1722471000,
+          "status": "MATCH",
+          "sum": 1722471000,
+          "target": "revenue"
+        }
+      ],
+      "start": "2026-07-01"
+    }
+  ],
+  "policy": "explicit-business-dimensions-v1",
+  "scope": "Exact reconciliation for available latest annual and latest interim dimensional disclosures only; no inferred segment values or segment market multiples.",
+  "ticker": "SNAP"
+}

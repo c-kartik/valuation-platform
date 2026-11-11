@@ -1,0 +1,216 @@
+{
+  "as_of": "2026-11-11",
+  "limitations": [
+    "Microsoft old/new reporting structures are not spliced; unmatched old structure remains unavailable.",
+    "Pinterest and Trade Desk product-level profit breakdowns are not inferred.",
+    "Segment operating income is a management allocation measure, not standalone company EBIT.",
+    "AWS/Azure have no separately traded enterprise value."
+  ],
+  "matches": 1,
+  "mismatches": 0,
+  "periods": [
+    {
+      "accession": "0000320193-26-000026",
+      "end": "2026-09-26",
+      "fields": {
+        "ebit": {
+          "accession": "0000320193-26-000026",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-09-26",
+          "filed": "2026-11-03",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/",
+          "start": "2025-09-28",
+          "status": "SEC_REPORTED",
+          "value": 158063000000
+        },
+        "ipad": {
+          "evidence": [
+            {
+              "accession": "0000320193-26-000026",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-50",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "IPadMember"
+                }
+              ],
+              "end": "2026-09-26",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+              "start": "2025-09-28",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "27929000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 27929000000
+        },
+        "iphone": {
+          "evidence": [
+            {
+              "accession": "0000320193-26-000026",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-44",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "IPhoneMember"
+                }
+              ],
+              "end": "2026-09-26",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+              "start": "2025-09-28",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "254098000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 254098000000
+        },
+        "mac": {
+          "evidence": [
+            {
+              "accession": "0000320193-26-000026",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-47",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "MacMember"
+                }
+              ],
+              "end": "2026-09-26",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+              "start": "2025-09-28",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "37929000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 37929000000
+        },
+        "revenue": {
+          "accession": "0000320193-26-000026",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-26",
+          "filed": "2026-11-03",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/",
+          "start": "2025-09-28",
+          "status": "SEC_REPORTED",
+          "value": 478834000000
+        },
+        "services": {
+          "evidence": [
+            {
+              "accession": "0000320193-26-000026",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-14",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "ServiceMember"
+                }
+              ],
+              "end": "2026-09-26",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+              "start": "2025-09-28",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "123301000000"
+            },
+            {
+              "accession": "0000320193-26-000026",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-14",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "ServiceMember"
+                }
+              ],
+              "end": "2026-09-26",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+              "start": "2025-09-28",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "123301000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 123301000000
+        },
+        "wearables": {
+          "evidence": [
+            {
+              "accession": "0000320193-26-000026",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-53",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "WearablesHomeandAccessoriesMember"
+                }
+              ],
+              "end": "2026-09-26",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+              "start": "2025-09-28",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "35577000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 35577000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "iphone",
+            "mac",
+            "ipad",
+            "wearables",
+            "services"
+          ],
+          "difference_usd": 0,
+          "name": "product_revenue",
+          "reported_total": 478834000000,
+          "status": "MATCH",
+          "sum": 478834000000,
+          "target": "revenue"
+        }
+      ],
+      "start": "2025-09-28"
+    }
+  ],
+  "policy": "explicit-business-dimensions-v1",
+  "scope": "Exact reconciliation for available latest annual and latest interim dimensional disclosures only; no inferred segment values or segment market multiples.",
+  "ticker": "AAPL"
+}

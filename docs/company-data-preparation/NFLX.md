@@ -1,3 +1,9 @@
+## Apple/Meta comparables display scope — November 11, 2026
+
+New peer-only preparation: subscription context uses labelled total-company revenue including ads and its disclosed operating income. PP&E cash capex excludes content investment; no comparable D&A/EBITDA approval follows.
+
+[Selection, sources, reconciliation, alternatives and remaining gates](../trading-comparables-apple-meta.md). Preparation evidence is retained under `data/trading-comparables/`; this grants no new original DCF acceptance. Missing values stay unavailable; market-date prices/shares, EV classifications and EBITDA conventions remain unresolved. Existing issuer decisions below are preserved.
+
 # NFLX — company data preparation
 
 ## Bounded v2 statement-binding/shared repair

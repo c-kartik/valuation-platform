@@ -1,0 +1,652 @@
+{
+  "as_of": "2026-11-11",
+  "limitations": [
+    "Microsoft old/new reporting structures are not spliced; unmatched old structure remains unavailable.",
+    "Pinterest and Trade Desk product-level profit breakdowns are not inferred.",
+    "Segment operating income is a management allocation measure, not standalone company EBIT.",
+    "AWS/Azure have no separately traded enterprise value."
+  ],
+  "matches": 3,
+  "mismatches": 0,
+  "periods": [
+    {
+      "accession": "0001571996-26-000008",
+      "end": "2026-01-30",
+      "fields": {
+        "client_solutions": {
+          "evidence": [
+            {
+              "accession": "0001571996-26-000008",
+              "concept": "Revenues",
+              "context": "c-328",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ClientSolutionsMember"
+                }
+              ],
+              "end": "2026-01-30",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130_htm.xml",
+              "start": "2025-02-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "50984000000"
+            },
+            {
+              "accession": "0001571996-26-000008",
+              "concept": "Revenues",
+              "context": "c-328",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ClientSolutionsMember"
+                }
+              ],
+              "end": "2026-01-30",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130_htm.xml",
+              "start": "2025-02-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "50984000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 50984000000
+        },
+        "client_solutions_ebit": {
+          "evidence": [
+            {
+              "accession": "0001571996-26-000008",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-328",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ClientSolutionsMember"
+                }
+              ],
+              "end": "2026-01-30",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130_htm.xml",
+              "start": "2025-02-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "2833000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 2833000000
+        },
+        "corporate_revenue": {
+          "evidence": [
+            {
+              "accession": "0001571996-26-000008",
+              "concept": "Revenues",
+              "context": "c-460",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "CorporateNonSegmentMember"
+                }
+              ],
+              "end": "2026-01-30",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130_htm.xml",
+              "start": "2025-02-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "1728000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 1728000000
+        },
+        "ebit": {
+          "accession": "0001571996-26-000008",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-01-30",
+          "filed": "2026-03-16",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/",
+          "start": "2025-02-01",
+          "status": "SEC_REPORTED",
+          "value": 8149000000
+        },
+        "infrastructure": {
+          "evidence": [
+            {
+              "accession": "0001571996-26-000008",
+              "concept": "Revenues",
+              "context": "c-327",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "InfrastructureSolutionsGroupMember"
+                }
+              ],
+              "end": "2026-01-30",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130_htm.xml",
+              "start": "2025-02-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "60826000000"
+            },
+            {
+              "accession": "0001571996-26-000008",
+              "concept": "Revenues",
+              "context": "c-327",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "InfrastructureSolutionsGroupMember"
+                }
+              ],
+              "end": "2026-01-30",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130_htm.xml",
+              "start": "2025-02-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "60826000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 60826000000
+        },
+        "revenue": {
+          "accession": "0001571996-26-000008",
+          "concept": "Revenues",
+          "end": "2026-01-30",
+          "filed": "2026-03-16",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/",
+          "start": "2025-02-01",
+          "status": "SEC_REPORTED",
+          "value": 113538000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "client_solutions",
+            "infrastructure",
+            "corporate_revenue"
+          ],
+          "difference_usd": 0,
+          "name": "segment_revenue",
+          "reported_total": 113538000000,
+          "status": "MATCH",
+          "sum": 113538000000,
+          "target": "revenue"
+        }
+      ],
+      "start": "2025-02-01"
+    },
+    {
+      "accession": "0001571996-26-000046",
+      "end": "2026-07-31",
+      "fields": {
+        "client_solutions": {
+          "evidence": [
+            {
+              "accession": "0001571996-26-000046",
+              "concept": "Revenues",
+              "context": "c-294",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ClientSolutionsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+              "start": "2026-01-31",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "29643000000"
+            },
+            {
+              "accession": "0001571996-26-000046",
+              "concept": "Revenues",
+              "context": "c-294",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ClientSolutionsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+              "start": "2026-01-31",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "29643000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 29643000000
+        },
+        "client_solutions_ebit": {
+          "evidence": [
+            {
+              "accession": "0001571996-26-000046",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-294",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ClientSolutionsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+              "start": "2026-01-31",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "2312000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 2312000000
+        },
+        "corporate_revenue": {
+          "evidence": [
+            {
+              "accession": "0001571996-26-000046",
+              "concept": "Revenues",
+              "context": "c-340",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "CorporateNonSegmentMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+              "start": "2026-01-31",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "379000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 379000000
+        },
+        "ebit": {
+          "accession": "0001571996-26-000046",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-07-31",
+          "filed": "2026-09-08",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/",
+          "start": "2026-01-31",
+          "status": "SEC_REPORTED",
+          "value": 9041000000
+        },
+        "infrastructure": {
+          "evidence": [
+            {
+              "accession": "0001571996-26-000046",
+              "concept": "Revenues",
+              "context": "c-293",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "InfrastructureSolutionsGroupMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+              "start": "2026-01-31",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "60791000000"
+            },
+            {
+              "accession": "0001571996-26-000046",
+              "concept": "Revenues",
+              "context": "c-293",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "InfrastructureSolutionsGroupMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+              "start": "2026-01-31",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "60791000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 60791000000
+        },
+        "revenue": {
+          "accession": "0001571996-26-000046",
+          "concept": "Revenues",
+          "end": "2026-07-31",
+          "filed": "2026-09-08",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/",
+          "start": "2026-01-31",
+          "status": "SEC_REPORTED",
+          "value": 90813000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "client_solutions",
+            "infrastructure",
+            "corporate_revenue"
+          ],
+          "difference_usd": 0,
+          "name": "segment_revenue",
+          "reported_total": 90813000000,
+          "status": "MATCH",
+          "sum": 90813000000,
+          "target": "revenue"
+        }
+      ],
+      "start": "2026-01-31"
+    },
+    {
+      "accession": "0001571996-26-000046",
+      "end": "2026-07-31",
+      "fields": {
+        "client_solutions": {
+          "evidence": [
+            {
+              "accession": "0001571996-26-000046",
+              "concept": "Revenues",
+              "context": "c-331",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ClientSolutionsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+              "start": "2026-05-02",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "15034000000"
+            },
+            {
+              "accession": "0001571996-26-000046",
+              "concept": "Revenues",
+              "context": "c-331",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ClientSolutionsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+              "start": "2026-05-02",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "15034000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 15034000000
+        },
+        "client_solutions_ebit": {
+          "evidence": [
+            {
+              "accession": "0001571996-26-000046",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-331",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ClientSolutionsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+              "start": "2026-05-02",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "1142000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 1142000000
+        },
+        "corporate_revenue": {
+          "evidence": [
+            {
+              "accession": "0001571996-26-000046",
+              "concept": "Revenues",
+              "context": "c-338",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "CorporateNonSegmentMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+              "start": "2026-05-02",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "155000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 155000000
+        },
+        "ebit": {
+          "accession": "0001571996-26-000046",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-07-31",
+          "filed": "2026-09-08",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/",
+          "start": "2026-05-02",
+          "status": "SEC_REPORTED",
+          "value": 5385000000
+        },
+        "infrastructure": {
+          "evidence": [
+            {
+              "accession": "0001571996-26-000046",
+              "concept": "Revenues",
+              "context": "c-328",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "InfrastructureSolutionsGroupMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+              "start": "2026-05-02",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "31782000000"
+            },
+            {
+              "accession": "0001571996-26-000046",
+              "concept": "Revenues",
+              "context": "c-328",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "InfrastructureSolutionsGroupMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+              "start": "2026-05-02",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "31782000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 31782000000
+        },
+        "revenue": {
+          "accession": "0001571996-26-000046",
+          "concept": "Revenues",
+          "end": "2026-07-31",
+          "filed": "2026-09-08",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/",
+          "start": "2026-05-02",
+          "status": "SEC_REPORTED",
+          "value": 46971000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "client_solutions",
+            "infrastructure",
+            "corporate_revenue"
+          ],
+          "difference_usd": 0,
+          "name": "segment_revenue",
+          "reported_total": 46971000000,
+          "status": "MATCH",
+          "sum": 46971000000,
+          "target": "revenue"
+        }
+      ],
+      "start": "2026-05-02"
+    }
+  ],
+  "policy": "explicit-business-dimensions-v1",
+  "scope": "Exact reconciliation for available latest annual and latest interim dimensional disclosures only; no inferred segment values or segment market multiples.",
+  "ticker": "DELL"
+}

@@ -44,6 +44,19 @@ MAPPINGS = {
             'xbox':'XBOXMember', 'industry':'IndustrySolutionsMember', 'windows_devices':'WindowsOEMAndDevicesMember',
             'frontier_support':'FrontierAndSupportServicesMember'}.items()}},
     'RDDT': {'advertising': product('AdvertisingMember'), 'other_revenue': product('OtherRevenueMember')},
+    'AAPL': {name: product(member) for name, member in {'iphone':'IPhoneMember', 'mac':'MacMember',
+        'ipad':'IPadMember', 'wearables':'WearablesHomeandAccessoriesMember', 'services':'ServiceMember'}.items()},
+    'DELL': {**{name: rule('Revenues', **{C:'OperatingSegmentsMember', S:member}) for name,member in {
+        'client_solutions':'ClientSolutionsMember','infrastructure':'InfrastructureSolutionsGroupMember'}.items()},
+        'corporate_revenue':rule('Revenues', **{C:'CorporateNonSegmentMember'}),
+        'client_solutions_ebit':rule(O, **{C:'OperatingSegmentsMember', S:'ClientSolutionsMember'})},
+    'HPQ': {**{name: rule('Revenues', **{C:'OperatingSegmentsMember', S:member}) for name,member in {
+        'personal_systems':'PersonalSystemsMember','printing':'PrintingMember','corporate_investments':'CorporateInvestmentsMember'}.items()},
+        'reconciling_revenue':rule('Revenues', **{C:'MaterialReconcilingItemsMember'}),
+        'personal_systems_ebit':rule(O, **{C:'OperatingSegmentsMember',S:'PersonalSystemsMember'})},
+    'SNAP': {'advertising':product('AdvertisingRevenueMember'), 'other_revenue':product('OtherRevenueMember')},
+    'NFLX': {'reported_segment':rule('Revenues', **{S:'ReportableSegmentMember'}),
+             'reported_segment_ebit':profit('ReportableSegmentMember')},
 }
 GROUPS = {
     'GOOGL': [('services_components', ['search', 'youtube_ads', 'network', 'subscriptions_platforms_devices'], 'services'),
@@ -59,6 +72,11 @@ GROUPS = {
              ('segment_ebit', ['agents_infra_ebit', 'devices_consumer_ebit'], 'ebit'),
              ('product_revenue', ['azure', 'm365', 'licensing', 'search_ads', 'xbox', 'industry', 'windows_devices', 'frontier_support'], 'revenue')],
     'RDDT': [('consolidated_revenue', ['advertising', 'other_revenue'], 'revenue')],
+    'AAPL': [('product_revenue', ['iphone','mac','ipad','wearables','services'], 'revenue')],
+    'DELL': [('segment_revenue', ['client_solutions','infrastructure','corporate_revenue'], 'revenue')],
+    'HPQ': [('segment_revenue', ['personal_systems','printing','corporate_investments','reconciling_revenue'], 'revenue')],
+    'SNAP': [('consolidated_revenue', ['advertising','other_revenue'], 'revenue')],
+    'NFLX': [('single_segment_revenue',['reported_segment'],'revenue'),('single_segment_ebit',['reported_segment_ebit'],'ebit')],
 }
 
 def select(rows, mapping, start, end, accession):
@@ -80,7 +98,7 @@ def review(ticker):
         selected = {name: select(rows, mapping, start, end, accession) for name, mapping in MAPPINGS.get(ticker, {}).items()}
         if ticker == 'GOOGL':
             selected['hedging'] = pick(facts, ['RevenueNotFromContractWithCustomer'], d['as_of'], start, end, accession)
-        selected['revenue'] = pick(facts, ['Revenues'] if ticker == 'GOOGL' else [R], d['as_of'], start, end, accession)
+        selected['revenue'] = pick(facts, ['Revenues'] if ticker in ('GOOGL','DELL','HPQ','NFLX') else [R], d['as_of'], start, end, accession)
         selected['ebit'] = pick(facts, [O], d['as_of'], start, end, accession)
         checks = []
         for name, components, target in GROUPS.get(ticker, []):
@@ -106,7 +124,8 @@ def review(ticker):
 
 if __name__ == '__main__':
     failures = 0
-    for t in ['GOOGL', 'META', 'PINS', 'RDDT', 'TTD', 'MSFT', 'AMZN']:
+    from prepare import ISSUERS
+    for t in ISSUERS:
         result = review(t)
         failures += result['mismatches']
         print(json.dumps(result))

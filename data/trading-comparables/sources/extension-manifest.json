@@ -1,0 +1,75 @@
+{
+  "retrieved_at": "2026-11-11T09:17:27.401597+00:00",
+  "sources": [
+    {
+      "ticker": "AAPL",
+      "kind": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "path": "sources/AAPL-companyfacts.json.gz",
+      "sha256": "df21b15cb43a5ed8b31463990854c8f1a35ea075636d165bc12c936f39537bba"
+    },
+    {
+      "ticker": "AAPL",
+      "kind": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+      "path": "sources/AAPL-submissions.json.gz",
+      "sha256": "3c0ff099af42b3d43c563ed6aa20ffb836e18176a37b15d43469aedd79d6eda1"
+    },
+    {
+      "ticker": "DELL",
+      "kind": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001571996.json",
+      "path": "sources/DELL-companyfacts.json.gz",
+      "sha256": "49896b47b96c2cc0446d929b0b555ee5e16aeb1360832f34a08f9de45d458956"
+    },
+    {
+      "ticker": "DELL",
+      "kind": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0001571996.json",
+      "path": "sources/DELL-submissions.json.gz",
+      "sha256": "a24229c3ff08563da40c4184fde705c07b8610848588711b126a229346650efe"
+    },
+    {
+      "ticker": "HPQ",
+      "kind": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000047217.json",
+      "path": "sources/HPQ-companyfacts.json.gz",
+      "sha256": "2968ed9e59ab3875ebf333cd406bb72d2c34589315a1860200b03882ec1967f9"
+    },
+    {
+      "ticker": "HPQ",
+      "kind": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0000047217.json",
+      "path": "sources/HPQ-submissions.json.gz",
+      "sha256": "b8fff3c93931db4c50dce98b5bf9024e6959d9a19d088c7dbbb8959a5b6e112a"
+    },
+    {
+      "ticker": "NFLX",
+      "kind": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001065280.json",
+      "path": "sources/NFLX-companyfacts.json.gz",
+      "sha256": "c9bdee19d57cf2834d269f739319e1caa4f9a9bb2ef0f9bf3ca785a62f6e3c04"
+    },
+    {
+      "ticker": "NFLX",
+      "kind": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0001065280.json",
+      "path": "sources/NFLX-submissions.json.gz",
+      "sha256": "99b3c0634b66a4a31c68e94395ab84040c7c09d99fae6af94a65103e18494aff"
+    },
+    {
+      "ticker": "SNAP",
+      "kind": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001564408.json",
+      "path": "sources/SNAP-companyfacts.json.gz",
+      "sha256": "80dbf8fecced577635a272393f3232c05643e67b149f3d9bf080f2c3443bf37d"
+    },
+    {
+      "ticker": "SNAP",
+      "kind": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0001564408.json",
+      "path": "sources/SNAP-submissions.json.gz",
+      "sha256": "25900f1f7459cded1f50767f770a66098db0c90ba9151f987dd20b7d7843f057"
+    }
+  ]
+}

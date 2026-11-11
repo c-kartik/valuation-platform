@@ -1,3 +1,7 @@
+## Apple and Meta comparables — November 11, 2026
+
+Extended the shared detachable section 6 with target-specific hardware/services peers for Apple and advertising peers for Meta. New official SEC snapshots validate with 122 selected filing matches and 16 business reconciliations; Apple product data reuses the original approved reporting package. 527 frontend / 26 data tests pass, with desktop/phone and shared-switch checks. Original DCF sources, inputs and defaults are unchanged. Markets/EV/D&A/share/exit methodology remains OPEN. [Extension contract](trading-comparables-apple-meta.md).
+
 ## Detachable comparables interface — November 11, 2026
 
 Added Alphabet section 06 under the existing 05–06 Valuation band, with direct cloud/advertising comparisons and same-filing YoY segment growth, peer financials, sources and pending valuation-input views. One flag removes the feature and its loading/navigation. 522 frontend tests, 19 preparation/export tests, browser build and desktop/phone/disconnect checks pass. Original Python/DCF source, inputs and calculations remain unchanged. Broader EV/D&A/share/price review stays OPEN. [Feature boundary and operation](trading-comparables-feature.md).

@@ -1,3 +1,9 @@
+## Apple/Meta comparables display scope — November 11, 2026
+
+Retained as Meta advertising-technology context, not a gross-ad-revenue equivalent. Original financial observations and accounting scope remain unchanged.
+
+[Selection, sources, reconciliation, alternatives and remaining gates](../trading-comparables-apple-meta.md). Preparation evidence is retained under `data/trading-comparables/`; this grants no new original DCF acceptance. Missing values stay unavailable; market-date prices/shares, EV classifications and EBITDA conventions remain unresolved. Existing issuer decisions below are preserved.
+
 ## Isolated Alphabet peer-display consumer — November 11, 2026
 
 The [detachable comparables interface](../trading-comparables-feature.md) reads this issuer's existing consolidated financial preparation. New same-filing July–September comparative segment observations, where disclosed, preserve exact contexts and SEC sources in the isolated feature JSON; no value is inferred for unsupported breakdowns. Public display does not alter prior company/DCF acceptance, approve EBITDA or EV classifications, or establish a market-date valuation. Remaining qualifications and peer-data scope below stay in force.

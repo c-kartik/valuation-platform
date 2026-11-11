@@ -1,0 +1,927 @@
+{
+  "as_of": "2026-11-11",
+  "businesses": {},
+  "currency": "USD",
+  "growth": {
+    "GOOGL_advertising": {
+      "basis": "Same-filing comparative quarters; nominal USD",
+      "components": [
+        "GOOGL_search",
+        "GOOGL_youtube_ads",
+        "GOOGL_network"
+      ],
+      "current": 82012000000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.10555121188428451,
+      "operands": [],
+      "prior": 74182000000,
+      "prior_end": "2025-09-30"
+    },
+    "GOOGL_network": {
+      "basis": "Same-filing comparative quarters; nominal USD",
+      "current": 7455000000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.013734022300788684,
+      "operands": [
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-100"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "GoogleNetworkMember",
+            "StatementBusinessSegmentsAxis": "GoogleServicesMember"
+          },
+          "end": "2025-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+          "start": "2025-07-01",
+          "value": 7354000000
+        },
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-101"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "GoogleNetworkMember",
+            "StatementBusinessSegmentsAxis": "GoogleServicesMember"
+          },
+          "end": "2026-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+          "start": "2026-07-01",
+          "value": 7455000000
+        }
+      ],
+      "prior": 7354000000,
+      "prior_end": "2025-09-30"
+    },
+    "GOOGL_search": {
+      "basis": "Same-filing comparative quarters; nominal USD",
+      "current": 63350000000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.11991090211607469,
+      "operands": [
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-92"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "GoogleSearchOtherMember",
+            "StatementBusinessSegmentsAxis": "GoogleServicesMember"
+          },
+          "end": "2025-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+          "start": "2025-07-01",
+          "value": 56567000000
+        },
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-93"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "GoogleSearchOtherMember",
+            "StatementBusinessSegmentsAxis": "GoogleServicesMember"
+          },
+          "end": "2026-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+          "start": "2026-07-01",
+          "value": 63350000000
+        }
+      ],
+      "prior": 56567000000,
+      "prior_end": "2025-09-30"
+    },
+    "GOOGL_services": {
+      "basis": "Same-filing comparative quarter; nominal USD",
+      "current": 96302000000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.10625832835546567,
+      "operands": [
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-112"
+          ],
+          "dimensions": {
+            "StatementBusinessSegmentsAxis": "GoogleServicesMember"
+          },
+          "end": "2025-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+          "start": "2025-07-01",
+          "value": 87052000000
+        },
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-113"
+          ],
+          "dimensions": {
+            "StatementBusinessSegmentsAxis": "GoogleServicesMember"
+          },
+          "end": "2026-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+          "start": "2026-07-01",
+          "value": 96302000000
+        }
+      ],
+      "prior": 87052000000,
+      "prior_end": "2025-09-30"
+    },
+    "GOOGL_youtube_ads": {
+      "basis": "Same-filing comparative quarters; nominal USD",
+      "current": 11207000000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.0921937432998734,
+      "operands": [
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-96"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "YouTubeAdvertisingRevenueMember",
+            "StatementBusinessSegmentsAxis": "GoogleServicesMember"
+          },
+          "end": "2025-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+          "start": "2025-07-01",
+          "value": 10261000000
+        },
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-97"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "YouTubeAdvertisingRevenueMember",
+            "StatementBusinessSegmentsAxis": "GoogleServicesMember"
+          },
+          "end": "2026-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+          "start": "2026-07-01",
+          "value": 11207000000
+        }
+      ],
+      "prior": 10261000000,
+      "prior_end": "2025-09-30"
+    },
+    "META_advertising": {
+      "basis": "Same-filing comparative quarters; nominal USD",
+      "current": 63061000000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.2591549858232498,
+      "operands": [
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-48"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "AdvertisingMember",
+            "StatementBusinessSegmentsAxis": "FamilyOfAppsMember"
+          },
+          "end": "2025-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930_htm.xml",
+          "start": "2025-07-01",
+          "value": 50082000000
+        },
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-47"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "AdvertisingMember",
+            "StatementBusinessSegmentsAxis": "FamilyOfAppsMember"
+          },
+          "end": "2026-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930_htm.xml",
+          "start": "2026-07-01",
+          "value": 63061000000
+        }
+      ],
+      "prior": 50082000000,
+      "prior_end": "2025-09-30"
+    },
+    "META_family_of_apps": {
+      "basis": "Same-filing comparative quarter; nominal USD",
+      "current": 64158000000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.26364925549515483,
+      "operands": [
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-56"
+          ],
+          "dimensions": {
+            "StatementBusinessSegmentsAxis": "FamilyOfAppsMember"
+          },
+          "end": "2025-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930_htm.xml",
+          "start": "2025-07-01",
+          "value": 50772000000
+        },
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-55"
+          ],
+          "dimensions": {
+            "StatementBusinessSegmentsAxis": "FamilyOfAppsMember"
+          },
+          "end": "2026-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930_htm.xml",
+          "start": "2026-07-01",
+          "value": 64158000000
+        }
+      ],
+      "prior": 50772000000,
+      "prior_end": "2025-09-30"
+    },
+    "PINS_total": {
+      "basis": "Same-filing comparative quarters; nominal USD",
+      "current": 1173929000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.11887476708555522,
+      "operands": [
+        {
+          "accession": "0001506293-26-000153",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1506293/000150629326000153/",
+          "start": "2025-07-01",
+          "status": "SEC_REPORTED",
+          "value": 1049205000
+        },
+        {
+          "accession": "0001506293-26-000153",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1506293/000150629326000153/",
+          "start": "2026-07-01",
+          "status": "SEC_REPORTED",
+          "value": 1173929000
+        }
+      ],
+      "prior": 1049205000,
+      "prior_end": "2025-09-30"
+    },
+    "RDDT_advertising": {
+      "basis": "Same-filing comparative quarters; nominal USD",
+      "current": 846996000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.5418373253820026,
+      "operands": [
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-71"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "AdvertisingMember"
+          },
+          "end": "2025-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1713445/000171344526000116/rddt-20260930_htm.xml",
+          "start": "2025-07-01",
+          "value": 549342000
+        },
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-70"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "AdvertisingMember"
+          },
+          "end": "2026-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1713445/000171344526000116/rddt-20260930_htm.xml",
+          "start": "2026-07-01",
+          "value": 846996000
+        }
+      ],
+      "prior": 549342000,
+      "prior_end": "2025-09-30"
+    },
+    "SNAP_advertising": {
+      "basis": "Same-filing comparative quarter; nominal USD",
+      "current": 1372788000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.04226573301273451,
+      "operands": [
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-87"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "AdvertisingRevenueMember"
+          },
+          "end": "2025-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/snap-20260930_htm.xml",
+          "start": "2025-07-01",
+          "value": 1317119000
+        },
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-86"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "AdvertisingRevenueMember"
+          },
+          "end": "2026-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/snap-20260930_htm.xml",
+          "start": "2026-07-01",
+          "value": 1372788000
+        }
+      ],
+      "prior": 1317119000,
+      "prior_end": "2025-09-30"
+    }
+  },
+  "limitations": [
+    "Meta consolidated EBIT retains Reality Labs losses; Family of Apps is not advertising-only profit.",
+    "Pinterest uses a labelled total-company revenue proxy. Trade Desk net revenue differs from advertiser spend.",
+    "Negative peer EBIT is preserved; it cannot support a meaningful EV/EBIT denominator.",
+    "Nominal USD growth uses same-filing comparable periods for business cards.",
+    "Market inputs, EV/share classification, comparable EBITDA and exit defaults remain unselected."
+  ],
+  "market": {
+    "exit_default": null,
+    "multiples": null,
+    "prices": null,
+    "valuation_date": null
+  },
+  "peer_order": [
+    "META",
+    "GOOGL",
+    "SNAP",
+    "PINS",
+    "RDDT",
+    "TTD",
+    "AMZN"
+  ],
+  "peers": {
+    "AMZN": {
+      "balances": {
+        "cash": 55783000000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": 6827000000,
+        "long_term_debt_noncurrent": 173125000000,
+        "short_term_investments": 58443000000
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/",
+      "name": "Amazon",
+      "note": "AWS is a separate profit segment; consolidated accounts include retail and logistics. Gross cash purchases differ from net capex and finance-lease investment.",
+      "quarter_end": "2026-09-30",
+      "quarter_growth": 0.1208587492853932,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 201944000000,
+      "quarter_start": "2026-07-01",
+      "revenue_operands": [
+        {
+          "accession": "0001018724-26-000004",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-12-31",
+          "filed": "2026-02-06",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 716924000000
+        },
+        {
+          "accession": "0001018724-26-000040",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 584069000000
+        },
+        {
+          "accession": "0001018724-26-000040",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-09-30",
+          "filed": "2026-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 503538000000
+        }
+      ],
+      "role": "Commerce advertising benchmark",
+      "ttm": {
+        "cash_capex": 215192000000,
+        "cfo": 168300000000,
+        "ebit": 104366000000,
+        "revenue": 797455000000,
+        "sbc": 19873000000
+      },
+      "ttm_end": "2026-09-30"
+    },
+    "GOOGL": {
+      "balances": {
+        "cash": 56334000000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": 1016000000,
+        "long_term_debt_noncurrent": 125102000000,
+        "short_term_investments": 208764000000
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/",
+      "name": "Alphabet",
+      "note": "Search, YouTube ads and Network profit is not separately disclosed. Google Cloud includes Workspace. Comparable D&A remains under review.",
+      "quarter_end": "2026-09-30",
+      "quarter_growth": 0.24653866823000636,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 127577000000,
+      "quarter_start": "2026-07-01",
+      "revenue_operands": [
+        {
+          "accession": "0001652044-26-000018",
+          "concept": "Revenues",
+          "end": "2025-12-31",
+          "filed": "2026-02-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 402836000000
+        },
+        {
+          "accession": "0001652044-26-000084",
+          "concept": "Revenues",
+          "end": "2026-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 357269000000
+        },
+        {
+          "accession": "0001652044-26-000084",
+          "concept": "Revenues",
+          "end": "2025-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 289007000000
+        }
+      ],
+      "role": "Primary advertising reference",
+      "ttm": {
+        "cash_capex": 159804000000,
+        "cfo": 179551000000,
+        "ebit": 156976000000,
+        "revenue": 471098000000,
+        "sbc": 30409000000
+      },
+      "ttm_end": "2026-09-30"
+    },
+    "META": {
+      "balances": {
+        "cash": 11222000000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": 2747000000,
+        "long_term_debt_noncurrent": 80922000000,
+        "short_term_investments": 71227000000
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/",
+      "name": "Meta",
+      "note": "Consolidated operating income retains Reality Labs losses. Family of Apps is a separate management profit unit, not advertising-only profit.",
+      "quarter_end": "2026-09-30",
+      "quarter_growth": 0.2606795074449193,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 64601000000,
+      "quarter_start": "2026-07-01",
+      "revenue_operands": [
+        {
+          "accession": "0001628280-26-003942",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-12-31",
+          "filed": "2026-01-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 200966000000
+        },
+        {
+          "accession": "0001628280-26-066773",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-10-22",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 181712000000
+        },
+        {
+          "accession": "0001628280-26-066773",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-09-30",
+          "filed": "2026-10-22",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 141073000000
+        }
+      ],
+      "role": "Target company",
+      "ttm": {
+        "cash_capex": 104438000000,
+        "cfo": 133087000000,
+        "ebit": 79380000000,
+        "revenue": 241605000000,
+        "sbc": 26943000000
+      },
+      "ttm_end": "2026-09-30"
+    },
+    "PINS": {
+      "balances": {
+        "cash": 654344000,
+        "convertible_debt_noncurrent": 982091000,
+        "long_term_debt_current": null,
+        "long_term_debt_noncurrent": null,
+        "short_term_investments": null
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/1506293/000150629326000153/",
+      "name": "Pinterest",
+      "note": "Total-company revenue is the available advertising proxy. Reported convertible debt requires claims review; missing standard debt tags do not mean zero debt.",
+      "quarter_end": "2026-09-30",
+      "quarter_growth": 0.11887476708555522,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 1173929000,
+      "quarter_start": "2026-07-01",
+      "revenue_operands": [
+        {
+          "accession": "0001506293-26-000021",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-12-31",
+          "filed": "2026-02-12",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1506293/000150629326000021/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 4221767000
+        },
+        {
+          "accession": "0001506293-26-000153",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1506293/000150629326000153/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 3361097000
+        },
+        {
+          "accession": "0001506293-26-000153",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1506293/000150629326000153/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 2902420000
+        }
+      ],
+      "role": "Secondary advertising peer",
+      "ttm": {
+        "cash_capex": 65603000,
+        "cfo": 1327854000,
+        "ebit": 196022000,
+        "revenue": 4680444000,
+        "sbc": 1078324000
+      },
+      "ttm_end": "2026-09-30"
+    },
+    "RDDT": {
+      "balances": {
+        "cash": 1357583000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": null,
+        "long_term_debt_noncurrent": null,
+        "short_term_investments": null
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/0001713445/000171344526000116/",
+      "name": "Reddit",
+      "note": "Smaller, faster-growing platform. Complete prepared quarterly cohorts start in 2023. Other revenue is excluded from the advertising comparison.",
+      "quarter_end": "2026-09-30",
+      "quarter_growth": 0.5300738061004153,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 894957000,
+      "quarter_start": "2026-07-01",
+      "revenue_operands": [
+        {
+          "accession": "0001713445-26-000022",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-12-31",
+          "filed": "2026-02-06",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/0001713445/000171344526000022/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 2202506000
+        },
+        {
+          "accession": "0001713445-26-000116",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/0001713445/000171344526000116/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 2363273000
+        },
+        {
+          "accession": "0001713445-26-000116",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-09-30",
+          "filed": "2026-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/0001713445/000171344526000116/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 1476899000
+        }
+      ],
+      "role": "Secondary advertising peer",
+      "ttm": {
+        "cash_capex": 6617000,
+        "cfo": 1204733000,
+        "ebit": 908042000,
+        "revenue": 3088880000,
+        "sbc": 385772000
+      },
+      "ttm_end": "2026-09-30"
+    },
+    "SNAP": {
+      "balances": {
+        "cash": 1019215000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": null,
+        "long_term_debt_noncurrent": 3380216000,
+        "short_term_investments": 1751432000
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/",
+      "name": "Snap",
+      "note": "Direct social-advertising reference, with different scale and profitability. Advertising revenue excludes other revenue. Negative TTM EBIT is preserved; EV/EBIT would be not meaningful when EBIT is nonpositive.",
+      "quarter_end": "2026-09-30",
+      "quarter_growth": 0.14310221596335104,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 1722471000,
+      "quarter_start": "2026-07-01",
+      "revenue_operands": [
+        {
+          "accession": "0001564408-26-000013",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-12-31",
+          "filed": "2026-02-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000013/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 5931447000
+        },
+        {
+          "accession": "0001564408-26-000067",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-11-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 4850255000
+        },
+        {
+          "accession": "0001564408-26-000067",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-09-30",
+          "filed": "2026-11-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1564408/000156440826000067/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 4214986000
+        }
+      ],
+      "role": "Social advertising peer",
+      "ttm": {
+        "cash_capex": 206501000,
+        "cfo": 983055000,
+        "ebit": -118737000,
+        "revenue": 6566716000,
+        "sbc": 1025256000
+      },
+      "ttm_end": "2026-09-30"
+    },
+    "TTD": {
+      "balances": {
+        "cash": 1229288000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": null,
+        "long_term_debt_noncurrent": null,
+        "short_term_investments": 420380000
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/1671933/000167193326000116/",
+      "name": "The Trade Desk",
+      "note": "Net platform-fee revenue is different from gross advertiser spending. Revenue multiples and margins need accounting context.",
+      "quarter_end": "2026-09-30",
+      "quarter_growth": -0.004690080101915961,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 735965000,
+      "quarter_start": "2026-07-01",
+      "revenue_operands": [
+        {
+          "accession": "0001671933-26-000014",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-12-31",
+          "filed": "2026-02-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1671933/000167193326000014/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 2896284000
+        },
+        {
+          "accession": "0001671933-26-000116",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-11-09",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1671933/000167193326000116/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 2139879000
+        },
+        {
+          "accession": "0001671933-26-000116",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-09-30",
+          "filed": "2026-11-09",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1671933/000167193326000116/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 2049493000
+        }
+      ],
+      "role": "Advertising technology reference",
+      "ttm": {
+        "cash_capex": 253068000,
+        "cfo": 1115257000,
+        "ebit": 517703000,
+        "revenue": 2986670000,
+        "sbc": 425868000
+      },
+      "ttm_end": "2026-09-30"
+    }
+  },
+  "presentation": {
+    "business_tables": [
+      {
+        "columns": [
+          {
+            "format": "text",
+            "label": "Reported unit"
+          },
+          {
+            "format": "bn",
+            "label": "Revenue, $B"
+          },
+          {
+            "format": "bn",
+            "label": "Operating income, $B"
+          }
+        ],
+        "note": "Family of Apps + Reality Labs reconcile exactly to consolidated revenue and operating income. Reality Labs losses remain in consolidated EBIT; no hardware/metaverse peer multiple is invented.",
+        "rows": [
+          [
+            "Family of Apps",
+            64158000000,
+            17117000000
+          ],
+          [
+            "Reality Labs",
+            443000000,
+            -4129000000
+          ],
+          [
+            "Consolidated Meta",
+            64601000000,
+            12988000000
+          ]
+        ],
+        "title": "Meta operating segments"
+      }
+    ],
+    "groups": [
+      {
+        "cards": [
+          {
+            "growth_key": "META_advertising",
+            "income": null,
+            "name": "Meta Ads",
+            "scope": "Family of Apps advertising",
+            "target": true
+          },
+          {
+            "growth_key": "GOOGL_advertising",
+            "income": null,
+            "name": "Google Ads",
+            "scope": "Search + YouTube ads + Network",
+            "target": false
+          },
+          {
+            "growth_key": "SNAP_advertising",
+            "income": null,
+            "name": "Snap Ads",
+            "scope": "Advertising revenue; excludes other revenue",
+            "target": false
+          },
+          {
+            "growth_key": "RDDT_advertising",
+            "income": null,
+            "name": "Reddit Ads",
+            "scope": "Advertising revenue; excludes other revenue",
+            "target": false
+          },
+          {
+            "growth_key": "PINS_total",
+            "income": null,
+            "name": "Pinterest",
+            "scope": "Total-company revenue proxy",
+            "target": false
+          }
+        ],
+        "eyebrow": "Digital advertising",
+        "note": "Advertising revenue is compared directly where disclosed. Pinterest remains a total-company proxy. No advertising-only EBIT is inferred.",
+        "title": "Meta Ads vs Google, Snap, Reddit & Pinterest"
+      },
+      {
+        "cards": [
+          {
+            "growth_key": "META_family_of_apps",
+            "income": 17117000000,
+            "name": "Meta Family of Apps",
+            "scope": "Reported management segment",
+            "target": true
+          },
+          {
+            "growth_key": "GOOGL_services",
+            "income": 39157000000,
+            "name": "Google Services",
+            "scope": "Ads + subscriptions + platforms + devices",
+            "target": false
+          }
+        ],
+        "eyebrow": "Reported platform profitability",
+        "note": "Management reporting units include more than advertising. Google Services includes subscriptions/devices. Cost allocations differ; these are not standalone market valuations.",
+        "title": "Family of Apps vs Google Services"
+      }
+    ],
+    "growth_rows": [
+      {
+        "growth_key": "META_advertising",
+        "label": "Meta advertising"
+      },
+      {
+        "growth_key": "META_family_of_apps",
+        "label": "Meta Family of Apps"
+      },
+      {
+        "growth_key": "GOOGL_advertising",
+        "label": "Google advertising"
+      },
+      {
+        "growth_key": "SNAP_advertising",
+        "label": "Snap advertising"
+      },
+      {
+        "growth_key": "RDDT_advertising",
+        "label": "Reddit advertising"
+      },
+      {
+        "growth_key": "PINS_total",
+        "label": "Pinterest company proxy"
+      }
+    ],
+    "growth_table_title": "Advertising & platform revenue growth"
+  },
+  "provenance": {},
+  "quarter_end": "2026-09-30",
+  "quarter_start": "2026-07-01",
+  "schema_version": 1,
+  "target": "META",
+  "validation": {
+    "business_reconciliations": 32,
+    "selected_filing_checks": 182
+  }
+}

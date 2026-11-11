@@ -1,0 +1,1307 @@
+{
+  "as_of": "2026-11-11",
+  "businesses": {},
+  "currency": "USD",
+  "growth": {
+    "AAPL_ipad": {
+      "basis": "Existing approved revenue-mix fiscal-quarter derivation; annual less nine months for Q4; revision vintages can differ.",
+      "current": 6229000000,
+      "current_end": "2026-09-26",
+      "current_start": "2026-06-28",
+      "growth": -0.10399884925201386,
+      "operands": [
+        {
+          "accession": "0000320193-26-000026",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-50"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2026",
+              "member": "IPadMember",
+              "member_namespace": "http://www.apple.com/20260926"
+            }
+          ],
+          "end": "2026-09-26",
+          "filed": "2026-11-03",
+          "namespace": "http://fasb.org/us-gaap/2026",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+          "start": "2025-09-28",
+          "value": 27929000000
+        },
+        {
+          "accession": "0000320193-26-000020",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-67"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2025",
+              "member": "IPadMember",
+              "member_namespace": "http://www.apple.com/20260627"
+            }
+          ],
+          "end": "2026-06-27",
+          "filed": "2026-07-31",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627_htm.xml",
+          "start": "2025-09-28",
+          "value": 21700000000
+        },
+        {
+          "accession": "0000320193-25-000079",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-51"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2025",
+              "member": "IPadMember",
+              "member_namespace": "http://www.apple.com/20250927"
+            }
+          ],
+          "end": "2025-09-27",
+          "filed": "2025-10-31",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+          "start": "2024-09-29",
+          "value": 28023000000
+        },
+        {
+          "accession": "0000320193-25-000073",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-68"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2024",
+              "member": "IPadMember",
+              "member_namespace": "http://www.apple.com/20250628"
+            }
+          ],
+          "end": "2025-06-28",
+          "filed": "2025-08-01",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/aapl-20250628_htm.xml",
+          "start": "2024-09-29",
+          "value": 21071000000
+        }
+      ],
+      "prior": 6952000000,
+      "prior_end": "2025-09-27"
+    },
+    "AAPL_iphone": {
+      "basis": "Existing approved revenue-mix fiscal-quarter derivation; annual less nine months for Q4; revision vintages can differ.",
+      "current": 57583000000,
+      "current_end": "2026-09-26",
+      "current_start": "2026-06-28",
+      "growth": 0.17456399796022448,
+      "operands": [
+        {
+          "accession": "0000320193-26-000026",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-44"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2026",
+              "member": "IPhoneMember",
+              "member_namespace": "http://www.apple.com/20260926"
+            }
+          ],
+          "end": "2026-09-26",
+          "filed": "2026-11-03",
+          "namespace": "http://fasb.org/us-gaap/2026",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+          "start": "2025-09-28",
+          "value": 254098000000
+        },
+        {
+          "accession": "0000320193-26-000020",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-59"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2025",
+              "member": "IPhoneMember",
+              "member_namespace": "http://www.apple.com/20260627"
+            }
+          ],
+          "end": "2026-06-27",
+          "filed": "2026-07-31",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627_htm.xml",
+          "start": "2025-09-28",
+          "value": 196515000000
+        },
+        {
+          "accession": "0000320193-25-000079",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-45"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2025",
+              "member": "IPhoneMember",
+              "member_namespace": "http://www.apple.com/20250927"
+            }
+          ],
+          "end": "2025-09-27",
+          "filed": "2025-10-31",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+          "start": "2024-09-29",
+          "value": 209586000000
+        },
+        {
+          "accession": "0000320193-25-000073",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-60"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2024",
+              "member": "IPhoneMember",
+              "member_namespace": "http://www.apple.com/20250628"
+            }
+          ],
+          "end": "2025-06-28",
+          "filed": "2025-08-01",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/aapl-20250628_htm.xml",
+          "start": "2024-09-29",
+          "value": 160561000000
+        }
+      ],
+      "prior": 49025000000,
+      "prior_end": "2025-09-27"
+    },
+    "AAPL_mac": {
+      "basis": "Existing approved revenue-mix fiscal-quarter derivation; annual less nine months for Q4; revision vintages can differ.",
+      "current": 10792000000,
+      "current_end": "2026-09-26",
+      "current_start": "2026-06-28",
+      "growth": 0.23676369470547787,
+      "operands": [
+        {
+          "accession": "0000320193-26-000026",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-47"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2026",
+              "member": "MacMember",
+              "member_namespace": "http://www.apple.com/20260926"
+            }
+          ],
+          "end": "2026-09-26",
+          "filed": "2026-11-03",
+          "namespace": "http://fasb.org/us-gaap/2026",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+          "start": "2025-09-28",
+          "value": 37929000000
+        },
+        {
+          "accession": "0000320193-26-000020",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-63"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2025",
+              "member": "MacMember",
+              "member_namespace": "http://www.apple.com/20260627"
+            }
+          ],
+          "end": "2026-06-27",
+          "filed": "2026-07-31",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627_htm.xml",
+          "start": "2025-09-28",
+          "value": 27137000000
+        },
+        {
+          "accession": "0000320193-25-000079",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-48"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2025",
+              "member": "MacMember",
+              "member_namespace": "http://www.apple.com/20250927"
+            }
+          ],
+          "end": "2025-09-27",
+          "filed": "2025-10-31",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+          "start": "2024-09-29",
+          "value": 33708000000
+        },
+        {
+          "accession": "0000320193-25-000073",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-64"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2024",
+              "member": "MacMember",
+              "member_namespace": "http://www.apple.com/20250628"
+            }
+          ],
+          "end": "2025-06-28",
+          "filed": "2025-08-01",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/aapl-20250628_htm.xml",
+          "start": "2024-09-29",
+          "value": 24982000000
+        }
+      ],
+      "prior": 8726000000,
+      "prior_end": "2025-09-27"
+    },
+    "AAPL_services": {
+      "basis": "Existing approved revenue-mix fiscal-quarter derivation; annual less nine months for Q4; revision vintages can differ.",
+      "current": 31573000000,
+      "current_end": "2026-09-26",
+      "current_start": "2026-06-28",
+      "growth": 0.09819130434782619,
+      "operands": [
+        {
+          "accession": "0000320193-26-000026",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-14"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2026",
+              "member": "ServiceMember",
+              "member_namespace": "http://fasb.org/us-gaap/2026"
+            }
+          ],
+          "end": "2026-09-26",
+          "filed": "2026-11-03",
+          "namespace": "http://fasb.org/us-gaap/2026",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+          "start": "2025-09-28",
+          "value": 123301000000
+        },
+        {
+          "accession": "0000320193-26-000020",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-16"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2025",
+              "member": "ServiceMember",
+              "member_namespace": "http://fasb.org/us-gaap/2025"
+            }
+          ],
+          "end": "2026-06-27",
+          "filed": "2026-07-31",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627_htm.xml",
+          "start": "2025-09-28",
+          "value": 91728000000
+        },
+        {
+          "accession": "0000320193-25-000079",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-15"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2025",
+              "member": "ServiceMember",
+              "member_namespace": "http://fasb.org/us-gaap/2025"
+            }
+          ],
+          "end": "2025-09-27",
+          "filed": "2025-10-31",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+          "start": "2024-09-29",
+          "value": 109158000000
+        },
+        {
+          "accession": "0000320193-25-000073",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-17"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2024",
+              "member": "ServiceMember",
+              "member_namespace": "http://fasb.org/us-gaap/2024"
+            }
+          ],
+          "end": "2025-06-28",
+          "filed": "2025-08-01",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/aapl-20250628_htm.xml",
+          "start": "2024-09-29",
+          "value": 80408000000
+        }
+      ],
+      "prior": 28750000000,
+      "prior_end": "2025-09-27"
+    },
+    "AAPL_wearables": {
+      "basis": "Existing approved revenue-mix fiscal-quarter derivation; annual less nine months for Q4; revision vintages can differ.",
+      "current": 8300000000,
+      "current_end": "2026-09-26",
+      "current_start": "2026-06-28",
+      "growth": -0.07910795517585711,
+      "operands": [
+        {
+          "accession": "0000320193-26-000026",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-53"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2026",
+              "member": "WearablesHomeandAccessoriesMember",
+              "member_namespace": "http://www.apple.com/20260926"
+            }
+          ],
+          "end": "2026-09-26",
+          "filed": "2026-11-03",
+          "namespace": "http://fasb.org/us-gaap/2026",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926_htm.xml",
+          "start": "2025-09-28",
+          "value": 35577000000
+        },
+        {
+          "accession": "0000320193-26-000020",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-71"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2025",
+              "member": "WearablesHomeandAccessoriesMember",
+              "member_namespace": "http://www.apple.com/20260627"
+            }
+          ],
+          "end": "2026-06-27",
+          "filed": "2026-07-31",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627_htm.xml",
+          "start": "2025-09-28",
+          "value": 27277000000
+        },
+        {
+          "accession": "0000320193-25-000079",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-54"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2025",
+              "member": "WearablesHomeandAccessoriesMember",
+              "member_namespace": "http://www.apple.com/20250927"
+            }
+          ],
+          "end": "2025-09-27",
+          "filed": "2025-10-31",
+          "namespace": "http://fasb.org/us-gaap/2025",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927_htm.xml",
+          "start": "2024-09-29",
+          "value": 35686000000
+        },
+        {
+          "accession": "0000320193-25-000073",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "context_ids": [
+            "c-72"
+          ],
+          "dimensions": [
+            {
+              "axis": "ProductOrServiceAxis",
+              "axis_namespace": "http://fasb.org/srt/2024",
+              "member": "WearablesHomeandAccessoriesMember",
+              "member_namespace": "http://www.apple.com/20250628"
+            }
+          ],
+          "end": "2025-06-28",
+          "filed": "2025-08-01",
+          "namespace": "http://fasb.org/us-gaap/2024",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/aapl-20250628_htm.xml",
+          "start": "2024-09-29",
+          "value": 26673000000
+        }
+      ],
+      "prior": 9013000000,
+      "prior_end": "2025-09-27"
+    },
+    "AMZN_subscriptions": {
+      "basis": "Same-filing product/category comparative; nominal USD",
+      "current": 14006000000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.11388579608716398,
+      "operands": [
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-339"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "SubscriptionServicesMember"
+          },
+          "end": "2025-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+          "start": "2025-07-01",
+          "value": 12574000000
+        },
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-340"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "SubscriptionServicesMember"
+          },
+          "end": "2026-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+          "start": "2026-07-01",
+          "value": 14006000000
+        }
+      ],
+      "prior": 12574000000,
+      "prior_end": "2025-09-30"
+    },
+    "DELL_client_solutions": {
+      "basis": "Same-filing comparative fiscal quarters; nominal USD",
+      "current": 15034000000,
+      "current_end": "2026-07-31",
+      "current_start": "2026-05-02",
+      "growth": 0.20243141646004958,
+      "operands": [
+        {
+          "concept": "Revenues",
+          "contexts": [
+            "c-332"
+          ],
+          "dimensions": {
+            "ConsolidationItemsAxis": "OperatingSegmentsMember",
+            "StatementBusinessSegmentsAxis": "ClientSolutionsMember"
+          },
+          "end": "2025-08-01",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+          "start": "2025-05-03",
+          "value": 12503000000
+        },
+        {
+          "concept": "Revenues",
+          "contexts": [
+            "c-331"
+          ],
+          "dimensions": {
+            "ConsolidationItemsAxis": "OperatingSegmentsMember",
+            "StatementBusinessSegmentsAxis": "ClientSolutionsMember"
+          },
+          "end": "2026-07-31",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731_htm.xml",
+          "start": "2026-05-02",
+          "value": 15034000000
+        }
+      ],
+      "prior": 12503000000,
+      "prior_end": "2025-08-01"
+    },
+    "GOOGL_subscriptions_platforms_devices": {
+      "basis": "Same-filing product/category comparative; nominal USD",
+      "current": 14290000000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.11033411033411022,
+      "operands": [
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-108"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "SubscriptionsPlatformsAndDevicesRevenueMember",
+            "StatementBusinessSegmentsAxis": "GoogleServicesMember"
+          },
+          "end": "2025-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+          "start": "2025-07-01",
+          "value": 12870000000
+        },
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "c-109"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "SubscriptionsPlatformsAndDevicesRevenueMember",
+            "StatementBusinessSegmentsAxis": "GoogleServicesMember"
+          },
+          "end": "2026-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+          "start": "2026-07-01",
+          "value": 14290000000
+        }
+      ],
+      "prior": 12870000000,
+      "prior_end": "2025-09-30"
+    },
+    "HPQ_personal_systems": {
+      "basis": "Same-filing comparative fiscal quarters; nominal USD",
+      "current": 11767000000,
+      "current_end": "2026-07-31",
+      "current_start": "2026-05-01",
+      "growth": 0.18487564192931227,
+      "operands": [
+        {
+          "concept": "Revenues",
+          "contexts": [
+            "c-91"
+          ],
+          "dimensions": {
+            "ConsolidationItemsAxis": "OperatingSegmentsMember",
+            "StatementBusinessSegmentsAxis": "PersonalSystemsMember"
+          },
+          "end": "2025-07-31",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731_htm.xml",
+          "start": "2025-05-01",
+          "value": 9931000000
+        },
+        {
+          "concept": "Revenues",
+          "contexts": [
+            "c-90"
+          ],
+          "dimensions": {
+            "ConsolidationItemsAxis": "OperatingSegmentsMember",
+            "StatementBusinessSegmentsAxis": "PersonalSystemsMember"
+          },
+          "end": "2026-07-31",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731_htm.xml",
+          "start": "2026-05-01",
+          "value": 11767000000
+        }
+      ],
+      "prior": 9931000000,
+      "prior_end": "2025-07-31"
+    },
+    "MSFT_m365": {
+      "basis": "Same-filing product/category comparative; nominal USD",
+      "current": 27778000000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.1723643116400777,
+      "operands": [
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "C_83ba23ef-3ab4-40d7-ae2e-a06ccbc748e1"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "MicrosoftThreeSixFiveCloudMember"
+          },
+          "end": "2025-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930_htm.xml",
+          "start": "2025-07-01",
+          "value": 23694000000
+        },
+        {
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "contexts": [
+            "C_bfb3de33-73aa-4054-b943-e364879baf4d"
+          ],
+          "dimensions": {
+            "ProductOrServiceAxis": "MicrosoftThreeSixFiveCloudMember"
+          },
+          "end": "2026-09-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930_htm.xml",
+          "start": "2026-07-01",
+          "value": 27778000000
+        }
+      ],
+      "prior": 23694000000,
+      "prior_end": "2025-09-30"
+    },
+    "NFLX_total": {
+      "basis": "Same-filing consolidated comparative; subscription + advertising proxy",
+      "current": 12874176000,
+      "current_end": "2026-09-30",
+      "current_start": "2026-07-01",
+      "growth": 0.11849110540665864,
+      "operands": [
+        {
+          "accession": "0001065280-26-000291",
+          "concept": "Revenues",
+          "end": "2025-09-30",
+          "filed": "2026-10-21",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/",
+          "start": "2025-07-01",
+          "status": "SEC_REPORTED",
+          "value": 11510307000
+        },
+        {
+          "accession": "0001065280-26-000291",
+          "concept": "Revenues",
+          "end": "2026-09-30",
+          "filed": "2026-10-21",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/",
+          "start": "2026-07-01",
+          "status": "SEC_REPORTED",
+          "value": 12874176000
+        }
+      ],
+      "prior": 11510307000,
+      "prior_end": "2025-09-30"
+    }
+  },
+  "limitations": [
+    "Apple product quarters reuse the existing revenue-mix derivation; Q4 is annual less nine months, not an invented standalone filing fact.",
+    "Dell/HP periods end in July; Apple ends in September. Per-issuer fiscal dates and TTM ends are shown.",
+    "Mac is compared with PC segments; no iPhone profit or pure US handset comparable is invented.",
+    "Services benchmarks have different business mixes; Google/Netflix observations are explicitly broader proxies.",
+    "Netflix cash PP&E capex excludes content investment; raw capex ratios are not complete reinvestment comparisons.",
+    "EV/EBITDA, market inputs, share classifications and exit defaults remain unselected."
+  ],
+  "market": {
+    "exit_default": null,
+    "multiples": null,
+    "prices": null,
+    "valuation_date": null
+  },
+  "peer_order": [
+    "AAPL",
+    "DELL",
+    "HPQ",
+    "MSFT",
+    "GOOGL",
+    "AMZN",
+    "NFLX"
+  ],
+  "peers": {
+    "AAPL": {
+      "balances": {
+        "cash": 36305000000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": 9906000000,
+        "long_term_debt_noncurrent": 68208000000,
+        "short_term_investments": 20417000000
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/",
+      "name": "Apple",
+      "note": "September fiscal year end. Product revenue is disclosed, but Mac/iPhone/Services operating profit is not. Quarterly product observations reuse the existing derived-quarter reporting package.",
+      "quarter_end": "2026-09-26",
+      "quarter_growth": 0.11721937032771845,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 114477000000,
+      "quarter_start": "2026-06-28",
+      "revenue_operands": [
+        {
+          "accession": "0000320193-26-000026",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-26",
+          "filed": "2026-11-03",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/",
+          "start": "2025-09-28",
+          "status": "SEC_REPORTED",
+          "value": 478834000000
+        }
+      ],
+      "role": "Target company",
+      "ttm": {
+        "cash_capex": 9041000000,
+        "cfo": 145097000000,
+        "ebit": 158063000000,
+        "revenue": 478834000000,
+        "sbc": 13789000000
+      },
+      "ttm_end": "2026-09-26"
+    },
+    "AMZN": {
+      "balances": {
+        "cash": 55783000000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": 6827000000,
+        "long_term_debt_noncurrent": 173125000000,
+        "short_term_investments": 58443000000
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/",
+      "name": "Amazon",
+      "note": "AWS is a separate profit segment; consolidated accounts include retail and logistics. Gross cash purchases differ from net capex and finance-lease investment.",
+      "quarter_end": "2026-09-30",
+      "quarter_growth": 0.1208587492853932,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 201944000000,
+      "quarter_start": "2026-07-01",
+      "revenue_operands": [
+        {
+          "accession": "0001018724-26-000004",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-12-31",
+          "filed": "2026-02-06",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 716924000000
+        },
+        {
+          "accession": "0001018724-26-000040",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 584069000000
+        },
+        {
+          "accession": "0001018724-26-000040",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-09-30",
+          "filed": "2026-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 503538000000
+        }
+      ],
+      "role": "Subscription ecosystem benchmark",
+      "ttm": {
+        "cash_capex": 215192000000,
+        "cfo": 168300000000,
+        "ebit": 104366000000,
+        "revenue": 797455000000,
+        "sbc": 19873000000
+      },
+      "ttm_end": "2026-09-30"
+    },
+    "DELL": {
+      "balances": {
+        "cash": 11569000000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": null,
+        "long_term_debt_noncurrent": 25985000000,
+        "short_term_investments": null
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/",
+      "name": "Dell Technologies",
+      "note": "Client Solutions is a computer-hardware reference for Mac, not iPhone. Infrastructure/AI servers materially affect the consolidated company. Segment profit is a management measure, not consolidated GAAP EBIT.",
+      "quarter_end": "2026-07-31",
+      "quarter_growth": 0.5774785061794734,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 46971000000,
+      "quarter_start": "2026-05-02",
+      "revenue_operands": [
+        {
+          "accession": "0001571996-26-000008",
+          "concept": "Revenues",
+          "end": "2026-01-30",
+          "filed": "2026-03-16",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/",
+          "start": "2025-02-01",
+          "status": "SEC_REPORTED",
+          "value": 113538000000
+        },
+        {
+          "accession": "0001571996-26-000046",
+          "concept": "Revenues",
+          "end": "2026-07-31",
+          "filed": "2026-09-08",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/",
+          "start": "2026-01-31",
+          "status": "SEC_REPORTED",
+          "value": 90813000000
+        },
+        {
+          "accession": "0001571996-26-000046",
+          "concept": "Revenues",
+          "end": "2025-08-01",
+          "filed": "2026-09-08",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/",
+          "start": "2025-02-01",
+          "status": "SEC_REPORTED",
+          "value": 53154000000
+        }
+      ],
+      "role": "Computer hardware reference",
+      "ttm": {
+        "cash_capex": 3592000000,
+        "cfo": 12152000000,
+        "ebit": 14252000000,
+        "revenue": 151197000000,
+        "sbc": 727000000
+      },
+      "ttm_end": "2026-07-31"
+    },
+    "GOOGL": {
+      "balances": {
+        "cash": 56334000000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": 1016000000,
+        "long_term_debt_noncurrent": 125102000000,
+        "short_term_investments": 208764000000
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/",
+      "name": "Alphabet",
+      "note": "Search, YouTube ads and Network profit is not separately disclosed. Google Cloud includes Workspace. Comparable D&A remains under review.",
+      "quarter_end": "2026-09-30",
+      "quarter_growth": 0.24653866823000636,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 127577000000,
+      "quarter_start": "2026-07-01",
+      "revenue_operands": [
+        {
+          "accession": "0001652044-26-000018",
+          "concept": "Revenues",
+          "end": "2025-12-31",
+          "filed": "2026-02-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 402836000000
+        },
+        {
+          "accession": "0001652044-26-000084",
+          "concept": "Revenues",
+          "end": "2026-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 357269000000
+        },
+        {
+          "accession": "0001652044-26-000084",
+          "concept": "Revenues",
+          "end": "2025-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 289007000000
+        }
+      ],
+      "role": "Platform ecosystem benchmark",
+      "ttm": {
+        "cash_capex": 159804000000,
+        "cfo": 179551000000,
+        "ebit": 156976000000,
+        "revenue": 471098000000,
+        "sbc": 30409000000
+      },
+      "ttm_end": "2026-09-30"
+    },
+    "HPQ": {
+      "balances": {
+        "cash": 4169000000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": 1292000000,
+        "long_term_debt_noncurrent": 7868000000,
+        "short_term_investments": null
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/",
+      "name": "HP",
+      "note": "Personal Systems is the computer-hardware reference; the consolidated company also includes Printing. Fiscal reporting dates differ from Apple. Segment profit excludes corporate/reconciling items.",
+      "quarter_end": "2026-07-31",
+      "quarter_growth": 0.1252512202124605,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 15677000000,
+      "quarter_start": "2026-05-01",
+      "revenue_operands": [
+        {
+          "accession": "0000047217-25-000071",
+          "concept": "Revenues",
+          "end": "2025-10-31",
+          "filed": "2025-12-10",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721725000071/",
+          "start": "2024-11-01",
+          "status": "SEC_REPORTED",
+          "value": 55295000000
+        },
+        {
+          "accession": "0000047217-26-000051",
+          "concept": "Revenues",
+          "end": "2026-07-31",
+          "filed": "2026-08-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/",
+          "start": "2025-11-01",
+          "status": "SEC_REPORTED",
+          "value": 44523000000
+        },
+        {
+          "accession": "0000047217-26-000051",
+          "concept": "Revenues",
+          "end": "2025-07-31",
+          "filed": "2026-08-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/",
+          "start": "2024-11-01",
+          "status": "SEC_REPORTED",
+          "value": 40656000000
+        }
+      ],
+      "role": "Computer hardware reference",
+      "ttm": {
+        "cash_capex": 787000000,
+        "cfo": 4668000000,
+        "ebit": 3222000000,
+        "revenue": 59162000000,
+        "sbc": 479000000
+      },
+      "ttm_end": "2026-07-31"
+    },
+    "MSFT": {
+      "balances": {
+        "cash": 20281000000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": 4391000000,
+        "long_term_debt_noncurrent": 31090000000,
+        "short_term_investments": 44228000000
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/",
+      "name": "Microsoft",
+      "note": "June fiscal year end. Azure product revenue is disclosed; Azure-only EBIT is not. New segment definitions require consistent recast periods.",
+      "quarter_end": "2026-09-30",
+      "quarter_growth": 0.18804475171552526,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 92279000000,
+      "quarter_start": "2026-07-01",
+      "revenue_operands": [
+        {
+          "accession": "0001193125-26-323660",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-06-30",
+          "filed": "2026-07-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/",
+          "start": "2025-07-01",
+          "status": "SEC_REPORTED",
+          "value": 331839000000
+        },
+        {
+          "accession": "0001193125-26-436133",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-10-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/",
+          "start": "2026-07-01",
+          "status": "SEC_REPORTED",
+          "value": 92279000000
+        },
+        {
+          "accession": "0001193125-26-436133",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-09-30",
+          "filed": "2026-10-28",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/",
+          "start": "2025-07-01",
+          "status": "SEC_REPORTED",
+          "value": 77673000000
+        }
+      ],
+      "role": "Enterprise ecosystem benchmark",
+      "ttm": {
+        "cash_capex": 135921000000,
+        "cfo": 195878000000,
+        "ebit": 163191000000,
+        "revenue": 346445000000,
+        "sbc": 12556000000
+      },
+      "ttm_end": "2026-09-30"
+    },
+    "NFLX": {
+      "balances": {
+        "cash": 8194275000,
+        "convertible_debt_noncurrent": null,
+        "long_term_debt_current": null,
+        "long_term_debt_noncurrent": 12657598000,
+        "short_term_investments": 28678000
+      },
+      "financials_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/",
+      "name": "Netflix",
+      "note": "Consumer-subscription context only: consolidated revenue includes advertising. Content investment is economically important and is not captured by cash PP&E capex alone.",
+      "quarter_end": "2026-09-30",
+      "quarter_growth": 0.11849110540665864,
+      "quarter_growth_basis": "Prepared fiscal quarter versus prior-year fiscal quarter; revision vintages can differ.",
+      "quarter_revenue": 12874176000,
+      "quarter_start": "2026-07-01",
+      "revenue_operands": [
+        {
+          "accession": "0001065280-26-000034",
+          "concept": "Revenues",
+          "end": "2025-12-31",
+          "filed": "2026-01-23",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 45183036000
+        },
+        {
+          "accession": "0001065280-26-000291",
+          "concept": "Revenues",
+          "end": "2026-09-30",
+          "filed": "2026-10-21",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 37683871000
+        },
+        {
+          "accession": "0001065280-26-000291",
+          "concept": "Revenues",
+          "end": "2025-09-30",
+          "filed": "2026-10-21",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 33132274000
+        }
+      ],
+      "role": "Consumer subscription reference",
+      "ttm": {
+        "cash_capex": 932875000,
+        "cfo": 12307938000,
+        "ebit": 15564870000,
+        "revenue": 49734633000,
+        "sbc": 540064000
+      },
+      "ttm_end": "2026-09-30"
+    }
+  },
+  "presentation": {
+    "business_tables": [
+      {
+        "columns": [
+          {
+            "format": "text",
+            "label": "Reported product/category"
+          },
+          {
+            "format": "bn",
+            "label": "Quarter revenue, $B"
+          }
+        ],
+        "note": "Quarter ended 2026-09-26. Components reconcile exactly to the existing shared financial package. iPhone has no clean separately traded US handset peer here; Dell/HP are Mac references, not iPhone substitutes. Samsung is not forced into this US-GAAP dataset.",
+        "rows": [
+          [
+            "iPhone",
+            57583000000
+          ],
+          [
+            "Mac",
+            10792000000
+          ],
+          [
+            "iPad",
+            6229000000
+          ],
+          [
+            "Wearables, Home & Accessories",
+            8300000000
+          ],
+          [
+            "Services",
+            31573000000
+          ],
+          [
+            "Total Apple",
+            114477000000
+          ]
+        ],
+        "title": "Apple revenue mix reconciliation"
+      },
+      {
+        "columns": [
+          {
+            "format": "text",
+            "label": "Business"
+          },
+          {
+            "format": "text",
+            "label": "Quarter end"
+          },
+          {
+            "format": "bn",
+            "label": "Revenue, $B"
+          },
+          {
+            "format": "bn",
+            "label": "Segment operating income, $B"
+          }
+        ],
+        "note": "Dell/HP management segment profit differs from consolidated GAAP EBIT and excludes separate reconciling items. Apple does not disclose Mac-only operating profit.",
+        "rows": [
+          [
+            "Apple Mac",
+            "2026-09-26",
+            10792000000,
+            null
+          ],
+          [
+            "Dell Client Solutions",
+            "2026-07-31",
+            15034000000,
+            1142000000
+          ],
+          [
+            "HP Personal Systems",
+            "2026-07-31",
+            11767000000,
+            537000000
+          ]
+        ],
+        "title": "Hardware segment reporting boundaries"
+      }
+    ],
+    "groups": [
+      {
+        "cards": [
+          {
+            "growth_key": "AAPL_mac",
+            "income": null,
+            "name": "Apple Mac",
+            "scope": "Mac product revenue; no product operating profit",
+            "target": true
+          },
+          {
+            "growth_key": "DELL_client_solutions",
+            "income": 1142000000,
+            "name": "Dell Client Solutions",
+            "scope": "PC/client hardware and related services",
+            "target": false
+          },
+          {
+            "growth_key": "HPQ_personal_systems",
+            "income": 537000000,
+            "name": "HP Personal Systems",
+            "scope": "PC/computing segment",
+            "target": false
+          }
+        ],
+        "eyebrow": "Computer hardware",
+        "note": "Different fiscal quarters: Apple ends in September; Dell/HP latest available quarters end in July. Compare each issuer\u2019s own YoY growth; these are not the same calendar quarter. Dell/HP segments include broader hardware/services than Mac; their management segment profit excludes separate corporate/reconciling items.",
+        "title": "Mac vs Dell Client Solutions & HP Personal Systems"
+      },
+      {
+        "cards": [
+          {
+            "growth_key": "AAPL_services",
+            "income": null,
+            "name": "Apple Services",
+            "scope": "Reported Services category",
+            "target": true
+          },
+          {
+            "growth_key": "GOOGL_subscriptions_platforms_devices",
+            "income": null,
+            "name": "Google ecosystem",
+            "scope": "Subscriptions + platforms + devices",
+            "target": false
+          },
+          {
+            "growth_key": "MSFT_m365",
+            "income": null,
+            "name": "Microsoft 365 cloud",
+            "scope": "Enterprise and consumer cloud products",
+            "target": false
+          },
+          {
+            "growth_key": "AMZN_subscriptions",
+            "income": null,
+            "name": "Amazon subscriptions",
+            "scope": "Prime and other subscription services",
+            "target": false
+          },
+          {
+            "growth_key": "NFLX_total",
+            "income": 4458600000,
+            "name": "Netflix",
+            "scope": "Total-company subscription + ad revenue proxy",
+            "target": false
+          }
+        ],
+        "eyebrow": "Services & ecosystem",
+        "note": "Contextual revenue comparisons, not interchangeable businesses: Apple bundles multiple services; Google includes platforms/devices; Microsoft includes enterprise software; Netflix includes advertising. No standalone services operating profit is inferred.",
+        "title": "Apple Services vs ecosystem & subscription references"
+      }
+    ],
+    "growth_rows": [
+      {
+        "growth_key": "AAPL_iphone",
+        "label": "iPhone"
+      },
+      {
+        "growth_key": "AAPL_mac",
+        "label": "Mac"
+      },
+      {
+        "growth_key": "AAPL_ipad",
+        "label": "iPad"
+      },
+      {
+        "growth_key": "AAPL_wearables",
+        "label": "Wearables, Home & Accessories"
+      },
+      {
+        "growth_key": "AAPL_services",
+        "label": "Services"
+      }
+    ],
+    "growth_table_title": "Apple product revenue & growth"
+  },
+  "provenance": {
+    "shared_apple_revenue_mix_sha256": "5a7a4f55631d5d1f1923d6471c764238abc41537c09e740f80b32e5364687705"
+  },
+  "quarter_end": "2026-09-26",
+  "quarter_start": "2026-06-28",
+  "schema_version": 1,
+  "target": "AAPL",
+  "validation": {
+    "business_reconciliations": 33,
+    "selected_filing_checks": 181
+  }
+}

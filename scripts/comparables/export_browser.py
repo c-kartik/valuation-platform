@@ -57,7 +57,7 @@ def segment_growth(instance, mapping):
 def build():
     peers, businesses, growth = {}, {}, {}
     filing_checks, business_checks = 0, 0
-    for ticker in ISSUERS:
+    for ticker in NAMES:
         prepared = json.loads((BASE / 'prepared' / f'{ticker}.json').read_text())
         if prepared['validation']['errors'] or prepared['validation']['mismatches']:
             raise ValueError('Unvalidated source package: ' + ticker)

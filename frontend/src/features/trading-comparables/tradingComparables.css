@@ -12,6 +12,9 @@
 .tc-container .tc-heading small{display:block;margin-top:4px;font-size:11px}
 .tc-container .tc-cloud-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .tc-container .tc-ads-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.tc-container .tc-configured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:20px}
+.tc-container .tc-configured-ads{grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:16px}
+.tc-container .tc-configured-grid article dl>div{flex-wrap:wrap}
 .tc-container article{border-top:1px solid var(--tc-line);padding:18px 14px 14px;min-width:0}
 .tc-container article.tc-reference{background:var(--tc-soft);border-top-color:var(--tc-gold)}
 .tc-container .tc-scope{font-size:11px;min-height:38px;margin-bottom:12px}
@@ -55,5 +58,5 @@
 .tc-container .tc-source-links{display:flex;gap:10px 18px;flex-wrap:wrap;font-size:12px;margin:16px 0}
 .tc-container [hidden]{display:none!important}
 @media(max-width:800px){.tc-container .tc-ads-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tc-container .tc-big-number{font-size:31px}.tc-container article dl>div{flex-direction:column;gap:2px}}
-@media(max-width:540px){.tc-container .tc-cloud-grid,.tc-container .tc-valuation-grid{grid-template-columns:1fr}.tc-container .tc-heading,.tc-container .tc-subheading{align-items:flex-start;flex-direction:column;gap:8px}.tc-container .tc-heading>span,.tc-container .tc-subheading>span{text-align:left}.tc-container .tc-cash-strip{grid-template-columns:1fr 1fr}.tc-container .tc-tabs{gap:16px}.tc-container .tc-scope{min-height:0}.tc-container article dl>div{flex-direction:row}.tc-container h3{font-size:24px}}
+@media(max-width:540px){.tc-container .tc-cloud-grid,.tc-container .tc-valuation-grid{grid-template-columns:1fr}.tc-container .tc-configured-ads{grid-template-columns:repeat(2,minmax(0,1fr))}.tc-container .tc-heading,.tc-container .tc-subheading{align-items:flex-start;flex-direction:column;gap:8px}.tc-container .tc-heading>span,.tc-container .tc-subheading>span{text-align:left}.tc-container .tc-cash-strip{grid-template-columns:1fr 1fr}.tc-container .tc-tabs{gap:16px}.tc-container .tc-scope{min-height:0}.tc-container article dl>div{flex-direction:row}.tc-container h3{font-size:24px}}
 @media(pointer:coarse){.tc-container button,.tc-container summary{min-height:44px}}

@@ -1,3 +1,7 @@
+## Apple and Meta extension — November 11, 2026
+
+The user extends the same detachable section 6 to AAPL and META. Target-specific peer sets and direct business comparisons are implemented through the same container/config, with separate public packages. This supersedes the historical Alphabet-only limitation below for these two targets only. Dates, proxies, losses and missing operating-profit disclosures remain explicit. [Peer methodology, data and validation](trading-comparables-apple-meta.md). Original DCF contracts/defaults remain untouched.
+
 # Detachable trading comparables — Alphabet
 
 Implemented November 11, 2026 as section **06 / Relative valuation**, following DCF section 05 inside the existing **Valuation** chapter. Alphabet-only target acceptance; Apple/Meta target-specific comparables are not silently inferred from Alphabet's peers. The original Python source, JS DCF engine, approved datasets, assumptions and workbook exporter are unchanged.

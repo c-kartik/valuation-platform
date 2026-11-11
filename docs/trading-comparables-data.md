@@ -76,3 +76,7 @@ For a later snapshot, use `capture_sources.py --output <new-empty-directory>` wi
 ## Approved available-data interface — November 11, 2026
 
 The additive [detachable feature](trading-comparables-feature.md) publishes a reviewed projection of these prepared financials plus same-filing prior/current segment growth. Public observations, sources and contexts are retained in `frontend/public/features/trading-comparables/GOOGL.json`; the original prepared financials and DCF inputs remain byte-preserved. Financial methodology/market readiness above remains OPEN.
+
+## Apple/Meta target extension
+
+The [reviewed extension](trading-comparables-apple-meta.md) adds peer-only AAPL/DELL/HPQ/NFLX/SNAP source preparation. The full peer source set has 304 selected filing matches and 48 business reconciliations. This does not change original annual/DCF packages, imply current prices, or resolve EV/EBITDA/share/exit gates. Original Alphabet projections reproduce unchanged.

@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import {fetchComparables} from './client';
-import {peerTickers, type ComparablesPackage, type PeerTicker, type Growth} from './types';
+import {peersFor, type ComparablesPackage, type PeerTicker, type Growth} from './types';
 import './tradingComparables.css';
 
 const bn = (v: number|null) => v === null ? 'Unavailable' : (v/1e9).toFixed(2);
@@ -10,12 +10,13 @@ const growth = (v: number|null) => v === null ? 'Unavailable' : `${v>=0?'+':''}$
 type Tab = 'financials'|'business'|'valuation';
 
 function GrowthReadout({value}: {value: Growth}) {
-  return <div className="tc-growth"><span>Quarter revenue growth · YoY</span><strong>{growth(value.growth)}</strong><small>vs {money(value.prior)} · Jul–Sep 2025</small></div>;
+  return <div className="tc-growth"><span>Quarter revenue growth · YoY</span><strong>{growth(value.growth)}</strong><small>vs {money(value.prior)} · {value.prior_end??'Jul–Sep 2025'}</small></div>;
 }
 function Table({headers, rows, label}: {headers: string[]; rows: React.ReactNode[][]; label: string}) {
   return <div className="tc-table-scroll"><table aria-label={label}><thead><tr>{headers.map(h => <th key={h} scope="col">{h}</th>)}</tr></thead><tbody>{rows.map((row,i) => <tr key={i}>{row.map((cell,j) => j===0 ? <th key={j} scope="row">{cell}</th> : <td key={j}>{cell}</td>)}</tr>)}</tbody></table></div>;
 }
 function DirectComparisons({data: d}: {data: ComparablesPackage}) {
+  if(d.presentation)return <ConfiguredComparisons data={d}/>;
   const g = d.businesses.GOOGL, a = d.businesses.AMZN;
   const cloud = [
     {name:'Google Cloud', scope:'GCP + Workspace + other enterprise services', key:'GOOGL_cloud', ebit:g.cloud_ebit},
@@ -42,23 +43,44 @@ function DirectComparisons({data: d}: {data: ComparablesPackage}) {
   </>;
 }
 
+function ConfiguredComparisons({data:d}:{data:ComparablesPackage}){
+  const p=d.presentation!;
+  return <>{p.groups.map(group=><section key={group.title} aria-label={group.title}>
+    <div className="tc-subheading"><div><span className="tc-eyebrow">{group.eyebrow}</span><h3>{group.title}</h3></div><span>Latest available fiscal quarters · USD</span></div>
+    <div className={`tc-configured-grid ${group.cards.length>3?'tc-configured-ads':''}`}>{group.cards.map(card=>{
+      const value=d.growth[card.growth_key];
+      return <article key={card.growth_key} className={card.target?'tc-reference':''} aria-label={`${card.name} comparison`}>
+        <span className="tc-eyebrow">{card.target?d.peers[d.target].name:'Peer reference'}</span><h4>{card.name}</h4><p className="tc-scope">{card.scope}</p>
+        <span>Quarter ended {value.current_end}</span><strong className="tc-big-number">{money(value.current)}</strong>
+        {group.cards.some(c=>c.income!==null)&&<dl><div><dt>Reported operating income</dt><dd>{money(card.income)}</dd></div><div><dt>Operating margin</dt><dd>{card.income===null?'Not disclosed':pct(card.income/value.current)}</dd></div></dl>}
+        <GrowthReadout value={value}/>
+      </article>;
+    })}</div><p className="tc-note">{group.note}</p>
+  </section>)}<h4 className="tc-spaced">{p.growth_table_title}</h4>
+    <Table label={`${d.peers[d.target].name} business revenue and growth`} headers={['Reported component','Prior quarter end','Prior revenue, $B','Current quarter end','Revenue, $B','YoY growth']}
+      rows={p.growth_rows.map(row=>{const value=d.growth[row.growth_key];return [row.label,value.prior_end??'',bn(value.prior),value.current_end??'',bn(value.current),growth(value.growth)];})}/>
+    <details><summary>Comparative periods & revenue basis</summary><ul>{p.growth_rows.map(row=><li key={row.growth_key}><strong>{row.label}:</strong> {d.growth[row.growth_key].basis}</li>)}</ul><p className="tc-note">Growth is nominal USD, not constant currency. Different fiscal quarters are not presented as calendar-aligned observations.</p></details>
+  </>;
+}
+
 function PeerFinancials({data: d}: {data: ComparablesPackage}) {
-  const [selected,setSelected] = useState<PeerTicker>('GOOGL');
+  const [selected,setSelected] = useState<PeerTicker>(d.target);
   const p = d.peers[selected];
   return <>
-    <h3>Scale, profitability & reinvestment</h3><p className="tc-note">TTM ended {d.quarter_end} · USD billions · Consolidated companies</p>
-    <Table label="Peer financial comparison" headers={['Company / proposed role','Revenue','EBIT','EBIT margin','Cash capex / sales','SBC / sales']} rows={peerTickers.map(t => {
+    <h3>Scale, profitability & reinvestment</h3><p className="tc-note">Latest available TTM · USD billions · Consolidated companies · Per-issuer period ends shown</p>
+    <Table label="Peer financial comparison" headers={['Company / proposed role','TTM end','Revenue','EBIT','EBIT margin','Cash capex / sales','SBC / sales']} rows={peersFor(d).map(t => {
       const q=d.peers[t],v=q.ttm;
-      return [<button className="tc-peer-button" aria-pressed={selected===t} onClick={()=>setSelected(t)}>{q.name}<small>{t} · {q.role}</small></button>,bn(v.revenue),bn(v.ebit),pct(v.ebit/v.revenue),pct(v.cash_capex/v.revenue),pct(v.sbc/v.revenue)];
+      return [<button className="tc-peer-button" aria-pressed={selected===t} onClick={()=>setSelected(t)}>{q.name}<small>{t} · {q.role}</small></button>,q.ttm_end??d.quarter_end,bn(v.revenue),bn(v.ebit),pct(v.ebit/v.revenue),pct(v.cash_capex/v.revenue),pct(v.sbc/v.revenue)];
     })}/>
-    <section className="tc-selected" aria-label="Selected peer financial detail" aria-live="polite"><div className="tc-subheading"><div><span className="tc-eyebrow">{selected} · {p.role}</span><h3>{p.name}</h3></div><span>Quarter revenue growth {growth(p.quarter_growth)} YoY</span></div>
+    <section className="tc-selected" aria-label="Selected peer financial detail" aria-live="polite"><div className="tc-subheading"><div><span className="tc-eyebrow">{selected} · {p.role}</span><h3>{p.name}</h3></div><span>Quarter ended {p.quarter_end??d.quarter_end}<br/>Revenue growth {growth(p.quarter_growth)} YoY</span></div>
       <dl className="tc-cash-strip">{[['Operating cash flow',p.ttm.cfo],['Gross cash capex',p.ttm.cash_capex],['Cash FCF',p.ttm.cfo-p.ttm.cash_capex],['Stock-based compensation',p.ttm.sbc]].map(([name,value]) => <div key={name}><dt>{name}</dt><dd>{money(value as number)}</dd></div>)}</dl><p>{p.note}</p>
-      <details><summary>Source data & TTM calculation</summary><Table label={`${p.name} TTM revenue operands`} headers={['Revenue calculation','Period','USD billions','SEC source']} rows={p.revenue_operands.map((o,i) => [i===0?'Latest fiscal annual':i===1?'+ Current fiscal YTD':'− Prior fiscal YTD',`${o.start} → ${o.end}`,bn(o.value),<a href={o.source_url} target="_blank" rel="noreferrer">{o.filed} filing ↗</a>])}/><p className="tc-note">TTM = annual + current YTD − same-filing prior YTD. Quarter growth above uses prepared July–September quarters; revision vintages may differ. Cash FCF is CFO less gross cash purchases, not FCFF/FCFE. Gross capex differs from net capex and lease-funded investment.</p></details>
+      <details><summary>Source data & TTM calculation</summary><Table label={`${p.name} TTM revenue operands`} headers={['Revenue calculation','Period','USD billions','SEC source']} rows={p.revenue_operands.map((o,i) => [i===0?'Latest fiscal annual':i===1?'+ Current fiscal YTD':'− Prior fiscal YTD',`${o.start} → ${o.end}`,bn(o.value),<a href={o.source_url} target="_blank" rel="noreferrer">{o.filed} filing ↗</a>])}/><p className="tc-note">TTM = latest annual when no interim exists, otherwise annual + current YTD − same-filing prior YTD. Quarter growth above uses prepared fiscal quarters; revision vintages may differ. Cash FCF is CFO less gross cash purchases, not FCFF/FCFE. Gross capex differs from net capex and lease-funded investment. Netflix content investment is not captured by PP&E capex alone.</p></details>
     </section>
   </>;
 }
 
 function BusinessDetails({data:d}: {data: ComparablesPackage}) {
+  if(d.presentation)return <>{d.presentation.business_tables.map(t=><section key={t.title}><h3>{t.title}</h3><Table label={t.title} headers={t.columns.map(c=>c.label)} rows={t.rows.map(r=>r.map((v,i)=>v===null?'Not disclosed':t.columns[i].format==='bn'?bn(v as number):t.columns[i].format==='pct'?pct(v as number):String(v)))}/><p className="tc-note">{t.note}</p></section>)}</>;
   const g=d.businesses.GOOGL,m=d.businesses.META;
   return <><h3>Reported profit units</h3><p className="tc-note">Quarter ended {d.quarter_end} · USD billions</p><Table label="Reported services profitability" headers={['Reported unit','Revenue','Operating income','Operating margin']} rows={[
     ['Google Services',bn(g.services),bn(g.services_ebit),pct(g.services_ebit!/g.services!)],
@@ -79,7 +101,7 @@ function BusinessDetails({data:d}: {data: ComparablesPackage}) {
 }
 function ValuationInputs({data:d}: {data: ComparablesPackage}) {
   return <><div className="tc-valuation-grid"><section><h3>Financial evidence</h3><dl>{[['Revenue & operating income','Prepared'],['Business disclosures','Available by issuer'],['Comparable EBITDA','Scope review'],['Debt, leases, investments & NCI','Classification review'],['Market-date shares & prices','Pending']].map(([name,value]) => <div key={name}><dt>{name}</dt><dd>{value}</dd></div>)}</dl></section><section className="tc-exit"><span className="tc-eyebrow">Exit EV / EBIT</span><h3>Not selected</h3><p>Peer evidence informs a future market-supported assumption. No exit multiple or market valuation is inferred from these financials.</p><dl>{['Share price','Market capitalisation','Enterprise value','EV / EBIT'].map(n => <div key={n}><dt>{n}</dt><dd>Pending</dd></div>)}</dl></section></div>
-    <h4 className="tc-spaced">Reported balance candidates</h4><p className="tc-note">{d.quarter_end} · USD billions · Raw observations, not an approved EV bridge. Unavailable never means zero.</p><Table label="Reported balance candidates" headers={['Company','Cash','Current investments','Term debt: current','Term debt: noncurrent','Convertible debt: noncurrent']} rows={peerTickers.map(t => [d.peers[t].name,...['cash','short_term_investments','long_term_debt_current','long_term_debt_noncurrent','convertible_debt_noncurrent'].map(k=>bn(d.peers[t].balances[k]))])}/><p className="tc-note">Pinterest convertible debt is retained separately. Investment eligibility, restricted cash, leases, other claims and share classes need review before EV calculations. No prices or market-data rights are supplied by this feature.</p></>;
+    <h4 className="tc-spaced">Reported balance candidates</h4><p className="tc-note">Per-issuer report dates · USD billions · Raw observations, not an approved EV bridge. Unavailable never means zero.</p><Table label="Reported balance candidates" headers={['Company','Report date','Cash','Current investments','Term debt: current','Term debt: noncurrent','Convertible debt: noncurrent']} rows={peersFor(d).map(t => [d.peers[t].name,d.peers[t].ttm_end??d.quarter_end,...['cash','short_term_investments','long_term_debt_current','long_term_debt_noncurrent','convertible_debt_noncurrent'].map(k=>bn(d.peers[t].balances[k]))])}/><p className="tc-note">Convertible debt is retained separately where reported. Investment eligibility, restricted cash, leases, other claims and share classes need review before EV calculations. No prices or market-data rights are supplied by this feature.</p></>;
 }
 
 export default function TradingComparables({ticker, load=fetchComparables}: {ticker:string; load?:typeof fetchComparables}) {
@@ -87,12 +109,12 @@ export default function TradingComparables({ticker, load=fetchComparables}: {tic
   const [error,setError]=useState(false),[attempt,setAttempt]=useState(0),[tab,setTab]=useState<Tab>('financials');
   useEffect(()=>{const abort=new AbortController();setLoaded(null);setError(false);setTab('financials');load(ticker,abort.signal).then(data=>{if(!abort.signal.aborted&&data.target===ticker)setLoaded({ticker,data});}).catch(()=>{if(!abort.signal.aborted)setError(true);});return()=>abort.abort();},[ticker,load,attempt]);
   const d=loaded?.ticker===ticker?loaded.data:null;
-  return <section className="tc-container" id="company-trading-comparables" aria-labelledby="tc-heading" data-feature="trading-comparables"><header className="tc-heading"><div><span className="tc-eyebrow">06 / Relative valuation</span><h2 id="tc-heading">Trading comparables</h2></div>{d&&<span>SEC financial snapshot · {d.as_of}<small>Alphabet · 6 proposed peers</small></span>}</header>
+  return <section className="tc-container" id="company-trading-comparables" aria-labelledby="tc-heading" data-feature="trading-comparables"><header className="tc-heading"><div><span className="tc-eyebrow">06 / Relative valuation</span><h2 id="tc-heading">Trading comparables</h2></div>{d&&<span>SEC financial snapshot · {d.as_of}<small>{d.peers[d.target].name} · {peersFor(d).length-1} proposed peers</small></span>}</header>
     {!d?<p role="status">{error?<>Comparables could not be loaded. The DCF remains available. <button onClick={()=>setAttempt(n=>n+1)}>Retry comparables</button></>:'Loading peer financials…'}</p>:<>
       <DirectComparisons data={d}/>
       <nav className="tc-tabs" aria-label="Trading comparables views">{(['financials','business','valuation'] as const).map(key=><button key={key} aria-pressed={tab===key} onClick={()=>setTab(key)}>{key==='financials'?'Peer financials':key==='business'?'Business comparisons':'Valuation & inputs'}</button>)}</nav>
       <div hidden={tab!=='financials'}><PeerFinancials data={d}/></div><div hidden={tab!=='business'}><BusinessDetails data={d}/></div><div hidden={tab!=='valuation'}><ValuationInputs data={d}/></div>
-      <details className="tc-methodology"><summary>Comparables sources, methodology & review status</summary><p>Official SEC Company Facts and retained filing-level XBRL. {d.validation.selected_filing_checks} selected operand checks and {d.validation.business_reconciliations} business reconciliations passed within their documented scope; this is not full historical certification.</p><ul>{d.limitations.map(l=><li key={l}>{l}</li>)}</ul><div className="tc-source-links">{peerTickers.map(t=><a key={t} href={d.peers[t].financials_url} target="_blank" rel="noreferrer">{t} interim filing ↗</a>)}</div><p>Financial cutoff is separate from a market valuation date and the DCF’s analytical anchor. This section neither reads nor changes DCF assumptions or results.</p></details>
+      <details className="tc-methodology"><summary>Comparables sources, methodology & review status</summary><p>Official SEC Company Facts and retained filing-level XBRL, plus existing approved reporting packages where identified. {d.validation.selected_filing_checks} selected operand checks and {d.validation.business_reconciliations} business reconciliations passed within their documented scope; this is not full historical certification.</p><ul>{d.limitations.map(l=><li key={l}>{l}</li>)}</ul><div className="tc-source-links">{peersFor(d).map(t=><a key={t} href={d.peers[t].financials_url} target="_blank" rel="noreferrer">{t} source filing ↗</a>)}</div><p>Financial cutoff is separate from a market valuation date and the DCF’s analytical anchor. This section neither reads nor changes DCF assumptions or results.</p></details>
     </>}
   </section>;
 }

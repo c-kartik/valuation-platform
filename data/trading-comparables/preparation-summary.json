@@ -101,6 +101,75 @@
       "ticker": "AMZN",
       "ttm_ebit": 104366000000,
       "ttm_revenue": 797455000000
+    },
+    {
+      "annuals": 6,
+      "filing_matches": 17,
+      "filing_mismatches": 0,
+      "latest_end": "2026-09-26",
+      "missing_ttm_metrics": [],
+      "quarters": 24,
+      "source_errors": [],
+      "ticker": "AAPL",
+      "ttm_ebit": 158063000000,
+      "ttm_revenue": 478834000000
+    },
+    {
+      "annuals": 6,
+      "filing_matches": 27,
+      "filing_mismatches": 0,
+      "latest_end": "2026-07-31",
+      "missing_ttm_metrics": [
+        "depreciation_only"
+      ],
+      "quarters": 26,
+      "source_errors": [],
+      "ticker": "DELL",
+      "ttm_ebit": 14252000000,
+      "ttm_revenue": 151197000000
+    },
+    {
+      "annuals": 5,
+      "filing_matches": 27,
+      "filing_mismatches": 0,
+      "latest_end": "2026-07-31",
+      "missing_ttm_metrics": [
+        "depreciation_only"
+      ],
+      "quarters": 23,
+      "source_errors": [],
+      "ticker": "HPQ",
+      "ttm_ebit": 3222000000,
+      "ttm_revenue": 59162000000
+    },
+    {
+      "annuals": 5,
+      "filing_matches": 24,
+      "filing_mismatches": 0,
+      "latest_end": "2026-09-30",
+      "missing_ttm_metrics": [
+        "depreciation_only",
+        "intangible_amortization"
+      ],
+      "quarters": 23,
+      "source_errors": [],
+      "ticker": "NFLX",
+      "ttm_ebit": 15564870000,
+      "ttm_revenue": 49734633000
+    },
+    {
+      "annuals": 5,
+      "filing_matches": 27,
+      "filing_mismatches": 0,
+      "latest_end": "2026-09-30",
+      "missing_ttm_metrics": [
+        "depreciation_only"
+      ],
+      "quarters": 23,
+      "source_errors": [],
+      "ticker": "SNAP",
+      "ttm_ebit": -118737000,
+      "ttm_revenue": 6566716000
     }
   ]
 }

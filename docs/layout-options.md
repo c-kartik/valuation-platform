@@ -70,3 +70,5 @@ viewport. The test multiple was local only and cleared by reload.
 ## Detachable section 6 — November 11, 2026
 
 Alphabet now groups DCF (5) and Trading Comparables (6) under Valuation. The latter is independently disconnectable; other companies retain section 5 only. Frozen Option 1/2 tags remain unchanged. See [feature contract](trading-comparables-feature.md).
+
+Apple/Meta extension (November 11, 2026): all three targets now group DCF 5 and detachable Comparables 6 in Valuation. One flag removes section 6 and its links for every target. Original layout tags stay frozen.

@@ -1,0 +1,331 @@
+{
+  "as_of": "2026-11-11",
+  "limitations": [
+    "Microsoft old/new reporting structures are not spliced; unmatched old structure remains unavailable.",
+    "Pinterest and Trade Desk product-level profit breakdowns are not inferred.",
+    "Segment operating income is a management allocation measure, not standalone company EBIT.",
+    "AWS/Azure have no separately traded enterprise value."
+  ],
+  "matches": 6,
+  "mismatches": 0,
+  "periods": [
+    {
+      "accession": "0001065280-26-000034",
+      "end": "2025-12-31",
+      "fields": {
+        "ebit": {
+          "accession": "0001065280-26-000034",
+          "concept": "OperatingIncomeLoss",
+          "end": "2025-12-31",
+          "filed": "2026-01-23",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 13326603000
+        },
+        "reported_segment": {
+          "evidence": [
+            {
+              "accession": "0001065280-26-000034",
+              "concept": "Revenues",
+              "context": "c-372",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ReportableSegmentMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "45183036000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 45183036000
+        },
+        "reported_segment_ebit": {
+          "evidence": [
+            {
+              "accession": "0001065280-26-000034",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-372",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ReportableSegmentMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "13326603000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 13326603000
+        },
+        "revenue": {
+          "accession": "0001065280-26-000034",
+          "concept": "Revenues",
+          "end": "2025-12-31",
+          "filed": "2026-01-23",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 45183036000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "reported_segment"
+          ],
+          "difference_usd": 0,
+          "name": "single_segment_revenue",
+          "reported_total": 45183036000,
+          "status": "MATCH",
+          "sum": 45183036000,
+          "target": "revenue"
+        },
+        {
+          "components": [
+            "reported_segment_ebit"
+          ],
+          "difference_usd": 0,
+          "name": "single_segment_ebit",
+          "reported_total": 13326603000,
+          "status": "MATCH",
+          "sum": 13326603000,
+          "target": "ebit"
+        }
+      ],
+      "start": "2025-01-01"
+    },
+    {
+      "accession": "0001065280-26-000291",
+      "end": "2026-09-30",
+      "fields": {
+        "ebit": {
+          "accession": "0001065280-26-000291",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-09-30",
+          "filed": "2026-10-21",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 12608207000
+        },
+        "reported_segment": {
+          "evidence": [
+            {
+              "accession": "0001065280-26-000291",
+              "concept": "Revenues",
+              "context": "c-363",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ReportableSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "37683871000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 37683871000
+        },
+        "reported_segment_ebit": {
+          "evidence": [
+            {
+              "accession": "0001065280-26-000291",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-363",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ReportableSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "12608207000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 12608207000
+        },
+        "revenue": {
+          "accession": "0001065280-26-000291",
+          "concept": "Revenues",
+          "end": "2026-09-30",
+          "filed": "2026-10-21",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 37683871000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "reported_segment"
+          ],
+          "difference_usd": 0,
+          "name": "single_segment_revenue",
+          "reported_total": 37683871000,
+          "status": "MATCH",
+          "sum": 37683871000,
+          "target": "revenue"
+        },
+        {
+          "components": [
+            "reported_segment_ebit"
+          ],
+          "difference_usd": 0,
+          "name": "single_segment_ebit",
+          "reported_total": 12608207000,
+          "status": "MATCH",
+          "sum": 12608207000,
+          "target": "ebit"
+        }
+      ],
+      "start": "2026-01-01"
+    },
+    {
+      "accession": "0001065280-26-000291",
+      "end": "2026-09-30",
+      "fields": {
+        "ebit": {
+          "accession": "0001065280-26-000291",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-09-30",
+          "filed": "2026-10-21",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/",
+          "start": "2026-07-01",
+          "status": "SEC_REPORTED",
+          "value": 4458600000
+        },
+        "reported_segment": {
+          "evidence": [
+            {
+              "accession": "0001065280-26-000291",
+              "concept": "Revenues",
+              "context": "c-361",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ReportableSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "12874176000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 12874176000
+        },
+        "reported_segment_ebit": {
+          "evidence": [
+            {
+              "accession": "0001065280-26-000291",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-361",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "ReportableSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "4458600000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 4458600000
+        },
+        "revenue": {
+          "accession": "0001065280-26-000291",
+          "concept": "Revenues",
+          "end": "2026-09-30",
+          "filed": "2026-10-21",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/",
+          "start": "2026-07-01",
+          "status": "SEC_REPORTED",
+          "value": 12874176000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "reported_segment"
+          ],
+          "difference_usd": 0,
+          "name": "single_segment_revenue",
+          "reported_total": 12874176000,
+          "status": "MATCH",
+          "sum": 12874176000,
+          "target": "revenue"
+        },
+        {
+          "components": [
+            "reported_segment_ebit"
+          ],
+          "difference_usd": 0,
+          "name": "single_segment_ebit",
+          "reported_total": 4458600000,
+          "status": "MATCH",
+          "sum": 4458600000,
+          "target": "ebit"
+        }
+      ],
+      "start": "2026-07-01"
+    }
+  ],
+  "policy": "explicit-business-dimensions-v1",
+  "scope": "Exact reconciliation for available latest annual and latest interim dimensional disclosures only; no inferred segment values or segment market multiples.",
+  "ticker": "NFLX"
+}

@@ -1,3 +1,7 @@
+## Apple/Meta comparables peer extension — November 11, 2026
+
+Added peer-only DELL/HPQ/NFLX/SNAP records and an isolated AAPL snapshot, and updated affected peer display records under the [extension contract](../trading-comparables-apple-meta.md). Frozen-universe membership, original preparation acceptance and DCF contracts are unchanged. New observations have source receipts and exact comparative dates; missing classifications remain OPEN.
+
 ## Alphabet comparables display projection — November 11, 2026
 
 Seven existing peer records now link the [isolated available-data feature](../trading-comparables-feature.md). Same-filing segment-growth observations are confined to its projection. No underlying approved financial package, universe classification or DCF acceptance changes.

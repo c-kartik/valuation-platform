@@ -1,0 +1,598 @@
+{
+  "as_of": "2026-11-11",
+  "limitations": [
+    "Microsoft old/new reporting structures are not spliced; unmatched old structure remains unavailable.",
+    "Pinterest and Trade Desk product-level profit breakdowns are not inferred.",
+    "Segment operating income is a management allocation measure, not standalone company EBIT.",
+    "AWS/Azure have no separately traded enterprise value."
+  ],
+  "matches": 3,
+  "mismatches": 0,
+  "periods": [
+    {
+      "accession": "0000047217-25-000071",
+      "end": "2025-10-31",
+      "fields": {
+        "corporate_investments": {
+          "evidence": [
+            {
+              "accession": "0000047217-25-000071",
+              "concept": "Revenues",
+              "context": "c-79",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "CorporateInvestmentsMember"
+                }
+              ],
+              "end": "2025-10-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721725000071/hpq-20251031_htm.xml",
+              "start": "2024-11-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "62000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 62000000
+        },
+        "ebit": {
+          "accession": "0000047217-25-000071",
+          "concept": "OperatingIncomeLoss",
+          "end": "2025-10-31",
+          "filed": "2025-12-10",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721725000071/",
+          "start": "2024-11-01",
+          "status": "SEC_REPORTED",
+          "value": 3174000000
+        },
+        "personal_systems": {
+          "evidence": [
+            {
+              "accession": "0000047217-25-000071",
+              "concept": "Revenues",
+              "context": "c-64",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "PersonalSystemsMember"
+                }
+              ],
+              "end": "2025-10-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721725000071/hpq-20251031_htm.xml",
+              "start": "2024-11-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "38532000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 38532000000
+        },
+        "personal_systems_ebit": {
+          "evidence": [
+            {
+              "accession": "0000047217-25-000071",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-64",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "PersonalSystemsMember"
+                }
+              ],
+              "end": "2025-10-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721725000071/hpq-20251031_htm.xml",
+              "start": "2024-11-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "2054000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 2054000000
+        },
+        "printing": {
+          "evidence": [
+            {
+              "accession": "0000047217-25-000071",
+              "concept": "Revenues",
+              "context": "c-76",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "PrintingMember"
+                }
+              ],
+              "end": "2025-10-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721725000071/hpq-20251031_htm.xml",
+              "start": "2024-11-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "16702000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 16702000000
+        },
+        "reconciling_revenue": {
+          "evidence": [
+            {
+              "accession": "0000047217-25-000071",
+              "concept": "Revenues",
+              "context": "c-85",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "MaterialReconcilingItemsMember"
+                }
+              ],
+              "end": "2025-10-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721725000071/hpq-20251031_htm.xml",
+              "start": "2024-11-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "-1000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": -1000000
+        },
+        "revenue": {
+          "accession": "0000047217-25-000071",
+          "concept": "Revenues",
+          "end": "2025-10-31",
+          "filed": "2025-12-10",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721725000071/",
+          "start": "2024-11-01",
+          "status": "SEC_REPORTED",
+          "value": 55295000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "personal_systems",
+            "printing",
+            "corporate_investments",
+            "reconciling_revenue"
+          ],
+          "difference_usd": 0,
+          "name": "segment_revenue",
+          "reported_total": 55295000000,
+          "status": "MATCH",
+          "sum": 55295000000,
+          "target": "revenue"
+        }
+      ],
+      "start": "2024-11-01"
+    },
+    {
+      "accession": "0000047217-26-000051",
+      "end": "2026-07-31",
+      "fields": {
+        "corporate_investments": {
+          "evidence": [
+            {
+              "accession": "0000047217-26-000051",
+              "concept": "Revenues",
+              "context": "c-112",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "CorporateInvestmentsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731_htm.xml",
+              "start": "2025-11-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "0"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 0
+        },
+        "ebit": {
+          "accession": "0000047217-26-000051",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-07-31",
+          "filed": "2026-08-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/",
+          "start": "2025-11-01",
+          "status": "SEC_REPORTED",
+          "value": 2263000000
+        },
+        "personal_systems": {
+          "evidence": [
+            {
+              "accession": "0000047217-26-000051",
+              "concept": "Revenues",
+              "context": "c-92",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "PersonalSystemsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731_htm.xml",
+              "start": "2025-11-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "32231000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 32231000000
+        },
+        "personal_systems_ebit": {
+          "evidence": [
+            {
+              "accession": "0000047217-26-000051",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-92",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "PersonalSystemsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731_htm.xml",
+              "start": "2025-11-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "1578000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 1578000000
+        },
+        "printing": {
+          "evidence": [
+            {
+              "accession": "0000047217-26-000051",
+              "concept": "Revenues",
+              "context": "c-108",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "PrintingMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731_htm.xml",
+              "start": "2025-11-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "12294000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 12294000000
+        },
+        "reconciling_revenue": {
+          "evidence": [
+            {
+              "accession": "0000047217-26-000051",
+              "concept": "Revenues",
+              "context": "c-120",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "MaterialReconcilingItemsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731_htm.xml",
+              "start": "2025-11-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "-2000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": -2000000
+        },
+        "revenue": {
+          "accession": "0000047217-26-000051",
+          "concept": "Revenues",
+          "end": "2026-07-31",
+          "filed": "2026-08-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/",
+          "start": "2025-11-01",
+          "status": "SEC_REPORTED",
+          "value": 44523000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "personal_systems",
+            "printing",
+            "corporate_investments",
+            "reconciling_revenue"
+          ],
+          "difference_usd": 0,
+          "name": "segment_revenue",
+          "reported_total": 44523000000,
+          "status": "MATCH",
+          "sum": 44523000000,
+          "target": "revenue"
+        }
+      ],
+      "start": "2025-11-01"
+    },
+    {
+      "accession": "0000047217-26-000051",
+      "end": "2026-07-31",
+      "fields": {
+        "corporate_investments": {
+          "evidence": [
+            {
+              "accession": "0000047217-26-000051",
+              "concept": "Revenues",
+              "context": "c-110",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "CorporateInvestmentsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731_htm.xml",
+              "start": "2026-05-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "0"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 0
+        },
+        "ebit": {
+          "accession": "0000047217-26-000051",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-07-31",
+          "filed": "2026-08-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/",
+          "start": "2026-05-01",
+          "status": "SEC_REPORTED",
+          "value": 892000000
+        },
+        "personal_systems": {
+          "evidence": [
+            {
+              "accession": "0000047217-26-000051",
+              "concept": "Revenues",
+              "context": "c-90",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "PersonalSystemsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731_htm.xml",
+              "start": "2026-05-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "11767000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 11767000000
+        },
+        "personal_systems_ebit": {
+          "evidence": [
+            {
+              "accession": "0000047217-26-000051",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-90",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "PersonalSystemsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731_htm.xml",
+              "start": "2026-05-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "537000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 537000000
+        },
+        "printing": {
+          "evidence": [
+            {
+              "accession": "0000047217-26-000051",
+              "concept": "Revenues",
+              "context": "c-106",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "PrintingMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731_htm.xml",
+              "start": "2026-05-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "3912000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 3912000000
+        },
+        "reconciling_revenue": {
+          "evidence": [
+            {
+              "accession": "0000047217-26-000051",
+              "concept": "Revenues",
+              "context": "c-118",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "MaterialReconcilingItemsMember"
+                }
+              ],
+              "end": "2026-07-31",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731_htm.xml",
+              "start": "2026-05-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "-2000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": -2000000
+        },
+        "revenue": {
+          "accession": "0000047217-26-000051",
+          "concept": "Revenues",
+          "end": "2026-07-31",
+          "filed": "2026-08-27",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/",
+          "start": "2026-05-01",
+          "status": "SEC_REPORTED",
+          "value": 15677000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "personal_systems",
+            "printing",
+            "corporate_investments",
+            "reconciling_revenue"
+          ],
+          "difference_usd": 0,
+          "name": "segment_revenue",
+          "reported_total": 15677000000,
+          "status": "MATCH",
+          "sum": 15677000000,
+          "target": "revenue"
+        }
+      ],
+      "start": "2026-05-01"
+    }
+  ],
+  "policy": "explicit-business-dimensions-v1",
+  "scope": "Exact reconciliation for available latest annual and latest interim dimensional disclosures only; no inferred segment values or segment market multiples.",
+  "ticker": "HPQ"
+}
