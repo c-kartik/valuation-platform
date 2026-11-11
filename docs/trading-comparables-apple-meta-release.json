@@ -1,0 +1,65 @@
+{
+  "status": "published-and-live-verified",
+  "verified_at": "2026-11-11T09:33:29.838611+00:00",
+  "source_commit": "ec054e7",
+  "portfolio_commit": "78a31e8",
+  "publication": "Existing Netlify production site via authorized portfolio main push",
+  "site_id": "4439ee14-d894-45b4-84a9-be3ef68eb870",
+  "urls": {
+    "AAPL": "https://kartikchaturvedi.com/valuation/?company=AAPL",
+    "META": "https://kartikchaturvedi.com/valuation/?company=META"
+  },
+  "feature_hashes": {
+    "GOOGL": "eea1149d311c6c65108cea28b015f76e000ad2b17fbe4a620e6a32d2d122968d",
+    "AAPL": "12407126682215dd84bc48b68ead4a09aef16af2dff051bbae458bb2b8a4fe09",
+    "META": "2b8c98acb7a98fa395d6a51ec45fe0ae2123135c6238a323c40cb8dbfd768ec8"
+  },
+  "checks": {
+    "frontend_tests": 527,
+    "python_preparation_export_tests": 26,
+    "selected_filing_checks_full_peer_pool": 304,
+    "business_reconciliations_full_peer_pool": 48,
+    "static_files": 62,
+    "static_local_references": 67,
+    "static_routes": "PASS",
+    "original_python_files_unchanged": 396,
+    "original_dcf_assets_unchanged": 15,
+    "parity_fixtures_unchanged": 128,
+    "desktop_apple": true,
+    "desktop_meta": true,
+    "phone_width": 390,
+    "phone_no_document_overflow": true,
+    "shared_disconnect_apple": true,
+    "shared_disconnect_meta": true,
+    "shared_reconnect": true,
+    "live_new_entry": true,
+    "live_apple_data_matches": true,
+    "live_meta_data_matches": true,
+    "alphabet_data_byte_preserved": true,
+    "live_apple_mac_pc_comparisons": true,
+    "live_meta_advertising": true,
+    "live_meta_segment_reconciliation": true
+  },
+  "unchanged_default_dcf": {
+    "AAPL": {
+      "ev": "$2.58tn",
+      "fcff_value_per_share": "$175.46"
+    },
+    "META": {
+      "ev": "$944.60bn",
+      "fcff_value_per_share": "$374.70"
+    }
+  },
+  "limits": [
+    "Apple and Dell/HP fiscal quarters are not calendar-aligned; dates are visible.",
+    "Mac/Services operating profit is not inferred; ecosystem proxies remain labelled.",
+    "Meta retains Reality Labs losses and negative Snap TTM EBIT.",
+    "Market pricing/rights, EV/EBITDA/share classification and exit multiples remain unresolved.",
+    "390px browser rendering is not an actual iPhone Safari test."
+  ],
+  "disconnect": "Set tradingComparables.enabled=false in the single feature config, rebuild and republish.",
+  "screenshots": {
+    "AAPL": "/Users/kc/Documents/Codex/outputs/trading-comparables-apple-live.jpg",
+    "META": "/Users/kc/Documents/Codex/outputs/trading-comparables-meta-live.jpg"
+  }
+}

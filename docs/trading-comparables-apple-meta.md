@@ -55,3 +55,7 @@ For a future source/cutoff change, retain the old freeze and review mappings, fi
 527 frontend tests (including 15 feature tests) and 26 Python preparation/export tests pass; the production build retains a separate feature chunk and styles. Tests cover target-specific peer sets, Apple calendar/quarter derivations, same-filing growth, proxies, preserved negative earnings, private-path exclusion, source/cross-period reproduction, issuer switching and the common disable flag. Actual desktop/390px checks cover Apple and Meta. Toggling the common flag off removes each section/link while the existing DCF stays available, then reconnects without any data migration. Original 15 DCF assets, 396 Python source files and 128 parity/extra fixtures verify unchanged.
 
 Existing local default DCF preservation observations: Apple Base $2.58tn EV / $175.46 FCFF per share; Meta Base $944.60bn EV / $374.70 FCFF per share. These are unchanged model-snapshot outputs, not updated current market valuations. Publication is recorded in a separate release receipt.
+
+## Publication
+
+Published and live-verified November 11, 2026 with source implementation `ec054e7` and portfolio `78a31e8`. Both public data files match the release bytes and the live entry loads the target-specific module. Apple hardware/services, Meta ad revenue/segment reconciliation and unchanged default DCF outputs were checked on production. [Release receipt](trading-comparables-apple-meta-release.json).
