@@ -1,3 +1,11 @@
+## Separate trading-comparables preparation — November 11, 2026
+
+**Status: OPEN; no new DCF acceptance.** Official consolidated Company Facts plus retained latest annual/interim filing XML support the isolated financial package at `data/trading-comparables/prepared/AMZN.json` and business review at `data/trading-comparables/business-review/AMZN.json`. See [shared selection, accounting, evidence and gap contract](../trading-comparables-data.md).
+
+AWS revenue and EBIT reconcile with the other segments. Advertising revenue is a product category, not a standalone EBIT segment. PaymentsToAcquireProductiveAssets is the explicit cash-capex candidate; gross cash purchases differ from headline net capex and finance-lease investment. One depreciation fact is repeated at a coarser declared note precision; both values and precisions are retained.
+
+Alternatives considered: pooling all standard tags, treating missing balances as zero, substituting weighted-average EPS shares and treating segment EBIT as a standalone trading multiple. All are rejected. Retain reported facts and unavailable fields; explicit classifications remain separate. Historical quarter consistency is arithmetic, not full filing re-extraction. Outstanding share-class/EV/D&A/price review gates remain open; prior approved issuer policies and broader-universe statuses are unchanged.
+
 # AMZN — company data preparation
 
 ## Current — user-approved effective five-year historical view

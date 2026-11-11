@@ -1,0 +1,103 @@
+{
+  "retrieved_at": "2026-11-11T07:38:43.367595+00:00",
+  "sources": [
+    {
+      "ticker": "GOOGL",
+      "kind": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+      "path": "data/trading-comparables/sources/GOOGL-companyfacts.json.gz",
+      "sha256": "b0f88dcf5b43a84f95189a22f241d2270a7921791027c68b2a4d895f4eeead37"
+    },
+    {
+      "ticker": "GOOGL",
+      "kind": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0001652044.json",
+      "path": "data/trading-comparables/sources/GOOGL-submissions.json.gz",
+      "sha256": "8f52341b8e4e2ce291911450cee5e1dfa55e2f264145cb6354b64247240617b5"
+    },
+    {
+      "ticker": "META",
+      "kind": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001326801.json",
+      "path": "data/trading-comparables/sources/META-companyfacts.json.gz",
+      "sha256": "44bef4ec481bf640a424404a382c72bbfb72eaccaa1a57947e333ed5417049d5"
+    },
+    {
+      "ticker": "META",
+      "kind": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0001326801.json",
+      "path": "data/trading-comparables/sources/META-submissions.json.gz",
+      "sha256": "8ae4b1ad3fe5d784272d2a4299777f0942dd103e79d6b2cdbbda44903e8be3ca"
+    },
+    {
+      "ticker": "PINS",
+      "kind": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001506293.json",
+      "path": "data/trading-comparables/sources/PINS-companyfacts.json.gz",
+      "sha256": "f371f0d70bb6ee7030efa34bf3ce42f1bb1cf655f2aec6a312262ed47f60a046"
+    },
+    {
+      "ticker": "PINS",
+      "kind": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0001506293.json",
+      "path": "data/trading-comparables/sources/PINS-submissions.json.gz",
+      "sha256": "bcb988f56e82fe6790a406eebe221e3cfed16f3fe945bd489bcf5e0cbe6108cd"
+    },
+    {
+      "ticker": "RDDT",
+      "kind": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001713445.json",
+      "path": "data/trading-comparables/sources/RDDT-companyfacts.json.gz",
+      "sha256": "4d3cb3b69facb134327585da8c1868ddbbd616d7b18f3cb362d41065e889a0c4"
+    },
+    {
+      "ticker": "RDDT",
+      "kind": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0001713445.json",
+      "path": "data/trading-comparables/sources/RDDT-submissions.json.gz",
+      "sha256": "3342784bc81a3ba5414b0e7fd798c4dd37993b0c8d8fa21350a0115504e85264"
+    },
+    {
+      "ticker": "TTD",
+      "kind": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001671933.json",
+      "path": "data/trading-comparables/sources/TTD-companyfacts.json.gz",
+      "sha256": "bdd5c768b68f4e506e5d472ecd385f196274db381f146c056e8306fd2c59ee19"
+    },
+    {
+      "ticker": "TTD",
+      "kind": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0001671933.json",
+      "path": "data/trading-comparables/sources/TTD-submissions.json.gz",
+      "sha256": "4098fc10f4dca2187ffeebc90806d84df4c9a1deca2536a8258f8c7713976ab6"
+    },
+    {
+      "ticker": "MSFT",
+      "kind": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+      "path": "data/trading-comparables/sources/MSFT-companyfacts.json.gz",
+      "sha256": "e7ee0a682d92136ee0075482556ce150df722adda3492e4b3e139e0d14171d5d"
+    },
+    {
+      "ticker": "MSFT",
+      "kind": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0000789019.json",
+      "path": "data/trading-comparables/sources/MSFT-submissions.json.gz",
+      "sha256": "2f04f8765730d023af6acfd29eb727a2efa8837d5db97773fcc31299ba89d53c"
+    },
+    {
+      "ticker": "AMZN",
+      "kind": "companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+      "path": "data/trading-comparables/sources/AMZN-companyfacts.json.gz",
+      "sha256": "fc05ab91c58fd9e6d44ea56b4760851426741ea52d704f41175122cebed7762f"
+    },
+    {
+      "ticker": "AMZN",
+      "kind": "submissions",
+      "url": "https://data.sec.gov/submissions/CIK0001018724.json",
+      "path": "data/trading-comparables/sources/AMZN-submissions.json.gz",
+      "sha256": "574c5e79a11fc87efe0282a37a6d2e72627cd9e851f5ade3499fcb638a6de2f8"
+    }
+  ]
+}

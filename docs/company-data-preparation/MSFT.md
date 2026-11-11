@@ -1,3 +1,11 @@
+## Separate trading-comparables preparation — November 11, 2026
+
+**Status: OPEN; no new DCF acceptance.** Official consolidated Company Facts plus retained latest annual/interim filing XML support the isolated financial package at `data/trading-comparables/prepared/MSFT.json` and business review at `data/trading-comparables/business-review/MSFT.json`. See [shared selection, accounting, evidence and gap contract](../trading-comparables-data.md).
+
+FY2027 Agents and Infra / Devices and Consumer mapping reconciles for September 2026. Prior Intelligent Cloud structure is retained separately, not spliced. Azure product revenue is available in the new disclosure; Azure-only EBIT is unavailable. DepreciationAmortizationAndOther is not pure D&A.
+
+Alternatives considered: pooling all standard tags, treating missing balances as zero, substituting weighted-average EPS shares and treating segment EBIT as a standalone trading multiple. All are rejected. Retain reported facts and unavailable fields; explicit classifications remain separate. Historical quarter consistency is arithmetic, not full filing re-extraction. Outstanding share-class/EV/D&A/price review gates remain open; prior approved issuer policies and broader-universe statuses are unchanged.
+
 # MSFT — company data preparation
 
 ## Current — five selected annuals completed for the approved historical perimeter

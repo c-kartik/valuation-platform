@@ -1,3 +1,11 @@
+## Separate trading-comparables preparation — November 11, 2026
+
+**Status: OPEN; no new DCF acceptance.** Official consolidated Company Facts plus retained latest annual/interim filing XML support the isolated financial package at `data/trading-comparables/prepared/GOOGL.json` and business review at `data/trading-comparables/business-review/GOOGL.json`. See [shared selection, accounting, evidence and gap contract](../trading-comparables-data.md).
+
+Search, YouTube ads and Network have revenue but no standalone EBIT. Google Cloud includes Workspace. Hedging is separately reconciled. Depreciation-only and intangible amortization are retained separately; a comparable total D&A is not yet approved.
+
+Alternatives considered: pooling all standard tags, treating missing balances as zero, substituting weighted-average EPS shares and treating segment EBIT as a standalone trading multiple. All are rejected. Retain reported facts and unavailable fields; explicit classifications remain separate. Historical quarter consistency is arithmetic, not full filing re-extraction. Outstanding share-class/EV/D&A/price review gates remain open; prior approved issuer policies and broader-universe statuses are unchanged.
+
 ## Full FY2021 cash-allocation extension — November 9, 2026
 
 The user requested FY2021 Q1–Q3 and year-grouped quarter selection.

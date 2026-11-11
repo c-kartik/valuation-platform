@@ -1,0 +1,106 @@
+{
+  "as_of": "2026-11-11",
+  "issuers": [
+    {
+      "annuals": 5,
+      "filing_matches": 28,
+      "filing_mismatches": 0,
+      "latest_end": "2026-09-30",
+      "missing_ttm_metrics": [
+        "reported_da",
+        "intangible_amortization"
+      ],
+      "quarters": 23,
+      "source_errors": [],
+      "ticker": "GOOGL",
+      "ttm_ebit": 156976000000,
+      "ttm_revenue": 471098000000
+    },
+    {
+      "annuals": 5,
+      "filing_matches": 28,
+      "filing_mismatches": 0,
+      "latest_end": "2026-09-30",
+      "missing_ttm_metrics": [
+        "intangible_amortization"
+      ],
+      "quarters": 23,
+      "source_errors": [],
+      "ticker": "META",
+      "ttm_ebit": 79380000000,
+      "ttm_revenue": 241605000000
+    },
+    {
+      "annuals": 5,
+      "filing_matches": 25,
+      "filing_mismatches": 0,
+      "latest_end": "2026-09-30",
+      "missing_ttm_metrics": [
+        "depreciation_only"
+      ],
+      "quarters": 23,
+      "source_errors": [],
+      "ticker": "PINS",
+      "ttm_ebit": 196022000,
+      "ttm_revenue": 4680444000
+    },
+    {
+      "annuals": 4,
+      "filing_matches": 21,
+      "filing_mismatches": 0,
+      "latest_end": "2026-09-30",
+      "missing_ttm_metrics": [
+        "depreciation_only",
+        "intangible_amortization"
+      ],
+      "quarters": 15,
+      "source_errors": [],
+      "ticker": "RDDT",
+      "ttm_ebit": 908042000,
+      "ttm_revenue": 3088880000
+    },
+    {
+      "annuals": 5,
+      "filing_matches": 22,
+      "filing_mismatches": 0,
+      "latest_end": "2026-09-30",
+      "missing_ttm_metrics": [
+        "depreciation_only",
+        "intangible_amortization"
+      ],
+      "quarters": 23,
+      "source_errors": [],
+      "ticker": "TTD",
+      "ttm_ebit": 517703000,
+      "ttm_revenue": 2986670000
+    },
+    {
+      "annuals": 6,
+      "filing_matches": 27,
+      "filing_mismatches": 0,
+      "latest_end": "2026-09-30",
+      "missing_ttm_metrics": [
+        "reported_da"
+      ],
+      "quarters": 25,
+      "source_errors": [],
+      "ticker": "MSFT",
+      "ttm_ebit": 163191000000,
+      "ttm_revenue": 346445000000
+    },
+    {
+      "annuals": 5,
+      "filing_matches": 31,
+      "filing_mismatches": 0,
+      "latest_end": "2026-09-30",
+      "missing_ttm_metrics": [
+        "intangible_amortization"
+      ],
+      "quarters": 23,
+      "source_errors": [],
+      "ticker": "AMZN",
+      "ttm_ebit": 104366000000,
+      "ttm_revenue": 797455000000
+    }
+  ]
+}

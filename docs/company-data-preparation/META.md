@@ -1,3 +1,11 @@
+## Separate trading-comparables preparation — November 11, 2026
+
+**Status: OPEN; no new DCF acceptance.** Official consolidated Company Facts plus retained latest annual/interim filing XML support the isolated financial package at `data/trading-comparables/prepared/META.json` and business review at `data/trading-comparables/business-review/META.json`. See [shared selection, accounting, evidence and gap contract](../trading-comparables-data.md).
+
+Family of Apps and Reality Labs revenue and operating profit reconcile to consolidated totals. Retain Reality Labs losses in consolidated EBIT. Cash-flow SBC and allocated income-statement SBC can differ; do not silently interchange them.
+
+Alternatives considered: pooling all standard tags, treating missing balances as zero, substituting weighted-average EPS shares and treating segment EBIT as a standalone trading multiple. All are rejected. Retain reported facts and unavailable fields; explicit classifications remain separate. Historical quarter consistency is arithmetic, not full filing re-extraction. Outstanding share-class/EV/D&A/price review gates remain open; prior approved issuer policies and broader-universe statuses are unchanged.
+
 
 ## Shared cash-analysis reporting consumer — November 10, 2026
 

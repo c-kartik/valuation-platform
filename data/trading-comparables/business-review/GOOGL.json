@@ -1,0 +1,1423 @@
+{
+  "as_of": "2026-11-11",
+  "limitations": [
+    "Microsoft old/new reporting structures are not spliced; unmatched old structure remains unavailable.",
+    "Pinterest and Trade Desk product-level profit breakdowns are not inferred.",
+    "Segment operating income is a management allocation measure, not standalone company EBIT.",
+    "AWS/Azure have no separately traded enterprise value."
+  ],
+  "matches": 9,
+  "mismatches": 0,
+  "periods": [
+    {
+      "accession": "0001652044-26-000018",
+      "end": "2025-12-31",
+      "fields": {
+        "cloud": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-77",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleCloudMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "58705000000"
+            },
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-77",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleCloudMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "58705000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 58705000000
+        },
+        "cloud_ebit": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-420",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleCloudMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "13910000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 13910000000
+        },
+        "corporate_ebit": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-426",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "CorporateNonSegmentMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "-16760000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": -16760000000
+        },
+        "ebit": {
+          "accession": "0001652044-26-000018",
+          "concept": "OperatingIncomeLoss",
+          "end": "2025-12-31",
+          "filed": "2026-02-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 129039000000
+        },
+        "hedging": {
+          "accession": "0001652044-26-000018",
+          "concept": "RevenueNotFromContractWithCustomer",
+          "end": "2025-12-31",
+          "filed": "2026-02-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": -127000000
+        },
+        "network": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-65",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "GoogleNetworkMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "29792000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 29792000000
+        },
+        "other_bets": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-80",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AllOtherSegmentsMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "1537000000"
+            },
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-80",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AllOtherSegmentsMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "1537000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 1537000000
+        },
+        "other_bets_ebit": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-423",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AllOtherSegmentsMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "-7515000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": -7515000000
+        },
+        "revenue": {
+          "accession": "0001652044-26-000018",
+          "concept": "Revenues",
+          "end": "2025-12-31",
+          "filed": "2026-02-05",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 402836000000
+        },
+        "search": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-59",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "GoogleSearchOtherMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "224532000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 224532000000
+        },
+        "services": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-74",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "342721000000"
+            },
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-74",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "342721000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 342721000000
+        },
+        "services_ebit": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-417",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "139404000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 139404000000
+        },
+        "subscriptions_platforms_devices": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-71",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "SubscriptionsPlatformsAndDevicesRevenueMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "48030000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 48030000000
+        },
+        "youtube_ads": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000018",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-62",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "YouTubeAdvertisingRevenueMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "40367000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 40367000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "search",
+            "youtube_ads",
+            "network",
+            "subscriptions_platforms_devices"
+          ],
+          "difference_usd": 0,
+          "name": "services_components",
+          "reported_total": 342721000000,
+          "status": "MATCH",
+          "sum": 342721000000,
+          "target": "services"
+        },
+        {
+          "components": [
+            "services",
+            "cloud",
+            "other_bets",
+            "hedging"
+          ],
+          "difference_usd": 0,
+          "name": "consolidated_revenue",
+          "reported_total": 402836000000,
+          "status": "MATCH",
+          "sum": 402836000000,
+          "target": "revenue"
+        },
+        {
+          "components": [
+            "services_ebit",
+            "cloud_ebit",
+            "other_bets_ebit",
+            "corporate_ebit"
+          ],
+          "difference_usd": 0,
+          "name": "consolidated_ebit",
+          "reported_total": 129039000000,
+          "status": "MATCH",
+          "sum": 129039000000,
+          "target": "ebit"
+        }
+      ],
+      "start": "2025-01-01"
+    },
+    {
+      "accession": "0001652044-26-000084",
+      "end": "2026-09-30",
+      "fields": {
+        "cloud": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-119",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleCloudMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "75505000000"
+            },
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-119",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleCloudMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "75505000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 75505000000
+        },
+        "cloud_ebit": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-585",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleCloudMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "26533000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 26533000000
+        },
+        "corporate_ebit": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-593",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "CorporateNonSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "-18835000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": -18835000000
+        },
+        "ebit": {
+          "accession": "0001652044-26-000084",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 121042000000
+        },
+        "hedging": {
+          "accession": "0001652044-26-000084",
+          "concept": "RevenueNotFromContractWithCustomer",
+          "end": "2026-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 120000000
+        },
+        "network": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-103",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "GoogleNetworkMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "21729000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 21729000000
+        },
+        "other_bets": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-123",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AllOtherSegmentsMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "1165000000"
+            },
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-123",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AllOtherSegmentsMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "1165000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 1165000000
+        },
+        "other_bets_ebit": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-589",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AllOtherSegmentsMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "-5946000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": -5946000000
+        },
+        "revenue": {
+          "accession": "0001652044-26-000084",
+          "concept": "Revenues",
+          "end": "2026-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 357269000000
+        },
+        "search": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-95",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "GoogleSearchOtherMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "187020000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 187020000000
+        },
+        "services": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-115",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "280479000000"
+            },
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-115",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "280479000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 280479000000
+        },
+        "services_ebit": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-581",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "119290000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 119290000000
+        },
+        "subscriptions_platforms_devices": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-111",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "SubscriptionsPlatformsAndDevicesRevenueMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "39585000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 39585000000
+        },
+        "youtube_ads": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-99",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "YouTubeAdvertisingRevenueMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "32145000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 32145000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "search",
+            "youtube_ads",
+            "network",
+            "subscriptions_platforms_devices"
+          ],
+          "difference_usd": 0,
+          "name": "services_components",
+          "reported_total": 280479000000,
+          "status": "MATCH",
+          "sum": 280479000000,
+          "target": "services"
+        },
+        {
+          "components": [
+            "services",
+            "cloud",
+            "other_bets",
+            "hedging"
+          ],
+          "difference_usd": 0,
+          "name": "consolidated_revenue",
+          "reported_total": 357269000000,
+          "status": "MATCH",
+          "sum": 357269000000,
+          "target": "revenue"
+        },
+        {
+          "components": [
+            "services_ebit",
+            "cloud_ebit",
+            "other_bets_ebit",
+            "corporate_ebit"
+          ],
+          "difference_usd": 0,
+          "name": "consolidated_ebit",
+          "reported_total": 121042000000,
+          "status": "MATCH",
+          "sum": 121042000000,
+          "target": "ebit"
+        }
+      ],
+      "start": "2026-01-01"
+    },
+    {
+      "accession": "0001652044-26-000084",
+      "end": "2026-09-30",
+      "fields": {
+        "cloud": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-117",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleCloudMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "30709000000"
+            },
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-117",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleCloudMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "30709000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 30709000000
+        },
+        "cloud_ebit": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-583",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleCloudMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "11121000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 11121000000
+        },
+        "corporate_ebit": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-591",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "CorporateNonSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "-7655000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": -7655000000
+        },
+        "ebit": {
+          "accession": "0001652044-26-000084",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/",
+          "start": "2026-07-01",
+          "status": "SEC_REPORTED",
+          "value": 40576000000
+        },
+        "hedging": {
+          "accession": "0001652044-26-000084",
+          "concept": "RevenueNotFromContractWithCustomer",
+          "end": "2026-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/",
+          "start": "2026-07-01",
+          "status": "SEC_REPORTED",
+          "value": 194000000
+        },
+        "network": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-101",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "GoogleNetworkMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "7455000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 7455000000
+        },
+        "other_bets": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-121",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AllOtherSegmentsMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "372000000"
+            },
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-121",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AllOtherSegmentsMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "372000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 372000000
+        },
+        "other_bets_ebit": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-587",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AllOtherSegmentsMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "-2047000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": -2047000000
+        },
+        "revenue": {
+          "accession": "0001652044-26-000084",
+          "concept": "Revenues",
+          "end": "2026-09-30",
+          "filed": "2026-10-29",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/",
+          "start": "2026-07-01",
+          "status": "SEC_REPORTED",
+          "value": 127577000000
+        },
+        "search": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-93",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "GoogleSearchOtherMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "63350000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 63350000000
+        },
+        "services": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-113",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "96302000000"
+            },
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-113",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "96302000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 96302000000
+        },
+        "services_ebit": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-579",
+              "dimensions": [
+                {
+                  "axis": "ConsolidationItemsAxis",
+                  "member": "OperatingSegmentsMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "39157000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 39157000000
+        },
+        "subscriptions_platforms_devices": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-109",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "SubscriptionsPlatformsAndDevicesRevenueMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "14290000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 14290000000
+        },
+        "youtube_ads": {
+          "evidence": [
+            {
+              "accession": "0001652044-26-000084",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-97",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "YouTubeAdvertisingRevenueMember"
+                },
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "GoogleServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "11207000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 11207000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "search",
+            "youtube_ads",
+            "network",
+            "subscriptions_platforms_devices"
+          ],
+          "difference_usd": 0,
+          "name": "services_components",
+          "reported_total": 96302000000,
+          "status": "MATCH",
+          "sum": 96302000000,
+          "target": "services"
+        },
+        {
+          "components": [
+            "services",
+            "cloud",
+            "other_bets",
+            "hedging"
+          ],
+          "difference_usd": 0,
+          "name": "consolidated_revenue",
+          "reported_total": 127577000000,
+          "status": "MATCH",
+          "sum": 127577000000,
+          "target": "revenue"
+        },
+        {
+          "components": [
+            "services_ebit",
+            "cloud_ebit",
+            "other_bets_ebit",
+            "corporate_ebit"
+          ],
+          "difference_usd": 0,
+          "name": "consolidated_ebit",
+          "reported_total": 40576000000,
+          "status": "MATCH",
+          "sum": 40576000000,
+          "target": "ebit"
+        }
+      ],
+      "start": "2026-07-01"
+    }
+  ],
+  "policy": "explicit-business-dimensions-v1",
+  "scope": "Exact reconciliation for available latest annual and latest interim dimensional disclosures only; no inferred segment values or segment market multiples.",
+  "ticker": "GOOGL"
+}

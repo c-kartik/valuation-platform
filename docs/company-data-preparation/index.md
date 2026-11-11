@@ -1,3 +1,7 @@
+## Separate trading-comparables consumer — November 11, 2026
+
+GOOGL/META/PINS/RDDT/TTD/MSFT/AMZN have additive peer-preparation records under the [isolated comparables contract](../trading-comparables-data.md). This does not resume the paused universe review, alter existing analyst acceptance, or confer EV/EBITDA/valuation readiness. PINS/RDDT/TTD are peer-only additions outside the frozen universe register.
+
 ## Full-window reporting audit — November 9, 2026
 
 [GOOGL/AAPL/META review](../reporting-review-2026-11-09.md) expands isolated

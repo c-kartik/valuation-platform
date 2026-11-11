@@ -1,0 +1,1263 @@
+{
+  "as_of": "2026-11-11",
+  "limitations": [
+    "Microsoft old/new reporting structures are not spliced; unmatched old structure remains unavailable.",
+    "Pinterest and Trade Desk product-level profit breakdowns are not inferred.",
+    "Segment operating income is a management allocation measure, not standalone company EBIT.",
+    "AWS/Azure have no separately traded enterprise value."
+  ],
+  "matches": 8,
+  "mismatches": 0,
+  "periods": [
+    {
+      "accession": "0001018724-26-000004",
+      "end": "2025-12-31",
+      "fields": {
+        "advertising": {
+          "evidence": [],
+          "status": "UNAVAILABLE_OR_CONFLICT",
+          "value": null
+        },
+        "aws": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000004",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-141",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AmazonWebServicesSegmentMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "128725000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 128725000000
+        },
+        "aws_ebit": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000004",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-141",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AmazonWebServicesSegmentMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "45606000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 45606000000
+        },
+        "aws_product": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000004",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-300",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "AmazonWebServicesMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "128725000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 128725000000
+        },
+        "ebit": {
+          "accession": "0001018724-26-000004",
+          "concept": "OperatingIncomeLoss",
+          "end": "2025-12-31",
+          "filed": "2026-02-06",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 79975000000
+        },
+        "international": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000004",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-140",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "InternationalSegmentMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "161894000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 161894000000
+        },
+        "international_ebit": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000004",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-140",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "InternationalSegmentMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "4750000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 4750000000
+        },
+        "north_america": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000004",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-139",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "NorthAmericaSegmentMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "426305000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 426305000000
+        },
+        "north_america_ebit": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000004",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-139",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "NorthAmericaSegmentMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "29619000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 29619000000
+        },
+        "online_stores": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000004",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-285",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "OnlineStoresMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "269287000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 269287000000
+        },
+        "other": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000004",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-303",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "OtherServicesMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "5935000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 5935000000
+        },
+        "physical_stores": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000004",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-288",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "PhysicalStoresMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "22561000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 22561000000
+        },
+        "revenue": {
+          "accession": "0001018724-26-000004",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2025-12-31",
+          "filed": "2026-02-06",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/",
+          "start": "2025-01-01",
+          "status": "SEC_REPORTED",
+          "value": 716924000000
+        },
+        "subscriptions": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000004",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-297",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "SubscriptionServicesMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "49619000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 49619000000
+        },
+        "third_party_sellers": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000004",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-291",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "ThirdPartySellerServicesMember"
+                }
+              ],
+              "end": "2025-12-31",
+              "namespace": "http://fasb.org/us-gaap/2025",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+              "start": "2025-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "172162000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 172162000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "north_america",
+            "international",
+            "aws"
+          ],
+          "difference_usd": 0,
+          "name": "segment_revenue",
+          "reported_total": 716924000000,
+          "status": "MATCH",
+          "sum": 716924000000,
+          "target": "revenue"
+        },
+        {
+          "components": [
+            "north_america_ebit",
+            "international_ebit",
+            "aws_ebit"
+          ],
+          "difference_usd": 0,
+          "name": "segment_ebit",
+          "reported_total": 79975000000,
+          "status": "MATCH",
+          "sum": 79975000000,
+          "target": "ebit"
+        },
+        {
+          "components": [
+            "online_stores",
+            "physical_stores",
+            "third_party_sellers",
+            "advertising",
+            "subscriptions",
+            "aws_product",
+            "other"
+          ],
+          "difference_usd": null,
+          "name": "product_revenue",
+          "reported_total": 716924000000,
+          "status": "UNAVAILABLE",
+          "sum": null,
+          "target": "revenue"
+        }
+      ],
+      "start": "2025-01-01"
+    },
+    {
+      "accession": "0001018724-26-000040",
+      "end": "2026-09-30",
+      "fields": {
+        "advertising": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-338",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "AdvertisingServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "56689000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 56689000000
+        },
+        "aws": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-322",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AmazonWebServicesSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "125803000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 125803000000
+        },
+        "aws_ebit": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-322",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AmazonWebServicesSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "48555000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 48555000000
+        },
+        "aws_product": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-346",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "AmazonWebServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "125803000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 125803000000
+        },
+        "ebit": {
+          "accession": "0001018724-26-000040",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-09-30",
+          "filed": "2026-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 79389000000
+        },
+        "international": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-318",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "InternationalSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "125094000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 125094000000
+        },
+        "international_ebit": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-318",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "InternationalSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "4721000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 4721000000
+        },
+        "north_america": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-314",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "NorthAmericaSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "333172000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 333172000000
+        },
+        "north_america_ebit": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-314",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "NorthAmericaSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "26113000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 26113000000
+        },
+        "online_stores": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-326",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "OnlineStoresMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "203156000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 203156000000
+        },
+        "other": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-350",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "OtherServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "5119000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 5119000000
+        },
+        "physical_stores": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-330",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "PhysicalStoresMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "17289000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 17289000000
+        },
+        "revenue": {
+          "accession": "0001018724-26-000040",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/",
+          "start": "2026-01-01",
+          "status": "SEC_REPORTED",
+          "value": 584069000000
+        },
+        "subscriptions": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-342",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "SubscriptionServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "41163000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 41163000000
+        },
+        "third_party_sellers": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-334",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "ThirdPartySellerServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-01-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "134850000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 134850000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "north_america",
+            "international",
+            "aws"
+          ],
+          "difference_usd": 0,
+          "name": "segment_revenue",
+          "reported_total": 584069000000,
+          "status": "MATCH",
+          "sum": 584069000000,
+          "target": "revenue"
+        },
+        {
+          "components": [
+            "north_america_ebit",
+            "international_ebit",
+            "aws_ebit"
+          ],
+          "difference_usd": 0,
+          "name": "segment_ebit",
+          "reported_total": 79389000000,
+          "status": "MATCH",
+          "sum": 79389000000,
+          "target": "ebit"
+        },
+        {
+          "components": [
+            "online_stores",
+            "physical_stores",
+            "third_party_sellers",
+            "advertising",
+            "subscriptions",
+            "aws_product",
+            "other"
+          ],
+          "difference_usd": 0,
+          "name": "product_revenue",
+          "reported_total": 584069000000,
+          "status": "MATCH",
+          "sum": 584069000000,
+          "target": "revenue"
+        }
+      ],
+      "start": "2026-01-01"
+    },
+    {
+      "accession": "0001018724-26-000040",
+      "end": "2026-09-30",
+      "fields": {
+        "advertising": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-336",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "AdvertisingServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "19637000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 19637000000
+        },
+        "aws": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-320",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AmazonWebServicesSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "45984000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 45984000000
+        },
+        "aws_ebit": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-320",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "AmazonWebServicesSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "17773000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 17773000000
+        },
+        "aws_product": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-344",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "AmazonWebServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "45984000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 45984000000
+        },
+        "ebit": {
+          "accession": "0001018724-26-000040",
+          "concept": "OperatingIncomeLoss",
+          "end": "2026-09-30",
+          "filed": "2026-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/",
+          "start": "2026-07-01",
+          "status": "SEC_REPORTED",
+          "value": 28076000000
+        },
+        "international": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-316",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "InternationalSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "43108000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 43108000000
+        },
+        "international_ebit": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-316",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "InternationalSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "1580000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 1580000000
+        },
+        "north_america": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-312",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "NorthAmericaSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "112852000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 112852000000
+        },
+        "north_america_ebit": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "OperatingIncomeLoss",
+              "context": "c-312",
+              "dimensions": [
+                {
+                  "axis": "StatementBusinessSegmentsAxis",
+                  "member": "NorthAmericaSegmentMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "8723000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 8723000000
+        },
+        "online_stores": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-324",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "OnlineStoresMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "68470000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 68470000000
+        },
+        "other": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-348",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "OtherServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "1645000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 1645000000
+        },
+        "physical_stores": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-328",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "PhysicalStoresMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "5710000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 5710000000
+        },
+        "revenue": {
+          "accession": "0001018724-26-000040",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "end": "2026-09-30",
+          "filed": "2026-10-30",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/",
+          "start": "2026-07-01",
+          "status": "SEC_REPORTED",
+          "value": 201944000000
+        },
+        "subscriptions": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-340",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "SubscriptionServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "14006000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 14006000000
+        },
+        "third_party_sellers": {
+          "evidence": [
+            {
+              "accession": "0001018724-26-000040",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context": "c-332",
+              "dimensions": [
+                {
+                  "axis": "ProductOrServiceAxis",
+                  "member": "ThirdPartySellerServicesMember"
+                }
+              ],
+              "end": "2026-09-30",
+              "namespace": "http://fasb.org/us-gaap/2026",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930_htm.xml",
+              "start": "2026-07-01",
+              "status": "UNREVIEWED_DIMENSIONAL_CANDIDATE",
+              "unit": "usd",
+              "unit_measures": [
+                "USD"
+              ],
+              "value": "46492000000"
+            }
+          ],
+          "status": "FILING_DIMENSION_MATCH",
+          "value": 46492000000
+        }
+      },
+      "reconciliations": [
+        {
+          "components": [
+            "north_america",
+            "international",
+            "aws"
+          ],
+          "difference_usd": 0,
+          "name": "segment_revenue",
+          "reported_total": 201944000000,
+          "status": "MATCH",
+          "sum": 201944000000,
+          "target": "revenue"
+        },
+        {
+          "components": [
+            "north_america_ebit",
+            "international_ebit",
+            "aws_ebit"
+          ],
+          "difference_usd": 0,
+          "name": "segment_ebit",
+          "reported_total": 28076000000,
+          "status": "MATCH",
+          "sum": 28076000000,
+          "target": "ebit"
+        },
+        {
+          "components": [
+            "online_stores",
+            "physical_stores",
+            "third_party_sellers",
+            "advertising",
+            "subscriptions",
+            "aws_product",
+            "other"
+          ],
+          "difference_usd": 0,
+          "name": "product_revenue",
+          "reported_total": 201944000000,
+          "status": "MATCH",
+          "sum": 201944000000,
+          "target": "revenue"
+        }
+      ],
+      "start": "2026-07-01"
+    }
+  ],
+  "policy": "explicit-business-dimensions-v1",
+  "scope": "Exact reconciliation for available latest annual and latest interim dimensional disclosures only; no inferred segment values or segment market multiples.",
+  "ticker": "AMZN"
+}
